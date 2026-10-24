@@ -1,0 +1,96 @@
+{
+  "rows": 1105160,
+  "unique_doc_ids": 855745,
+  "available_corpus_files": 1195,
+  "selected_corpus_files": 1195,
+  "partial": false,
+  "errors": [],
+  "short_chars": 200,
+  "inspect_blocks": true,
+  "quality_flags": {
+    "missing_or_invalid_id": 0,
+    "empty_text": 3444,
+    "short_text": 19613,
+    "missing_title": 3512,
+    "invalid_url": 0,
+    "non_2xx_status": 3058,
+    "text_len_mismatch": 0,
+    "html_in_text": 1391,
+    "replacement_character": 84,
+    "possible_block_page": 841,
+    "invalid_blocks": 0,
+    "missing_text_column": 853
+  },
+  "duplicates": {
+    "id": {
+      "groups": 248909,
+      "extra_rows": 249415
+    },
+    "url": {
+      "groups": 248909,
+      "extra_rows": 249415
+    },
+    "normalized_text_sha256": {
+      "groups": 223088,
+      "extra_rows": 225574
+    }
+  },
+  "characters": {
+    "count": 1105160,
+    "min": 0,
+    "max": 336970,
+    "mean": 3089.7728057475842,
+    "p25": 1204,
+    "p50": 2492,
+    "p75": 4339,
+    "p90": 6244,
+    "p95": 7695,
+    "p99": 11693
+  },
+  "whitespace_units": {
+    "count": 1105160,
+    "min": 0,
+    "max": 66214,
+    "mean": 625.2311583843064,
+    "p25": 130,
+    "p50": 503,
+    "p75": 945,
+    "p90": 1360,
+    "p95": 1673,
+    "p99": 2533
+  },
+  "language_hints": {
+    "cjk_likely_zh": 314350,
+    "latin_undetermined": 422,
+    "other_or_mixed": 3,
+    "unknown": 3444,
+    "vi_diacritics": 786941
+  },
+  "ids_with_conflicting_text": 28480,
+  "crawler_reconciliation": [
+    {
+      "member": "A",
+      "database": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_A.sqlite3",
+      "state_ids": 147786,
+      "state_ids_without_shard": 0,
+      "shard_ids_without_state": 0,
+      "state_2xx_ids_without_nonempty_2xx_text": 120
+    },
+    {
+      "member": "B",
+      "database": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_B.sqlite3",
+      "state_ids": 429143,
+      "state_ids_without_shard": 0,
+      "shard_ids_without_state": 0,
+      "state_2xx_ids_without_nonempty_2xx_text": 16
+    },
+    {
+      "member": "C",
+      "database": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_C.sqlite3",
+      "state_ids": 527636,
+      "state_ids_without_shard": 0,
+      "shard_ids_without_state": 0,
+      "state_2xx_ids_without_nonempty_2xx_text": 49
+    }
+  ]
+}

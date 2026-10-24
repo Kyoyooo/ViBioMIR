@@ -1,0 +1,11 @@
+{
+  "data_dir": "Data",
+  "output_dir": "reports/eda",
+  "stage": "all",
+  "batch_size": 512,
+  "max_files": null,
+  "short_chars": 200,
+  "inspect_blocks": true,
+  "query_file": null,
+  "links_file": null
+}

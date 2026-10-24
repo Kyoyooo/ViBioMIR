@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 270" role="img">
+<title>Text length in characters</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="24" y="32" font-family="sans-serif" font-size="20">Text length in characters</text>
+<text x="24" y="80" font-family="sans-serif" font-size="12">0</text>
+<rect x="345" y="65" width="3.7" height="21" fill="#2563eb"/>
+<text x="358.7" y="80" font-family="sans-serif" font-size="12">3,444</text>
+<text x="24" y="110" font-family="sans-serif" font-size="12">1-199</text>
+<rect x="345" y="95" width="21.1" height="21" fill="#2563eb"/>
+<text x="376.1" y="110" font-family="sans-serif" font-size="12">19,613</text>
+<text x="24" y="140" font-family="sans-serif" font-size="12">200-999</text>
+<rect x="345" y="125" width="216.3" height="21" fill="#2563eb"/>
+<text x="571.3" y="140" font-family="sans-serif" font-size="12">200,980</text>
+<text x="24" y="170" font-family="sans-serif" font-size="12">1000-2999</text>
+<rect x="345" y="155" width="442.3" height="21" fill="#2563eb"/>
+<text x="797.3" y="170" font-family="sans-serif" font-size="12">411,015</text>
+<text x="24" y="200" font-family="sans-serif" font-size="12">3000-9999</text>
+<rect x="345" y="185" width="480.0" height="21" fill="#2563eb"/>
+<text x="835.0" y="200" font-family="sans-serif" font-size="12">446,031</text>
+<text x="24" y="230" font-family="sans-serif" font-size="12">10000+</text>
+<rect x="345" y="215" width="25.9" height="21" fill="#2563eb"/>
+<text x="380.9" y="230" font-family="sans-serif" font-size="12">24,077</text>
+</svg>

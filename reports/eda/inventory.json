@@ -1,0 +1,831 @@
+{
+  "data_dir": "/home/duyhoang/Downloads/AI_Guru/Data",
+  "files": 1204,
+  "parquet_files": 1197,
+  "parquet_rows": 2326958,
+  "parquet_bytes": 2466230403,
+  "schemas": {
+    "id: int64; domain: large_string; url: large_string; status: large_string; final_url: large_string; ts: int64; text_len: int64; ver: large_string; source: large_string; title: large_string; desc: large_string; canonical: large_string; method: large_string; blocks: large_string; text: large_string; html_trim: large_string": 1169,
+    "id: int64; domain: large_string; url: large_string; status: large_string; final_url: large_string; ts: int64; text_len: int64; ver: large_string; source: large_string": 26,
+    "id: int64; url: string": 1,
+    "id: int64; query: string": 1
+  },
+  "crawler_states": [
+    {
+      "path": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_A.sqlite3",
+      "tables": {
+        "crawl_state": "CREATE TABLE crawl_state (\n                id INTEGER PRIMARY KEY,\n                url TEXT,\n                domain TEXT,\n                status TEXT,\n                final_url TEXT,\n                ts INTEGER\n            )",
+        "state_meta": "CREATE TABLE state_meta (\n                key TEXT PRIMARY KEY,\n                value TEXT\n            )"
+      },
+      "by_domain_status": [
+        {
+          "domain": "a-hospital.com",
+          "status": "200",
+          "rows": 4701
+        },
+        {
+          "domain": "article.iiyi.com",
+          "status": "521",
+          "rows": 43
+        },
+        {
+          "domain": "baby.39.net",
+          "status": "200",
+          "rows": 3368
+        },
+        {
+          "domain": "baoangiang.com.vn",
+          "status": "200",
+          "rows": 10738
+        },
+        {
+          "domain": "baonghean.vn",
+          "status": "200",
+          "rows": 15941
+        },
+        {
+          "domain": "baophutho.vn",
+          "status": "200",
+          "rows": 1288
+        },
+        {
+          "domain": "baoquangninh.vn",
+          "status": "200",
+          "rows": 2911
+        },
+        {
+          "domain": "baoquangninh.vn",
+          "status": "dead",
+          "rows": 1
+        },
+        {
+          "domain": "baoquangtri.vn",
+          "status": "200",
+          "rows": 5483
+        },
+        {
+          "domain": "ek.39.net",
+          "status": "200",
+          "rows": 448
+        },
+        {
+          "domain": "familydoctor.cn",
+          "status": "200",
+          "rows": 2
+        },
+        {
+          "domain": "gan.39.net",
+          "status": "200",
+          "rows": 294
+        },
+        {
+          "domain": "giadinhonline.vn",
+          "status": "200",
+          "rows": 16729
+        },
+        {
+          "domain": "gk.39.net",
+          "status": "200",
+          "rows": 90
+        },
+        {
+          "domain": "health.people.com.cn",
+          "status": "200",
+          "rows": 50
+        },
+        {
+          "domain": "laodong.vn",
+          "status": "200",
+          "rows": 31282
+        },
+        {
+          "domain": "mega.vietnamplus.vn",
+          "status": "200",
+          "rows": 2
+        },
+        {
+          "domain": "phuyen.baodaklak.vn",
+          "status": "200",
+          "rows": 6252
+        },
+        {
+          "domain": "pmc-ecm-healthblog.beta.pharmacity.io",
+          "status": "403",
+          "rows": 41
+        },
+        {
+          "domain": "qdnd.vn",
+          "status": "200",
+          "rows": 3700
+        },
+        {
+          "domain": "suckhoeviet.org.vn",
+          "status": "200",
+          "rows": 5626
+        },
+        {
+          "domain": "suckhoeviet.org.vn",
+          "status": "404",
+          "rows": 1
+        },
+        {
+          "domain": "tamanhhospital.vn",
+          "status": "200",
+          "rows": 4259
+        },
+        {
+          "domain": "tamanhhospital.vn",
+          "status": "404",
+          "rows": 2
+        },
+        {
+          "domain": "thaythuocvietnam.vn",
+          "status": "200",
+          "rows": 697
+        },
+        {
+          "domain": "thaythuocvietnam.vn",
+          "status": "dead",
+          "rows": 2230
+        },
+        {
+          "domain": "tiemchunglongchau.com.vn",
+          "status": "200",
+          "rows": 13276
+        },
+        {
+          "domain": "tiemchunglongchau.com.vn",
+          "status": "404",
+          "rows": 5
+        },
+        {
+          "domain": "vietnamplus.vn",
+          "status": "200",
+          "rows": 3695
+        },
+        {
+          "domain": "vov.vn",
+          "status": "200",
+          "rows": 9782
+        },
+        {
+          "domain": "vov.vn",
+          "status": "dead",
+          "rows": 2
+        },
+        {
+          "domain": "wujue.com",
+          "status": "200",
+          "rows": 708
+        },
+        {
+          "domain": "youlai.cn",
+          "status": "200",
+          "rows": 4122
+        },
+        {
+          "domain": "youlai.cn",
+          "status": "404",
+          "rows": 17
+        }
+      ]
+    },
+    {
+      "path": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_B.sqlite3",
+      "tables": {
+        "crawl_state": "CREATE TABLE crawl_state (\n                id INTEGER PRIMARY KEY,\n                url TEXT,\n                domain TEXT,\n                status TEXT,\n                final_url TEXT,\n                ts INTEGER\n            )",
+        "state_meta": "CREATE TABLE state_meta (\n                key TEXT PRIMARY KEY,\n                value TEXT\n            )"
+      },
+      "by_domain_status": [
+        {
+          "domain": "120ask.com",
+          "status": "200",
+          "rows": 76993
+        },
+        {
+          "domain": "120ask.com",
+          "status": "404",
+          "rows": 7
+        },
+        {
+          "domain": "bachmai.gov.vn",
+          "status": "200",
+          "rows": 2783
+        },
+        {
+          "domain": "baidu.com",
+          "status": "200",
+          "rows": 11
+        },
+        {
+          "domain": "baoangiang.com.vn",
+          "status": "200",
+          "rows": 10738
+        },
+        {
+          "domain": "baochinhphu.vn",
+          "status": "200",
+          "rows": 2301
+        },
+        {
+          "domain": "baochinhphu.vn",
+          "status": "404",
+          "rows": 1
+        },
+        {
+          "domain": "baolangson.vn",
+          "status": "200",
+          "rows": 1981
+        },
+        {
+          "domain": "baonghean.vn",
+          "status": "200",
+          "rows": 15941
+        },
+        {
+          "domain": "baophutho.vn",
+          "status": "200",
+          "rows": 1288
+        },
+        {
+          "domain": "baoquangninh.vn",
+          "status": "200",
+          "rows": 2911
+        },
+        {
+          "domain": "baoquangninh.vn",
+          "status": "dead",
+          "rows": 1
+        },
+        {
+          "domain": "baotayninh.vn",
+          "status": "200",
+          "rows": 1198
+        },
+        {
+          "domain": "baothanhhoa.vn",
+          "status": "200",
+          "rows": 782
+        },
+        {
+          "domain": "baovinhlong.com.vn",
+          "status": "200",
+          "rows": 5113
+        },
+        {
+          "domain": "benhviennhitrunguong.gov.vn",
+          "status": "200",
+          "rows": 1200
+        },
+        {
+          "domain": "benhvienvietduc.org",
+          "status": "200",
+          "rows": 425
+        },
+        {
+          "domain": "byby.39.net",
+          "status": "200",
+          "rows": 37
+        },
+        {
+          "domain": "cancer.39.net",
+          "status": "200",
+          "rows": 736
+        },
+        {
+          "domain": "dantri.com.vn",
+          "status": "200",
+          "rows": 1000
+        },
+        {
+          "domain": "familydoctor.cn",
+          "status": "200",
+          "rows": 2
+        },
+        {
+          "domain": "familydoctor.com.cn",
+          "status": "200",
+          "rows": 26819
+        },
+        {
+          "domain": "fitness.39.net",
+          "status": "200",
+          "rows": 185
+        },
+        {
+          "domain": "fk.39.net",
+          "status": "200",
+          "rows": 928
+        },
+        {
+          "domain": "gc.39.net",
+          "status": "200",
+          "rows": 59
+        },
+        {
+          "domain": "giadinhonline.vn",
+          "status": "200",
+          "rows": 16729
+        },
+        {
+          "domain": "hanoimoi.vn",
+          "status": "200",
+          "rows": 1283
+        },
+        {
+          "domain": "health.people.com.cn",
+          "status": "200",
+          "rows": 50
+        },
+        {
+          "domain": "heart.39.net",
+          "status": "200",
+          "rows": 1055
+        },
+        {
+          "domain": "hellobacsi.com",
+          "status": "200",
+          "rows": 11744
+        },
+        {
+          "domain": "hellobacsi.com",
+          "status": "dead",
+          "rows": 3
+        },
+        {
+          "domain": "jbk.39.net",
+          "status": "200",
+          "rows": 2033
+        },
+        {
+          "domain": "khoahocphothong.vn",
+          "status": "200",
+          "rows": 8143
+        },
+        {
+          "domain": "laodong.vn",
+          "status": "200",
+          "rows": 31282
+        },
+        {
+          "domain": "man.39.net",
+          "status": "200",
+          "rows": 382
+        },
+        {
+          "domain": "medlatec.vn",
+          "status": "200",
+          "rows": 24707
+        },
+        {
+          "domain": "medlatec.vn",
+          "status": "404",
+          "rows": 55
+        },
+        {
+          "domain": "mega.vietnamplus.vn",
+          "status": "200",
+          "rows": 2
+        },
+        {
+          "domain": "nhandan.vn",
+          "status": "200",
+          "rows": 5224
+        },
+        {
+          "domain": "nhandan.vn",
+          "status": "404",
+          "rows": 1
+        },
+        {
+          "domain": "nk.39.net",
+          "status": "200",
+          "rows": 762
+        },
+        {
+          "domain": "pf.39.net",
+          "status": "200",
+          "rows": 85
+        },
+        {
+          "domain": "pharmacity.vn",
+          "status": "200",
+          "rows": 65
+        },
+        {
+          "domain": "pharmacity.vn",
+          "status": "404",
+          "rows": 4
+        },
+        {
+          "domain": "phuyen.baodaklak.vn",
+          "status": "200",
+          "rows": 6252
+        },
+        {
+          "domain": "pmc-ecm-healthblog.beta.pharmacity.io",
+          "status": "403",
+          "rows": 41
+        },
+        {
+          "domain": "qy.familydoctor.com.cn",
+          "status": "200",
+          "rows": 2
+        },
+        {
+          "domain": "sggp.org.vn",
+          "status": "200",
+          "rows": 1853
+        },
+        {
+          "domain": "shen.39.net",
+          "status": "200",
+          "rows": 325
+        },
+        {
+          "domain": "sj.39.net",
+          "status": "200",
+          "rows": 197
+        },
+        {
+          "domain": "test.pmphai.com",
+          "status": "200",
+          "rows": 2989
+        },
+        {
+          "domain": "thanhnien.vn",
+          "status": "200",
+          "rows": 72111
+        },
+        {
+          "domain": "tiemchunglongchau.com.vn",
+          "status": "200",
+          "rows": 13276
+        },
+        {
+          "domain": "tiemchunglongchau.com.vn",
+          "status": "404",
+          "rows": 5
+        },
+        {
+          "domain": "tnb.39.net",
+          "status": "200",
+          "rows": 717
+        },
+        {
+          "domain": "tuoitre.vn",
+          "status": "200",
+          "rows": 3893
+        },
+        {
+          "domain": "vietnamnet.vn",
+          "status": "200",
+          "rows": 15542
+        },
+        {
+          "domain": "vietnamnet.vn",
+          "status": "404",
+          "rows": 1
+        },
+        {
+          "domain": "vietnamplus.vn",
+          "status": "200",
+          "rows": 3695
+        },
+        {
+          "domain": "vinmec.com",
+          "status": "200",
+          "rows": 26126
+        },
+        {
+          "domain": "vinmec.com",
+          "status": "404",
+          "rows": 3
+        },
+        {
+          "domain": "vnexpress.net",
+          "status": "200",
+          "rows": 2055
+        },
+        {
+          "domain": "vov.vn",
+          "status": "200",
+          "rows": 9782
+        },
+        {
+          "domain": "vov.vn",
+          "status": "dead",
+          "rows": 2
+        },
+        {
+          "domain": "vov2.vov.vn",
+          "status": "200",
+          "rows": 6899
+        },
+        {
+          "domain": "wei.39.net",
+          "status": "200",
+          "rows": 225
+        },
+        {
+          "domain": "zhongyibaodian.net",
+          "status": "200",
+          "rows": 6061
+        },
+        {
+          "domain": "zysjonline.com",
+          "status": "403",
+          "rows": 42
+        }
+      ]
+    },
+    {
+      "path": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_C.sqlite3",
+      "tables": {
+        "crawl_state": "CREATE TABLE crawl_state (\n                id INTEGER PRIMARY KEY,\n                url TEXT,\n                domain TEXT,\n                status TEXT,\n                final_url TEXT,\n                ts INTEGER\n            )",
+        "state_meta": "CREATE TABLE state_meta (\n                key TEXT PRIMARY KEY,\n                value TEXT\n            )"
+      },
+      "by_domain_status": [
+        {
+          "domain": "120ask.com",
+          "status": "200",
+          "rows": 98151
+        },
+        {
+          "domain": "120ask.com",
+          "status": "404",
+          "rows": 9
+        },
+        {
+          "domain": "ask.familydoctor.com.cn",
+          "status": "200",
+          "rows": 1
+        },
+        {
+          "domain": "baidianfeng.familydoctor.com.cn",
+          "status": "200",
+          "rows": 60
+        },
+        {
+          "domain": "baocantho.com.vn",
+          "status": "200",
+          "rows": 12016
+        },
+        {
+          "domain": "baochinhphu.vn",
+          "status": "200",
+          "rows": 2301
+        },
+        {
+          "domain": "baochinhphu.vn",
+          "status": "404",
+          "rows": 1
+        },
+        {
+          "domain": "baodanang.vn",
+          "status": "200",
+          "rows": 14500
+        },
+        {
+          "domain": "baogialai.com.vn",
+          "status": "200",
+          "rows": 3287
+        },
+        {
+          "domain": "baogialai.com.vn",
+          "status": "404",
+          "rows": 3
+        },
+        {
+          "domain": "baohaiphong.vn",
+          "status": "200",
+          "rows": 16286
+        },
+        {
+          "domain": "bingli.iiyi.com",
+          "status": "521",
+          "rows": 5
+        },
+        {
+          "domain": "care.39.net",
+          "status": "200",
+          "rows": 1282
+        },
+        {
+          "domain": "cnkang.com",
+          "status": "200",
+          "rows": 40035
+        },
+        {
+          "domain": "cnkang.com",
+          "status": "404",
+          "rows": 11
+        },
+        {
+          "domain": "dantri.com.vn",
+          "status": "200",
+          "rows": 2063
+        },
+        {
+          "domain": "familydoctor.com.cn",
+          "status": "200",
+          "rows": 26819
+        },
+        {
+          "domain": "fk.39.net",
+          "status": "200",
+          "rows": 928
+        },
+        {
+          "domain": "food.39.net",
+          "status": "200",
+          "rows": 594
+        },
+        {
+          "domain": "jb39.com",
+          "status": "200",
+          "rows": 527
+        },
+        {
+          "domain": "khoahocphothong.vn",
+          "status": "200",
+          "rows": 8143
+        },
+        {
+          "domain": "msdmanuals.cn",
+          "status": "200",
+          "rows": 835
+        },
+        {
+          "domain": "msdmanuals.cn",
+          "status": "404",
+          "rows": 70
+        },
+        {
+          "domain": "phunusuckhoe.giadinhonline.vn",
+          "status": "200",
+          "rows": 27577
+        },
+        {
+          "domain": "pubmed.ncbi.nlm.nih.gov",
+          "status": "203",
+          "rows": 43
+        },
+        {
+          "domain": "qihuangzhishu.com",
+          "status": "200",
+          "rows": 29
+        },
+        {
+          "domain": "shen.39.net",
+          "status": "200",
+          "rows": 325
+        },
+        {
+          "domain": "sj.39.net",
+          "status": "200",
+          "rows": 197
+        },
+        {
+          "domain": "special.vietnamplus.vn",
+          "status": "200",
+          "rows": 1
+        },
+        {
+          "domain": "suckhoecongdongonline.vn",
+          "status": "200",
+          "rows": 154503
+        },
+        {
+          "domain": "suckhoedoisong.vn",
+          "status": "200",
+          "rows": 85811
+        },
+        {
+          "domain": "suckhoedoisong.vn",
+          "status": "dead",
+          "rows": 12
+        },
+        {
+          "domain": "test.pmphai.com",
+          "status": "200",
+          "rows": 2989
+        },
+        {
+          "domain": "tienphong.vn",
+          "status": "200",
+          "rows": 3021
+        },
+        {
+          "domain": "tuoitre.vn",
+          "status": "200",
+          "rows": 3893
+        },
+        {
+          "domain": "vov2.vov.vn",
+          "status": "200",
+          "rows": 6899
+        },
+        {
+          "domain": "wei.39.net",
+          "status": "200",
+          "rows": 225
+        },
+        {
+          "domain": "woman.39.net",
+          "status": "200",
+          "rows": 687
+        },
+        {
+          "domain": "youmed.vn",
+          "status": "200",
+          "rows": 7187
+        },
+        {
+          "domain": "youmed.vn",
+          "status": "404",
+          "rows": 2
+        },
+        {
+          "domain": "zhongyibaodian.net",
+          "status": "200",
+          "rows": 6061
+        },
+        {
+          "domain": "zydcd.com",
+          "status": "200",
+          "rows": 204
+        },
+        {
+          "domain": "zysjonline.com",
+          "status": "403",
+          "rows": 43
+        }
+      ]
+    }
+  ],
+  "last_runs": [
+    {
+      "path": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/last_run_A.json",
+      "data": {
+        "member": "A",
+        "version": "v5",
+        "start": "Fri Oct 23 16:15:15 2026",
+        "end": "Fri Oct 23 16:15:29 2026",
+        "seconds": 14,
+        "stats": {
+          "pmc-ecm-healthblog.beta.pharmacity.io": {
+            "ok": 0,
+            "fail": 41,
+            "captcha": 0,
+            "tried": 41,
+            "skipped": true
+          },
+          "article.iiyi.com": {
+            "ok": 0,
+            "fail": 43,
+            "captcha": 0,
+            "tried": 43,
+            "skipped": true
+          }
+        },
+        "rates": {}
+      }
+    },
+    {
+      "path": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/last_run_C.json",
+      "data": {
+        "member": "C",
+        "version": "v5",
+        "start": "Fri Oct 23 15:59:28 2026",
+        "end": "Fri Oct 23 15:59:35 2026",
+        "seconds": 7,
+        "stats": {
+          "pubmed.ncbi.nlm.nih.gov": {
+            "ok": 0,
+            "fail": 40,
+            "captcha": 0,
+            "tried": 40,
+            "skipped": true
+          },
+          "zysjonline.com": {
+            "ok": 0,
+            "fail": 40,
+            "captcha": 0,
+            "tried": 40,
+            "skipped": true
+          },
+          "bingli.iiyi.com": {
+            "ok": 0,
+            "fail": 5,
+            "captcha": 0,
+            "tried": 5,
+            "skipped": false
+          }
+        },
+        "rates": {}
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,2 @@
+# Chỉ cần PyArrow để đọc Parquet; các phân tích còn lại dùng thư viện chuẩn.
+pyarrow>=15

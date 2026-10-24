@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" role="img">
+<title>HTTP status by corpus rows</title>
+<rect width="100%" height="100%" fill="white"/>
+<text x="24" y="32" font-family="sans-serif" font-size="20">HTTP status by corpus rows</text>
+<text x="24" y="80" font-family="sans-serif" font-size="12">200</text>
+<rect x="345" y="65" width="480.0" height="21" fill="#2563eb"/>
+<text x="835.0" y="80" font-family="sans-serif" font-size="12">1,101,858</text>
+<text x="24" y="110" font-family="sans-serif" font-size="12">dead</text>
+<rect x="345" y="95" width="1.0" height="21" fill="#2563eb"/>
+<text x="356.0" y="110" font-family="sans-serif" font-size="12">2,251</text>
+<text x="24" y="140" font-family="sans-serif" font-size="12">403</text>
+<rect x="345" y="125" width="0.2" height="21" fill="#2563eb"/>
+<text x="355.2" y="140" font-family="sans-serif" font-size="12">451</text>
+<text x="24" y="170" font-family="sans-serif" font-size="12">203</text>
+<rect x="345" y="155" width="0.1" height="21" fill="#2563eb"/>
+<text x="355.1" y="170" font-family="sans-serif" font-size="12">244</text>
+<text x="24" y="200" font-family="sans-serif" font-size="12">404</text>
+<rect x="345" y="185" width="0.1" height="21" fill="#2563eb"/>
+<text x="355.1" y="200" font-family="sans-serif" font-size="12">198</text>
+<text x="24" y="230" font-family="sans-serif" font-size="12">521</text>
+<rect x="345" y="215" width="0.1" height="21" fill="#2563eb"/>
+<text x="355.1" y="230" font-family="sans-serif" font-size="12">153</text>
+<text x="24" y="260" font-family="sans-serif" font-size="12">TimeoutError</text>
+<rect x="345" y="245" width="0.0" height="21" fill="#2563eb"/>
+<text x="355.0" y="260" font-family="sans-serif" font-size="12">5</text>
+</svg>

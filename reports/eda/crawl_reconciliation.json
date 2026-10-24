@@ -1,0 +1,26 @@
+[
+  {
+    "member": "A",
+    "database": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_A.sqlite3",
+    "state_ids": 147786,
+    "state_ids_without_shard": 0,
+    "shard_ids_without_state": 0,
+    "state_2xx_ids_without_nonempty_2xx_text": 120
+  },
+  {
+    "member": "B",
+    "database": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_B.sqlite3",
+    "state_ids": 429143,
+    "state_ids_without_shard": 0,
+    "shard_ids_without_state": 0,
+    "state_2xx_ids_without_nonempty_2xx_text": 16
+  },
+  {
+    "member": "C",
+    "database": "/home/duyhoang/Downloads/AI_Guru/Data/ViBioMIR/state_C.sqlite3",
+    "state_ids": 527636,
+    "state_ids_without_shard": 0,
+    "shard_ids_without_state": 0,
+    "state_2xx_ids_without_nonempty_2xx_text": 49
+  }
+]

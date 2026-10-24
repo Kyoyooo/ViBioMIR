@@ -1,0 +1,47 @@
+{
+  "queries": {
+    "file": "/home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/query.parquet",
+    "rows": 1200,
+    "unique_valid_ids": 1200,
+    "expected_rows": 1200,
+    "has_1200_unique_valid_ids": true,
+    "duplicate_id_groups": 0,
+    "duplicate_normalized_query_groups": 0,
+    "quality_flags": {},
+    "mean_characters": 129.50583333333333,
+    "median_characters_lower": 81,
+    "max_characters": 1243,
+    "whitespace_units": {
+      "min": 5,
+      "p50_lower": 18,
+      "p95_lower": 84,
+      "max": 281
+    },
+    "language_hints": {
+      "vi_diacritics": 1200
+    }
+  },
+  "official_links": {
+    "file": "/home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/links_corpus_vi_en_zh.parquet",
+    "rows": 1220598,
+    "unique_valid_ids": 1220598,
+    "invalid_ids": 0,
+    "invalid_urls": 0,
+    "domains": 94,
+    "duplicate_id_extra_rows": 0,
+    "official_ids_with_shard": 855745,
+    "official_ids_with_nonempty_2xx_text": 852995,
+    "official_ids_with_only_mismatched_source_urls": 0,
+    "shard_ids_outside_official_corpus": 0,
+    "official_ids_without_shard": 364853,
+    "nonempty_2xx_id_coverage": 0.6988336864389422,
+    "note": "Coverage refers to the scanned shards; a partial run understates full coverage. Domain coverage counts unique IDs, using MIN(domain) for ambiguous duplicate official IDs. Source URL matching is exact; redirects/encoding differences need manual review."
+  },
+  "official_source": {
+    "repository": "AIGuruTinix/ViBioMIR",
+    "revision": "71be0e1239a19dfd7a717e2bc13e3bec21bd0334",
+    "retrieved_at_vietnam": "2026-10-24T02:00:16+07:00",
+    "metadata_url": "https://huggingface.co/api/datasets/AIGuruTinix/ViBioMIR/revision/71be0e1239a19dfd7a717e2bc13e3bec21bd0334",
+    "manifest": "/home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/provenance.json"
+  }
+}
