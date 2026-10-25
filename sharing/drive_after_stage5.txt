@@ -1,0 +1,3 @@
+# Upload only after build-chunks completes, validate-chunks passes and writers stop.
+# Include manifest.json, VALIDATION.json and every committed batch-* directory.
+artifacts/chunks_stage5_full_structure/
