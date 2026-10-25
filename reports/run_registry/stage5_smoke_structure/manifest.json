@@ -1,0 +1,34 @@
+{
+  "format": "vibiomir-document-batches-v1",
+  "identity": {
+    "operation": "build-chunks",
+    "parent_signature": "01d55084ddec9f8642e947d65825d5bc8fd9339200dddd2317b7cff175d67b4c",
+    "code": {
+      "chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+      "chunking.py": "7bb7148d4f7404404693bd1fc4de7dd88300186d6b9c62604d627fb68e4cd176",
+      "chunk_models.py": "05383a2d6faa8606016de3c1625fc1f97f4e88bd7a131ee92e85f9c252d7a274",
+      "chunk_pipeline.py": "b55d114a46757f7ddc8ffc228283e01c1ea4af67e15e0b5d20342e4ae0db27ba",
+      "document_contracts.py": "c2a4f7a26d854ecd3fa0c42da8cdd9ffb22f1ad0cdc3e30da283510f39774e34"
+    },
+    "strategy": "structure",
+    "config": {
+      "target_tokens": 384,
+      "max_tokens": 512,
+      "overlap_tokens": 64,
+      "min_tokens": 128,
+      "context_tokens": 48,
+      "semantic_threshold": 0.65
+    },
+    "tokenizer": "54f28ea626d993cf151f6e55267e0e863359d6b359e8102f54a510341f5fc18e",
+    "encoder": null
+  },
+  "signature": "ded01f5934bcdf2ed972c7275ae3191bf1a01d1d82dd8e517ba3e92eecfcd019",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "elapsed_seconds_last_invocation": 8.184,
+  "batches": 4,
+  "documents": 200,
+  "chunks": 687
+}
