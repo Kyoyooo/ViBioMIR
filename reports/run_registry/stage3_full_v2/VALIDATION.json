@@ -1,0 +1,16 @@
+{
+  "validation": "passed",
+  "tables": {
+    "blocks": 28320695,
+    "content_groups": 876142,
+    "document_aliases": 67990,
+    "document_selection": 855745,
+    "document_versions": 913969,
+    "input_records": 1105160,
+    "version_review": 913969
+  },
+  "source_checksums_verified": true,
+  "selection_is_final": false,
+  "human_qa": "pending",
+  "gpu_required": false
+}
