@@ -1,0 +1,11 @@
+{
+  "unique_sample_records_checked": 646,
+  "source_files_checked": 442,
+  "random_sample_records_checked": 600,
+  "records_failing_consistency": 0,
+  "packet_duplicate_conflict_records": 0,
+  "signal_examples_checked": 3161,
+  "exact_block_join_matches": 625,
+  "normalized_block_join_matches": 625,
+  "interpretation": "Source consistency only; not main-content correctness, human review or clinical validation."
+}
