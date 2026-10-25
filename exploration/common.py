@@ -69,7 +69,7 @@ def write_csv(path, columns, rows):
         writer.writerows(rows)
 
 
-def parquet_batches(path, columns=None, batch_size=512):
+def parquet_batches(path, columns=None, batch_size=512, row_groups=None):
     with pq.ParquetFile(path) as pf:
         selected = None if columns is None else [c for c in columns if c in pf.schema_arrow.names]
-        yield from pf.iter_batches(batch_size=batch_size, columns=selected)
+        yield from pf.iter_batches(batch_size=batch_size, columns=selected, row_groups=row_groups)
