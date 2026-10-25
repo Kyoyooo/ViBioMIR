@@ -1,131 +1,138 @@
-# ViBioMIR: Truy hồi thông tin y sinh đa ngôn ngữ
+# ViBioMIR: multilingual biomedical information retrieval
 
-Tài liệu tổng hợp đặc tả do người dùng cung cấp, được bổ sung từ dataset card,
-metadata repository và các tệp Parquet chính thức trên Hugging Face ngày
-24/10/2026. Phần đánh giá, hạn chế mô hình và submission vẫn dựa trên đặc tả
-người dùng; dataset card không mô tả đầy đủ các quy định này. Khi có cập nhật,
-ưu tiên thông báo và bộ chấm chính thức của Ban Tổ chức (BTC).
+This document consolidates the user-provided competition specification, with
+additions from the Hugging Face dataset card, repository metadata, and official
+Parquet files inspected on 2026-10-24. Evaluation, model restrictions, and
+submission rules remain based on the user-provided specification: the dataset
+card does not describe all of them. Official organizer announcements and the
+official evaluator take precedence when updated.
 
-## 1. Bối cảnh
+The English translation preserves the original file path. Historical dataset
+statistics below refer to the inspected revision. The user subsequently supplied
+an updated reference list of **1,194,469 URLs: 714,469 VI, 240,000 ZH, 240,000 EN**.
+See the [development specification](SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md) for the
+version discrepancy and current scope: audit and process existing local data;
+recrawling is deferred and complete URL acquisition is not a prerequisite.
 
-Tri thức y sinh phân bố không đồng đều giữa các ngôn ngữ. Nguồn tiếng Việt đang
-mở rộng nhưng còn hạn chế về chiều sâu và chuyên môn so với nguồn tiếng Anh và
-tiếng Trung. Điều này tạo khoảng cách thông tin y tế đối với người dùng tiếng Việt.
+## 1. Background
 
-Cuộc thi yêu cầu xây dựng hệ thống truy hồi thông tin y sinh đa ngôn ngữ: đầu vào
-là truy vấn tiếng Việt, đầu ra là các tài liệu và đoạn nội dung liên quan, bất kể
-nguồn viết bằng tiếng Việt, tiếng Anh hay tiếng Trung. Đây là nhiệm vụ **truy hồi**;
-không yêu cầu sinh câu trả lời y khoa.
+Biomedical knowledge is distributed unevenly across languages. Vietnamese
+resources are growing but remain more limited in depth and specialization than
+English and Chinese resources, creating an information-access gap for Vietnamese
+users.
 
-## 2. Hình thức hóa và mục tiêu
+The competition asks teams to build multilingual biomedical retrieval systems:
+queries are in Vietnamese, while relevant documents and passages may be in
+Vietnamese, English, or Chinese. The task is **retrieval**; generating medical
+answers is not required.
 
-Cho tập truy vấn tiếng Việt `Q = {q₁, q₂, …, qₙ}` và các nguồn y sinh được BTC cung
-cấp/chỉ định. Với mỗi truy vấn, hệ thống tìm và xếp hạng tài liệu hoặc nội dung
-liên quan từ ba ngôn ngữ Việt–Anh–Trung.
+## 2. Formalization and objectives
 
-Các đội tự thiết kế quy trình thu thập → tiền xử lý → phân đoạn → embedding/lập
-chỉ mục → truy hồi → reranking/hậu xử lý. BTC không cung cấp pipeline embedding
-hoặc indexing sẵn có.
+Given Vietnamese queries `Q = {q₁, q₂, …, qₙ}` and organizer-provided or designated
+biomedical sources, retrieve and rank relevant documents or content from the
+three languages for each query.
 
-Ba yêu cầu chính:
+Teams design acquisition → preprocessing → chunking → embedding/indexing →
+retrieval → reranking/postprocessing. The organizers do not supply a ready-made
+embedding or indexing pipeline.
 
-1. **Cấp tài liệu:** xác định đúng tài liệu liên quan; truy hồi xuyên ngôn ngữ,
-   vượt ra ngoài so khớp từ khóa.
-2. **Cấp đoạn nội dung:** xác định phần thực sự chứa thông tin liên quan. Đội thi
-   chủ động thiết kế cách phân đoạn và đơn vị truy hồi.
-3. **Hiểu truy vấn y khoa tiếng Việt:** xử lý thuật ngữ, khái niệm y khoa/lâm sàng
-   và câu hỏi có nhiều thông tin hoặc nhiều ý.
+The three core objectives are:
 
-## 3. Dữ liệu chính thức
+1. **Document retrieval:** identify relevant documents through cross-language
+   retrieval, beyond keyword overlap.
+2. **Chunk retrieval:** locate passages that actually contain relevant information.
+   Teams choose segmentation methods and retrieval units.
+3. **Vietnamese medical query understanding:** handle medical/clinical terms,
+   concepts, and questions containing multiple facts or intents.
 
-Nguồn: [Hugging Face — AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR).
+## 3. Official data
 
-### 3.1. Truy vấn: `query.parquet`
+Source: [Hugging Face — AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR).
 
-| Trường | Kiểu | Ý nghĩa |
+### 3.1. Queries: `query.parquet`
+
+| Field | Type | Meaning |
 | --- | --- | --- |
-| `id` | integer | Mã định danh truy vấn |
-| `query` | string | Câu hỏi y khoa tiếng Việt |
+| `id` | integer | Query identifier |
+| `query` | string | Vietnamese medical question |
 
-Ví dụ:
+Original-language example:
 
 ```json
 {"id": 1, "query": "Cần làm gì đối với tình trạng tắc nghẽn đường tiết niệu do sỏi thận?"}
 ```
 
-Nộp kết quả cho **toàn bộ 1.200 truy vấn đã phát hành ở cả hai giai đoạn**. Hệ
-thống tự chọn truy vấn thuộc public/private phase để chấm; đội thi không cần biết
-trước cách chia phase.
+Submit predictions for **all 1,200 queries released across both phases**. The
+platform selects public/private phase queries for scoring; teams do not need to
+know the split in advance.
 
-### 3.2. Danh sách tài liệu: `links_corpus_vi_en_zh.parquet`
+### 3.2. Documents: `links_corpus_vi_en_zh.parquet`
 
-**Tên tệp thực tế trên Hugging Face là `links_corpus_vi_en_zh.parquet`**;
-`links_corpus.parquet` là tên được nhắc trong đặc tả ban đầu của cuộc thi.
-Mã EDA hỗ trợ cả hai tên, nhưng yêu cầu chỉ định đường dẫn khi tìm thấy nhiều
-tệp để tránh chọn nhầm phiên bản. Các tham chiếu `links_corpus.parquet` trong
-phần quy định bên dưới giữ cách gọi của đặc tả ban đầu.
+**The actual Hugging Face filename is `links_corpus_vi_en_zh.parquet`**;
+`links_corpus.parquet` is the name used in the original competition description.
+EDA supports both names and requires explicit paths if multiple files are found.
+References to `links_corpus.parquet` in the rules below retain the original naming.
 
-| Trường | Kiểu | Ý nghĩa |
+| Field | Type | Meaning |
 | --- | --- | --- |
-| `id` | integer | ID tài liệu chính thức, dùng để chấm |
-| `url` | string | Liên kết bài viết gốc cần thu thập |
-
-Ví dụ:
+| `id` | integer | Official document ID used for evaluation |
+| `url` | string | Original article URL to acquire |
 
 ```json
 {"id": 1, "url": "https://example.com/article"}
 ```
 
-Đội thi tự crawl, xử lý, phân đoạn và xây dựng cơ sở tri thức. Trong phiên bản
-đánh giá này, **mọi nhãn tài liệu đều dùng `id` trong `links_corpus.parquet`**.
-Tài liệu ngoài danh sách không được tính là nhãn dương. Phải bảo toàn ánh xạ
-`id → URL → văn bản → chunk`, kể cả khi URL chuyển hướng hoặc nội dung trùng nhau.
+Teams acquire, process, segment, and build the knowledge base. In this evaluation
+version, **all document labels use `id` from `links_corpus.parquet`**. Documents
+outside the list do not count as positives. Preserve the mapping
+`id → URL → text → chunk`, including redirects and duplicate content.
 
-### 3.3. Thống kê do dataset card công bố
+### 3.3. Statistics published in the inspected dataset card
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | ---: |
-| Truy vấn | 1.200 |
-| Số từ truy vấn: trung vị / P95 | 18 / 84 |
-| Số từ truy vấn: min–max | 5–283 |
-| Tổng liên kết | 1.220.598 |
-| Liên kết tiếng Việt | 740.598 |
-| Liên kết tiếng Anh | 240.000 |
-| Liên kết tiếng Trung | 240.000 |
+| Queries | 1,200 |
+| Query word count: median / P95 | 18 / 84 |
+| Query word count: minimum–maximum | 5–283 |
+| Total links in the inspected revision | 1,220,598 |
+| Vietnamese links | 740,598 |
+| English links | 240,000 |
+| Chinese links | 240,000 |
 
-Nguồn tiếng Anh gồm tài liệu PubMed. Các số theo ngôn ngữ và số từ ở bảng này
-là **thống kê công bố**, không phải kết quả nhận diện ngôn ngữ của EDA. Hai tệp
-Parquet chỉ có các trường đã mô tả, không có cột nhãn ngôn ngữ/intent/chủ đề/năm
-để gán chính xác từng tài liệu theo các nhóm trên. Dataset card có các hình
-thống kê theo thể loại, năm và độ dài; không suy ra rằng các nhãn đó được phát hành.
+English sources include PubMed documents. Language and word-count totals here
+are **published statistics**, not EDA language-identification results. The two
+Parquet files contain only the fields described above; they do not expose
+language, intent, topic, or year labels for each document. The card includes
+figures by category, year, and length, but this does not establish that those
+labels are released.
 
-Nguồn: [dataset card ở revision đã tải](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR/blob/71be0e1239a19dfd7a717e2bc13e3bec21bd0334/README.md).
+Source: [dataset card at the downloaded revision](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR/blob/71be0e1239a19dfd7a717e2bc13e3bec21bd0334/README.md).
 
-Kiểm tra trực tiếp query bằng `str.split()` cho min/P50/P95/max lần lượt là
-**5/18/84/281**. Max khác số công bố 283; chưa có mô tả cách đếm từ để giải thích
-chênh lệch này. Giữ riêng thống kê công bố và thống kê EDA, không sửa câu hỏi.
+Direct query inspection using `str.split()` yields minimum/P50/P95/maximum
+**5/18/84/281**. The maximum differs from the published 283; the published
+counting method is unspecified. Keep published and measured statistics separate
+and preserve query text.
 
-### 3.4. Config và split trên Hugging Face
+### 3.4. Hugging Face configurations and splits
 
-| Config | Split | Tệp |
+| Configuration | Split | File |
 | --- | --- | --- |
 | `query` | `train` | `query.parquet` |
 | `corpus` | `train` | `links_corpus_vi_en_zh.parquet` |
 
-`train` ở đây là tên split kỹ thuật trong metadata Hugging Face. Nó không xác
-nhận đây là tập huấn luyện có nhãn, cũng không cung cấp cách chia public/private
-phase. Repository ở revision đã kiểm tra không phát hành qrels hoặc nhãn chunk.
-Schema đọc trực tiếp: query có `id: int64 not null`, `query: string not null`;
-corpus có `id: int64`, `url: string`.
+`train` is a technical split name in Hugging Face metadata. It does not establish
+a labeled training set or reveal the public/private split. The inspected
+revision contains no qrels or chunk relevance labels. Directly read schemas:
+query has `id: int64 not null`, `query: string not null`; corpus has
+`id: int64`, `url: string`.
 
-### 3.5. Giấy phép và trích dẫn
+### 3.5. License and citation
 
-Dataset card nêu giấy phép **CC BY-NC 4.0** và yêu cầu ghi công khi sử dụng.
-Điều khoản của từng website nguồn vẫn cần được xem riêng khi thu thập/sử dụng
-nội dung. Đây là thông tin giấy phép ghi trên dataset card, không phải xác nhận
-giấy phép của mọi bài viết liên kết.
+The dataset card states **CC BY-NC 4.0** and requires attribution. Individual
+source websites have their own terms for acquisition and use. The dataset-card
+license does not establish the license of every linked article.
 
-Trích dẫn được đề nghị trong dataset card:
+The dataset card recommends this citation:
 
 ```bibtex
 @online{medkb,
@@ -135,12 +142,13 @@ Trích dẫn được đề nghị trong dataset card:
 }
 ```
 
-Ngày trong BibTeX là giá trị nguồn đề nghị; ngày tải thực tế được lưu riêng trong
-manifest. [Giấy phép được dataset card liên kết](https://creativecommons.org/licenses/by-nc/4.0/).
+The BibTeX date is the value recommended by the source; actual retrieval time is
+stored separately in the manifest.
+[License linked by the dataset card](https://creativecommons.org/licenses/by-nc/4.0/).
 
-### 3.6. Phiên bản và dữ liệu đã bổ sung cục bộ
+### 3.6. Version and locally downloaded files
 
-Repository: `AIGuruTinix/ViBioMIR`; commit đã tải:
+Repository: `AIGuruTinix/ViBioMIR`; downloaded commit:
 `71be0e1239a19dfd7a717e2bc13e3bec21bd0334`.
 
 ```text
@@ -151,87 +159,88 @@ Data/official/ViBioMIR/
 └── provenance.json
 ```
 
-Đã kiểm tra metadata: query có 1.200 dòng; danh sách corpus có 1.220.598 dòng.
-`provenance.json` lưu URL theo commit, thời điểm tải giờ Việt Nam, kích thước,
-SHA-256, schema và số dòng từng Parquet. Tệp chính thức được lưu riêng với các
-shard đã crawl. Script tải có thể chạy lại với output mới:
+Verified metadata: 1,200 query rows and 1,220,598 corpus-list rows.
+`provenance.json` records revision-specific URLs, retrieval time in Vietnam,
+bytes, SHA-256, schemas, and Parquet row counts. Official files are stored
+separately from crawled shards. Download another copy to a new output directory:
 
 ```bash
 python -m exploration.download_official --output-dir Data/official/ViBioMIR_copy
 ```
 
-Việc tải không thu thập lại các URL bài viết. Các bước EDA vẫn chạy cục bộ;
-script tải riêng là bước cần mạng.
+This downloads the reference files without crawling article URLs. EDA stages
+remain local; the separate download script requires network access.
 
-## 4. Dữ liệu ngoài và mô hình được phép
+## 4. External data and permitted models
 
-- Được dùng dữ liệu bên ngoài, nhưng phải trích dẫn rõ nguồn gốc, cung cấp đủ
-  thông tin để BTC có thể kiểm tra/xác minh.
-- Được dùng PLM và LLM có dữ liệu huấn luyện và/hoặc mô hình được công khai, ví dụ
-  trên Hugging Face hoặc nền tảng tương tự.
-- **Không được dùng LLM mô hình đóng**, ví dụ GPT-4o, Gemini.
-- Mô hình phải được phát hành **trước ngày 01/08/2026, theo giờ Việt Nam** và có
-  kích thước **không quá 15B tham số**. Ngưỡng thời gian là trước ngày đó, không
-  phải bao gồm cả ngày 01/08.
-- Có thể lựa chọn embedding đa ngôn ngữ phù hợp y học, thiết kế indexing/search,
-  reranking/hậu xử lý và dùng dữ liệu y học mở hợp pháp để huấn luyện/đánh giá bổ trợ.
+- External data is permitted with clear citations and sufficient provenance for
+  organizer verification.
+- PLMs and LLMs whose training data and/or models are publicly available may be
+  used, for example through Hugging Face or similar platforms.
+- **Closed models are prohibited**, including the examples GPT-4o and Gemini.
+- Models must have been released **before 2026-08-01 in Vietnam time**, with
+  **at most 15B parameters**. The cutoff excludes August 1 itself.
+- Teams may choose biomedical multilingual embeddings, indexing/search methods,
+  reranking/postprocessing, and legally usable open medical data for auxiliary
+  training or evaluation.
 
-Nên lưu manifest nguồn dữ liệu, URL, ngày thu thập, phiên bản, giấy phép nếu có;
-với mô hình, lưu tên, revision, số tham số và bằng chứng ngày phát hành. Đây là
-đề xuất quản lý provenance, không phải trường bắt buộc của file submission.
+Maintain data-source manifests with URLs, collection dates, versions, and
+licenses where available. For models, record the name, revision, parameter count,
+and evidence of release date. These are recommended provenance records, not
+additional required submission fields.
 
-## 5. Đánh giá
+## 5. Evaluation
 
-Đánh giá riêng ở **cấp document** và **cấp chunk** bằng Precision, Recall, F2.
-Tính các chỉ số cho **từng truy vấn**, sau đó lấy trung bình cộng trên toàn bộ
-truy vấn (**macro-average**).
+**Document** and **chunk** retrieval are evaluated separately using Precision,
+Recall, and F2. Calculate each metric **per query**, then take its arithmetic
+mean across queries (**macro-average**).
 
-### 5.1. Cấp tài liệu
+### 5.1. Document level
 
-Với một truy vấn, gọi `D` là tập tài liệu dự đoán, `G` là tập tài liệu liên quan
-theo nhãn tham chiếu:
+For one query, let `D` be the set of predicted document IDs and `G` the reference
+relevant-document set:
 
 ```text
 Precision_doc = |D ∩ G| / |D|
 Recall_doc    = |D ∩ G| / |G|
 ```
 
-`D` và `G` là tập hợp: không nên nộp ID lặp trong `relevant_docs`.
+`D` and `G` are sets; avoid duplicate IDs in `relevant_docs`.
 
-### 5.2. Quy tắc khớp chunk
+### 5.2. Chunk matching
 
-Chunk dự đoán chỉ đối chiếu với các chunk tham chiếu **cùng câu hỏi và cùng
-`doc_id`**. Chuẩn hóa văn bản hai phía theo thứ tự:
+Compare a predicted chunk only with reference chunks for the **same query and
+same `doc_id`**. Normalize both texts in this order:
 
-1. Chuẩn hóa Unicode NFKC.
-2. Giải mã HTML entity.
-3. Chuyển chữ thường.
-4. Gộp khoảng trắng liên tiếp và bỏ khoảng trắng đầu/cuối.
+1. Unicode NFKC normalization.
+2. HTML entity decoding.
+3. Lowercasing.
+4. Collapse consecutive whitespace and trim leading/trailing whitespace.
 
-Với chunk dự đoán `c` và chunk tham chiếu `g` sau chuẩn hóa:
+For normalized predicted chunk `c` and reference chunk `g`:
 
 ```text
 overlap(c, g) = LCS_tokens(c, g) / |g|
 ```
 
-`LCS_tokens` là độ dài **dãy con chung dài nhất** của hai chuỗi token: giữ thứ tự
-nhưng không yêu cầu liên tiếp. Mẫu số là số token của **chunk tham chiếu**.
-Một chunk dự đoán đúng nếu khớp **ít nhất một** chunk tham chiếu với overlap
-**≥ 0,40**.
+`LCS_tokens` is the length of the **longest common subsequence** of tokens:
+order is preserved, but adjacency is not required. The denominator is the
+**reference chunk's token count**. A prediction is correct if it matches
+**at least one** reference chunk with overlap **≥ 0.40**.
 
-### 5.3. Cấp đoạn nội dung
+### 5.3. Chunk level
 
 ```text
-Precision_chunk = số chunk dự đoán được tính đúng / tổng số chunk dự đoán
-Recall_chunk    = số chunk tham chiếu đã được tìm thấy / tổng số chunk tham chiếu
+Precision_chunk = correct predicted chunks / total predicted chunks
+Recall_chunk    = reference chunks found / total reference chunks
 ```
 
-Hai tử số khác nhau: một phía đếm chunk dự đoán đúng, một phía đếm chunk tham
-chiếu được phủ. Không mặc định rằng việc đối chiếu là ghép cặp một-một.
+The numerators count different things: correct predictions versus covered
+reference chunks. Do not assume one-to-one matching.
 
-### 5.4. F2 và macro-average
+### 5.4. F2 and macro-average
 
-Ở mỗi cấp và với từng truy vấn:
+For each level and query:
 
 ```text
 F2 = 5 × Precision × Recall / (4 × Precision + Recall)
@@ -240,21 +249,21 @@ macro_R  = (Σ Rᵢ) / n
 macro_F2 = (Σ F2ᵢ) / n
 ```
 
-F2 ưu tiên Recall hơn Precision. **Không** tính macro_F2 bằng cách thay macro_P
-và macro_R vào công thức F2. Cần cân bằng độ phủ và số kết quả trả về; chưa có
-quy định top-k tối đa trong thông tin được cung cấp.
+F2 weights Recall more heavily than Precision. **Do not** substitute macro_P
+and macro_R into the F2 formula to compute macro_F2. Balance coverage against
+the number of returned results; the supplied rules do not specify a maximum top-k.
 
-### 5.5. Các chi tiết chưa được đặc tả
+### 5.5. Unspecified evaluator details
 
-Thông tin hiện tại chưa xác định tokenizer dùng cho LCS (đặc biệt với tiếng
-Trung), quy ước mẫu số bằng 0/tập nhãn rỗng, cách xử lý chunk trùng và mọi chi
-tiết của bộ chấm. Không tự coi các giả định triển khai là quy định chính thức.
-Chưa có nhãn tham chiếu trong mô tả dữ liệu được cấp; EDA không thể tính điểm
-Precision/Recall/F2 thực tế nếu thiếu nhãn.
+The supplied information does not define the LCS tokenizer, especially for
+Chinese; zero-denominator/empty-gold conventions; duplicate-chunk handling; or
+all scorer implementation details. Local implementation assumptions are not
+official rules. EDA cannot calculate actual relevance Precision/Recall/F2 without
+reference relevance labels.
 
 ## 6. Submission
 
-File JSON là một mảng, mỗi phần tử ứng với một câu hỏi:
+The JSON file is an array with one object per query:
 
 ```json
 [
@@ -276,39 +285,40 @@ File JSON là một mảng, mỗi phần tử ứng với một câu hỏi:
 ]
 ```
 
-Ví dụ minh họa cấu trúc; các ID/văn bản trên không phải kết quả truy hồi thật.
+This original-language example illustrates structure. Its IDs/text are not
+actual retrieval results.
 
-| Trường | Yêu cầu |
+| Field | Requirement |
 | --- | --- |
-| `id` | ID câu hỏi, integer |
-| `relevant_docs` | Danh sách ID tài liệu liên quan |
-| `relevant_chunks` | Danh sách chunk liên quan |
-| `doc_id` | ID tài liệu gốc trong `links_corpus.parquet` |
-| `chunk_text` | Nội dung trích xuất từ tài liệu gốc, **không viết lại hoặc sinh mới** |
-| `chunk_order` | Tùy chọn, integer không âm; bỏ qua thì dùng vị trí chunk trong mảng |
+| `id` | Query ID, integer |
+| `relevant_docs` | Relevant document IDs |
+| `relevant_chunks` | Relevant chunks |
+| `doc_id` | Original document ID from `links_corpus.parquet` |
+| `chunk_text` | Content extracted from the original document; **not rewritten or generated** |
+| `chunk_order` | Optional nonnegative integer; otherwise the chunk's array position is used |
 
-Đặc tả có điểm chưa thống nhất về kiểu ID tài liệu: mẫu/ví dụ ban đầu dùng
-chuỗi (`"doc_id1"`), nhưng mô tả phiên bản hiện tại nói ID là integer từ
-`links_corpus.parquet`. Ví dụ trên dùng integer theo mô tả hiện tại; cần đối
-chiếu schema/validator chính thức trước khi nộp, không thay ID bằng URL hoặc ID tự tạo.
+The original example uses string document IDs such as `"doc_id1"`, while the
+current description specifies integer IDs from the corpus file. The example
+above follows the integer description. Check the official schema/validator
+before submission; do not replace IDs with URLs or invented identifiers.
 
-Nếu không có dự đoán ở một cấp, vẫn cung cấp trường tương ứng với `[]`. Bài
-nộp phải có đủ 1.200 truy vấn; thiếu câu hoặc sai định dạng sẽ không được đánh giá.
+If no results are predicted at a level, provide its field with `[]`. Include
+all 1,200 queries; missing questions or invalid formatting prevent evaluation.
 
-### Quy trình nộp
+### Submission procedure
 
-1. Sinh file `.json` tuân thủ schema và chứa toàn bộ câu hỏi.
-2. Nén thành ZIP **chỉ chứa duy nhất một file JSON ở thư mục gốc**, không có thư mục con.
-3. Tải ZIP tại **My Submissions** trên
+1. Generate a schema-compliant `.json` containing every query.
+2. Create a ZIP with **exactly one JSON file at its root**, without subdirectories.
+3. Upload through **My Submissions** at
    [leaderboard.aiguru.com.vn](https://leaderboard.aiguru.com.vn/).
 
-Mỗi đội bị giới hạn số lần nộp mỗi ngày để đảm bảo công bằng và tránh dò đáp án;
-chưa có con số cụ thể trong thông tin cung cấp. Bài thiếu file/thiếu câu không
-được đánh giá và không bị tính vào số lần nộp tối đa cho phép.
+Daily submission limits apply to support fairness and prevent answer probing;
+the provided information does not specify the number. Submissions missing the
+file or questions are not evaluated and do not count toward the allowed maximum.
 
-## 7. Dữ liệu đã crawl và lịch sử bổ sung
+## 7. Collected data and download history
 
-Khảo sát ban đầu tại `Data/ViBioMIR/`, trước khi tải tệp chính thức:
+Initial inspection of `Data/ViBioMIR/`, before official files were downloaded:
 
 ```text
 Data/ViBioMIR/
@@ -320,49 +330,52 @@ Data/ViBioMIR/
 └── last_run_C.json
 ```
 
-- Có 1.195 shard Parquet, tổng 2.428.459.143 byte tại thời điểm khảo sát.
-- Metadata ghi nhận tổng cộng 1.105.160 dòng. Có hai biến thể schema: 1.169
-  shard đầy đủ và 26 shard chỉ có metadata crawl, thiếu các cột nội dung.
-- Mẫu schema: `id`, `domain`, `url`, `status`, `final_url`, `ts`, `text_len`,
+- 1,195 Parquet shards, totaling 2,428,459,143 bytes at inspection time.
+- Metadata reports 1,105,160 rows across two schemas: 1,169 full-content shards
+  and 26 crawl-metadata-only shards lacking content columns.
+- Example columns: `id`, `domain`, `url`, `status`, `final_url`, `ts`, `text_len`,
   `ver`, `source`, `title`, `desc`, `canonical`, `method`, `blocks`, `text`, `html_trim`.
-- `blocks` trong mẫu là chuỗi JSON chứa danh sách `[loại_khối, văn_bản]`.
-- SQLite chứa `crawl_state(id, url, domain, status, final_url, ts)` và `state_meta`.
-- A/B/C là nhãn thư mục/nhóm thu thập; **không có bằng chứng đây là train/dev/test
-  hoặc phân chia public/private**.
-- `last_run_*.json` chỉ mô tả lần chạy gần nhất; không dùng làm tổng thống kê crawl.
-- Lượt khảo sát đầu tiên chưa có query/danh sách corpus chính thức. Hai tệp đã
-  được bổ sung ở `Data/official/ViBioMIR/` như mục 3.6; EDA truy vấn và độ phủ
-  chính thức hiện được xuất trong [báo cáo](../reports/eda/REPORT.md).
+- Sample `blocks` values are JSON strings containing `[block_kind, text]` lists.
+- SQLite contains `crawl_state(id, url, domain, status, final_url, ts)` and `state_meta`.
+- A/B/C identify folders/collection groups; **they do not establish train/dev/test
+  or public/private splits**.
+- `last_run_*.json` describes only the latest run, not aggregate acquisition totals.
+- The first inspection had no official query/corpus-list files. These were later
+  added under `Data/official/ViBioMIR/` as described in section 3.6. Query EDA and
+  reference coverage appear in the [report](../reports/eda/REPORT.md).
 
-### Đối chiếu sau khi bổ sung tệp chính thức
+### Reconciliation against the stored official snapshot
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | ---: |
-| Query hợp lệ, ID khác nhau | 1.200 |
-| ID tài liệu chính thức khác nhau | 1.220.598 |
-| ID đã có shard | 855.745 |
-| ID có text HTTP 2xx không rỗng | 852.995 |
-| Độ phủ text HTTP 2xx không rỗng | 69,88% |
-| ID chính thức chưa có shard | 364.853 |
-| ID trong shard ngoài danh sách chính thức | 0 |
-| ID đã crawl nhưng không có URL nguồn khớp nguyên văn | 0 |
+| Valid, distinct query IDs | 1,200 |
+| Distinct official document IDs | 1,220,598 |
+| IDs with shards | 855,745 |
+| IDs with nonempty HTTP 2xx text | 852,995 |
+| Nonempty HTTP 2xx text coverage | 69.88% |
+| Official IDs without shards | 364,853 |
+| Shard IDs outside the official list | 0 |
+| Collected IDs without any verbatim source-URL match | 0 |
 
-Danh sách chính thức gồm 94 tên miền. Phần thiếu tập trung ở 6 tên miền;
-riêng `pubmed.ncbi.nlm.nih.gov` có 240.000 ID chính thức nhưng chỉ 43 ID có
-bản ghi shard và **0 ID có text HTTP 2xx không rỗng**. Hai nguồn chưa có shard
-nào là `nhathuoclongchau.com.vn` (79.598 ID) và `ask.39.net` (32.772 ID).
-Đây là kết quả đối chiếu dữ liệu cục bộ, không phải số liệu do dataset card
-công bố, cũng không phải Recall truy hồi.
+The stored official list spans 94 domains. Missing IDs concentrate in six
+domains. `pubmed.ncbi.nlm.nih.gov` has 240,000 official IDs, only 43 with shard
+records, and **zero with nonempty HTTP 2xx text**. Two sources have no shards:
+`nhathuoclongchau.com.vn` (79,598 IDs) and `ask.39.net` (32,772 IDs).
+These are local reconciliation results for the stored snapshot, not dataset-card
+statistics or retrieval Recall. They do not establish coverage of the updated list.
 
-Chi tiết: [references_summary.json](../reports/eda/references_summary.json) và
-[độ phủ theo tên miền](../reports/eda/official_coverage_by_domain.csv).
+Details: [references_summary.json](../reports/eda/references_summary.json) and
+[coverage by domain](../reports/eda/official_coverage_by_domain.csv).
 
-## 8. Phạm vi triển khai hiện tại
+## 8. Current implementation scope
 
-Chỉ tổng hợp bài toán và khám phá dữ liệu đã thu thập: inventory/schema, trạng
-thái crawl, độ dài/chất lượng văn bản, trùng ID/URL/nội dung, dấu hiệu ngôn ngữ,
-thống kê khối nội dung tùy chọn, EDA 1.200 truy vấn, đối chiếu ID và URL nguồn với
-danh sách chính thức, thống kê độ phủ theo tên miền. Chưa huấn luyện, embedding, indexing, truy hồi,
-reranking hoặc tạo/nộp submission.
+Implemented work covers task consolidation and EDA of collected data: inventory,
+schemas, crawl states, text lengths/quality, duplicate IDs/URLs/content, language
+hints, optional block statistics, analysis of 1,200 queries, official ID/source-URL
+reconciliation, and coverage by domain. Training, embeddings, indexing, retrieval,
+reranking, and submission creation/upload have not been implemented.
 
-Hướng dẫn chạy và diễn giải giới hạn: [README](../README.md).
+The next development stage is the deeper S00 audit in the
+[development specification](SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md). Current scope
+accepts incomplete acquisition and defers recrawling. See the [README](../README.md)
+for commands and interpretation limits.
