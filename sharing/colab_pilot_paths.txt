@@ -1,0 +1,5 @@
+# Upload the notebook from this repository to Colab.
+colab/stage5_semantic.ipynb
+# Create this bundle manually using scripts/make_stage5_colab_bundle.py first.
+# This ZIP does not exist merely because it is listed here.
+artifacts/stage5_colab_pilot.zip
