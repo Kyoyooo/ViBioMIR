@@ -1,0 +1,109 @@
+{
+  "observed_at_utc": "2026-10-25T16:07:43.795637+00:00",
+  "purpose": "Read-only review metadata, not runnable checkpoints",
+  "snapshots": [
+    {
+      "snapshot": "stage3_full_v2",
+      "source": "artifacts/document_store_stage3_full_v2",
+      "files": [
+        "run_manifest.json",
+        "VALIDATION.json",
+        "REPORT.md"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage4_full_apply",
+      "source": "artifacts/cleaning_stage4_full_apply",
+      "files": [
+        "run_manifest.json",
+        "VALIDATION.json",
+        "REPORT.md",
+        "processing_summary.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage4_full_dry",
+      "source": "artifacts/cleaning_stage4_full_dry",
+      "files": [
+        "run_manifest.json",
+        "VALIDATION.json",
+        "REPORT.md",
+        "processing_summary.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage4_reviewed_pilot_dry",
+      "source": "artifacts/cleaning_stage4_reviewed_pilot_dry",
+      "files": [
+        "run_manifest.json",
+        "VALIDATION.json",
+        "REPORT.md",
+        "processing_summary.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage4_pilot_dry",
+      "source": "artifacts/cleaning_stage4_pilot_dry",
+      "files": [
+        "run_manifest.json",
+        "REPORT.md",
+        "processing_summary.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_inputs_full",
+      "source": "artifacts/chunk_inputs_stage5_full",
+      "files": [
+        "manifest.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_inputs_smoke",
+      "source": "artifacts/chunk_inputs_stage5_smoke",
+      "files": [
+        "manifest.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_smoke_fixed",
+      "source": "artifacts/chunks_stage5_smoke_fixed",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_smoke_structure",
+      "source": "artifacts/chunks_stage5_smoke_structure",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_full_structure_observed",
+      "source": "artifacts/chunks_stage5_full_structure",
+      "files": [
+        "manifest.json"
+      ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_tokenizer",
+      "source": "artifacts/tokenizers/bge_m3_stage5",
+      "files": [
+        "REGISTRY.json"
+      ],
+      "checkpoint": false
+    }
+  ]
+}
