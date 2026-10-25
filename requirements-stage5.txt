@@ -1,0 +1,5 @@
+# CPU chunk preparation and fixed/structural chunking. No torch required.
+-r requirements-stage4.txt
+transformers==4.57.1
+tokenizers==0.22.1
+huggingface-hub==0.35.3
