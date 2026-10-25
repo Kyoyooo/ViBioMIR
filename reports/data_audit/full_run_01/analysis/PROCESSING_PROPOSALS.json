@@ -1,0 +1,98 @@
+{
+  "status": "implementation_proposals_only",
+  "source_audit": "reports/data_audit/full_run_01",
+  "enabled": false,
+  "human_expert_validation": "pending",
+  "proposals": [
+    {
+      "issue_id": "D3-01",
+      "priority": "P0",
+      "affected_count": 855745,
+      "denominator_definition": "distinct local document IDs",
+      "action": "Keep source hashes/locators and every content version; do not replace IDs or select by longest/newest alone.",
+      "required_acceptance": "A01/A08/A09",
+      "enabled": false
+    },
+    {
+      "issue_id": "D3-02",
+      "priority": "P0",
+      "affected_count": 28480,
+      "denominator_definition": "distinct IDs with multiple normalized texts",
+      "action": "Compare article structure and main content; retain rejected versions and reasons. Final selection follows cleaning QA.",
+      "required_acceptance": "A05/A09",
+      "enabled": false
+    },
+    {
+      "issue_id": "D3-03",
+      "priority": "P0",
+      "affected_count": 1105160,
+      "denominator_definition": "collected records",
+      "action": "Use stored title/desc and available HTML/body bylines; keep publication/date/author roles separate and null when unknown.",
+      "required_acceptance": "A05/A21",
+      "enabled": false
+    },
+    {
+      "issue_id": "D4-01",
+      "priority": "P0",
+      "affected_count": 2750,
+      "denominator_definition": "distinct IDs with no nonempty text version",
+      "action": "Separate offline-recovery candidates from empty-only records. Exclude irreparable versions from content indexing, without recrawling.",
+      "required_acceptance": "A05/A20",
+      "enabled": false
+    },
+    {
+      "issue_id": "D4-02",
+      "priority": "P0",
+      "affected_count": 84,
+      "denominator_definition": "flagged records, not all confirmed binary",
+      "action": "Quarantine confirmed image/binary redirects; never guess lost characters or call it ordinary HTML cleanup.",
+      "required_acceptance": "A06/A21",
+      "enabled": false
+    },
+    {
+      "issue_id": "D4-03",
+      "priority": "P1",
+      "affected_count": 257117,
+      "denominator_definition": "records with a lexical UI marker",
+      "action": "Validate block positions and counterexamples; retain substantive article and medical caution paragraphs.",
+      "required_acceptance": "A05/A06/A21",
+      "enabled": false
+    },
+    {
+      "issue_id": "D4-04",
+      "priority": "P1",
+      "affected_count": 212401,
+      "denominator_definition": "records with repeated normalized lines",
+      "action": "Keep clinical repetitions/lists; trim only proven contents/navigation/related-story spans.",
+      "required_acceptance": "A06/A21",
+      "enabled": false
+    },
+    {
+      "issue_id": "D4-05",
+      "priority": "P1",
+      "affected_count": 841,
+      "denominator_definition": "records with heuristic block-page signal",
+      "action": "Distinguish real gates from reCAPTCHA footer in an otherwise valid article. Do not reject by marker alone.",
+      "required_acceptance": "A05/A20",
+      "enabled": false
+    },
+    {
+      "issue_id": "D4-06",
+      "priority": "P1",
+      "affected_count": 7845,
+      "denominator_definition": "records flagged by current word-overlap heuristic",
+      "action": "Use CJK-aware diagnostics and review; shared topic substrings can make the current flag a false positive.",
+      "required_acceptance": "A06/A20",
+      "enabled": false
+    },
+    {
+      "issue_id": "D5-01",
+      "priority": "P1",
+      "affected_count": 852995,
+      "denominator_definition": "distinct IDs with normalized text/block agreement",
+      "action": "Map exact original spans first; support h/p/tr blocks and numbered headings inside p; preserve Q&A, conditions and numbers.",
+      "required_acceptance": "A07/A08",
+      "enabled": false
+    }
+  ]
+}
