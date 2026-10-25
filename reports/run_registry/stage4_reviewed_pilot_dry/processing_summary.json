@@ -1,0 +1,145 @@
+{
+  "parent_versions_processed": 201,
+  "removed_source_chars": 16517,
+  "kept_source_chars": 527271,
+  "quarantined_source_chars": 155941,
+  "documents_complete": 185,
+  "documents_failed": 0,
+  "by_extraction_method": {
+    "no_safe_content": 3,
+    "retained_stage3_text": 198
+  },
+  "by_availability": {
+    "content_candidate": 198,
+    "quarantine": 2,
+    "unavailable": 1
+  },
+  "failed_examples": [],
+  "rules": {
+    "baonghean_inline_related_link": {
+      "proposed_removal": 19,
+      "vetoed": 15
+    },
+    "vov_recaptcha_footer": {
+      "vetoed": 2,
+      "proposed_removal": 14
+    },
+    "vinmec_booking_footer": {
+      "proposed_removal": 46,
+      "vetoed": 1
+    },
+    "120ask_complaint_control": {
+      "proposed_removal": 21,
+      "vetoed": 19
+    },
+    "cnkang_related_tail": {
+      "proposed_removal": 12,
+      "vetoed": 12
+    },
+    "familydoctor_related_tail": {
+      "vetoed": 25,
+      "proposed_removal": 1
+    }
+  },
+  "quality_flags": {
+    "main_content_qa_pending": 201,
+    "vetoed_removal_candidates_require_review": 71,
+    "binary_payload_as_text": 2,
+    "legacy_title_mismatch_counterexample": 1,
+    "title_body_low_overlap_review_only": 1,
+    "missing_content": 1
+  },
+  "selection_changes": 0,
+  "by_domain": {
+    "baonghean.vn": {
+      "versions": 24,
+      "changed_versions": 18,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 933,
+      "vetoed_versions": 12
+    },
+    "hellobacsi.com": {
+      "versions": 1,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "thanhnien.vn": {
+      "versions": 26,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "thaythuocvietnam.vn": {
+      "versions": 4,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 2,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "vov.vn": {
+      "versions": 16,
+      "changed_versions": 14,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 1316,
+      "vetoed_versions": 2
+    },
+    "vinmec.com": {
+      "versions": 37,
+      "changed_versions": 36,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 9983,
+      "vetoed_versions": 1
+    },
+    "120ask.com": {
+      "versions": 40,
+      "changed_versions": 21,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 63,
+      "vetoed_versions": 19
+    },
+    "cnkang.com": {
+      "versions": 25,
+      "changed_versions": 12,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 4069,
+      "vetoed_versions": 12
+    },
+    "test.pmphai.com": {
+      "versions": 1,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "familydoctor.com.cn": {
+      "versions": 26,
+      "changed_versions": 1,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 153,
+      "vetoed_versions": 25
+    },
+    "pubmed.ncbi.nlm.nih.gov": {
+      "versions": 1,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    }
+  },
+  "normalization": "comparison_view_only_evidence_regions_remain_verbatim",
+  "metadata": "inherited_unchanged_from_stage3_missing_abstracts_authors_dates_remain_unknown"
+}
