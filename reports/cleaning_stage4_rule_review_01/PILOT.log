@@ -1,0 +1,13 @@
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 185 documents / 201 parent versions; mode=dry-run
+{
+  "state": "complete_dry_run",
+  "mode": "dry-run",
+  "scope": "selected_documents",
+  "expected": {
+    "parent_versions": 201,
+    "documents": 185
+  },
+  "gpu_required": false,
+  "ready_for_retrieval": false
+}
