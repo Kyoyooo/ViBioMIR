@@ -1,0 +1,45 @@
+{
+  "comparison": "passed",
+  "expected_removals": 147803,
+  "actual_removals": 147803,
+  "retained_original_proposals": 3676,
+  "by_rule": {
+    "baonghean_inline_related_link": {
+      "expected_removals": 109,
+      "expected_chars": 5293,
+      "actual_removals": 109,
+      "actual_chars": 5293
+    },
+    "vov_recaptcha_footer": {
+      "expected_removals": 8614,
+      "expected_chars": 809716,
+      "actual_removals": 8614,
+      "actual_chars": 809716
+    },
+    "vinmec_booking_footer": {
+      "expected_removals": 26539,
+      "expected_chars": 5817510,
+      "actual_removals": 26539,
+      "actual_chars": 5817510
+    },
+    "120ask_complaint_control": {
+      "expected_removals": 111263,
+      "expected_chars": 327844,
+      "actual_removals": 111263,
+      "actual_chars": 327844
+    },
+    "cnkang_related_tail": {
+      "expected_removals": 1277,
+      "expected_chars": 574752,
+      "actual_removals": 1277,
+      "actual_chars": 574752
+    },
+    "familydoctor_related_tail": {
+      "expected_removals": 1,
+      "expected_chars": 153,
+      "actual_removals": 1,
+      "actual_chars": 153
+    }
+  },
+  "interpretation": "Apply introduced no removal outside the reviewed subset of the validated original dry-run."
+}
