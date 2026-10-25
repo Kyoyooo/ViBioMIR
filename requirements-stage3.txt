@@ -1,0 +1,2 @@
+# CPU only. This pins the existing project's Arrow baseline, not a claim of stage-3 test execution.
+pyarrow==22.0.0
