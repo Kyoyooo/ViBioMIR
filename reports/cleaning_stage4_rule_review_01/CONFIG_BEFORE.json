@@ -1,0 +1,18 @@
+{
+  "max_html_chars": 5000000,
+  "max_removed_fraction": 0.5,
+  "min_body_chars": 80,
+  "review_sample_limit": 100,
+  "export_batch_rows": 128,
+  "export_rows_per_file": 50000,
+  "rules": [
+    {"id": "120ask_complaint_control", "revision": 1, "domains": ["120ask.com"], "pattern": "投诉", "action": "drop_line", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#120askcom--keep_short_qa"},
+    {"id": "familydoctor_feedback_control", "revision": 1, "domains": ["familydoctor.com.cn"], "pattern": "举报[/／]反馈", "action": "drop_line", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#familydoctorcomcn--separate_article_date_from_feed_dates"},
+    {"id": "cnkang_related_tail", "revision": 1, "domains": ["cnkang.com"], "pattern": "(?:相关文章|相关阅读|相关推荐)", "action": "trim_tail", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#cnkangcom--keep_article_remove_related_feed"},
+    {"id": "familydoctor_related_tail", "revision": 1, "domains": ["familydoctor.com.cn"], "pattern": "(?:相关文章|最新文章|热门文章)", "action": "trim_tail", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#familydoctorcomcn--separate_article_date_from_feed_dates"},
+    {"id": "vov_recaptcha_footer", "revision": 1, "domains": ["vov.vn"], "pattern": "This site is protected by reCAPTCHA(?: and the Google Privacy Policy and Terms of Service apply\\.?)?\\.?", "action": "drop_line", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#vovvn--whole_document_block_flag_false_positive"},
+    {"id": "vinmec_booking_footer", "revision": 1, "domains": ["vinmec.com"], "pattern": "Để đặt lịch khám tại viện, Quý khách vui lòng .+", "action": "drop_line", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#vinmeccom--keep_with_footer_review"},
+    {"id": "baonghean_inline_related_link", "revision": 1, "domains": ["baonghean.vn"], "pattern": "»\\s+.+", "action": "drop_line", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#baongheanvn--handle_noncontiguous_ui_regions"},
+    {"id": "thanhnien_related_link", "revision": 1, "domains": ["thanhnien.vn"], "pattern": ">>\\s+.+", "action": "drop_line", "enabled": true, "review_status": "proposal", "evidence": "reports/data_audit/full_run_01/analysis/REVIEW_FINDINGS.md#thanhnienvn--preserve_numbers_and_related_link_boundary"}
+  ]
+}
