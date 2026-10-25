@@ -1,0 +1,392 @@
+{
+  "created_at_utc": "2026-10-25T03:14:04.757061+00:00",
+  "fingerprint": "8d0ef8a59510343beed791526ddd1ee228b960ce19ae9d0a3080bf5d20e957d3",
+  "signature": {
+    "config": {
+      "metadata": {
+        "body_candidates": true,
+        "select_body_candidates": false,
+        "date_locales": {
+          "familydoctor.com.cn": "zh",
+          "vinmec.com": "vi"
+        }
+      },
+      "selection": {
+        "mode": "provisional",
+        "prefer_exact_blocks": true
+      },
+      "export": {
+        "batch_rows": 128,
+        "rows_per_file": 50000
+      }
+    },
+    "import_revision": "stage3-verbatim-import-v1",
+    "code": {
+      "__init__.py": "99a38631723c8ffc57be89fd2379e8ec59693b4c5f39af075cdc4a313eeac539",
+      "__main__.py": "c56d10975b7f97b550bafb6e43a125cf50a0eb4fc88d0091fc333356e32d8504",
+      "document_contracts.py": "c2a4f7a26d854ecd3fa0c42da8cdd9ffb22f1ad0cdc3e30da283510f39774e34",
+      "documents.py": "18b3897ecff00565fa97b9ce9c8158eb9cae262a483d8ad6d5ad8dc9a0d80f71",
+      "io.py": "a407bc4837869f7d47aa00f88553bbfb6ba2e5e5c26f9249f8969f04a62a3b37",
+      "metadata.py": "4a49ab6b736556d30c7f0e2c6f51e648ee66deb3fa41194279d6ca0537c28632",
+      "validate_documents.py": "71d48b6a9f0aa970e963c2c75004ef826a9b566492b20ca11a395742c27eec9a"
+    },
+    "normalization_helper_sha256": "0aad2b79117e3a7afe720fceae12bbdaac2dce3d212eb21e0c993cbea177a727",
+    "python": [
+      3,
+      13,
+      5
+    ],
+    "unicode": "15.1.0",
+    "pyarrow": "22.0.0",
+    "audit_files": {
+      "input_manifest.json": "160c5c997d8c60eec766a411092c6b6652898669f2dfe4c0df61bee17fac5781",
+      "scan_status.json": "d7658e81339d19e9e84c2a280321b3af4575eac2385cb0aacce6482de6e8d3c1",
+      "record_audit.parquet": "cb81a34c2d4ed877d3cc4254f52859129d4b1ded04a5d717110f1e0b656b8e29"
+    },
+    "selected_paths": [
+      "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714570674-056.parquet",
+      "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714909666-041.parquet",
+      "ViBioMIR/shards/A/vov.vn/part-1792716842933-706.parquet",
+      "ViBioMIR/shards/B/120ask.com/part-1792685726879-367.parquet",
+      "ViBioMIR/shards/B/vinmec.com/part-1792716882112-410.parquet",
+      "ViBioMIR/shards/C/cnkang.com/part-1792716526532-236.parquet",
+      "ViBioMIR/shards/C/pubmed.ncbi.nlm.nih.gov/part-1792716468718-977.parquet"
+    ]
+  },
+  "data_root_at_creation": "/home/duyhoang/Downloads/AI_Guru/Data",
+  "audit_root_at_creation": "/home/duyhoang/Downloads/AI_Guru/reports/data_audit/full_run_01",
+  "scope": "selected_sources_only",
+  "source_files": [
+    {
+      "path": "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714570674-056.parquet",
+      "bytes": 3585427,
+      "mtime_ns": 1792664170000000000,
+      "kind": "corpus",
+      "metadata_rows": 1000,
+      "row_group_rows": [
+        1000
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\ntitle: large_string\ndesc: large_string\ncanonical: large_string\nmethod: large_string\nblocks: large_string\ntext: large_string\nhtml_trim: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1808",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source",
+        "title",
+        "desc",
+        "canonical",
+        "method",
+        "blocks",
+        "text",
+        "html_trim"
+      ],
+      "sha256": "429dda1ddbeaba7df09bf3624824c50b8377a4e8c91c443a3e9a9d1639dc09ac",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    },
+    {
+      "path": "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714909666-041.parquet",
+      "bytes": 8778674,
+      "mtime_ns": 1792664510000000000,
+      "kind": "corpus",
+      "metadata_rows": 1000,
+      "row_group_rows": [
+        1000
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\ntitle: large_string\ndesc: large_string\ncanonical: large_string\nmethod: large_string\nblocks: large_string\ntext: large_string\nhtml_trim: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1808",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source",
+        "title",
+        "desc",
+        "canonical",
+        "method",
+        "blocks",
+        "text",
+        "html_trim"
+      ],
+      "sha256": "28261e7da374116c5e5ea455293b523751d44a7467a40cd921fca1a295f45a45",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    },
+    {
+      "path": "ViBioMIR/shards/A/vov.vn/part-1792716842933-706.parquet",
+      "bytes": 2289404,
+      "mtime_ns": 1792666442000000000,
+      "kind": "corpus",
+      "metadata_rows": 1000,
+      "row_group_rows": [
+        1000
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\ntitle: large_string\ndesc: large_string\ncanonical: large_string\nmethod: large_string\nblocks: large_string\ntext: large_string\nhtml_trim: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1808",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source",
+        "title",
+        "desc",
+        "canonical",
+        "method",
+        "blocks",
+        "text",
+        "html_trim"
+      ],
+      "sha256": "c2221a7c3192fc96110806b713b8109cc7c63d77eb2d856bd6c45ab79bfdf625",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    },
+    {
+      "path": "ViBioMIR/shards/B/120ask.com/part-1792685726879-367.parquet",
+      "bytes": 1642862,
+      "mtime_ns": 1792635326000000000,
+      "kind": "corpus",
+      "metadata_rows": 1000,
+      "row_group_rows": [
+        1000
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\ntitle: large_string\ndesc: large_string\ncanonical: large_string\nmethod: large_string\nblocks: large_string\ntext: large_string\nhtml_trim: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1808",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source",
+        "title",
+        "desc",
+        "canonical",
+        "method",
+        "blocks",
+        "text",
+        "html_trim"
+      ],
+      "sha256": "6abc533a735ed41f42f9bfd207d7c3fed47763c1b1fc53ea8fb1add701b3d111",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    },
+    {
+      "path": "ViBioMIR/shards/B/vinmec.com/part-1792716882112-410.parquet",
+      "bytes": 3372863,
+      "mtime_ns": 1792666482000000000,
+      "kind": "corpus",
+      "metadata_rows": 1000,
+      "row_group_rows": [
+        1000
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\ntitle: large_string\ndesc: large_string\ncanonical: large_string\nmethod: large_string\nblocks: large_string\ntext: large_string\nhtml_trim: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1808",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source",
+        "title",
+        "desc",
+        "canonical",
+        "method",
+        "blocks",
+        "text",
+        "html_trim"
+      ],
+      "sha256": "457574a301967753db09eb916040258ce2711b93f00badf503582f3871ea0ae9",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    },
+    {
+      "path": "ViBioMIR/shards/C/cnkang.com/part-1792716526532-236.parquet",
+      "bytes": 2494533,
+      "mtime_ns": 1792666126000000000,
+      "kind": "corpus",
+      "metadata_rows": 1000,
+      "row_group_rows": [
+        1000
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\ntitle: large_string\ndesc: large_string\ncanonical: large_string\nmethod: large_string\nblocks: large_string\ntext: large_string\nhtml_trim: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1808",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source",
+        "title",
+        "desc",
+        "canonical",
+        "method",
+        "blocks",
+        "text",
+        "html_trim"
+      ],
+      "sha256": "dd3b58dea0f4314f7660391779afad4db88425eb202556bd8511d5ed6aca994b",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    },
+    {
+      "path": "ViBioMIR/shards/C/pubmed.ncbi.nlm.nih.gov/part-1792716468718-977.parquet",
+      "bytes": 6245,
+      "mtime_ns": 1792666068000000000,
+      "kind": "corpus",
+      "metadata_rows": 40,
+      "row_group_rows": [
+        40
+      ],
+      "schema": "id: int64\ndomain: large_string\nurl: large_string\nstatus: large_string\nfinal_url: large_string\nts: int64\ntext_len: int64\nver: large_string\nsource: large_string\n-- schema metadata --\npandas: '{\"index_columns\": [], \"column_indexes\": [], \"columns\": [{\"name\":' + 1050",
+      "columns": [
+        "id",
+        "domain",
+        "url",
+        "status",
+        "final_url",
+        "ts",
+        "text_len",
+        "ver",
+        "source"
+      ],
+      "sha256": "2d3bd6ebe891844907d912db002ecff2da7fe218967e2264f6eb98df8ffa8e02",
+      "state": "footer_read",
+      "error": null,
+      "selected": true
+    }
+  ],
+  "gpu_required": false,
+  "ready_for_retrieval": false,
+  "state": "partial",
+  "stats": {
+    "input_records": 0,
+    "document_versions": 0,
+    "distinct_document_ids": 0,
+    "invalid_id_records": 0,
+    "files": [
+      {
+        "shard": "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714570674-056.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "429dda1ddbeaba7df09bf3624824c50b8377a4e8c91c443a3e9a9d1639dc09ac"
+      },
+      {
+        "shard": "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714909666-041.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "28261e7da374116c5e5ea455293b523751d44a7467a40cd921fca1a295f45a45"
+      },
+      {
+        "shard": "ViBioMIR/shards/A/vov.vn/part-1792716842933-706.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "c2221a7c3192fc96110806b713b8109cc7c63d77eb2d856bd6c45ab79bfdf625"
+      },
+      {
+        "shard": "ViBioMIR/shards/B/120ask.com/part-1792685726879-367.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "6abc533a735ed41f42f9bfd207d7c3fed47763c1b1fc53ea8fb1add701b3d111"
+      },
+      {
+        "shard": "ViBioMIR/shards/B/vinmec.com/part-1792716882112-410.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "457574a301967753db09eb916040258ce2711b93f00badf503582f3871ea0ae9"
+      },
+      {
+        "shard": "ViBioMIR/shards/C/cnkang.com/part-1792716526532-236.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "dd3b58dea0f4314f7660391779afad4db88425eb202556bd8511d5ed6aca994b"
+      },
+      {
+        "shard": "ViBioMIR/shards/C/pubmed.ncbi.nlm.nih.gov/part-1792716468718-977.parquet",
+        "state": "partial",
+        "error": null,
+        "final_sha256": "2d3bd6ebe891844907d912db002ecff2da7fe218967e2264f6eb98df8ffa8e02"
+      }
+    ],
+    "row_groups": [
+      {
+        "shard": "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714570674-056.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      },
+      {
+        "shard": "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714909666-041.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      },
+      {
+        "shard": "ViBioMIR/shards/A/vov.vn/part-1792716842933-706.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      },
+      {
+        "shard": "ViBioMIR/shards/B/120ask.com/part-1792685726879-367.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      },
+      {
+        "shard": "ViBioMIR/shards/B/vinmec.com/part-1792716882112-410.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      },
+      {
+        "shard": "ViBioMIR/shards/C/cnkang.com/part-1792716526532-236.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      },
+      {
+        "shard": "ViBioMIR/shards/C/pubmed.ncbi.nlm.nih.gov/part-1792716468718-977.parquet",
+        "group_id": 0,
+        "rows": 0,
+        "state": "failed",
+        "error": "OperationalError: table inputs has 7 columns but 8 values were supplied"
+      }
+    ]
+  },
+  "exports_ready": false,
+  "human_qa_status": "pending",
+  "selection_policy": "provisional_not_longest_or_latest"
+}
