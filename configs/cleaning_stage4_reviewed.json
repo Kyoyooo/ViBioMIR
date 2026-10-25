@@ -1,0 +1,106 @@
+{
+  "max_html_chars": 5000000,
+  "max_removed_fraction": 0.5,
+  "min_body_chars": 80,
+  "review_sample_limit": 100,
+  "export_batch_rows": 128,
+  "export_rows_per_file": 50000,
+  "rules": [
+    {
+      "id": "120ask_complaint_control",
+      "revision": 1,
+      "domains": [
+        "120ask.com"
+      ],
+      "pattern": "投诉",
+      "action": "drop_line",
+      "enabled": true,
+      "review_status": "approved",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#120ask-complaint-control"
+    },
+    {
+      "id": "familydoctor_feedback_control",
+      "revision": 1,
+      "domains": [
+        "familydoctor.com.cn"
+      ],
+      "pattern": "举报[/／]反馈",
+      "action": "drop_line",
+      "enabled": false,
+      "review_status": "proposal",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#familydoctor-feedback-control"
+    },
+    {
+      "id": "cnkang_related_tail",
+      "revision": 1,
+      "domains": [
+        "cnkang.com"
+      ],
+      "pattern": "(?:相关文章|相关阅读|相关推荐)",
+      "action": "trim_tail",
+      "enabled": true,
+      "review_status": "approved",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#cnkang-related-tail"
+    },
+    {
+      "id": "familydoctor_related_tail",
+      "revision": 1,
+      "domains": [
+        "familydoctor.com.cn"
+      ],
+      "pattern": "(?:相关文章|最新文章|热门文章)",
+      "action": "trim_tail",
+      "enabled": true,
+      "review_status": "approved",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#familydoctor-related-tail"
+    },
+    {
+      "id": "vov_recaptcha_footer",
+      "revision": 1,
+      "domains": [
+        "vov.vn"
+      ],
+      "pattern": "This site is protected by reCAPTCHA(?: and the Google Privacy Policy and Terms of Service apply\\.?)?\\.?",
+      "action": "drop_line",
+      "enabled": true,
+      "review_status": "approved",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#vov-recaptcha-footer"
+    },
+    {
+      "id": "vinmec_booking_footer",
+      "revision": 2,
+      "domains": [
+        "vinmec.com"
+      ],
+      "pattern": "(?:Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ ,\\ đặt\\ mua\\ GÓI\\ DỊCH\\ VỤ\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ My\\ Vinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụn|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc,\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ tới\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ tới\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ ngay\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ có\\ thể\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ khám\\ mọi\\ lúc\\ mọi\\ nơi\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ quý\\ khách\\ vui\\ lòng\\ liên\\ hệ\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.)",
+      "action": "drop_line",
+      "enabled": true,
+      "review_status": "approved",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#vinmec-booking-footer"
+    },
+    {
+      "id": "baonghean_inline_related_link",
+      "revision": 1,
+      "domains": [
+        "baonghean.vn"
+      ],
+      "pattern": "»\\s+.+",
+      "action": "drop_line",
+      "enabled": true,
+      "review_status": "approved",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#baonghean-inline-related-link"
+    },
+    {
+      "id": "thanhnien_related_link",
+      "revision": 1,
+      "domains": [
+        "thanhnien.vn"
+      ],
+      "pattern": ">>\\s+.+",
+      "action": "drop_line",
+      "enabled": false,
+      "review_status": "proposal",
+      "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#thanhnien-related-link"
+    }
+  ]
+}
