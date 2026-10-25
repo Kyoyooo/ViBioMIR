@@ -1,0 +1,36 @@
+{
+  "validation": "passed",
+  "counterexample_spans_checked": 5,
+  "results": [
+    {
+      "doc_id": 589690,
+      "parent_version_id": "19b0e0220f335a577c651cda9f7be8e918df1b7e89f222469d166b53dcabc02e",
+      "rule_id": "thanhnien_related_link",
+      "preserved_verbatim": true
+    },
+    {
+      "doc_id": 589690,
+      "parent_version_id": "19b0e0220f335a577c651cda9f7be8e918df1b7e89f222469d166b53dcabc02e",
+      "rule_id": "thanhnien_related_link",
+      "preserved_verbatim": true
+    },
+    {
+      "doc_id": 589690,
+      "parent_version_id": "19b0e0220f335a577c651cda9f7be8e918df1b7e89f222469d166b53dcabc02e",
+      "rule_id": "thanhnien_related_link",
+      "preserved_verbatim": true
+    },
+    {
+      "doc_id": 589690,
+      "parent_version_id": "19b0e0220f335a577c651cda9f7be8e918df1b7e89f222469d166b53dcabc02e",
+      "rule_id": "thanhnien_related_link",
+      "preserved_verbatim": true
+    },
+    {
+      "doc_id": 739156,
+      "parent_version_id": "02c76887cd5e53fa309f18e9807123ac503f87e9fe9e607753f453bf88a17ebf",
+      "rule_id": "vinmec_booking_footer",
+      "preserved_verbatim": true
+    }
+  ]
+}
