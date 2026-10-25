@@ -1,0 +1,18 @@
+[
+  {
+    "transformation_id": "000b0071de9328ece0bb69fcac0246ff9c0c1bdaa56ae41909bc2f3f25d6eb77",
+    "derived_version_id": "84d03f8835a44039a7f97785bdc2d637670bdb1b7c4cbbbb32422af4afef9a11",
+    "parent_version_id": "02c76887cd5e53fa309f18e9807123ac503f87e9fe9e607753f453bf88a17ebf",
+    "doc_id": 739156,
+    "ordinal": 0,
+    "source_kind": "stage3_text",
+    "source_locator_json": "{\"column\":\"text\",\"parent_version_id\":\"02c76887cd5e53fa309f18e9807123ac503f87e9fe9e607753f453bf88a17ebf\"}",
+    "source_start": 4201,
+    "source_end": 4442,
+    "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số HOTLINE hoặc đặt lịch trực tiếp TẠI ĐÂY . Tải và đặt lịch khám tự động trên ứng dụng MyVinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng. Lưu ý khi thực hiện:\n",
+    "rule_id": "vinmec_booking_footer",
+    "rule_revision": 1,
+    "decision": "proposed_removal",
+    "reason_json": "[\"exact_domain_rule_match\"]"
+  }
+]
