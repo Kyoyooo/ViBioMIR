@@ -1,0 +1,50 @@
+{
+  "observed_at_utc": "2026-10-25T16:07:43.798863+00:00",
+  "removed": [
+    {
+      "path": "artifacts/document_store_stage3_full",
+      "logical_bytes": 492721370,
+      "state": "partial",
+      "input_records": 0,
+      "replacement": "artifacts/document_store_stage3_full_v2",
+      "evidence": "reports/maintenance/repository_cleanup_20261025/document_store_stage3_full"
+    },
+    {
+      "path": "artifacts/document_store_stage3_pilot",
+      "logical_bytes": 2690151,
+      "state": "partial",
+      "input_records": 0,
+      "replacement": "artifacts/document_store_stage3_full_v2",
+      "evidence": "reports/maintenance/repository_cleanup_20261025/document_store_stage3_pilot"
+    }
+  ],
+  "moved": [
+    {
+      "from": "ViBioMIR-20261023T181256Z-1-001.zip",
+      "to": "local_assets/archives/ViBioMIR-20261023T181256Z-1-001.zip"
+    },
+    {
+      "from": "ViBioMIR-20261023T181256Z-1-002.zip",
+      "to": "local_assets/archives/ViBioMIR-20261023T181256Z-1-002.zip"
+    },
+    {
+      "from": "video.zip",
+      "to": "local_assets/mentor_video/video.zip"
+    },
+    {
+      "from": "video",
+      "to": "local_assets/mentor_video/video"
+    }
+  ],
+  "cache_directories_removed": [
+    "exploration/__pycache__",
+    "vibiomir/__pycache__",
+    "scripts/__pycache__",
+    "tests/__pycache__"
+  ],
+  "protected_files_verified": 52,
+  "active_stage5_directory_preserved": "artifacts/chunks_stage5_full_structure",
+  "logical_bytes_removed": 495411521,
+  "pipelines_executed": false,
+  "tests_executed": false
+}
