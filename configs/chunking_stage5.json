@@ -1,0 +1,8 @@
+{
+  "target_tokens": 384,
+  "max_tokens": 512,
+  "overlap_tokens": 64,
+  "min_tokens": 128,
+  "context_tokens": 48,
+  "semantic_threshold": 0.65
+}
