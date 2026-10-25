@@ -1,0 +1,11 @@
+﻿issue_id,priority,work_item,affected_count,denominator_definition,decision,acceptance
+D3-01,P0,Identity and versioned document store,855745,distinct local document IDs,Keep source hashes/locators and every content version; do not replace IDs or select by longest/newest alone.,A01/A08/A09
+D3-02,P0,Resolve differing content versions,28480,distinct IDs with multiple normalized texts,Compare article structure and main content; retain rejected versions and reasons. Final selection follows cleaning QA.,A05/A09
+D3-03,P0,Metadata extraction with field provenance,1105160,collected records,Use stored title/desc and available HTML/body bylines; keep publication/date/author roles separate and null when unknown.,A05/A21
+D4-01,P0,Empty and unrecoverable content,2750,distinct IDs with no nonempty text version,"Separate offline-recovery candidates from empty-only records. Exclude irreparable versions from content indexing, without recrawling.",A05/A20
+D4-02,P0,Binary/encoding failure review,84,"flagged records, not all confirmed binary",Quarantine confirmed image/binary redirects; never guess lost characters or call it ordinary HTML cleanup.,A06/A21
+D4-03,P1,Domain-specific UI/template boundaries,257117,records with a lexical UI marker,Validate block positions and counterexamples; retain substantive article and medical caution paragraphs.,A05/A06/A21
+D4-04,P1,Repeated text and related feeds,212401,records with repeated normalized lines,Keep clinical repetitions/lists; trim only proven contents/navigation/related-story spans.,A06/A21
+D4-05,P1,Mixed article and gate/footer content,841,records with heuristic block-page signal,Distinguish real gates from reCAPTCHA footer in an otherwise valid article. Do not reject by marker alone.,A05/A20
+D4-06,P1,CJK title/body mismatch checks,7845,records flagged by current word-overlap heuristic,Use CJK-aware diagnostics and review; shared topic substrings can make the current flag a false positive.,A06/A20
+D5-01,P1,Structure-aware chunks after cleaning,852995,distinct IDs with normalized text/block agreement,"Map exact original spans first; support h/p/tr blocks and numbered headings inside p; preserve Q&A, conditions and numbers.",A07/A08
