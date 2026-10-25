@@ -1,0 +1,20 @@
+# Candidate source/review paths. Apply .gitignore when using Git.
+# Directories include their non-ignored contents. No data/model artifacts.
+.gitignore
+README.md
+LICENSE
+261012_R2_AI_S3_MentorDay1_summary.md
+docs/
+configs/
+colab/
+vibiomir/
+exploration/
+scripts/
+tests/
+requirements-eda.txt
+requirements-stage3.txt
+requirements-stage4.txt
+requirements-stage5.txt
+requirements-stage5-colab.txt
+sharing/
+reports/
