@@ -1,0 +1,87 @@
+test_apply_uses_separate_reviewed_profile_and_never_marks_final (test_stage4_pipeline.CleaningPipelineTest.test_apply_uses_separate_reviewed_profile_and_never_marks_final) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 1 documents / 1 parent versions; mode=apply
+ok
+test_busy_or_unvalidated_parent_is_not_processed (test_stage4_pipeline.CleaningPipelineTest.test_busy_or_unvalidated_parent_is_not_processed) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+ok
+test_changed_raw_html_source_fails_the_document_without_silent_fallback (test_stage4_pipeline.CleaningPipelineTest.test_changed_raw_html_source_fails_the_document_without_silent_fallback) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 1 documents / 1 parent versions; mode=dry-run
+Failed document 1: ValueError: Raw source checksum mismatch: ViBioMIR/shards/A/example.org/part.parquet
+ok
+test_export_corruption_is_detected_even_if_manifest_part_hash_is_updated (test_stage4_pipeline.CleaningPipelineTest.test_export_corruption_is_detected_even_if_manifest_part_hash_is_updated) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 1 documents / 1 parent versions; mode=dry-run
+ok
+test_full_history_export_preserves_parent_store_and_sparse_metadata (test_stage4_pipeline.CleaningPipelineTest.test_full_history_export_preserves_parent_store_and_sparse_metadata) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 3 documents / 4 parent versions; mode=dry-run
+ok
+test_independent_verifier_rejects_fabricated_source_offsets (test_stage4_pipeline.CleaningPipelineTest.test_independent_verifier_rejects_fabricated_source_offsets) ... ok
+test_interrupt_mid_document_rolls_back_all_its_versions (test_stage4_pipeline.CleaningPipelineTest.test_interrupt_mid_document_rolls_back_all_its_versions) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 2 documents / 3 parent versions; mode=dry-run
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 2 documents / 3 parent versions; mode=dry-run
+ok
+test_missing_text_can_gain_a_candidate_without_inventing_metadata (test_stage4_pipeline.CleaningPipelineTest.test_missing_text_can_gain_a_candidate_without_inventing_metadata) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 1 documents / 1 parent versions; mode=dry-run
+ok
+test_paused_resume_matches_uninterrupted_outputs_and_handles_small_parts (test_stage4_pipeline.CleaningPipelineTest.test_paused_resume_matches_uninterrupted_outputs_and_handles_small_parts) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 3 documents / 3 parent versions; mode=dry-run
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 3 documents / 3 parent versions; mode=dry-run
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 3 documents / 3 parent versions; mode=dry-run
+ok
+test_preflight_creates_no_store_and_fingerprint_rejects_changed_config (test_stage4_pipeline.CleaningPipelineTest.test_preflight_creates_no_store_and_fingerprint_rejects_changed_config) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 2 documents / 2 parent versions; mode=dry-run
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 2 documents / 2 parent versions; mode=dry-run
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 2 documents / 2 parent versions; mode=dry-run
+ok
+test_real_local_html_row_is_checksum_verified_and_offsets_reference_raw_html (test_stage4_pipeline.CleaningPipelineTest.test_real_local_html_row_is_checksum_verified_and_offsets_reference_raw_html) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 1 documents / 1 parent versions; mode=dry-run
+ok
+test_record_subset_selects_all_versions_for_the_matching_document (test_stage4_pipeline.CleaningPipelineTest.test_record_subset_selects_all_versions_for_the_matching_document) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 1 documents / 2 parent versions; mode=dry-run
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+ok
+test_booking_line_with_attached_clinical_heading_is_retained (test_stage4_reviewed_profile.ReviewedProfileTest.test_booking_line_with_attached_clinical_heading_is_retained) ... ok
+test_reviewed_profile_applies_verified_booking_footer_only (test_stage4_reviewed_profile.ReviewedProfileTest.test_reviewed_profile_applies_verified_booking_footer_only) ... ok
+test_thanhnien_fact_heading_is_not_misclassified_as_a_related_link (test_stage4_reviewed_profile.ReviewedProfileTest.test_thanhnien_fact_heading_is_not_misclassified_as_a_related_link) ... ok
+test_explicit_article_nodes_keep_raw_entity_slices_and_skip_navigation (test_stage4_transform.HTMLRecoveryTest.test_explicit_article_nodes_keep_raw_entity_slices_and_skip_navigation) ... ok
+test_inline_tags_remain_separate_mapped_regions_and_size_limit_is_explicit (test_stage4_transform.HTMLRecoveryTest.test_inline_tags_remain_separate_mapped_regions_and_size_limit_is_explicit) ... ok
+test_multiple_articles_body_only_and_hidden_roots_do_not_become_main_content (test_stage4_transform.HTMLRecoveryTest.test_multiple_articles_body_only_and_hidden_roots_do_not_become_main_content) ... ok
+test_parser_column_attribute_and_absolute_spans_survive_fragmented_multiline_html (test_stage4_transform.HTMLRecoveryTest.test_parser_column_attribute_and_absolute_spans_survive_fragmented_multiline_html)
+Regression: HTMLParser.offset is an integer, not our source-position method. ... ok
+test_apply_requires_reviewed_rules_and_changes_use_applied_label (test_stage4_transform.SourceRegionTest.test_apply_requires_reviewed_rules_and_changes_use_applied_label) ... ok
+test_binary_signature_and_soft_404_are_not_encoding_rewrites (test_stage4_transform.SourceRegionTest.test_binary_signature_and_soft_404_are_not_encoding_rewrites) ... ok
+test_cjk_and_mixed_language_mismatch_is_diagnostic_only (test_stage4_transform.SourceRegionTest.test_cjk_and_mixed_language_mismatch_is_diagnostic_only) ... ok
+test_each_initial_rule_has_a_synthetic_positive_and_out_of_domain_counterexample (test_stage4_transform.SourceRegionTest.test_each_initial_rule_has_a_synthetic_positive_and_out_of_domain_counterexample) ... ok
+test_existing_text_is_not_replaced_by_html_or_description (test_stage4_transform.SourceRegionTest.test_existing_text_is_not_replaced_by_html_or_description) ... ok
+test_inline_teaser_creates_separate_exact_regions_and_preserves_clinical_values (test_stage4_transform.SourceRegionTest.test_inline_teaser_creates_separate_exact_regions_and_preserves_clinical_values) ... ok
+test_invalid_source_url_retains_parent_but_has_no_content_selection (test_stage4_transform.SourceRegionTest.test_invalid_source_url_retains_parent_but_has_no_content_selection) ... ok
+test_large_or_early_removals_are_vetoed (test_stage4_transform.SourceRegionTest.test_large_or_early_removals_are_vetoed) ... ok
+test_missing_text_recovers_original_blocks_without_joining_source_coordinates (test_stage4_transform.SourceRegionTest.test_missing_text_recovers_original_blocks_without_joining_source_coordinates) ... ok
+test_one_replacement_character_is_kept_and_flagged (test_stage4_transform.SourceRegionTest.test_one_replacement_character_is_kept_and_flagged) ... ok
+test_only_standalone_domain_control_is_removed (test_stage4_transform.SourceRegionTest.test_only_standalone_domain_control_is_removed) ... ok
+test_protected_numbers_negations_and_units_veto_a_tail_cut (test_stage4_transform.SourceRegionTest.test_protected_numbers_negations_and_units_veto_a_tail_cut) ... ok
+test_recaptcha_footer_does_not_quarantine_substantive_article (test_stage4_transform.SourceRegionTest.test_recaptcha_footer_does_not_quarantine_substantive_article) ... ok
+test_same_source_and_policy_reproduce_hash_and_preserve_nested_entities (test_stage4_transform.SourceRegionTest.test_same_source_and_policy_reproduce_hash_and_preserve_nested_entities) ... ok
+test_short_qa_clinical_repetitions_cautions_prices_and_tables_are_kept (test_stage4_transform.SourceRegionTest.test_short_qa_clinical_repetitions_cautions_prices_and_tables_are_kept) ... ok
+test_vinmec_clinical_booking_conditions_and_familydoctor_header_date_survive (test_stage4_transform.SourceRegionTest.test_vinmec_clinical_booking_conditions_and_familydoctor_header_date_survive) ... ok
+test_vinmec_title_and_language_gate_are_not_a_medical_body (test_stage4_transform.SourceRegionTest.test_vinmec_title_and_language_gate_are_not_a_medical_body) ... ok
+
+----------------------------------------------------------------------
+Ran 36 tests in 1.413s
+
+OK
