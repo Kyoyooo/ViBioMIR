@@ -1,0 +1,577 @@
+{
+  "stage": 4,
+  "created_at_utc": "2026-10-25T12:55:10.599334+00:00",
+  "fingerprint": "f5bfb0d586371a5031ba00f6aeaf47282ab59b003f98e87c8b17117206b374f2",
+  "signature": {
+    "parent": {
+      "manifest_sha256": "ea0f6164a797b03a84173b30c3f3e735fee9399c302e09efffcfc066a8bc7865",
+      "validation_sha256": "a6afc2039b264121a0e1927f0cb5a988d1bc1fd527ed6af4604f1ca44b6ffdc1",
+      "database_sha256": "e1e76266ce2662515b88cb019770d8dda081bba2792af126c01fde1ae62181b7",
+      "parent_fingerprint": "35cb0d598d3f00191ce573ac7038410fec3763ffc13e3697bdfcf469122ac845"
+    },
+    "code": {
+      "cleaning.py": "40fb47f01bf6084ae7cc55060d573f8750bb36537238f718932627571e3bde39",
+      "cleaning_rules.py": "473713fa393e489e132cbcea8a39b4c27ecb80aa04270b289fda485bd657c2ad",
+      "cleaning_source.py": "34745903ffd34d59a599ec29e19ca75a3abd242e19126687192eb6ca9e23cd2a",
+      "cleaning_transform.py": "376eb5e8bb33874a7cacf9773c86672cd790c672218ae3e8fe62c07adf8c23bf",
+      "cleaning_contracts.py": "b9f2f3aba84bb94f398f26d1237b037e1731e61b1de9609e4f6e09d8db6843b0",
+      "validate_cleaning.py": "78aee41d58f8bc95faac252685989aeeb816f7da4e6df79024a17d50a94c9666",
+      "documents.py": "d4c099db2fc22807fa292861a44b7532137b7a3a45a9199d74cd888c379fc5b1",
+      "document_contracts.py": "c2a4f7a26d854ecd3fa0c42da8cdd9ffb22f1ad0cdc3e30da283510f39774e34",
+      "io.py": "a407bc4837869f7d47aa00f88553bbfb6ba2e5e5c26f9249f8969f04a62a3b37",
+      "exploration/common.py": "0aad2b79117e3a7afe720fceae12bbdaac2dce3d212eb21e0c993cbea177a727"
+    },
+    "revision": "stage4-source-regions-v1",
+    "config": {
+      "max_html_chars": 5000000,
+      "max_removed_fraction": 0.5,
+      "min_body_chars": 80,
+      "review_sample_limit": 100,
+      "export_batch_rows": 128,
+      "export_rows_per_file": 50000,
+      "rules": [
+        {
+          "id": "120ask_complaint_control",
+          "revision": 1,
+          "domains": [
+            "120ask.com"
+          ],
+          "pattern": "投诉",
+          "action": "drop_line",
+          "enabled": true,
+          "review_status": "approved",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#120ask-complaint-control"
+        },
+        {
+          "id": "familydoctor_feedback_control",
+          "revision": 1,
+          "domains": [
+            "familydoctor.com.cn"
+          ],
+          "pattern": "举报[/／]反馈",
+          "action": "drop_line",
+          "enabled": false,
+          "review_status": "proposal",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#familydoctor-feedback-control"
+        },
+        {
+          "id": "cnkang_related_tail",
+          "revision": 1,
+          "domains": [
+            "cnkang.com"
+          ],
+          "pattern": "(?:相关文章|相关阅读|相关推荐)",
+          "action": "trim_tail",
+          "enabled": true,
+          "review_status": "approved",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#cnkang-related-tail"
+        },
+        {
+          "id": "familydoctor_related_tail",
+          "revision": 1,
+          "domains": [
+            "familydoctor.com.cn"
+          ],
+          "pattern": "(?:相关文章|最新文章|热门文章)",
+          "action": "trim_tail",
+          "enabled": true,
+          "review_status": "approved",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#familydoctor-related-tail"
+        },
+        {
+          "id": "vov_recaptcha_footer",
+          "revision": 1,
+          "domains": [
+            "vov.vn"
+          ],
+          "pattern": "This site is protected by reCAPTCHA(?: and the Google Privacy Policy and Terms of Service apply\\.?)?\\.?",
+          "action": "drop_line",
+          "enabled": true,
+          "review_status": "approved",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#vov-recaptcha-footer"
+        },
+        {
+          "id": "vinmec_booking_footer",
+          "revision": 2,
+          "domains": [
+            "vinmec.com"
+          ],
+          "pattern": "(?:Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ ,\\ đặt\\ mua\\ GÓI\\ DỊCH\\ VỤ\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ My\\ Vinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụn|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc,\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ số\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ tới\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ Quý\\ khách\\ vui\\ lòng\\ bấm\\ tới\\ số\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ trực\\ tiếp\\ TẠI\\ ĐÂY\\ \\.\\ Tải\\ và\\ đặt\\ lịch\\ khám\\ tự\\ động\\ ngay\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ có\\ thể\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ khám\\ mọi\\ lúc\\ mọi\\ nơi\\.|Để\\ đặt\\ lịch\\ khám\\ tại\\ viện,\\ quý\\ khách\\ vui\\ lòng\\ liên\\ hệ\\ HOTLINE\\ hoặc\\ đặt\\ lịch\\ khám\\ tự\\ động\\ trên\\ ứng\\ dụng\\ MyVinmec\\ để\\ quản\\ lý,\\ theo\\ dõi\\ lịch\\ và\\ đặt\\ hẹn\\ mọi\\ lúc\\ mọi\\ nơi\\ ngay\\ trên\\ ứng\\ dụng\\.)",
+          "action": "drop_line",
+          "enabled": true,
+          "review_status": "approved",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#vinmec-booking-footer"
+        },
+        {
+          "id": "baonghean_inline_related_link",
+          "revision": 1,
+          "domains": [
+            "baonghean.vn"
+          ],
+          "pattern": "»\\s+.+",
+          "action": "drop_line",
+          "enabled": true,
+          "review_status": "approved",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#baonghean-inline-related-link"
+        },
+        {
+          "id": "thanhnien_related_link",
+          "revision": 1,
+          "domains": [
+            "thanhnien.vn"
+          ],
+          "pattern": ">>\\s+.+",
+          "action": "drop_line",
+          "enabled": false,
+          "review_status": "proposal",
+          "evidence": "reports/cleaning_stage4_rule_review_01/DECISIONS.md#thanhnien-related-link"
+        }
+      ]
+    },
+    "mode": "apply",
+    "record_ids": null,
+    "max_documents": null,
+    "python": [
+      3,
+      13,
+      5
+    ],
+    "unicode": "15.1.0",
+    "pyarrow": "22.0.0"
+  },
+  "expected": {
+    "parent_versions": 913969,
+    "documents": 855745
+  },
+  "parent_store_at_creation": "/home/duyhoang/Downloads/AI_Guru/artifacts/document_store_stage3_full_v2",
+  "data_root_at_creation": "/home/duyhoang/Downloads/AI_Guru/Data",
+  "scope": "all_parent_documents",
+  "mode": "apply",
+  "gpu_required": false,
+  "ready_for_retrieval": false,
+  "human_qa_status": "pending",
+  "rulebook_sha256": "87ea3a0be03849dc879c01b6e24bd99656b345d91a854c501d29adf8d90cb7c9",
+  "state": "complete_provisional",
+  "exports_ready": true,
+  "tables": {
+    "cleaning_versions": {
+      "rows": 913969,
+      "parts": [
+        {
+          "path": "cleaning_versions/part-000000.parquet",
+          "rows": 50000,
+          "sha256": "01a0fb427488294795e4fe4b6383bb9292c801632e3895a75711ba9983c9d006",
+          "bytes": 25633322
+        },
+        {
+          "path": "cleaning_versions/part-000001.parquet",
+          "rows": 50000,
+          "sha256": "1fd5c872002ec35eb6444992b5ba0524f691c59b74d24f8350b613727c3e6775",
+          "bytes": 26458353
+        },
+        {
+          "path": "cleaning_versions/part-000002.parquet",
+          "rows": 50000,
+          "sha256": "0d86e0220f65aa8e80e67a9e84d6f0a343acd3bb3e141b25a85e6f50ef54d7d3",
+          "bytes": 25931966
+        },
+        {
+          "path": "cleaning_versions/part-000003.parquet",
+          "rows": 50000,
+          "sha256": "47ca56cc50768b9e77f78194a54447be0d54c0715638439f4c8d1a86c2822bf3",
+          "bytes": 26224423
+        },
+        {
+          "path": "cleaning_versions/part-000004.parquet",
+          "rows": 50000,
+          "sha256": "ccb960442121d3cbcbdd119890ae6ebd32852b706e523510b6e663dceb4a97c2",
+          "bytes": 27726501
+        },
+        {
+          "path": "cleaning_versions/part-000005.parquet",
+          "rows": 50000,
+          "sha256": "e2723836ba964fa7cf6e1571319cac0ab78e48b3f5de0461ecb29b95290f5093",
+          "bytes": 24323886
+        },
+        {
+          "path": "cleaning_versions/part-000006.parquet",
+          "rows": 50000,
+          "sha256": "365c75757d4264d7b9506302437a9d70c21deeff9b637678c49ca853e5864006",
+          "bytes": 24214497
+        },
+        {
+          "path": "cleaning_versions/part-000007.parquet",
+          "rows": 50000,
+          "sha256": "b868b32ebf1ba63b37de5bf8053156d8b12769726fff542bdb9923b8a0aed452",
+          "bytes": 24071755
+        },
+        {
+          "path": "cleaning_versions/part-000008.parquet",
+          "rows": 50000,
+          "sha256": "d127408f31a7f55fa0e995449986116c757d87fa382f25cbf628b1d6ad6e1387",
+          "bytes": 26297592
+        },
+        {
+          "path": "cleaning_versions/part-000009.parquet",
+          "rows": 50000,
+          "sha256": "aebe8a4f1808865330c3e527bc3879e3a5c1f6a3dc0aad140bbe90e42f83968a",
+          "bytes": 26473293
+        },
+        {
+          "path": "cleaning_versions/part-000010.parquet",
+          "rows": 50000,
+          "sha256": "c3ef1c816c6982c38692bd3591c4ea04467416237449d851bd66556a6efaf38f",
+          "bytes": 25813558
+        },
+        {
+          "path": "cleaning_versions/part-000011.parquet",
+          "rows": 50000,
+          "sha256": "4b93c322a3519eb896c4af3932042db1eb427fcc9f46527c6fe126a0305d7b53",
+          "bytes": 25723608
+        },
+        {
+          "path": "cleaning_versions/part-000012.parquet",
+          "rows": 50000,
+          "sha256": "b7f6a331927031a05fa26a06075f16c54b0062cfbc884db78333739fb9f5df8a",
+          "bytes": 25479140
+        },
+        {
+          "path": "cleaning_versions/part-000013.parquet",
+          "rows": 50000,
+          "sha256": "7cb9fae7ba03f0be8f89b258474e9eca8d81e5b4587f5925439e42d42e2a4099",
+          "bytes": 26156497
+        },
+        {
+          "path": "cleaning_versions/part-000014.parquet",
+          "rows": 50000,
+          "sha256": "23522728e716f38db5e4c6b9e1a1aed61d457afc03c307d75eaeea917127c61f",
+          "bytes": 25780916
+        },
+        {
+          "path": "cleaning_versions/part-000015.parquet",
+          "rows": 50000,
+          "sha256": "d49c414fc40831ce5f48b6027af22f461972d68b291e0d2395dbc7cf1c4949ed",
+          "bytes": 23966899
+        },
+        {
+          "path": "cleaning_versions/part-000016.parquet",
+          "rows": 50000,
+          "sha256": "8c1cba4cbe74bf8b43895208b46dd665465e3861c2b370c1d97ce7c2a6aa8d4a",
+          "bytes": 29131727
+        },
+        {
+          "path": "cleaning_versions/part-000017.parquet",
+          "rows": 50000,
+          "sha256": "e26ca88f280bcff1a7e80c60c15659e1ac9c5044a101439475e7eeec11c078e0",
+          "bytes": 28643714
+        },
+        {
+          "path": "cleaning_versions/part-000018.parquet",
+          "rows": 13969,
+          "sha256": "931d1a12423b4cc760401fe0fd52e2e382d2a512c7b67571123ed360c0a7508d",
+          "bytes": 6953640
+        }
+      ],
+      "schema": "derived_version_id: string\ndoc_id: int64\nparent_version_id: string\nrepresentative_record_id: string\nsource_url: string\nextraction_method: string\navailability: string\ncontent_candidate: bool\nsource_chars: int64\nkept_chars: int64\nremoved_chars: int64\nquarantined_chars: int64\nregion_count: int64\ntransformation_count: int64\nnormalized_sha256: string\nmetadata_json: large_string\nlanguage_hint: string\ndoc_type_hint: string\ndiagnostics_json: large_string\nquality_flags_json: string\nsource_fidelity: string\ncontent_scope: string\nrulebook_sha256: string\nmode: string\nis_final: bool\nneeds_review: bool\nofficial_match: string"
+    },
+    "evidence_regions": {
+      "rows": 1029307,
+      "parts": [
+        {
+          "path": "evidence_regions/part-000000.parquet",
+          "rows": 50000,
+          "sha256": "53fef264c387c6a656db35391629f68b424da4fe3d5ab29fc44d232e3449151b",
+          "bytes": 129202044
+        },
+        {
+          "path": "evidence_regions/part-000001.parquet",
+          "rows": 50000,
+          "sha256": "8bf441dc6e999a10613717f8e8bc9cb6afbd81b1243b209f7832cc79b712748e",
+          "bytes": 128129260
+        },
+        {
+          "path": "evidence_regions/part-000002.parquet",
+          "rows": 50000,
+          "sha256": "e2cb261def1a0f28095fec747130e3d243b014973b8f7645ff4d5f334f30babe",
+          "bytes": 161055422
+        },
+        {
+          "path": "evidence_regions/part-000003.parquet",
+          "rows": 50000,
+          "sha256": "7bdf23d425d4c32a27c7a8804586a431cf359c3fc5d6abe64216a007014b8042",
+          "bytes": 152733503
+        },
+        {
+          "path": "evidence_regions/part-000004.parquet",
+          "rows": 50000,
+          "sha256": "fb273af26104712deddd69ab7056c27845fd552075d79550a230865e955a863a",
+          "bytes": 171333471
+        },
+        {
+          "path": "evidence_regions/part-000005.parquet",
+          "rows": 50000,
+          "sha256": "8f9d92fe5b25faa6471dd42d592ad9b1e81512d859844e72153d9d5903819ba7",
+          "bytes": 139237956
+        },
+        {
+          "path": "evidence_regions/part-000006.parquet",
+          "rows": 50000,
+          "sha256": "e49b9516b13c6a7879f58605b053194e4261dea09d799397cf5d1eca077da80f",
+          "bytes": 139767983
+        },
+        {
+          "path": "evidence_regions/part-000007.parquet",
+          "rows": 50000,
+          "sha256": "64adc709470b098291989ecf11f9ab19915a318070e8c1ac9c828c42c37b5b83",
+          "bytes": 139116416
+        },
+        {
+          "path": "evidence_regions/part-000008.parquet",
+          "rows": 50000,
+          "sha256": "3850c37e03056bbdf1593e4a891c58005252d5198b551c6b07f1219515c29d3f",
+          "bytes": 172869322
+        },
+        {
+          "path": "evidence_regions/part-000009.parquet",
+          "rows": 50000,
+          "sha256": "c47e58a6e2a03164b0683f0e360818d1bb70b759fa4d90a06e116378d0bf9484",
+          "bytes": 172833132
+        },
+        {
+          "path": "evidence_regions/part-000010.parquet",
+          "rows": 50000,
+          "sha256": "5eb73de34dcf1bf96f8183c756332508b5c015c13b5ff9423627ca512b8a2d65",
+          "bytes": 114266876
+        },
+        {
+          "path": "evidence_regions/part-000011.parquet",
+          "rows": 50000,
+          "sha256": "9836664ebf6262517e117903852f0975a9d6d860a7eaaf8e0cd7de2c87b5712a",
+          "bytes": 154405151
+        },
+        {
+          "path": "evidence_regions/part-000012.parquet",
+          "rows": 50000,
+          "sha256": "95d0ea0e8c4389415d8e5c3ee8992fb3dfe497549b1637e8221b99ee5d4f8440",
+          "bytes": 127166279
+        },
+        {
+          "path": "evidence_regions/part-000013.parquet",
+          "rows": 50000,
+          "sha256": "e18b22b9df20d62b13b2e70c61a39fbbb4ad4ebcae515c647d1ff12bd33cfebc",
+          "bytes": 144422428
+        },
+        {
+          "path": "evidence_regions/part-000014.parquet",
+          "rows": 50000,
+          "sha256": "48d2b290efbbde167d642f61369d91fb2f86401c846e0858920b9aacb10b2ec4",
+          "bytes": 43570275
+        },
+        {
+          "path": "evidence_regions/part-000015.parquet",
+          "rows": 50000,
+          "sha256": "b8c1a618df6a72ad9e0ed96b98af48e7bba860411338c07d71146d645edcffdb",
+          "bytes": 34114874
+        },
+        {
+          "path": "evidence_regions/part-000016.parquet",
+          "rows": 50000,
+          "sha256": "82b51055eaf480360521202570793dce721eaf3432b80440f7c3095d6e6e21a8",
+          "bytes": 33125959
+        },
+        {
+          "path": "evidence_regions/part-000017.parquet",
+          "rows": 50000,
+          "sha256": "6d542ef2efe2c5848a9c5ab3569818dce398fa43b4e46043324f5acaa6ee22d7",
+          "bytes": 32913697
+        },
+        {
+          "path": "evidence_regions/part-000018.parquet",
+          "rows": 50000,
+          "sha256": "3e46d91bea5b4fa2829d0e5e43e3648df6bfd4f82df581135f723d6a680d4818",
+          "bytes": 101127644
+        },
+        {
+          "path": "evidence_regions/part-000019.parquet",
+          "rows": 50000,
+          "sha256": "cd96063a24c10fc79d11751ef7d1df143232ba17d398516f7ed06d2c4603ed12",
+          "bytes": 136636408
+        },
+        {
+          "path": "evidence_regions/part-000020.parquet",
+          "rows": 29307,
+          "sha256": "94be6346e28a65f7c4f0091e7f32b4159e8a54dab5f4c0e7eaafc08657321762",
+          "bytes": 115697298
+        }
+      ],
+      "schema": "region_id: string\nderived_version_id: string\nparent_version_id: string\ndoc_id: int64\nordinal: int64\nsource_kind: string\nkind: string\nsource_locator_json: string\nsource_start: int64\nsource_end: int64\ntext: large_string\nnormalized_text: large_string\ntext_sha256: string"
+    },
+    "transformations": {
+      "rows": 186208,
+      "parts": [
+        {
+          "path": "transformations/part-000000.parquet",
+          "rows": 50000,
+          "sha256": "10bfeae2b916ff00d9365195470484feb62ef7ab09cd19c5df02f56969564194",
+          "bytes": 9302533
+        },
+        {
+          "path": "transformations/part-000001.parquet",
+          "rows": 50000,
+          "sha256": "ac7339494f5d2afbc9d086e1ad383f9bfa530d45be27b2bc0cdf5b098cf0d0e6",
+          "bytes": 9089590
+        },
+        {
+          "path": "transformations/part-000002.parquet",
+          "rows": 50000,
+          "sha256": "b2ecec99da849f18123694db6cea01e2978dd6e16552aa46b26576258293cbb7",
+          "bytes": 9091366
+        },
+        {
+          "path": "transformations/part-000003.parquet",
+          "rows": 36208,
+          "sha256": "36b051018430ba173034ce791f3561188dda78c2fba6f1248a6b3a306d180abf",
+          "bytes": 8835282
+        }
+      ],
+      "schema": "transformation_id: string\nderived_version_id: string\nparent_version_id: string\ndoc_id: int64\nordinal: int64\nsource_kind: string\nsource_locator_json: string\nsource_start: int64\nsource_end: int64\ntext: large_string\nrule_id: string\nrule_revision: int64\ndecision: string\nreason_json: string"
+    },
+    "document_selection": {
+      "rows": 855745,
+      "parts": [
+        {
+          "path": "document_selection/part-000000.parquet",
+          "rows": 50000,
+          "sha256": "f9b00521e915aa68f89f1885d000802ea788e1c051e803f7727d704d8695fb42",
+          "bytes": 6532163
+        },
+        {
+          "path": "document_selection/part-000001.parquet",
+          "rows": 50000,
+          "sha256": "2399c35dd3fab9b5b33942d7bdb243af434e307c3bd85c65119b7b489d505e77",
+          "bytes": 6536306
+        },
+        {
+          "path": "document_selection/part-000002.parquet",
+          "rows": 50000,
+          "sha256": "a505698bdd6782218245646ecea64ea2744706c142044b50c5703a6c5262ee80",
+          "bytes": 6531339
+        },
+        {
+          "path": "document_selection/part-000003.parquet",
+          "rows": 50000,
+          "sha256": "4c9e270db7bcf2691d2d5c311aeea523eeb263cb513dd3291cfe28e7ce1ddec0",
+          "bytes": 6534613
+        },
+        {
+          "path": "document_selection/part-000004.parquet",
+          "rows": 50000,
+          "sha256": "21320df258c6e0abe069d41d461b99135789b47947d2559810ab06859094cdae",
+          "bytes": 6530778
+        },
+        {
+          "path": "document_selection/part-000005.parquet",
+          "rows": 50000,
+          "sha256": "24e5a992edbf3388d3738ba50e83ad29f9b0ab68d118bfe4a3e03f90048110f8",
+          "bytes": 6531182
+        },
+        {
+          "path": "document_selection/part-000006.parquet",
+          "rows": 50000,
+          "sha256": "4c5c6902a35abea7d509c0c6d1b531cb889e54e827a6626facfcff4d6d9aca4d",
+          "bytes": 6534511
+        },
+        {
+          "path": "document_selection/part-000007.parquet",
+          "rows": 50000,
+          "sha256": "24f226c64d4ba74dd239d2160d0fca51908fa68db3cf097a0155aa6232b7cce6",
+          "bytes": 6531522
+        },
+        {
+          "path": "document_selection/part-000008.parquet",
+          "rows": 50000,
+          "sha256": "57207b34076c1acffc1fe3c3a8497fc63b119f08036fdbf4bb5d773ec5aed217",
+          "bytes": 6530937
+        },
+        {
+          "path": "document_selection/part-000009.parquet",
+          "rows": 50000,
+          "sha256": "d6695d05ac634f61a8df733ac51ba00de5fc27c4fe5841fe8bf7ad535b1add29",
+          "bytes": 6534618
+        },
+        {
+          "path": "document_selection/part-000010.parquet",
+          "rows": 50000,
+          "sha256": "287467f6b8962dc3e3357dc00d9a276e59b3e0ed3870bac39c3537a30ff583a7",
+          "bytes": 6531251
+        },
+        {
+          "path": "document_selection/part-000011.parquet",
+          "rows": 50000,
+          "sha256": "66c0d6840ee0a82ab8b9eb8278f1dce4212f8279da3863d6aaec0e7988d585f1",
+          "bytes": 6295669
+        },
+        {
+          "path": "document_selection/part-000012.parquet",
+          "rows": 50000,
+          "sha256": "12cb9aa8e1e2189a1b2fb76f536d09f4676c20a1acde74feaa5ffd62211bd6ce",
+          "bytes": 6532717
+        },
+        {
+          "path": "document_selection/part-000013.parquet",
+          "rows": 50000,
+          "sha256": "8164e9c7aabe0b04673a6909d7f4fe89b0b3dd5c641afd3033ec58a5c4126763",
+          "bytes": 6541253
+        },
+        {
+          "path": "document_selection/part-000014.parquet",
+          "rows": 50000,
+          "sha256": "e3c2985ddd5805294d81d42c25b4b71466ea7f3c64b3144bcf7816ed22f2fa4d",
+          "bytes": 6544829
+        },
+        {
+          "path": "document_selection/part-000015.parquet",
+          "rows": 50000,
+          "sha256": "bc7417d52a243be6a492e268a6d23e93ed756bc0a5586f9365c3971347e5e2a4",
+          "bytes": 6533269
+        },
+        {
+          "path": "document_selection/part-000016.parquet",
+          "rows": 50000,
+          "sha256": "451833f1e8e52e61c0f966c906fc313eee204217a3702c1ab0dae34b8adbce8c",
+          "bytes": 6533935
+        },
+        {
+          "path": "document_selection/part-000017.parquet",
+          "rows": 5745,
+          "sha256": "297ac7a6bb72302b4a4320c4890a73550c69d3031ce52b6bf379ca414395a769",
+          "bytes": 745776
+        }
+      ],
+      "schema": "doc_id: int64\nselected_derived_version_id: string\nparent_version_count: int64\nstage3_selected_parent_id: string\nselected_parent_id: string\nselection_changed: bool\navailability: string\nreason_json: string\nis_final: bool\nneeds_review: bool"
+    }
+  },
+  "auxiliary_files": {
+    "processing_summary.json": "2cc02a9c1afa0f6425a2bc6b40dccf4c7dcd30ac96256d8b2db21f0362a59d9e",
+    "review_samples.jsonl": "5e8abaad6fad76bacc7e4a446ccfb3509cfa2a6d611ff8c66efaee29a0640557"
+  },
+  "stats": {
+    "parent_versions_processed": 913969,
+    "removed_source_chars": 7535268,
+    "kept_source_chars": 2799731328,
+    "quarantined_source_chars": 2284456,
+    "documents_complete": 855745,
+    "documents_failed": 0,
+    "by_extraction_method": {
+      "no_safe_content": 2779,
+      "retained_stage3_text": 911190
+    },
+    "by_availability": {
+      "content_candidate": 911190,
+      "quarantine": 24,
+      "unavailable": 2755
+    },
+    "failed_examples": []
+  },
+  "raw_sources": {}
+}
