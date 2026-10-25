@@ -1,0 +1,12 @@
+test_delete_mode_checkpoint_resumes_under_wal_and_validates (test_stage4_checkpoint_io.CheckpointIOTest.test_delete_mode_checkpoint_resumes_under_wal_and_validates) ... Documents: 1/1 source files checked; file state=complete
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 3 documents / 3 parent versions; mode=apply
+Stage 4: verifying the completed stage-3 checkpoint; hashing large inputs can take time
+Stage 4: 3 documents / 3 parent versions; mode=apply
+ok
+test_local_connection_uses_atomic_wal_with_normal_sync (test_stage4_checkpoint_io.CheckpointIOTest.test_local_connection_uses_atomic_wal_with_normal_sync) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.487s
+
+OK
