@@ -1,0 +1,4 @@
+Waiting for the apply runner to finish and close the checkpoint.
+Apply completed; starting full validation.
+Full validator passed; checking the reviewed removal set against the original dry-run.
+All authorized execution and cross-run checks completed successfully.
