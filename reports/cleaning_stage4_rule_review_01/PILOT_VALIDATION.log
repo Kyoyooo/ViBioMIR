@@ -1,0 +1,20 @@
+{
+  "validation": "passed",
+  "stage": 4,
+  "mode": "dry-run",
+  "scope": "selected_documents",
+  "tables": {
+    "cleaning_versions": 201,
+    "evidence_regions": 260,
+    "transformations": 187,
+    "document_selection": 185
+  },
+  "parent_store_checksums_verified": true,
+  "raw_html_sources_verified": 0,
+  "all_raw_shards_rehashed": false,
+  "source_slices_verified": true,
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "gpu_required": false
+}
