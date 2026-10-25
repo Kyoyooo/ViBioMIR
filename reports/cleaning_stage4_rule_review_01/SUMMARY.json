@@ -1,0 +1,266 @@
+{
+  "source_dry_manifest_sha256": "1ae3540859be56c82533effcc85a9c53a5e6c89d5302f9baae364a1b53e73d15",
+  "source_validation_sha256": "f9713e6931b6394ac2e3e8854a47c763a0cb5bac8930db05d7ca0af2a354576a",
+  "parent_manifest_sha256": "ea0f6164a797b03a84173b30c3f3e735fee9399c302e09efffcfc066a8bc7865",
+  "config_sha256": "6d39b2c5c5f0017e04b0464210210b36dfb496d7c9283c2eb169e31d691f1020",
+  "seed": 20261025,
+  "samples_per_rule_decision": 12,
+  "sample_scope": "deterministic_per_rule_reservoir_not_a_clinical_accuracy_estimate",
+  "checks": {
+    "proposals_checked": 151479,
+    "rule_and_protected_signal_checks_passed": 151479
+  },
+  "sample_count": 159,
+  "rules": {
+    "120ask_complaint_control": {
+      "counts": {
+        "proposed_removal": 111263,
+        "vetoed": 21541
+      },
+      "unique_proposed_texts": 2,
+      "most_common_proposals": [
+        {
+          "text": "投诉\n",
+          "full_chars": 3,
+          "count": 105318
+        },
+        {
+          "text": "投诉",
+          "full_chars": 2,
+          "count": 5945
+        }
+      ]
+    },
+    "familydoctor_feedback_control": {
+      "counts": {
+        "vetoed": 10188
+      },
+      "unique_proposed_texts": 0,
+      "most_common_proposals": []
+    },
+    "cnkang_related_tail": {
+      "counts": {
+        "vetoed": 6609,
+        "proposed_removal": 1277
+      },
+      "unique_proposed_texts": 153,
+      "most_common_proposals": [
+        {
+          "text": "相关文章\n做好这些宝宝远离手足口病的危害\n手足口病的并发危害\n警惕手足口病对肾脏危害\n重症手足口病的后遗危害有哪些\n小孩得了手足口病有哪些危害\n警惕手足口病危害宝宝\n警惕手足口病危害大！\n手足口病的危害?\n手足口病会给患儿带来哪些危害呢\n手足口病有些什么样的危害？\n做好这些宝宝远离手足口病的危害\n治疗手足口病的四种常规药物\n手足口病的中药治疗方法\n中药也可治疗手足口病\n手足口病易与哪些疾病混淆？\n手足口病该如何治疗呢\n治疗小儿手足口病的中药有哪些？\n治疗手足口病的四种常规药物\n中药防治手足口病有奇效\n哪些中药对于治疗手足口病有好处？\n手足口病的中药治疗方法\n手足口病的中药疗法有哪些？\n怎样护理手足口病患儿\n手足口病的家庭护理方法有哪些？\n孕妇手足口可传染胎儿，应注意提高抵抗力\n手足口病会传染孕妇吗\n怎样护理预防手足口病？\n患上手足口病的孩子该怎样进行护理？\n手足口病的家庭护理\n小儿手足口病科学护理很重要\n手足口病家庭护理方法有哪些\n手足口病的病后该如何护理\n手足口病患者如何做好护理工作\n孩子感染了手足口治疗要多少钱\n各程度手足口病的治疗费用分别是多少\n检查手足口病大概需要多少钱\n手足口病的最佳治疗方法及费用\n治疗手足口病多少钱\n手足口病治疗费用一般多少钱\n手足口病治疗费用\n手足口病病毒抗体喷剂多少钱\n手足口病，国家是否报销医疗费用\n手足口病的治疗费用是多少\n手足口病的治疗方式及费用",
+          "full_chars": 600,
+          "count": 67
+        },
+        {
+          "text": "相关文章\n高血压的危害\n高血压危害人体健康\n高血压的危害性是什么\n高血压的危害具体有哪些\n导致高血压病的原因\n什么是白大衣高血压？\n高血压的形成有哪些\n高血压形成的原因有哪些呢\n关于高血压的早期症状\n高血压有哪些症状呢？\n高血压突然发作该怎么办\n高血压的营养治疗办法\n有效治疗高血压的方法？\n高血压的治疗误区在哪?\n高血压患者的治疗佳法是哪些\n改善生活方式防治高血压\n高血压的诊断是怎么样的呢\n高血压有哪些诊断原则？\n高血压应该检查什么项目\n治疗高血压可用什么药\n得了高血压怎么用药\n高血压的用药选择\n高血压患者日常的饮食须知\n高血压有哪些饮食保健方法\n高血压的饮食问题有哪些\n高血压患者在春季应该如何饮食\n高血压患者要如何饮食呢\n高血压的饮食有什么要求\n高血压如何做好护理\n高血压护理有什么?\n高血压患者应当如何饮食\n高血压患者推荐降压食物\n高血压病患者的饮食指导\n治疗高血压需要多少费用？\n高血压的检查需要多少钱\n血压检查多少钱\n血压检查多少钱\n高血压性心脏病的治疗费用\n治疗高血压需要多少钱\n上海哪家医院治高血压好",
+          "full_chars": 460,
+          "count": 40
+        },
+        {
+          "text": "相关文章\n中耳炎的类型的介绍有哪些？\n关注小儿慢性中耳炎\n感冒是导致中耳炎的主要因素\n你知道中耳炎的病因有哪些吗\n中耳炎有可能危及到患者生命吗\n慢性中耳炎会威胁患者生命安全吗\n化脓性中耳炎会引发致命并发症吗？\n中耳炎一般会给患者带来什么危害\n中耳炎传染吗\n中耳炎存在遗传性吗\n遗传是中耳炎疾病的病因吗\n治疗中耳炎的药物有哪些\n生活上要如何鉴别中耳炎\n怎么鉴别中耳炎？\n中耳炎的鉴别诊断方法是什么？\n如何彻底的治愈中耳炎\n得了中耳炎治好有哪些办法\n如何可以彻底的治好中耳炎？\n如何才能彻底的治愈中耳炎\n中耳炎容易治愈吗\n治疗中耳炎的药物有哪些\n小儿中耳炎用药的方法\n产妇哺乳期如何治疗中耳炎\n怀孕患了中耳炎怎么办\n孕妇耳朵堵警惕中耳炎\n中耳炎对怀孕有影响吗\n中耳炎可以运动吗\n中耳炎能参加运动吗\n孕妇患上中耳炎采取何种措施有效预防\n产妇哺乳期如何治疗中耳炎\n怀孕患了中耳炎怎么办\n孕妇耳朵堵警惕中耳炎\n中耳炎对怀孕有影响吗\n诊断中耳炎的费用贵吗?\n治疗中耳炎手术费用贵吗?\n医院专家忠告中耳炎应该注意什么\n治疗中耳炎疾病要多少钱呢\n中耳炎诊断的费用贵吗?\n治疗中耳炎需要多少钱\n中耳炎诊断的费用贵吗?\n诊断中耳炎的费用贵吗?\n治疗中耳炎手术费用贵吗?\n治疗中耳炎哪个医院好\n治疗中耳炎最好医院在哪里",
+          "full_chars": 548,
+          "count": 40
+        },
+        {
+          "text": "相关文章\n眼底出血概述\n眼底出血是什么病\n眼底出血是怎么回事？\n什么是眼底出血\n眼底出血到底是怎么回事\n为什么会患上眼底出血？\n导致眼底出血的原因有哪些\n怎样预防眼底出血\n高血压眼底出血日常应该注意什么\n眼底出血有什么治疗方法？\n眼底出血的治疗和用药原则\n眼底出血的预防方法是什么\n预防眼底出血要注意什么\n治疗眼底出血的两种办法\n眼底出血如何护理好得快\n食疗验方如何治疗眼底出血\n眼底出血的饮食要点\n眼底出血应做哪些护理呢？\n怎样做好日常的眼底出血护理\n患上了眼底出血如何饮食\n护理眼底出血患者的方法有哪些",
+          "full_chars": 253,
+          "count": 39
+        },
+        {
+          "text": "相关文章\n解析糖尿病\n糖尿病是个什么东西你知道吗\n糖尿病的“消渴症”你可认识？\n糖尿病的认识有哪些？\n糖尿病的“三多一少”症状表现\n糖尿病的发病原因有哪些？\n得了糖尿病你依然能长寿\n解析糖尿病\n糖尿病是个什么东西你知道吗\n糖尿病的“消渴症”你可认识？\n什么叫糖尿病？\n你知道如何选择口服降糖药吗？\n患者怎么更换糖尿病的治疗药物\n糖尿病能彻底根治吗\n糖尿病能彻底治愈吗\n如何诊断出糖尿病\n如何鉴别诊断糖尿病？\n如何判断是否患有糖尿病？\n糖尿病的诊断标准是什么\n糖尿病的鉴别方法\n怎么鉴别和诊断糖尿病？\n糖尿病的鉴别诊断有哪些？\n糖尿病患者如何通过饮食进行保健\n六类食物控糖又预防糖尿病\n糖尿病患者做什么运动有助于病情的康复\n糖尿病人该如何运动\n女性患糖尿病可以生宝宝吗\n糖尿病病人的饮食方案\n糖尿病眼病患者应该怎么样饮食\n糖尿病患者需要哪些营养物质呢\n治疗糖尿病饮食妙招有哪些\n糖尿病患者如何通过饮食进行保健\n六类食物控糖又预防糖尿病\n北京治疗糖尿病的费用大概是多少\n同样糖尿病如何花钱少治得好\n妊娠糖尿病患者需要花费多少治疗费用\n糖尿病要是注射胰岛素需要多少钱?\n糖尿病看病的省钱揭秘\n糖尿病治疗哪家医院好\n糖尿病手术哪家医院做得比较好?\n糖尿病打胰岛素费用贵吗\n糖尿病的治疗费用\n治疗早期糖尿病需要多少钱\n北京治疗糖尿病的费用大概是多少",
+          "full_chars": 569,
+          "count": 37
+        },
+        {
+          "text": "相关文章\n脑出血后遗症的危害表现有哪些？\n脑出血的危害都有哪些呢\n脑出血所带有的症状\n脑出血的临床症状有哪几个内容\n脑出血术后能够有多长的寿命\n脑出血能活多久\n脑出血影响寿命吗\n脑出血的寿命\n脑出血患者的最高寿命是多少年\n脑出血后遗症的危害\n脑出血后遗症的危害有哪些\n脑出血患者应该做的检查\n确诊脑出血需要检查的项目有哪些\n脑出血各种检查的注意事项\n脑出血患者都应做哪些常规的检查\n脑出血的诊断\n脑出血怎么诊断\n脑出血的鉴别诊断\n脑出血术后如何应用预防的药物\n脑出血的治疗的常用药都有哪些\n脑出血病人康复过程吃什么药好\n脑出血吃什么药好\n脑出血患者的一般护理\n脑出血食疗方法有哪些\n脑出血患者需要的护理有哪些\n护理脑出血患者的几种措施\n脑出血患者的一般护理\n脑出血的护理问题\n脑出血如何运动\n脑出血可以怀孕吗？\n孕妇为什么会突发脑出血\n孕妇脑出血怎么回事\n脑出血食疗方法有哪些\n脑出血治疗大概需要多少钱\n脑出血治疗费用有多少\n治疗脑出血最好的医院\n脑出血的治疗哪家医院最好\n脑出血的治疗费\n脑出血的治疗要花多少钱呢\n脑出血治疗大概需要多少钱\n脑出血治疗费用有多少\n中医院真没治疗脑出血的\n治疗脑出血最好的医院\n医院怎么治脑出血",
+          "full_chars": 513,
+          "count": 35
+        },
+        {
+          "text": "相关文章\n自然流产常见因素介绍\n发生自然流产后有哪些表现\n自然流产究竟是种什么疾病\n自然流产一些基本常识\n复发性自然流产的诊治\n自然流产为什么复发\n自然流产能否传染\n自然流产常见因素介绍\n自然流产的主要病因\n自然流产的常识\n自然流产会遗传给后代吗\n自然流产的原因及预防\n了解早期自然流产的症状为预防做准备\n自然流产后要做哪些相关检查\n自然流产检查女性朋友要注意以下几点\n防治自然流产用什么药\n自然流产如何用药\n自然流产的原因及预防\n了解早期自然流产的症状为预防做准备\n预防自然流产\n自然流产后要做哪些相关检查\n自然流产检查女性朋友要注意以下几点\n自然流产后的注意事项及护理方法\n减压食物可以减少自然流产的发生\n自然流产后的护理方法有哪些？\n关于自然流产护理事项的介绍\n自然流产后的注意事项及护理方法\n减压食物可以减少自然流产的发生\n患了自然流产是否能够正常运动\n自然流产是否会因运动导致？\n自然流产多久后可运动\n流产后吃什么对身体比较好\n自然流产后吃什么恢复快\n自然流产检查费用贵吗\n治疗自然流产清宫多少钱\n自然流产手术费用需要多少\n自然流产手术费用的组成\n自然流产治疗的具体花费\n妇科医院如何治疗自然流产？\n自然流产正规医院\n自然流产治疗多少钱\n自然流产正常需要多少治疗费\n自然流产的治疗需要多少费用\n自然流产需要做手术都包括哪些费用",
+          "full_chars": 568,
+          "count": 33
+        },
+        {
+          "text": "相关文章\n口唇炎疾病有着怎样的危害呢\n过敏性唇炎的症状危害是什么\n剥脱性唇炎会引起哪些危害\n成人患有口唇炎都有什么危害呢\n引发口唇炎的原因有哪些\n过敏性唇炎会遗传吗\n唇炎由什么原因引起你了解吗\n唇炎的严重危害性\n剥脱性唇炎的危害是什么\n唇炎的危害有哪些\n唇炎带来危害大吗\n秋季如何预防慢性唇炎疾病\n唇炎要怎么预防\n慢性唇炎最好的预防方法？\n如何预防过敏性唇炎呢\n专家介绍唇炎治疗原则\n唇炎能否治愈\n如何治愈唇炎\n慢性唇炎能够治愈吗\n唇炎的预防\n如何预防婴儿慢性唇炎呢？\n过敏性唇炎的预防方法都有哪些\n日常护理过敏性唇炎\n唇炎的保健工作怎么进行呢\n患了肉芽肿性唇炎该如何护理\n详解唇炎治疗的保健工作\n什么运动防治唇炎\n运动和饮食预防唇炎\n治疗肉芽肿性唇炎后如何护理\n唇炎的饮食护理\n唇炎的注意事项\n如何护理唇炎\n孕妇患了剥脱性唇炎应该怎么办呢\n口唇炎治疗费用一般要多少钱\n老人肉芽肿性唇炎治疗要多少钱?\n医院是如何治疗唇炎疾病的\n有口唇炎治疗哪家医院最好?\n医院怎么控制慢性唇炎\n唇炎花多少钱\n剥脱性唇炎检查费用是需要多少钱?\n慢性唇炎的治疗费用\n唇炎治疗最好医院是哪里\n剥脱性唇炎治疗的最好医院有哪些\n唇炎怎么选择医院",
+          "full_chars": 509,
+          "count": 27
+        }
+      ]
+    },
+    "familydoctor_related_tail": {
+      "counts": {
+        "vetoed": 10213,
+        "proposed_removal": 1
+      },
+      "unique_proposed_texts": 1,
+      "most_common_proposals": [
+        {
+          "text": "最新文章\n昆明做阴道收紧术大概多少钱？\n昆明市哪里可以治疗女性阴道松弛\n昆明正规处女膜修复医院排名\n昆明阴唇矫正专科医院推荐\n昆明私密整形医院哪较好\n昆明女性私密漂红医院怎么样\n昆明哪家看大阴唇整形医院**\n昆明较佳阴道松弛医院排名\n昆明比较正规的处女膜修复医院是哪个\n重庆阴唇漂红整形医院名单榜\n健康科普",
+          "full_chars": 153,
+          "count": 1
+        }
+      ]
+    },
+    "vov_recaptcha_footer": {
+      "counts": {
+        "proposed_removal": 8614,
+        "vetoed": 2
+      },
+      "unique_proposed_texts": 1,
+      "most_common_proposals": [
+        {
+          "text": "This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.\n",
+          "full_chars": 94,
+          "count": 8614
+        }
+      ]
+    },
+    "vinmec_booking_footer": {
+      "counts": {
+        "proposed_removal": 26540,
+        "vetoed": 58
+      },
+      "unique_proposed_texts": 14,
+      "most_common_proposals": [
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số HOTLINE , đặt mua GÓI DỊCH VỤ hoặc đặt lịch trực tiếp TẠI ĐÂY . Tải và đặt lịch khám tự động trên ứng dụng My Vinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng.",
+          "full_chars": 242,
+          "count": 22120
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số\n",
+          "full_chars": 53,
+          "count": 3135
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số HOTLINE , đặt mua GÓI DỊCH VỤ hoặc đặt lịch trực tiếp TẠI ĐÂY . Tải và đặt lịch khám tự động trên ứng dụng My Vinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng.\n",
+          "full_chars": 243,
+          "count": 709
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số HOTLINE hoặc đặt lịch trực tiếp TẠI ĐÂY . Tải và đặt lịch khám tự động trên ứng dụng MyVinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng.\n",
+          "full_chars": 220,
+          "count": 543
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số HOTLINE hoặc đặt lịch trực tiếp TẠI ĐÂY. Tải và đặt lịch khám tự động trên ứng dụng MyVinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng.\n",
+          "full_chars": 219,
+          "count": 13
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, quý khách vui lòng liên hệ HOTLINE hoặc đặt lịch khám tự động trên ứng dụng MyVinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng.\n",
+          "full_chars": 185,
+          "count": 9
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm tới số HOTLINE hoặc đặt lịch trực tiếp TẠI ĐÂY . Tải và đặt lịch khám tự động ngay trên ứng dụng MyVinmec để có thể quản lý, theo dõi lịch và đặt hẹn khám mọi lúc mọi nơi.\n",
+          "full_chars": 222,
+          "count": 3
+        },
+        {
+          "text": "Để đặt lịch khám tại viện, Quý khách vui lòng bấm số hoặc đặt lịch trực tiếp TẠI ĐÂY. Tải và đặt lịch khám tự động trên ứng dụng MyVinmec để quản lý, theo dõi lịch và đặt hẹn mọi lúc mọi nơi ngay trên ứng dụng.\n",
+          "full_chars": 211,
+          "count": 2
+        }
+      ]
+    },
+    "baonghean_inline_related_link": {
+      "counts": {
+        "proposed_removal": 109,
+        "vetoed": 37
+      },
+      "unique_proposed_texts": 32,
+      "most_common_proposals": [
+        {
+          "text": "» Linh mục Nguyễn Đình Thục kích động giáo dân\n",
+          "full_chars": 47,
+          "count": 75
+        },
+        {
+          "text": "» Bùng phát dịch sốt xuất huyết ở Diễn Châu\n",
+          "full_chars": 44,
+          "count": 2
+        },
+        {
+          "text": "» Săn 'thần dược' đàn ông, thu tiền triệu mỗi ngày\n",
+          "full_chars": 51,
+          "count": 2
+        },
+        {
+          "text": "» Tài xế đứt lìa cánh tay sau khi xe bị 'xẻ làm đôi'\n",
+          "full_chars": 53,
+          "count": 2
+        },
+        {
+          "text": "» Cách phân biệt nhanh 'sốt xuất huyết' và 'sốt rét' để điều trị đúng\n",
+          "full_chars": 70,
+          "count": 1
+        },
+        {
+          "text": "» Tằm - đặc sản 'hút' khách ở một làng nghề xứ Nghệ\n",
+          "full_chars": 52,
+          "count": 1
+        },
+        {
+          "text": "» Em bé thụ tinh trong ống nghiệm đầu tiên ra đời tại Nghệ An\n",
+          "full_chars": 62,
+          "count": 1
+        },
+        {
+          "text": "» Mẹo đuổi muỗi gây bệnh sốt xuất huyết tại nhà\n",
+          "full_chars": 48,
+          "count": 1
+        }
+      ]
+    },
+    "thanhnien_related_link": {
+      "counts": {
+        "vetoed": 3104,
+        "proposed_removal": 3675
+      },
+      "unique_proposed_texts": 3573,
+      "most_common_proposals": [
+        {
+          "text": ">> Thức uống tăng cường sức đề kháng >> Ăn khoai lang để tăng sức đề kháng >> Tăng cường sức đề kháng cho trẻ >> Đau dạ dày có kiêng vitamin C? >> Mẹ thiếu vitamin C ảnh hưởng não trẻ >> Vitamin D có thể giúp ngăn chặn Alzheimer",
+          "full_chars": 228,
+          "count": 5
+        },
+        {
+          "text": ">> Vitamin cho da đẹp >> Da đẹp nhờ bắp cải tím >> Dinh dưỡng cho da đẹp, tóc khỏe >> Giữ da đẹp nơi công sở >> Da đẹp nhờ ăn nhiều hoa quả",
+          "full_chars": 139,
+          "count": 5
+        },
+        {
+          "text": ">> Sự thực là:\n",
+          "full_chars": 15,
+          "count": 4
+        },
+        {
+          "text": ">> Tiền tiểu đường có nguy cơ đột quỵ >> Liệu pháp chống mù do bệnh tiểu đường >> Thực phẩm cho người tiểu đường >> Nguy cơ tiểu đường ở phụ nữ >> Nguy cơ tiểu đường vì nước sơn móng >> Nguy cơ bệnh tiểu đường ở trẻ",
+          "full_chars": 215,
+          "count": 4
+        },
+        {
+          "text": ">> Vệ sinh răng miệng giúp giảm nguy cơ sinh non >> Thực phẩm tốt cho răng miệng >> Chăm sóc răng miệng thường bị \"phớt lờ >> Giữ vệ sinh răng miệng ở trẻ nhỏ >> Mang thai và vệ sinh răng miệng >> Muốn làm mẹ, hãy chăm sóc răng miệng",
+          "full_chars": 233,
+          "count": 3
+        },
+        {
+          "text": ">> Lão hóa da sớm >> Thể thao làm chậm quá trình lão hóa >> Tìm bệnh cho bé bị lão hóa sớm >> Làm chậm quá trình lão hóa >> Đối phó lão hóa",
+          "full_chars": 139,
+          "count": 3
+        },
+        {
+          "text": ">> Giảm viêm khớp gối >> Phụ nữ thừa cân tăng nguy cơ viêm khớp >> Bệnh nướu răng có thể gây viêm khớp >> Bệnh nướu răng có thể gây viêm khớp nặng",
+          "full_chars": 146,
+          "count": 3
+        },
+        {
+          "text": ">> Thịt bò giúp giảm cholesterol xấu >> Trà xanh giúp giảm cholesterol xấu >> Giảm cholesterol xấu nhờ đậu nành >> Giảm cholesterol \"xấu\" để bảo vệ tim",
+          "full_chars": 151,
+          "count": 3
+        }
+      ]
+    }
+  }
+}
