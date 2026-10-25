@@ -1,0 +1,105 @@
+{
+  "source_audit": "/home/duyhoang/Downloads/AI_Guru/reports/data_audit/full_run_01",
+  "records": 1105160,
+  "distinct_doc_ids": 855745,
+  "doc_ids_with_text": 852995,
+  "doc_ids_without_text": 2750,
+  "doc_ids_with_multiple_records": 248909,
+  "doc_ids_with_conflicting_normalized_text": 28480,
+  "doc_ids_with_automatic_candidate_version": 802263,
+  "doc_ids_with_text_but_all_versions_need_review": 50732,
+  "doc_ids_with_text_and_matching_blocks": 852995,
+  "rows_with_nonempty_html": 78739,
+  "rows_with_valid_blocks": 1101858,
+  "total_blocks": 34658787,
+  "block_kinds": {
+    "h": 5581196,
+    "p": 28782198,
+    "tr": 242270,
+    "dt": 53089,
+    "pre": 34
+  },
+  "quality_flags": {
+    "canonical_invalid": 1240,
+    "short_text": 19613,
+    "repeated_lines": 212401,
+    "possible_ui_text": 257117,
+    "possible_title_body_mismatch": 7845,
+    "repeated_characters": 1681,
+    "replacement_character": 84,
+    "html_entities": 601,
+    "html_in_text": 1391,
+    "empty_text": 3444,
+    "missing_text_column": 853,
+    "missing_title": 3512,
+    "non_2xx_status": 3058,
+    "final_url_domain_changed": 22395,
+    "conflicting_id_versions_or_urls": 56960,
+    "possible_block_page": 841,
+    "canonical_domain_changed": 16504,
+    "headings_without_body": 11,
+    "possible_language_gate": 1
+  },
+  "automatic_dispositions": {
+    "usable_as_is": 698439,
+    "needs_review": 91667,
+    "needs_cleaning": 311610,
+    "unusable_currently": 3321,
+    "needs_reextraction": 123
+  },
+  "language_hints": {
+    "cjk_likely_zh": 311172,
+    "mixed_script": 3175,
+    "latin_undetermined": 32,
+    "unknown": 3444,
+    "vi_diacritics": 787334,
+    "other_or_mixed": 3
+  },
+  "interpretation": "Working-corpus candidates only; no medical relevance or human QA guarantee.",
+  "metadata_states": {
+    "abstract": {
+      "missing_column": 1105160
+    },
+    "authors": {
+      "missing_column": 1105160
+    },
+    "canonical": {
+      "null": 2449,
+      "present": 920581,
+      "empty": 181277,
+      "missing_column": 853
+    },
+    "category": {
+      "missing_column": 1105160
+    },
+    "desc": {
+      "empty": 114609,
+      "null": 2449,
+      "present": 987249,
+      "missing_column": 853
+    },
+    "method": {
+      "null": 2449,
+      "present": 1101858,
+      "missing_column": 853
+    },
+    "published_date": {
+      "missing_column": 1105160
+    },
+    "source": {
+      "present": 1105160
+    },
+    "title": {
+      "null": 2449,
+      "present": 1101648,
+      "missing_column": 853,
+      "empty": 210
+    },
+    "ts": {
+      "present": 1105160
+    },
+    "updated_date": {
+      "missing_column": 1105160
+    }
+  }
+}
