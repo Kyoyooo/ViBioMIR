@@ -1,0 +1,29 @@
+{
+  "format": "vibiomir-document-batches-v1",
+  "identity": {
+    "operation": "prepare-chunk-inputs",
+    "source": {
+      "stage4_manifest": "768e4d17cebecda552a9edda20c49f0aacdb5d0da21342b939ac7e606ca2eb4b",
+      "stage4_validation": "31b2afcda322fefa39d0fb1ae0889ed5d700c354d8b90ab1f977c7a7606eb0eb",
+      "stage3_manifest": "ea0f6164a797b03a84173b30c3f3e735fee9399c302e09efffcfc066a8bc7865",
+      "verification": "validated stage4 snapshot + per-used-source slice; no full SQLite rehash"
+    },
+    "code": {
+      "chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+      "chunking.py": "7bb7148d4f7404404693bd1fc4de7dd88300186d6b9c62604d627fb68e4cd176",
+      "chunk_models.py": "05383a2d6faa8606016de3c1625fc1f97f4e88bd7a131ee92e85f9c252d7a274",
+      "chunk_pipeline.py": "b55d114a46757f7ddc8ffc228283e01c1ea4af67e15e0b5d20342e4ae0db27ba",
+      "document_contracts.py": "c2a4f7a26d854ecd3fa0c42da8cdd9ffb22f1ad0cdc3e30da283510f39774e34"
+    },
+    "batch_documents": 50,
+    "max_documents": 200
+  },
+  "signature": "01d55084ddec9f8642e947d65825d5bc8fd9339200dddd2317b7cff175d67b4c",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "batches": 4,
+  "documents": 200,
+  "chunks": 0
+}
