@@ -1,144 +1,69 @@
-# ViBioMIR — tổng hợp bài toán và khám phá dữ liệu
+# ViBioMIR — multilingual biomedical retrieval
 
-Đặc tả bài toán: [docs/BAI_TOAN_VIBIOMIR.md](docs/BAI_TOAN_VIBIOMIR.md).
-Báo cáo của lượt phân tích dữ liệu hiện tại: [reports/eda/REPORT.md](reports/eda/REPORT.md).
-Các bước EDA phân tích dữ liệu cục bộ, không gọi mô hình, không huấn luyện và
-không tạo submission. `exploration.download_official` là bước tải dữ liệu riêng,
-cần kết nối Hugging Face.
+Retrieve original Vietnamese, English and Chinese medical documents and passages
+for Vietnamese queries. Evidence must remain traceable to the original source.
+Code and technical documentation use English; corpus text retains its language.
 
-## Cài đặt và chạy
+## Start here
 
-Python 3.10 trở lên. Nếu môi trường chưa có PyArrow:
+1. [Task definition](docs/BAI_TOAN_VIBIOMIR.md): competition rules, evaluation and submission.
+2. [Development specification](docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md): architecture, backlog and acceptance criteria.
+3. [Team review and sharing](docs/TEAM_REVIEW_AND_SHARING.md): what goes on GitHub/Drive and what to review first.
+4. [Documentation map](docs/README.md) and [report index](reports/README.md): one entry point for each topic.
 
-```bash
-python -m pip install -r requirements-eda.txt
+The [original mentor summary](261012_R2_AI_S3_MentorDay1_summary.md) is preserved
+in Vietnamese. See [development conventions](docs/DEVELOPMENT_CONVENTIONS.md)
+for the manual-execution policy. The owner runs processing, tests and model jobs.
+
+## Observed progress — 2026-10-25
+
+| Stage | Observed state | Evidence |
+| --- | --- | --- |
+| Audit | Full automatic audit finished: 1,195 shards / 1,105,160 rows | [Analysis](reports/data_audit/full_run_01/analysis/REPORT.md) |
+| Stage 3 | `document_store_stage3_full_v2`: 913,969 versions / 855,745 document IDs; validated | [Validation snapshot](reports/run_registry/stage3_full_v2/VALIDATION.json) |
+| Stage 4 | Full apply complete and validated: 1,029,307 regions across all versions; zero failed documents | [Execution evidence](reports/cleaning_stage4_rule_review_01/EXECUTION.md) |
+| Stage 5 inputs | Full preparation complete: 855,745 documents / 1,712 batches | [Manifest snapshot](reports/run_registry/stage5_inputs_full/manifest.json) |
+| Stage 5 smoke | Fixed: 765 chunks; structural: 687 chunks, each over 200 documents; both validated | [Run registry](reports/run_registry/README.md) |
+| Stage 5 full structural chunks | **Running when observed**; do not move, delete or upload as a completed result yet | [Observed metadata](reports/run_registry/stage5_full_structure_observed/manifest.json) |
+| Semantic / ICD / indexes / retrieval | Semantic code and Colab handoff supplied; no completed GPU run recorded; later retrieval stages pending | [Stage-5 runbook](docs/CHUNKING_STAGE5.md) |
+
+These are technical processing results. Human/clinical QA, official-ID
+eligibility, corpus freeze and retrieval evaluation remain pending. Published URL
+counts are reference snapshots, not an acquisition quota; recrawling is deferred.
+
+## Run instructions
+
+Use the runbook for the operation you need; commands are not duplicated here.
+Run tests and a small pilot before a new full run.
+
+| Operation | Canonical guide | Compute |
+| --- | --- | --- |
+| Earlier EDA and official-reference snapshot | [Exploration](docs/EXPLORATION.md) | Local CPU |
+| S00 audit | [Data audit](docs/DATA_AUDIT.md) | Local CPU |
+| Versioned import and metadata | [Stage 3](docs/DOCUMENT_STORE_STAGE3.md) | Local CPU |
+| Offline recovery and reviewed cleaning | [Stage 4](docs/CLEANING_STAGE4.md) | Local CPU |
+| Prepare inputs, fixed/structural chunks, validation | [Stage 5](docs/CHUNKING_STAGE5.md) | Local CPU; tokenizer only |
+| Semantic boundary pilot | [Stage-5 Colab notebook](colab/stage5_semantic.ipynb) | CUDA GPU |
+
+## Repository layout
+
+```text
+configs/        Shipped settings and selected pilot IDs/shards
+vibiomir/       Stage 3–5 implementation and CLI
+exploration/    Earlier EDA, audit and audit analysis
+scripts/        Rule-review, checkpoint and Colab-bundle helpers
+tests/          Offline fixtures and optional real-tokenizer checks
+colab/          GPU notebook; no CPU-only notebook
+docs/           Task/specification and canonical runbooks
+reports/        Small review evidence on GitHub; large stores on Drive
+sharing/        Explicit GitHub, Drive and Colab upload lists
+Data/           Original collected/official data — local and Drive
+artifacts/      Successful/generated outputs — local and Drive
+local_assets/   Original dataset ZIPs and mentor videos — local and Drive
 ```
 
-Chạy từ thư mục gốc dự án, với **thư mục output mới**:
-
-```bash
-python -m exploration --data-dir Data --output-dir reports/eda
-```
-
-Đọc kết quả ở `reports/eda/REPORT.md`. Đầu ra có JSON tổng hợp, CSV và ba biểu
-đồ SVG; `metrics.sqlite3` chứa chỉ số từng dòng cùng ID/URL/đường dẫn shard,
-không sao chép toàn bộ nội dung văn bản/HTML. CSV dùng UTF-8 BOM để mở bằng Excel.
-
-Chạy thử hai shard đầu theo thứ tự đường dẫn (đây **không** phải mẫu ngẫu nhiên
-hay mẫu đại diện):
-
-```bash
-python -m exploration --output-dir reports/smoke --max-files 2 --inspect-blocks
-```
-
-Kiểm tra thêm cấu trúc `blocks` trên toàn corpus:
-
-```bash
-python -m exploration --output-dir reports/eda_blocks --inspect-blocks
-```
-
-Tùy chọn `--batch-size 512` giới hạn số dòng mỗi lô, không giới hạn byte; một dòng
-rất dài vẫn có thể chiếm nhiều RAM. Mã đọc chọn cột và không đọc `html_trim`.
-Phân tích đầy đủ có thể mất vài phút hoặc lâu hơn tùy máy; cần thêm dung lượng
-cho SQLite/index và file tạm. Các bước tổng hợp dùng SQLite trên đĩa thay vì giữ
-toàn bộ corpus trong RAM.
-
-## Các bước độc lập
-
-```bash
-python -m exploration --stage inventory --output-dir reports/inventory
-python -m exploration --stage corpus --output-dir reports/corpus
-python -m exploration --stage references --output-dir reports/corpus
-python -m exploration --stage report --output-dir reports/corpus
-```
-
-`corpus` và `all` từ chối ghi đè `metrics.sqlite3` đã có để tránh trộn các lần
-chạy. `inventory`, `references`, `report` có thể cập nhật các báo cáo tương ứng
-trong output đã có. Khi so sánh kết quả giữa các lần chạy, dùng thư mục riêng.
-`run_config.json` ghi tham số cho lệnh `all`.
-
-## Dữ liệu chính thức từ Hugging Face
-
-Đã bổ sung `Data/official/ViBioMIR/` gồm `query.parquet`,
-`links_corpus_vi_en_zh.parquet`, dataset card `README.md` và `provenance.json`.
-Nguồn: [AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR),
-revision `71be0e1239a19dfd7a717e2bc13e3bec21bd0334`.
-Manifest lưu URL theo commit, SHA-256, thời điểm tải, schema và số dòng.
-
-Tải lại vào thư mục mới nếu cần (không tự ghi đè dữ liệu đã có):
-
-```bash
-python -m exploration.download_official --output-dir Data/official/ViBioMIR_copy
-```
-
-Khi có nhiều bản sao dữ liệu, phải chỉ định đường dẫn cho EDA để tránh nhầm tệp.
-Dataset card công bố giấy phép CC BY-NC 4.0; chi tiết và trích dẫn ở
-[tài liệu bài toán](docs/BAI_TOAN_VIBIOMIR.md#35-giấy-phép-và-trích-dẫn).
-
-EDA tự tìm `query.parquet` cùng `links_corpus_vi_en_zh.parquet` hoặc tên cũ
-`links_corpus.parquet` bên dưới `Data/`. Nếu chưa có, báo cáo ghi rõ thiếu dữ
-liệu; EDA không tự tải. Cập nhật báo cáo đã có, dùng lại metrics của lượt quét
-corpus trước để tránh đọc lại toàn bộ văn bản:
-
-```bash
-python -m exploration --stage references --output-dir reports/eda \
-  --query-file Data/official/ViBioMIR/query.parquet \
-  --links-file Data/official/ViBioMIR/links_corpus_vi_en_zh.parquet
-python -m exploration --stage report --output-dir reports/eda
-```
-
-Phần truy vấn kiểm tra kiểu ID, ID trùng, nội dung rỗng, câu trùng sau chuẩn hóa,
-độ dài và số lượng 1.200 ID. Phần links kiểm tra ID/URL và đối chiếu với corpus
-đã quét: ID có shard, ID có text HTTP 2xx không rỗng, ID ngoài danh sách chính
-thức, ví dụ ID còn thiếu và các ID có URL nguồn không khớp nguyên văn. Có thêm
-`official_coverage_by_domain.csv` thống kê theo ID duy nhất từng tên miền,
-`official_url_mismatch_examples.csv` để kiểm tra lại ánh xạ ID–URL. Chỉ số này là độ phủ thu thập, **không phải Recall
-truy hồi**. Cần nhãn liên quan để đánh giá Precision/Recall/F2.
-
-## Cấu trúc code
-
-| Tệp | Nội dung |
-| --- | --- |
-| `exploration/__main__.py` | CLI và điều phối các bước |
-| `exploration/common.py` | Đọc theo lô, chuẩn hóa văn bản, IO, heuristic ngôn ngữ |
-| `exploration/inventory.py` | Inventory/schema và trạng thái crawl từ SQLite |
-| `exploration/corpus.py` | Chỉ số từng dòng, chất lượng, trùng lặp, tổng hợp và đối chiếu crawl |
-| `exploration/references.py` | EDA truy vấn, links và độ phủ ID chính thức khi có |
-| `exploration/download_official.py` | Tải hai Parquet và dataset card theo commit cố định, lưu provenance |
-| `exploration/report.py` | Báo cáo Markdown và biểu đồ SVG |
-
-## Đọc kết quả đúng phạm vi
-
-- A/B/C chỉ là nhãn nhóm thư mục, không suy ra train/dev/test hoặc public/private.
-- Phân bố tính trên **dòng đã crawl**; ID có thể lặp do retry. Các bảng cũng cung
-  cấp số ID khác nhau. Hash nội dung bỏ qua text rỗng và chuẩn hóa theo đặc tả.
-- Shard chỉ có metadata crawl vẫn được đọc và gắn cờ `missing_text_column`;
-  không bị bỏ qua hay tự coi là nội dung thu thập thành công.
-- `latin_undetermined` không phải nhãn tiếng Anh; `cjk_likely_zh` chưa xác nhận
-  tiếng Trung. Nhận diện ngôn ngữ hiện tại chỉ là heuristic trên tiền tố văn bản.
-- Độ dài theo khoảng trắng không phải token của embedding hay tokenizer bộ chấm;
-  đặc biệt không dùng làm cơ sở so sánh độ dài ngôn ngữ Trung với Việt/Anh.
-- HTTP 2xx có thể chứa trang chặn, menu hoặc nội dung không liên quan. Cờ chất
-  lượng là gợi ý kiểm tra, không tự xóa/lọc dữ liệu.
-- `quality_examples.csv` tối đa 20 dòng mỗi cờ; CSV trùng tối đa 1.000 nhóm; JSON
-  tổng hợp đếm toàn bộ phạm vi đã quét. ID/URL gốc vẫn có trong SQLite metrics.
-- Inventory ghi lỗi đọc; corpus bỏ qua toàn bộ shard lỗi và đánh dấu `partial`.
-  `--max-files` cũng đánh dấu `partial`; số liệu từ lần chạy này không đại diện
-  toàn bộ corpus. Báo cáo JSON giữ chi tiết lỗi.
-- `last_run_*.json` chỉ là log lần chạy cuối; số crawl tổng hợp lấy từ SQLite.
-- Dừng crawler trước khi chạy: SQLite nguồn được mở read-only/immutable để tránh
-  sinh sidecar; dữ liệu đang ghi hoặc còn WAL chưa checkpoint có thể chưa được
-  phản ánh. EDA không sửa các tệp nguồn.
-
-Ví dụ kiểm tra lại các ID có nhiều bản ghi bằng CLI SQLite nếu đã cài:
-
-```bash
-sqlite3 reports/eda/metrics.sqlite3 \
-  'SELECT doc_id, COUNT(*) AS n FROM documents GROUP BY doc_id HAVING n > 1 LIMIT 20;'
-```
-
-Các kiểm tra nhỏ cho chuẩn hóa, thống kê, đối chiếu crawl và dữ liệu chính thức:
-
-```bash
-python -m unittest discover -s tests -v
-```
+`.gitignore` separates source/review material from runtime data, databases,
+weights, caches and local environments. Successful artifact paths stay stable
+because manifests and resume checks reference them. Old failed stage-3 stores
+were removed; [the cleanup record](reports/maintenance/repository_cleanup_20261025/README.md)
+records evidence and original-asset relocations.
