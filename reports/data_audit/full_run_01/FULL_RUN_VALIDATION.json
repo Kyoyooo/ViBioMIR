@@ -1,0 +1,12 @@
+{
+  "all_source_checksums_unchanged": true,
+  "verified_source_files": 1195,
+  "source_membership_unchanged": true,
+  "readable_rows": 1105160,
+  "expected_rows": 1105160,
+  "partial": false,
+  "file_states": {
+    "complete": 1195
+  },
+  "retained_committed_rows_before_runtime_upgrade": 45303
+}
