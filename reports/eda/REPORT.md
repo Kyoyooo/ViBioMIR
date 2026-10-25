@@ -1,39 +1,39 @@
-# Báo cáo khám phá dữ liệu ViBioMIR
+# ViBioMIR data exploration report
 
-Thời điểm sinh (giờ Việt Nam): 2026-10-24T02:03:54+07:00
+Generated at (Vietnam time): 2026-10-24T23:29:51+07:00
 
-Phân tích dữ liệu cục bộ; không tải dữ liệu, không gọi mô hình hoặc API.
+Local data analysis; no data downloads, model inference, or API calls. This report is rendered from saved analysis artifacts; its generation time is not a new corpus scan timestamp.
 
 ## Inventory
 
-Nguồn: `/home/duyhoang/Downloads/AI_Guru/Data`.
+Source: `/home/duyhoang/Downloads/AI_Guru/Data`.
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | --- |
-| Tệp Parquet | 1197 |
-| Dung lượng Parquet (byte) | 2466230403 |
-| Tổng dòng theo metadata (mọi Parquet) | 2326958 |
-| Biến thể schema | 4 |
-| Lỗi inventory | 0 |
+| Parquet files | 1197 |
+| Parquet size (bytes) | 2466230403 |
+| Metadata row count (all Parquet files) | 2326958 |
+| Schema variants | 4 |
+| Inventory errors | 0 |
 
-Schema và lỗi chi tiết: [inventory.json](inventory.json); danh sách tệp: [files.csv](files.csv).
+Schema and error details: [inventory.json](inventory.json); file inventory: [files.csv](files.csv).
 
 ## Corpus
 
-Đã quét toàn bộ shard corpus phát hiện được.
+All discovered corpus shards were scanned.
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | --- |
-| Shard đã chọn | 1195 |
-| Shard phát hiện được | 1195 |
-| Dòng đã đọc thành công | 1105160 |
-| ID tài liệu khác nhau | 855745 |
-| ID có nhiều nội dung khác nhau | 28480 |
-| Lỗi đọc shard | 0 |
+| Selected shards | 1195 |
+| Discovered shards | 1195 |
+| Successfully read rows | 1105160 |
+| Distinct document IDs | 855745 |
+| IDs with conflicting text versions | 28480 |
+| Shard read errors | 0 |
 
-### Chất lượng (các cờ có thể chồng lấp)
+### Quality (flags may overlap)
 
-| Dấu hiệu | Số dòng |
+| Flag | Rows |
 | --- | --- |
 | missing_or_invalid_id | 0 |
 | empty_text | 3444 |
@@ -48,32 +48,32 @@ Schema và lỗi chi tiết: [inventory.json](inventory.json); danh sách tệp:
 | invalid_blocks | 0 |
 | missing_text_column | 853 |
 
-`short_text` dùng số ký tự thô của văn bản không rỗng, ngưỡng 200. `text_len_mismatch` so sánh `text_len` với `len(text)` Python. Cờ HTML/trang chặn là heuristic, cần xem lại mẫu.
+`short_text` uses the raw character count of nonempty text, with threshold 200. `text_len_mismatch` compares `text_len` with Python `len(text)`. HTML/block-page flags are heuristics requiring sample review.
 
-Ví dụ để kiểm tra lại bản gốc: [quality_examples.csv](quality_examples.csv).
+Examples for reviewing the original records: [quality_examples.csv](quality_examples.csv).
 
-### Phân bố độ dài
+### Length distributions
 
-| Đơn vị | Min | P50 | P90 | P99 | Max | Trung bình |
+| Unit | Min | P50 | P90 | P99 | Max | Mean |
 | --- | --- | --- | --- | --- | --- | --- |
-| Ký tự | 0 | 2492 | 6244 | 11693 | 336970 | 3089.7728057475842 |
-| Đơn vị tách khoảng trắng | 0 | 503 | 1360 | 2533 | 66214 | 625.2311583843064 |
+| Characters | 0 | 2492 | 6244 | 11693 | 336970 | 3089.7728057475842 |
+| Whitespace units | 0 | 503 | 1360 | 2533 | 66214 | 625.2311583843064 |
 
-Các phân vị dùng phần tử ở vị trí floor((n−1)×q) trong dãy đã sắp xếp. Đơn vị tách khoảng trắng **không phải token mô hình/LCS**, và không dùng để so sánh lượng thông tin giữa tiếng Trung với tiếng Việt/Anh.
+Quantiles use the element at floor((n−1)×q) in the sorted sequence. Whitespace units **are not model/LCS tokens** and should not be used to compare information volume between Chinese and Vietnamese/English.
 
-### Bản ghi trùng
+### Duplicate records
 
-| Khóa | Nhóm trùng | Dòng dư |
+| Key | Duplicate groups | Extra rows |
 | --- | --- | --- |
 | id | 248909 | 249415 |
 | url | 248909 | 249415 |
 | normalized_text_sha256 | 223088 | 225574 |
 
-Dòng dư = tổng (kích thước nhóm − 1). Hash SHA-256 tính trên toàn bộ văn bản sau NFKC → HTML unescape → lowercase → gộp khoảng trắng. Bỏ qua nội dung rỗng khi đếm trùng nội dung. URL được so sánh nguyên văn, chưa chuẩn hóa URL. Đây là trùng chính xác sau chuẩn hóa, chưa phải near-duplicate. Các CSV nhóm trùng chỉ xuất tối đa 1.000 nhóm; tổng đếm trong JSON là đầy đủ cho phạm vi đã quét.
+Extra rows = sum(group size − 1). SHA-256 hashes cover the entire text after NFKC → HTML unescape → lowercase → whitespace collapse. Empty text is excluded from content duplicate counts. URLs are compared verbatim without URL normalization. Content matches are exact after normalization; near-duplicates are not detected. Duplicate CSVs contain at most 1,000 groups; JSON totals cover the entire scanned scope.
 
-### Dấu hiệu ngôn ngữ
+### Language hints
 
-| Heuristic | Số dòng |
+| Heuristic | Rows |
 | --- | --- |
 | cjk_likely_zh | 314350 |
 | latin_undetermined | 422 |
@@ -81,28 +81,28 @@ Dòng dư = tổng (kích thước nhóm − 1). Hash SHA-256 tính trên toàn 
 | unknown | 3444 |
 | vi_diacritics | 786941 |
 
-Heuristic xem tối đa 4.000 ký tự đầu: tỷ lệ chữ CJK ≥20% → `cjk_likely_zh`; có dấu đặc trưng tiếng Việt → `vi_diacritics`; nhiều chữ Latin ASCII → `latin_undetermined`. CJK không khẳng định tiếng Trung; Latin không khẳng định tiếng Anh. Không có mô hình nhận diện ngôn ngữ, không dùng tên miền làm nhãn ngôn ngữ.
+The heuristic examines at most the first 4,000 characters: CJK share ≥20% → `cjk_likely_zh`; Vietnamese-specific diacritics → `vi_diacritics`; substantial ASCII Latin text → `latin_undetermined`. CJK does not confirm Chinese; Latin does not confirm English. No language identification model is used, and domains are not treated as language labels.
 
-### Đối chiếu trạng thái crawl
+### Crawl-state reconciliation
 
-| Nhóm | ID trạng thái | ID trạng thái thiếu shard | ID shard thiếu trạng thái | ID HTTP 2xx thiếu text 2xx không rỗng |
+| Group | State IDs | State IDs without shards | Shard IDs without state | HTTP 2xx IDs without nonempty 2xx text |
 | --- | --- | --- | --- | --- |
 | A | 147786 | 0 | 0 | 120 |
 | B | 429143 | 0 | 0 | 16 |
 | C | 527636 | 0 | 0 | 49 |
 
-Đối chiếu ID trong cùng nhóm A/B/C. SQLite trạng thái không phải danh sách tài liệu chính thức; HTTP 2xx không tự chứng minh nội dung đúng. Nếu chỉ quét mẫu shard thì số thiếu shard chưa phản ánh corpus đầy đủ. Log `last_run` chỉ là lần chạy gần nhất.
+IDs are reconciled within each A/B/C group. The crawl-state SQLite database is not the official document list; HTTP 2xx does not establish content correctness. Missing-shard counts from a sample scan do not describe the full corpus. A `last_run` log describes only the latest run.
 
-### Cấu trúc khối nội dung
+### Content block structure
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | --- |
-| Dòng có blocks hợp lệ | 1101858 |
-| Tổng khối | 34658787 |
-| Số khối trung bình/dòng có blocks hợp lệ | 31.45485806701045 |
-| Số khối tối đa | 8728 |
+| Rows with valid blocks | 1101858 |
+| Total blocks | 34658787 |
+| Mean blocks per row with valid blocks | 31.45485806701045 |
+| Maximum blocks | 8728 |
 
-Khối nội dung từ crawler chưa mặc định là chunk truy hồi. Cấu trúc hợp lệ là danh sách các cặp chuỗi `[loại_khối, văn_bản]`; EDA không thay đổi văn bản khối.
+Crawler content blocks are not automatically retrieval chunks. A valid structure is a list of string pairs `[block_kind, text]`; EDA does not modify block text.
 
 ![Top domains by corpus rows](top_domains.svg)
 
@@ -110,13 +110,13 @@ Khối nội dung từ crawler chưa mặc định là chunk truy hồi. Cấu t
 
 ![Text length in characters](lengths.svg)
 
-## Truy vấn và danh sách tài liệu chính thức
+## Queries and official document list
 
-Nguồn: [AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR); revision `71be0e1239a19dfd7a717e2bc13e3bec21bd0334`. Thời điểm tải: 2026-10-24T02:00:16+07:00. Manifest cục bộ: `/home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/provenance.json`.
+Source: [AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBioMIR); revision `71be0e1239a19dfd7a717e2bc13e3bec21bd0334`. Retrieved at: 2026-10-24T02:00:16+07:00. Local manifest: `/home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/provenance.json`.
 
-### Truy vấn
+### Queries
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | --- |
 | file | /home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/query.parquet |
 | rows | 1200 |
@@ -132,9 +132,9 @@ Nguồn: [AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBi
 | whitespace_units | {"min": 5, "p50_lower": 18, "p95_lower": 84, "max": 281} |
 | language_hints | {"vi_diacritics": 1200} |
 
-### Danh sách tài liệu
+### Document list
 
-| Chỉ số | Giá trị |
+| Metric | Value |
 | --- | --- |
 | file | /home/duyhoang/Downloads/AI_Guru/Data/official/ViBioMIR/links_corpus_vi_en_zh.parquet |
 | rows | 1220598 |
@@ -151,11 +151,11 @@ Nguồn: [AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBi
 | nonempty_2xx_id_coverage | 0.6988336864389422 |
 | note | Coverage refers to the scanned shards; a partial run understates full coverage. Domain coverage counts unique IDs, using MIN(domain) for ambiguous duplicate official IDs. Source URL matching is exact; redirects/encoding differences need manual review. |
 
-Độ phủ ID có ít nhất một bản text HTTP 2xx không rỗng: **69.88%**. Đây là độ phủ thu thập; chưa xác nhận văn bản đúng nội dung và không phải Recall truy hồi.
+Coverage of IDs with at least one nonempty HTTP 2xx text version: **69.88%**. This is acquisition coverage; it does not establish content correctness or retrieval Recall.
 
-### Tên miền thiếu ID so với danh sách chính thức
+### Domains with missing IDs relative to the official list
 
-| Tên miền | ID chính thức | ID chưa có shard | ID có text HTTP 2xx không rỗng |
+| Domain | Official IDs | IDs without shards | IDs with nonempty HTTP 2xx text |
 | --- | --- | --- | --- |
 | pubmed.ncbi.nlm.nih.gov | 240000 | 239957 | 0 |
 | nhathuoclongchau.com.vn | 79598 | 79598 | 0 |
@@ -164,16 +164,16 @@ Nguồn: [AIGuruTinix/ViBioMIR](https://huggingface.co/datasets/AIGuruTinix/ViBi
 | pmc-ecm-healthblog.beta.pharmacity.io | 5333 | 5292 | 0 |
 | article.iiyi.com | 729 | 686 | 0 |
 
-Tối đa 15 tên miền, xếp theo số ID thiếu. Toàn bộ thống kê: [official_coverage_by_domain.csv](official_coverage_by_domain.csv). Các URL nguồn không khớp nguyên văn: [official_url_mismatch_examples.csv](official_url_mismatch_examples.csv).
+Up to 15 domains, ranked by missing ID count. Full statistics: [official_coverage_by_domain.csv](official_coverage_by_domain.csv). Source URLs without verbatim matches: [official_url_mismatch_examples.csv](official_url_mismatch_examples.csv).
 
-Độ dài truy vấn ở đây dùng `str.split()`, phân vị theo phần tử floor((n−1)×q). Dataset card công bố min–max số từ là 5–283; lượt phân tích tệp đang đọc cho 5–281 theo cách đếm trên. Chưa xác định cách tách từ của thống kê công bố; không thay đổi văn bản truy vấn.
+Query length here uses `str.split()`, with quantiles at floor((n−1)×q). The dataset card reports a word-count range of 5–283; the analyzed file yields 5–281 under this counting method. The published tokenization method is unspecified; query text is preserved.
 
-## Giới hạn và bước tiếp theo
+## Limitations and next steps
 
-- Xem các cờ chất lượng theo domain trước khi quyết định lọc; mã EDA không loại/sửa bản ghi nguồn.
-- Kiểm tra các ID còn thiếu và các nguồn chưa có text thành công trong thống kê độ phủ chính thức.
-- Giữ ID gốc khi xử lý nội dung trùng giữa nhiều tài liệu.
-- Chưa có nhãn tham chiếu nên không tính Precision/Recall/F2, không kết luận chất lượng truy hồi.
-- Nếu bật `--inspect-blocks`, có thêm số khối và cờ JSON/structure lỗi; khối trống không được coi là JSON lỗi.
+- Review quality flags by domain before filtering; EDA does not remove or modify source records.
+- Review missing IDs and sources without usable text in the official coverage statistics.
+- Preserve original IDs when handling duplicate content across documents.
+- Reference relevance labels are unavailable, so Precision/Recall/F2 and retrieval quality are not assessed.
+- `--inspect-blocks` adds block counts and JSON/structure flags; empty blocks are not treated as malformed JSON.
 
-Dữ liệu chi tiết: [corpus_summary.json](corpus_summary.json), [references_summary.json](references_summary.json), [metrics.sqlite3](metrics.sqlite3).
+Detailed data: [corpus_summary.json](corpus_summary.json), [references_summary.json](references_summary.json), [metrics.sqlite3](metrics.sqlite3).
