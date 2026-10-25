@@ -1,0 +1,804 @@
+{
+  "parent_versions_processed": 913969,
+  "removed_source_chars": 8148018,
+  "kept_source_chars": 2799118578,
+  "quarantined_source_chars": 2284456,
+  "documents_complete": 855745,
+  "documents_failed": 0,
+  "by_extraction_method": {
+    "no_safe_content": 2779,
+    "retained_stage3_text": 911190
+  },
+  "by_availability": {
+    "content_candidate": 911190,
+    "quarantine": 24,
+    "unavailable": 2755
+  },
+  "failed_examples": [],
+  "rules": {
+    "baonghean_inline_related_link": {
+      "proposed_removal": 109,
+      "vetoed": 37
+    },
+    "thanhnien_related_link": {
+      "vetoed": 3104,
+      "proposed_removal": 3675
+    },
+    "vov_recaptcha_footer": {
+      "proposed_removal": 8614,
+      "vetoed": 2
+    },
+    "vinmec_booking_footer": {
+      "proposed_removal": 26540,
+      "vetoed": 58
+    },
+    "120ask_complaint_control": {
+      "proposed_removal": 111263,
+      "vetoed": 21541
+    },
+    "cnkang_related_tail": {
+      "vetoed": 6609,
+      "proposed_removal": 1277
+    },
+    "familydoctor_feedback_control": {
+      "vetoed": 10188
+    },
+    "familydoctor_related_tail": {
+      "vetoed": 10213,
+      "proposed_removal": 1
+    }
+  },
+  "quality_flags": {
+    "main_content_qa_pending": 913969,
+    "title_body_low_overlap_review_only": 4751,
+    "ambiguous_or_missing_article_root_review": 143,
+    "missing_content": 2755,
+    "vetoed_removal_candidates_require_review": 41457,
+    "replacement_characters_require_review_no_repair": 56,
+    "exact_error_placeholder": 2,
+    "legacy_title_mismatch_counterexample": 1413,
+    "binary_payload_as_text": 22,
+    "html_size_limit_review": 1
+  },
+  "selection_changes": 22,
+  "by_domain": {
+    "special.vietnamplus.vn": {
+      "versions": 1,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "bachmai.gov.vn": {
+      "versions": 2783,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 11,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baoangiang.com.vn": {
+      "versions": 13073,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baocantho.com.vn": {
+      "versions": 12016,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baochinhphu.vn": {
+      "versions": 2302,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baodanang.vn": {
+      "versions": 14500,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baogialai.com.vn": {
+      "versions": 3290,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 3,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baohaiphong.vn": {
+      "versions": 16286,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baolangson.vn": {
+      "versions": 1981,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baonghean.vn": {
+      "versions": 15941,
+      "changed_versions": 103,
+      "recovered_versions": 0,
+      "noncandidate_versions": 2,
+      "removed_chars": 5293,
+      "vetoed_versions": 31
+    },
+    "baophutho.vn": {
+      "versions": 2551,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baoquangninh.vn": {
+      "versions": 2941,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baoquangtri.vn": {
+      "versions": 5483,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baotayninh.vn": {
+      "versions": 1198,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baothanhhoa.vn": {
+      "versions": 782,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baovinhlong.com.vn": {
+      "versions": 5113,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "benhviennhitrunguong.gov.vn": {
+      "versions": 1200,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "benhvienvietduc.org": {
+      "versions": 425,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "dantri.com.vn": {
+      "versions": 2065,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "giadinhonline.vn": {
+      "versions": 16729,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "hanoimoi.vn": {
+      "versions": 1283,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "hellobacsi.com": {
+      "versions": 11747,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 7,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "khoahocphothong.vn": {
+      "versions": 8153,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "laodong.vn": {
+      "versions": 36911,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "medlatec.vn": {
+      "versions": 24762,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 55,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "mega.vietnamplus.vn": {
+      "versions": 2,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "nhandan.vn": {
+      "versions": 5225,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "phunusuckhoe.giadinhonline.vn": {
+      "versions": 27577,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "phuyen.baodaklak.vn": {
+      "versions": 6252,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "pmc-ecm-healthblog.beta.pharmacity.io": {
+      "versions": 41,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 41,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "suckhoecongdongonline.vn": {
+      "versions": 154503,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "suckhoedoisong.vn": {
+      "versions": 85823,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 12,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "suckhoeviet.org.vn": {
+      "versions": 5627,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "tamanhhospital.vn": {
+      "versions": 4261,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 2,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "thanhnien.vn": {
+      "versions": 72111,
+      "changed_versions": 3598,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 612509,
+      "vetoed_versions": 3002
+    },
+    "thaythuocvietnam.vn": {
+      "versions": 2927,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 2332,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "tiemchunglongchau.com.vn": {
+      "versions": 13920,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 5,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "tienphong.vn": {
+      "versions": 3021,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "tuoitre.vn": {
+      "versions": 3893,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "vietnamnet.vn": {
+      "versions": 15543,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "vnexpress.net": {
+      "versions": 2055,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "vov.vn": {
+      "versions": 10165,
+      "changed_versions": 8614,
+      "recovered_versions": 0,
+      "noncandidate_versions": 2,
+      "removed_chars": 809716,
+      "vetoed_versions": 2
+    },
+    "vov2.vov.vn": {
+      "versions": 6906,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "pharmacity.vn": {
+      "versions": 69,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 4,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "qdnd.vn": {
+      "versions": 3700,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 40,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "sggp.org.vn": {
+      "versions": 1853,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "vietnamplus.vn": {
+      "versions": 6755,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "vinmec.com": {
+      "versions": 26129,
+      "changed_versions": 25922,
+      "recovered_versions": 0,
+      "noncandidate_versions": 3,
+      "removed_chars": 5817751,
+      "vetoed_versions": 58
+    },
+    "youmed.vn": {
+      "versions": 7189,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 2,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "ask.familydoctor.com.cn": {
+      "versions": 1,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baby.39.net": {
+      "versions": 3368,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "byby.39.net": {
+      "versions": 37,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "cancer.39.net": {
+      "versions": 736,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "care.39.net": {
+      "versions": 1282,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "ek.39.net": {
+      "versions": 448,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "fitness.39.net": {
+      "versions": 185,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "fk.39.net": {
+      "versions": 1395,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "food.39.net": {
+      "versions": 594,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "gan.39.net": {
+      "versions": 294,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "gc.39.net": {
+      "versions": 59,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "gk.39.net": {
+      "versions": 90,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "health.people.com.cn": {
+      "versions": 50,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "heart.39.net": {
+      "versions": 1055,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 1,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "man.39.net": {
+      "versions": 382,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "nk.39.net": {
+      "versions": 762,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "pf.39.net": {
+      "versions": 85,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "qihuangzhishu.com": {
+      "versions": 29,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "qy.familydoctor.com.cn": {
+      "versions": 2,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "shen.39.net": {
+      "versions": 480,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "sj.39.net": {
+      "versions": 295,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "tnb.39.net": {
+      "versions": 717,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "wei.39.net": {
+      "versions": 324,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "woman.39.net": {
+      "versions": 687,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "120ask.com": {
+      "versions": 142205,
+      "changed_versions": 111262,
+      "recovered_versions": 0,
+      "noncandidate_versions": 9,
+      "removed_chars": 327844,
+      "vetoed_versions": 21541
+    },
+    "cnkang.com": {
+      "versions": 40046,
+      "changed_versions": 1277,
+      "recovered_versions": 0,
+      "noncandidate_versions": 17,
+      "removed_chars": 574752,
+      "vetoed_versions": 6609
+    },
+    "wujue.com": {
+      "versions": 708,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "zydcd.com": {
+      "versions": 204,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "article.iiyi.com": {
+      "versions": 43,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 43,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baidianfeng.familydoctor.com.cn": {
+      "versions": 60,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "bingli.iiyi.com": {
+      "versions": 10,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 10,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "jb39.com": {
+      "versions": 527,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "jbk.39.net": {
+      "versions": 2033,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "test.pmphai.com": {
+      "versions": 2989,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "a-hospital.com": {
+      "versions": 4701,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "baidu.com": {
+      "versions": 11,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "familydoctor.cn": {
+      "versions": 2,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "familydoctor.com.cn": {
+      "versions": 26819,
+      "changed_versions": 1,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 153,
+      "vetoed_versions": 10214
+    },
+    "msdmanuals.cn": {
+      "versions": 905,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 70,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "youlai.cn": {
+      "versions": 4139,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 17,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "zhongyibaodian.net": {
+      "versions": 6061,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 0,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "zysjonline.com": {
+      "versions": 43,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 43,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    },
+    "pubmed.ncbi.nlm.nih.gov": {
+      "versions": 43,
+      "changed_versions": 0,
+      "recovered_versions": 0,
+      "noncandidate_versions": 43,
+      "removed_chars": 0,
+      "vetoed_versions": 0
+    }
+  },
+  "normalization": "comparison_view_only_evidence_regions_remain_verbatim",
+  "metadata": "inherited_unchanged_from_stage3_missing_abstracts_authors_dates_remain_unknown"
+}
