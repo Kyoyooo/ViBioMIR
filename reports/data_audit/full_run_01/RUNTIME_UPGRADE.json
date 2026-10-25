@@ -1,0 +1,21 @@
+{
+  "reason": "Runtime-only CPU process pool; unchanged record checker, report, common reader and legacy metrics.",
+  "old_components": {
+    "audit.py": "ea370912e6f59897622a4c4d3c08b935876eb662e73189b1b2cd141dc30b0c3f",
+    "audit_checks.py": "e71cd383d6c89fa8f7ca62f1711a92b20949060e3c0fc8c399e40e7971017f10",
+    "audit_report.py": "269babc462e0a21104d65a07b47b10b1d6d1f7bdacd4f34a6a4b81674e7a2293",
+    "common.py": "0aad2b79117e3a7afe720fceae12bbdaac2dce3d212eb21e0c993cbea177a727",
+    "corpus.py": "fc5e31e08551fc6a765651d949566845f627cbe49aee23ecb53be7de58053def"
+  },
+  "new_components": {
+    "audit.py": "b4c2509a15712dfa70a4f703df80dc87c94b1bff09160301a97e21874dae70fc",
+    "audit_checks.py": "e71cd383d6c89fa8f7ca62f1711a92b20949060e3c0fc8c399e40e7971017f10",
+    "audit_report.py": "269babc462e0a21104d65a07b47b10b1d6d1f7bdacd4f34a6a4b81674e7a2293",
+    "common.py": "0aad2b79117e3a7afe720fceae12bbdaac2dce3d212eb21e0c993cbea177a727",
+    "corpus.py": "fc5e31e08551fc6a765651d949566845f627cbe49aee23ecb53be7de58053def"
+  },
+  "preserved_committed_records": 45303,
+  "compatibility_test": "24 tests pass, including byte-equal sequential vs parallel resumed outputs.",
+  "all_source_checksums_unchanged": true,
+  "requested_cpu_workers": 4
+}
