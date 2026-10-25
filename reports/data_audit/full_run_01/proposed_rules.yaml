@@ -1,0 +1,80 @@
+{
+  "status": "draft_unreviewed",
+  "proposals": [
+    {
+      "issue_id": "audit_html_in_text",
+      "enabled": false,
+      "status": "draft_review_required",
+      "flag": "html_in_text",
+      "affected_records": 1391,
+      "denominator_records": 1105160,
+      "examples": [
+        "d30bbe3e73f3afb92bc1d4bf98974fe483ca13d8305d1ab21e17023fed7f926e",
+        "23f6f72a4cc525485e08bb6ed434771413938f8217977dc6baaf56dfd811b901",
+        "d96fc14c8a229d259672a355ccdaa916dd7539b97844201c062c47a821864a49"
+      ],
+      "next_action": "Review original locators and counterexamples before writing a cleaning/extraction rule.",
+      "required_regression": "Preserve negation, dose/units, tables, Q&A, and original source mappings."
+    },
+    {
+      "issue_id": "audit_html_entities",
+      "enabled": false,
+      "status": "draft_review_required",
+      "flag": "html_entities",
+      "affected_records": 601,
+      "denominator_records": 1105160,
+      "examples": [
+        "82318242d4a614b96bbcf4e0758b693cff03ca95bd8a744238f43e7f6d26128d",
+        "2e6aca4cc6d2dc46de8c6a4ab5c99fd6c514c9c9a86744d4f09a218233a85980",
+        "6cde9b2636c11b13fbc139ada9673b567a6130a57a74b9623c93c8cddf713d3b"
+      ],
+      "next_action": "Review original locators and counterexamples before writing a cleaning/extraction rule.",
+      "required_regression": "Preserve negation, dose/units, tables, Q&A, and original source mappings."
+    },
+    {
+      "issue_id": "audit_repeated_lines",
+      "enabled": false,
+      "status": "draft_review_required",
+      "flag": "repeated_lines",
+      "affected_records": 212401,
+      "denominator_records": 1105160,
+      "examples": [
+        "2650ab528dd7221b55bc9d7738f74399775ab4be7f68359d9b63301c0f17cf2b",
+        "1d275dc8bc2c314cc9f02b30001d79591467d9b83bfc0855ade355b2e68600b6",
+        "8e3d1d8fc2360070ccb533a8477d669838bf5ee15203705906c062ae2667cf1e"
+      ],
+      "next_action": "Review original locators and counterexamples before writing a cleaning/extraction rule.",
+      "required_regression": "Preserve negation, dose/units, tables, Q&A, and original source mappings."
+    },
+    {
+      "issue_id": "audit_possible_ui_text",
+      "enabled": false,
+      "status": "draft_review_required",
+      "flag": "possible_ui_text",
+      "affected_records": 257117,
+      "denominator_records": 1105160,
+      "examples": [
+        "278bcb267e21ace4f12ba921823344f26830aae71fc2b60d30ad8ad479071936",
+        "807604378cdff157b6132d49c8dd1bd68a2dfc18f79fbba57e3964c34c0a1b92",
+        "d9778a18906b7782afc0ed8b942f8c3fb5d4cb7df67d5bf0757dec8c715bf47e"
+      ],
+      "next_action": "Review original locators and counterexamples before writing a cleaning/extraction rule.",
+      "required_regression": "Preserve negation, dose/units, tables, Q&A, and original source mappings."
+    },
+    {
+      "issue_id": "audit_missing_title",
+      "enabled": false,
+      "status": "draft_review_required",
+      "flag": "missing_title",
+      "affected_records": 3512,
+      "denominator_records": 1105160,
+      "examples": [
+        "8335db17e313110dbac33215fa5be0710dfd042d6109641237e9b91a9e90197e",
+        "a2f500844bf530a63d2fe96fc1f55a1415b4a868e93b6115a0ad512ac2210fa4",
+        "b4f6a3f70867e613fe15dedda17770c749186775c158b8c2732061472864601c"
+      ],
+      "next_action": "Review original locators and counterexamples before writing a cleaning/extraction rule.",
+      "required_regression": "Preserve negation, dose/units, tables, Q&A, and original source mappings."
+    }
+  ]
+}
