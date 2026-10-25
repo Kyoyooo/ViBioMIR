@@ -1,0 +1,62 @@
+{
+  "phases": [
+    {
+      "arguments": [
+        "--stop-after-groups",
+        "2"
+      ],
+      "wall_seconds": 5.037,
+      "records_read": 2000,
+      "run_state": "paused",
+      "record_parquet_sha256": "7dc37ed000a12dea32ce0f10e926a4738e48fc99e7597e7f60645ae35c51a768"
+    },
+    {
+      "arguments": [
+        "--resume"
+      ],
+      "wall_seconds": 14.397,
+      "records_read": 6040,
+      "run_state": "finished",
+      "record_parquet_sha256": "d7fd91d0cd0a249f1b7ee543084d13acc5ceeab71cff2fb16372ef5b78f8b837"
+    },
+    {
+      "arguments": [
+        "--resume"
+      ],
+      "wall_seconds": 1.468,
+      "records_read": 6040,
+      "run_state": "finished",
+      "record_parquet_sha256": "d7fd91d0cd0a249f1b7ee543084d13acc5ceeab71cff2fb16372ef5b78f8b837"
+    }
+  ],
+  "selected_source_hashes_unchanged": true,
+  "unique_record_ids": 6040,
+  "all_current_review_samples_have_queue_entries": true,
+  "manual_review_status": "pending",
+  "selection_reasons": {
+    "ViBioMIR/shards/B/vinmec.com/part-1792716882112-410.parquet": [
+      "Vietnamese articles with heading/paragraph blocks"
+    ],
+    "ViBioMIR/shards/B/120ask.com/part-1792685726879-367.parquet": [
+      "Chinese Q&A content"
+    ],
+    "ViBioMIR/shards/C/cnkang.com/part-1792716526532-236.parquet": [
+      "Chinese medical articles"
+    ],
+    "ViBioMIR/shards/C/pubmed.ncbi.nlm.nih.gov/part-1792716468718-977.parquet": [
+      "Metadata-only failed acquisition; no English content assumed"
+    ],
+    "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714909666-041.parquet": [
+      "Historical HTML-in-text signal"
+    ],
+    "ViBioMIR/shards/A/thaythuocvietnam.vn/part-1792714570674-056.parquet": [
+      "Historical Unicode replacement signal",
+      "Longest text in historical metrics; stress batch/length handling"
+    ],
+    "ViBioMIR/shards/A/vov.vn/part-1792716842933-706.parquet": [
+      "Historical suspected block-page signal"
+    ]
+  },
+  "artifact_bytes": 65704182,
+  "test_suite": "23 tests passed (18 audit tests and 5 existing EDA tests)"
+}
