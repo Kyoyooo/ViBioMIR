@@ -1,0 +1,3 @@
+# Keep an existing compatible Colab CUDA torch installation.
+-r requirements-stage5.txt
+torch>=2.6,<3
