@@ -1,0 +1,16 @@
+# Optional successful historical results and reproducible smoke fixtures.
+# These are not prerequisites for consuming the current full chunk stores.
+artifacts/cleaning_stage4_full_dry/
+artifacts/cleaning_stage4_reviewed_pilot_dry/
+artifacts/cleaning_stage4_pilot_dry/
+artifacts/chunk_inputs_stage5_smoke/
+artifacts/chunks_stage5_smoke_fixed/
+artifacts/chunks_stage5_smoke_structure/
+# Retain existing semantic shard backups on Drive; do not upload duplicates.
+artifacts/semantic_parallel_stage5_full/shard_0/
+artifacts/semantic_parallel_stage5_full/shard_1/
+# Audit databases/full provenance, if reviewers need more than Git reports:
+reports/data_audit/
+# Original mentor media and original dataset downloads, if not already backed up:
+local_assets/mentor_video/
+# Retired handoff/download ZIPs are local recovery archives, not current uploads.
