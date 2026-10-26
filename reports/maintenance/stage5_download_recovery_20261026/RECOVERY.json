@@ -1,0 +1,283 @@
+{
+  "date": "2026-10-26",
+  "scope": "Owner-authorized local recovery and integrity checks; no GPU or full rechunking",
+  "destination": "artifacts/semantic_parallel_stage5_full",
+  "archives": [
+    {
+      "path": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "bytes": 2132471132,
+      "sha256": "c9cd6cb31932781be0530abcfd0a837ff24d131c5d886b7f772fdcf1cf0bac71"
+    },
+    {
+      "path": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "bytes": 2131480895,
+      "sha256": "e9a782fda8acb0a579ec2bb9d985ccb85b6254ce7c01305929a06b59d07090e0"
+    },
+    {
+      "path": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "bytes": 2132360794,
+      "sha256": "a4cad05d158c1a792486032560ded82ce06bf99a92149e725653cce73457ac02"
+    },
+    {
+      "path": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-004.zip",
+      "bytes": 704797293,
+      "sha256": "2f6f16001671b95ada8a78d9a8eb57e7fcd90a3b75f7260e6d6701c9a46a5dbe"
+    }
+  ],
+  "restored_files": 6853,
+  "restored_bytes": 7098003499,
+  "missing_from_original_extractions": [
+    {
+      "relative_path": "plan.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/plan.json",
+      "bytes": 1509,
+      "sha256": "b89d21c8de7f0aaa2e820bfde851aa19d6bc3a8da56e593fbd4df5625b48227b"
+    },
+    {
+      "relative_path": "merged/manifest.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/merged/manifest.json",
+      "bytes": 5649,
+      "sha256": "16be274461da1210920527aea533497416ecda3f1da0e5d3f390e06a92dca4d3"
+    },
+    {
+      "relative_path": "shard_1/manifest.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/manifest.json",
+      "bytes": 3940,
+      "sha256": "4ef93c3cd3e23d782f26b59aa7e90e38dd22671927d79cbf2e6445f9849a6082"
+    },
+    {
+      "relative_path": "shard_0/batch-000788/batch.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/shard_0/batch-000788/batch.json",
+      "bytes": 300,
+      "sha256": "b3e5944dd29c45a5a22633e943cc10ec2e53d23f46189e85fb127c17b3de8387"
+    },
+    {
+      "relative_path": "shard_1/batch-000500/documents.jsonl.gz",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/batch-000500/documents.jsonl.gz",
+      "bytes": 1121135,
+      "sha256": "85b2f748371f708ce7dd04eced449591ac927e8c4fd74f5fe378b8b34cd337e8"
+    },
+    {
+      "relative_path": "shard_1/batch-000500/batch.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/batch-000500/batch.json",
+      "bytes": 303,
+      "sha256": "14790c73da0e1ff1671e5fbfcf6468a97fc3db8b4be268a19ab2ab87f3080a3b"
+    },
+    {
+      "relative_path": "shard_0/batch-000442/documents.jsonl.gz",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "archive_member": "semantic_parallel_run01/shard_0/batch-000442/documents.jsonl.gz",
+      "bytes": 3469112,
+      "sha256": "b2a421a895e0bdd7a8984a4e13de0fecfe9f745b1e296da55c3417fcfc6219f1"
+    },
+    {
+      "relative_path": "merged/VALIDATION.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "archive_member": "semantic_parallel_run01/merged/VALIDATION.json",
+      "bytes": 2028,
+      "sha256": "f38049ce4570db0b231150782629968e347683b6cd110185dadc8758fafaa391"
+    },
+    {
+      "relative_path": "merged/batch-001635/documents.jsonl.gz",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "archive_member": "semantic_parallel_run01/merged/batch-001635/documents.jsonl.gz",
+      "bytes": 2465052,
+      "sha256": "215e4f345213195e777b34cd9fa0b480764c41603c3eee7723374482995d2c50"
+    },
+    {
+      "relative_path": "shard_1/batch-000740/batch.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/batch-000740/batch.json",
+      "bytes": 303,
+      "sha256": "1cc954f5d765e498bd2c3b68295acf15722f922b909098e8e78382adf01d804d"
+    },
+    {
+      "relative_path": "shard_1/batch-000666/documents.jsonl.gz",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/batch-000666/documents.jsonl.gz",
+      "bytes": 881847,
+      "sha256": "66c0412ed8ed1bade75abe0d756dacbf7c6c1bb5570c4ebd5e887064839443b4"
+    },
+    {
+      "relative_path": "merged/batch-000571/batch.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "archive_member": "semantic_parallel_run01/merged/batch-000571/batch.json",
+      "bytes": 300,
+      "sha256": "662aa4c23b53089e64b7f5c25c8c4ecda8744dbe0afe388081605673c7231045"
+    },
+    {
+      "relative_path": "shard_0/manifest.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "archive_member": "semantic_parallel_run01/shard_0/manifest.json",
+      "bytes": 3191,
+      "sha256": "2b80fc3cd9fe769ca45d472ae35cf4952f2986ea642cacff7fc75fd499bb96fd"
+    },
+    {
+      "relative_path": "merged/batch-001472/batch.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "archive_member": "semantic_parallel_run01/merged/batch-001472/batch.json",
+      "bytes": 304,
+      "sha256": "3e576880dfe895ae6cffe3158a3bdc8bca55a4e21835a8213f1d1adb51309414"
+    },
+    {
+      "relative_path": "shard_1/batch-000823/documents.jsonl.gz",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/batch-000823/documents.jsonl.gz",
+      "bytes": 3499905,
+      "sha256": "7702ba17e19398d81602d6c62620c32d0d5330ae7afc2e4c64adf73fb5634441"
+    },
+    {
+      "relative_path": "shard_1/batch-000823/batch.json",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "archive_member": "semantic_parallel_run01/shard_1/batch-000823/batch.json",
+      "bytes": 303,
+      "sha256": "2c12603ebb2852b8fe7dc5aeb803f9195c14e832c3459256c985357e7a9012bc"
+    },
+    {
+      "relative_path": "merged/batch-000444/documents.jsonl.gz",
+      "archive": "semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "archive_member": "semantic_parallel_run01/merged/batch-000444/documents.jsonl.gz",
+      "bytes": 3526929,
+      "sha256": "4b73bbbab8c6d7582e0cb6d69cadf86f838668664d8b39b991498812c7d10f2c"
+    }
+  ],
+  "loose_files": [
+    {
+      "original": "artifacts/temp/VALIDATION.json",
+      "sha256": "f38049ce4570db0b231150782629968e347683b6cd110185dadc8758fafaa391",
+      "restored_matches": [
+        "artifacts/semantic_parallel_stage5_full/merged/VALIDATION.json"
+      ]
+    },
+    {
+      "original": "artifacts/temp/batch.json",
+      "sha256": "b3e5944dd29c45a5a22633e943cc10ec2e53d23f46189e85fb127c17b3de8387",
+      "restored_matches": [
+        "artifacts/semantic_parallel_stage5_full/shard_0/batch-000788/batch.json",
+        "artifacts/semantic_parallel_stage5_full/merged/batch-000788/batch.json"
+      ]
+    },
+    {
+      "original": "artifacts/temp/documents.jsonl.gz",
+      "sha256": "b2a421a895e0bdd7a8984a4e13de0fecfe9f745b1e296da55c3417fcfc6219f1",
+      "restored_matches": [
+        "artifacts/semantic_parallel_stage5_full/shard_0/batch-000442/documents.jsonl.gz",
+        "artifacts/semantic_parallel_stage5_full/merged/batch-000442/documents.jsonl.gz"
+      ]
+    },
+    {
+      "original": "artifacts/temp/manifest.json",
+      "sha256": "16be274461da1210920527aea533497416ecda3f1da0e5d3f390e06a92dca4d3",
+      "restored_matches": [
+        "artifacts/semantic_parallel_stage5_full/merged/manifest.json"
+      ]
+    },
+    {
+      "original": "artifacts/temp/plan.json",
+      "sha256": "b89d21c8de7f0aaa2e820bfde851aa19d6bc3a8da56e593fbd4df5625b48227b",
+      "restored_matches": [
+        "artifacts/semantic_parallel_stage5_full/plan.json"
+      ]
+    }
+  ],
+  "stores": {
+    "merged": {
+      "state": "complete",
+      "batches": 1712,
+      "documents": 855745,
+      "chunks": 9036279,
+      "signature": "5eb330242915cec8f2a3d990ddab2ebb860028bb089e5b024cfefba3b83df6bc"
+    },
+    "shard_0": {
+      "state": "complete",
+      "batches": 863,
+      "documents": 431500,
+      "chunks": 5183315,
+      "signature": "5eb330242915cec8f2a3d990ddab2ebb860028bb089e5b024cfefba3b83df6bc"
+    },
+    "shard_1": {
+      "state": "complete",
+      "batches": 849,
+      "documents": 424245,
+      "chunks": 3852964,
+      "signature": "5eb330242915cec8f2a3d990ddab2ebb860028bb089e5b024cfefba3b83df6bc"
+    }
+  },
+  "plan_signature": "b54aa528a2cfe378f063ba7d42d86ad03cd01cb1016f0b60ba0fc0785b8c8dd8",
+  "input_signature": "336ff927b965e75e5cf44057385245c8a5bc62929f7b2a2ffde31732ff57534e",
+  "integrity": "passed",
+  "checks": [
+    "ZIP CRC on every recovered member",
+    "Every restored gzip batch SHA-256 re-read from disk",
+    "Input gzip batch checksums",
+    "Identity, plan and local code/config/tokenizer hashes",
+    "Batch geometry and totals",
+    "Merged gzip hashes equal the corresponding shard hashes",
+    "All loose files matched to exact archived content"
+  ],
+  "colab_validation": "Imported passed full validation; not rerun over all chunks locally",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "backup": "local_assets/archives/stage5_colab_download_20261026",
+  "relocations": [
+    {
+      "from": "artifacts/temp/VALIDATION.json",
+      "to": "local_assets/archives/stage5_colab_download_20261026/loose_files/VALIDATION.json"
+    },
+    {
+      "from": "artifacts/temp/batch.json",
+      "to": "local_assets/archives/stage5_colab_download_20261026/loose_files/batch.json"
+    },
+    {
+      "from": "artifacts/temp/documents.jsonl.gz",
+      "to": "local_assets/archives/stage5_colab_download_20261026/loose_files/documents.jsonl.gz"
+    },
+    {
+      "from": "artifacts/temp/manifest.json",
+      "to": "local_assets/archives/stage5_colab_download_20261026/loose_files/manifest.json"
+    },
+    {
+      "from": "artifacts/temp/plan.json",
+      "to": "local_assets/archives/stage5_colab_download_20261026/loose_files/plan.json"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-001",
+      "to": "local_assets/archives/stage5_colab_download_20261026/extracted_snapshot/semantic_parallel_run01-20261026T084344Z-1-001"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-001.zip",
+      "to": "local_assets/archives/stage5_colab_download_20261026/zip_parts/semantic_parallel_run01-20261026T084344Z-1-001.zip"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-002",
+      "to": "local_assets/archives/stage5_colab_download_20261026/extracted_snapshot/semantic_parallel_run01-20261026T084344Z-1-002"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-002.zip",
+      "to": "local_assets/archives/stage5_colab_download_20261026/zip_parts/semantic_parallel_run01-20261026T084344Z-1-002.zip"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-003",
+      "to": "local_assets/archives/stage5_colab_download_20261026/extracted_snapshot/semantic_parallel_run01-20261026T084344Z-1-003"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-003.zip",
+      "to": "local_assets/archives/stage5_colab_download_20261026/zip_parts/semantic_parallel_run01-20261026T084344Z-1-003.zip"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-004",
+      "to": "local_assets/archives/stage5_colab_download_20261026/extracted_snapshot/semantic_parallel_run01-20261026T084344Z-1-004"
+    },
+    {
+      "from": "artifacts/temp/semantic_parallel_run01-20261026T084344Z-1-004.zip",
+      "to": "local_assets/archives/stage5_colab_download_20261026/zip_parts/semantic_parallel_run01-20261026T084344Z-1-004.zip"
+    }
+  ]
+}
