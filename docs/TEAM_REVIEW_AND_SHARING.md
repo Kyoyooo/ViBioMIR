@@ -15,7 +15,8 @@ been uploaded or published by this cleanup.
    and [reviewed processing plan](../reports/data_audit/full_run_01/analysis/PROCESSING_PLAN.md).
 5. [Stage-4 decisions](../reports/cleaning_stage4_rule_review_01/DECISIONS.md)
    and [execution evidence](../reports/cleaning_stage4_rule_review_01/EXECUTION.md).
-6. [Stage-5 runbook](CHUNKING_STAGE5.md), then `vibiomir/chunking.py`,
+6. [Stage-5 results/handoff](STAGE5_RESULTS_AND_HANDOFF.md) and
+   [runbook](CHUNKING_STAGE5.md), then `vibiomir/chunking.py`,
    `chunk_pipeline.py`, `chunk_batches.py`, `chunk_models.py` and their tests.
 
 Use the [documentation map](README.md) and [report index](../reports/README.md)
@@ -48,20 +49,24 @@ The large datasets, artifacts, original media, model weights, SQLite/Parquet
 files, virtual environment and bytecode are excluded. Previously tracked
 bytecode files were removed from the working tree; stage those deletions too.
 
-When ready, run these Git commands yourself from the project root:
+Use one explicitly selected file per add/commit, following the owner's
+publication convention. For example, for a future source change:
 
 ```bash
-git add .gitignore README.md LICENSE 261012_R2_AI_S3_MentorDay1_summary.md \
-  docs configs colab vibiomir exploration scripts tests sharing reports \
-  requirements-eda.txt requirements-stage3.txt requirements-stage4.txt \
-  requirements-stage5.txt requirements-stage5-colab.txt
-git add -u
-git diff --cached --stat
-git status --short
+git add -- path/to/changed_file.py
+git diff --cached --name-only
+git commit -m "fix(chunking): describe the concrete change"
 ```
 
-Review the staged changes, then commit and push using your team's repository
-workflow. The commands above do not push. After committing, give reviewers the
+For the 2026-10-26 closeout, the owner explicitly requested that the assistant
+create local commits. After those complete, the owner only needs to push:
+
+```bash
+git push -u origin main
+```
+
+The exact changed-file inventory is in
+[sharing/git_stage5_files.txt](../sharing/git_stage5_files.txt). Give reviewers the
 commit ID alongside the Drive folder so they can match code to data. The code
 license does not replace upstream dataset/model/media licenses; source citation
 and dataset licensing are documented in the task definition.
@@ -108,22 +113,31 @@ download the prepared inputs and tokenizer. Copy whole successful store
 directories, including manifests and exported parts, rather than selecting only
 a database or report.
 
-## Wait before uploading the running full chunk output
+## Full stage-5 outputs
+
+**2026-10-26 update:** semantic full run and merge completed on Colab and passed
+full validation. Full structural and semantic local validation also passed,
+covering 14,548,903 chunks. Use [the results/handoff guide](STAGE5_RESULTS_AND_HANDOFF.md).
+The semantic download is recovered locally at
+`artifacts/semantic_parallel_stage5_full/merged/`; original relative paths and
+all 1,712 batches are restored. See [the recovery record](../reports/maintenance/stage5_download_recovery_20261026/README.md)
+for checks, backups and the remaining stage-5 checklist. The source Drive run
+already contains this output; uploading local ZIP/extraction duplicates is
+unnecessary. Share the new small report and metadata snapshots on GitHub.
 
 [sharing/drive_after_stage5.txt](../sharing/drive_after_stage5.txt) lists
-`artifacts/chunks_stage5_full_structure/` separately. It was building during
-cleanup and has deliberately not been treated as completed or stable for upload.
+`artifacts/chunks_stage5_full_structure/` separately. Its build is now complete,
+and its full `VALIDATION.json` is present and passed as of 2026-10-26.
 
-After `build-chunks` finishes, run the existing `validate-chunks` command from
-[the stage-5 runbook](CHUNKING_STAGE5.md). Once validation passes and the writer
-has stopped, upload the complete output directory: `manifest.json`,
+Both full outputs are ready for a technical handoff; their writers have stopped.
+Upload the complete structural output directory: `manifest.json`,
 `VALIDATION.json`, and every committed `batch-*` directory. Do not upload a
 changing folder and label the result a reproducible snapshot. Keep code/config
 hashes compatible if resuming; this cleanup did not modify pipeline code.
 
-## Smallest Colab upload
+## Smallest optional pilot upload
 
-The files needed specifically for the current semantic pilot are in
+For a future small semantic pilot, the files are in
 [sharing/colab_pilot_paths.txt](../sharing/colab_pilot_paths.txt):
 
 - `colab/stage5_semantic.ipynb`, opened in Colab.
@@ -142,6 +156,5 @@ Small copied manifests under `reports/run_registry/` are review metadata, not
 checkpoints. Their referenced payloads are on Drive. Do not run resume against
 the registry, edit original manifests to change status, or flatten restored
 input paths. A successfully completed bounded pilot remains distinct from a
-full-corpus run. Current full structural chunking and GPU semantic results must
-be reported from their eventual validated outputs, not inferred from code or
-the presence of a directory.
+full-corpus run. Current full structural and semantic validation are recorded
+in the dated closeout evidence; human QA and corpus freeze are still separate.
