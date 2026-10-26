@@ -1,3 +1,19 @@
-# Upload only after build-chunks completes, validate-chunks passes and writers stop.
+# Full structural and semantic local validation passed on 2026-10-26.
+# Incremental upload: structural store (2.58 GiB) and current small reports.
 # Include manifest.json, VALIDATION.json and every committed batch-* directory.
 artifacts/chunks_stage5_full_structure/
+reports/stage5_validation_20261026/
+reports/run_registry/
+
+# Semantic already exists on Drive as semantic_parallel_run01/merged.
+# Local full validation report matches Colab; existing Drive payloads can be reused.
+# Canonical local recovery (full Colab + full local validation passed):
+# Required for downstream semantic use:
+artifacts/semantic_parallel_stage5_full/merged/
+# Retain provenance and recovery copies; no need to upload them twice:
+artifacts/semantic_parallel_stage5_full/plan.json
+artifacts/semantic_parallel_stage5_full/shard_0/
+artifacts/semantic_parallel_stage5_full/shard_1/
+# Reuse matching prepared inputs/tokenizer/config from the existing stage-5 handoff.
+# Do not upload artifacts/temp or redundant local_assets/archives download backups.
+# No new Colab upload is required; see docs/STAGE5_RESULTS_AND_HANDOFF.md.
