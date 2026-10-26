@@ -1,9 +1,25 @@
 # Stage 5 — verbatim chunk store (S05)
 
-This delivery supplies code, offline tests, configuration and a semantic GPU
-notebook. **The assistant has not run any stage-5 code, tests, downloads,
-packaging or corpus processing.** The owner executes the commands below from
-the project root. Python 3.10+ on Linux is required; the local implementation
+**Observed results, 2026-10-26:** full semantic output is recovered at
+`artifacts/semantic_parallel_stage5_full/merged` (9,036,279 chunks). Both it and
+the full structural output (5,512,624 chunks) passed full local validation,
+including actual tokenizer budgets and exact source coverage for every chunk.
+See [results and handoff](STAGE5_RESULTS_AND_HANDOFF.md) for execution evidence,
+canonical paths, Drive/Git publication and remaining S05 review/experiment scope.
+
+**Full-run continuation on Colab:** if the sequential structural build is too
+slow, use [the full Colab handoff](CHUNKING_STAGE5_COLAB_FULL.md). It preserves
+completed local batches, adds parallel CPU execution/tokenizer caching, and
+also supports a separate CUDA semantic run. Do not repeat completed preparation.
+
+The original delivery supplied code, offline tests, configuration and a semantic
+GPU notebook without assistant execution. The owner subsequently ran the full
+structural/semantic builds. On 2026-10-26 the owner explicitly authorized the
+assistant's local download recovery, integrity checks and bounded tokenizer
+sample check. They then authorized full local validation, stage-5 tests,
+cleanup and local commits; those checks passed as recorded in the handoff.
+No full chunk rebuild or GPU inference was run during this closeout.
+The owner executes the commands below from the project root. Python 3.10+ on Linux is required; the local implementation
 uses the project's existing `fcntl` locks.
 
 ## Input and scope
