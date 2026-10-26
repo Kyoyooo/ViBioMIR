@@ -1,0 +1,435 @@
+test_does_not_cross_removed_gaps_and_distinguishes_versions_and_ids (test_stage5_chunking.ChunkingTest.test_does_not_cross_removed_gaps_and_distinguishes_versions_and_ids) ... ok
+test_headings_and_table_rows_remain_in_section_and_source (test_stage5_chunking.ChunkingTest.test_headings_and_table_rows_remain_in_section_and_source) ... ok
+test_long_question_answer_retains_question_as_context (test_stage5_chunking.ChunkingTest.test_long_question_answer_retains_question_as_context) ... ok
+test_missing_semantic_encoder_and_bad_configuration_fail_early (test_stage5_chunking.ChunkingTest.test_missing_semantic_encoder_and_bad_configuration_fail_early) ... ok
+test_one_character_offset_version_and_token_tampering_rejected (test_stage5_chunking.ChunkingTest.test_one_character_offset_version_and_token_tampering_rejected) ... ok
+test_prepare_packet_recovers_exact_legacy_block_and_checks_source (test_stage5_chunking.ChunkingTest.test_prepare_packet_recovers_exact_legacy_block_and_checks_source) ... ok
+test_question_answer_between_target_and_maximum_stays_together (test_stage5_chunking.ChunkingTest.test_question_answer_between_target_and_maximum_stays_together) ... ok
+test_short_question_answer_is_one_verbatim_chunk (test_stage5_chunking.ChunkingTest.test_short_question_answer_is_one_verbatim_chunk) ... ok
+test_three_chunkers_unicode_exact_slices_and_hard_caps (test_stage5_chunking.ChunkingTest.test_three_chunkers_unicode_exact_slices_and_hard_caps) ... ok
+test_committed_backup_restore_and_checksum_rejection (test_stage5_colab.ColabHandoffTest.test_committed_backup_restore_and_checksum_rejection) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+ok
+test_notebook_has_no_execution_or_outputs_and_uses_shared_implementation (test_stage5_colab.ColabHandoffTest.test_notebook_has_no_execution_or_outputs_and_uses_shared_implementation) ... ok
+test_config_mismatch_is_rejected_without_editing_checkpoint (test_stage5_full_bundle.FullBundleTest.test_config_mismatch_is_rejected_without_editing_checkpoint) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+ok
+test_full_notebook_is_unexecuted_and_uses_importable_runner (test_stage5_full_bundle.FullBundleTest.test_full_notebook_is_unexecuted_and_uses_importable_runner) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+ok
+test_live_writer_is_rejected_before_creating_bundle (test_stage5_full_bundle.FullBundleTest.test_live_writer_is_rejected_before_creating_bundle) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+ok
+test_partial_checkpoint_and_full_inputs_are_included_with_code (test_stage5_full_bundle.FullBundleTest.test_partial_checkpoint_and_full_inputs_are_included_with_code) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+ok
+test_cache_limits_and_clear (test_stage5_parallel.ParallelChunkingTest.test_cache_limits_and_clear) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_cache_preserves_chunk_ids_text_budgets_and_reduces_calls (test_stage5_parallel.ParallelChunkingTest.test_cache_preserves_chunk_ids_text_budgets_and_reduces_calls) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213b50>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213c40>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213970>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12942136a0>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213790>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213a60>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294108040>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294108130>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294108310>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294108400>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213880>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/vibiomir/chunking.py:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12941085e0>
+  all_spans = [(start + a, start + b) for a, b in offsets(tokenizer, text[start:end])]
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_failed_worker_does_not_commit_partial_document_batch (test_stage5_parallel.ParallelChunkingTest.test_failed_worker_does_not_commit_partial_document_batch) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"phase": "verifying_input_batches", "workers": 2, "gpu_used": false, "reused_output_batches": 1}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 2}
+{"phase": "verifying_input_batches", "workers": 1, "gpu_used": false, "reused_output_batches": 1}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 1, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 1000.0, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 2, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 2, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 2000.0, "estimated_remaining_seconds": 0, "gpu_used": false}
+ok
+test_invalid_workers_and_missing_or_changed_checkpoint_fail (test_stage5_parallel.ParallelChunkingTest.test_invalid_workers_and_missing_or_changed_checkpoint_fail) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "verifying_input_batches", "workers": 1, "gpu_used": false, "reused_output_batches": 0}
+{"phase": "chunking", "batch": 0, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"phase": "committed", "batch": 0, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 561.53, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 1, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 808.95, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 2, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 2, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 962.42, "estimated_remaining_seconds": 0, "gpu_used": false}
+ok
+test_ordered_worker_schedule_matches_serial_and_supports_resume (test_stage5_parallel.ParallelChunkingTest.test_ordered_worker_schedule_matches_serial_and_supports_resume) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "verifying_input_batches", "workers": 2, "gpu_used": false, "reused_output_batches": 0}
+{"phase": "chunking", "batch": 0, "of_batches": 3, "documents": 1, "workers": 2}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"phase": "committed", "batch": 0, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 540.37, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "verifying_input_batches", "workers": 2, "gpu_used": false, "reused_output_batches": 1}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 1, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 1000.0, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 2, "of_batches": 3, "documents": 1, "workers": 2}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 2, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 1352.78, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "verifying_input_batches", "workers": 1, "gpu_used": false, "reused_output_batches": 0}
+{"phase": "chunking", "batch": 0, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"phase": "committed", "batch": 0, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 559.31, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 1, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 778.71, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 2, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 2, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 917.76, "estimated_remaining_seconds": 0, "gpu_used": false}
+ok
+test_restore_prefers_newer_backup_and_rejects_strategy_change (test_stage5_parallel.ParallelChunkingTest.test_restore_prefers_newer_backup_and_rejects_strategy_change) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "restoring_checkpoint", "source": "/tmp/tmpitfi31h3/backup"}
+ok
+test_resume_existing_legacy_batch_without_rewriting_it (test_stage5_parallel.ParallelChunkingTest.test_resume_existing_legacy_batch_without_rewriting_it) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"phase": "verifying_input_batches", "workers": 1, "gpu_used": false, "reused_output_batches": 1}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 1, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 1000.0, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"phase": "chunking", "batch": 2, "of_batches": 3, "documents": 1, "workers": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 2, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 1400.01, "estimated_remaining_seconds": 0, "gpu_used": false}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_cached_real_tokenizer_keeps_multilingual_offsets_and_ids (test_stage5_parallel.RealParallelWorkersTest.test_cached_real_tokenizer_keeps_multilingual_offsets_and_ids) ... <frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213a60>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213880>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213790>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12942136a0>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213d30>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213e20>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213f10>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213970>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213b50>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294213c40>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+ok
+test_two_real_processes_match_legacy_output (test_stage5_parallel.RealParallelWorkersTest.test_two_real_processes_match_legacy_output) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 5}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "verifying_input_batches", "workers": 2, "gpu_used": false, "reused_output_batches": 0}
+{"phase": "chunking", "batch": 0, "of_batches": 3, "documents": 1, "workers": 2}
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 5}
+{"phase": "committed", "batch": 0, "build_seconds": 2.07, "backup_seconds": 0.0, "documents_per_second_this_invocation": 0.48, "estimated_remaining_seconds": 4, "gpu_used": false}
+{"phase": "chunking", "batch": 1, "of_batches": 3, "documents": 1, "workers": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 1, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 0.97, "estimated_remaining_seconds": 1, "gpu_used": false}
+{"phase": "chunking", "batch": 2, "of_batches": 3, "documents": 1, "workers": 2}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "committed", "batch": 2, "build_seconds": 0.0, "backup_seconds": 0.0, "documents_per_second_this_invocation": 1.45, "estimated_remaining_seconds": 0, "gpu_used": false}
+ok
+test_changed_config_and_completed_directory_fail_with_actionable_errors (test_stage5_pipeline.Stage5PipelineTest.test_changed_config_and_completed_directory_fail_with_actionable_errors) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_checksum_tampering_and_rehashed_wrong_chunk_both_fail (test_stage5_pipeline.Stage5PipelineTest.test_checksum_tampering_and_rehashed_wrong_chunk_both_fail) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_cli_checks_missing_inputs_before_loading_models (test_stage5_pipeline.Stage5PipelineTest.test_cli_checks_missing_inputs_before_loading_models) ... usage: python -m unittest [-h]
+                          {prepare-documents,validate-documents,clean-documents,validate-cleaned,download-chunk-tokenizer,prepare-chunk-inputs,build-chunks,validate-chunks} ...
+python -m unittest: error: Missing chunk inputs: run prepare-chunk-inputs first
+ok
+test_committed_batch_survives_interruption_before_manifest_finish (test_stage5_pipeline.Stage5PipelineTest.test_committed_batch_survives_interruption_before_manifest_finish) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_dry_run_and_wrong_stage3_parent_fail_before_output_created (test_stage5_pipeline.Stage5PipelineTest.test_dry_run_and_wrong_stage3_parent_fail_before_output_created) ... ok
+test_prepare_resume_build_resume_and_zero_chunk_accounting (test_stage5_pipeline.Stage5PipelineTest.test_prepare_resume_build_resume_and_zero_chunk_accounting) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_uncommitted_pending_directory_is_ignored (test_stage5_pipeline.Stage5PipelineTest.test_uncommitted_pending_directory_is_ignored) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_packed_sentence_order_matches_original_encoder (test_stage5_semantic_compute.RealCUDAEncodingTest.test_packed_sentence_order_matches_original_encoder) ... skipped 'Explicit opt-in required for real CUDA/weights'
+test_microbatches_obey_padded_budget_and_preserve_every_index (test_stage5_semantic_compute.SemanticComputeTest.test_microbatches_obey_padded_budget_and_preserve_every_index) ... ok
+test_no_embedding_requests_for_short_sections (test_stage5_semantic_compute.SemanticComputeTest.test_no_embedding_requests_for_short_sections) ... ok
+test_notebook_has_distinct_shard_paths_and_no_outputs (test_stage5_semantic_compute.SemanticComputeTest.test_notebook_has_distinct_shard_paths_and_no_outputs) ... ok
+test_oom_splitting_retains_vector_to_sentence_mapping (test_stage5_semantic_compute.SemanticComputeTest.test_oom_splitting_retains_vector_to_sentence_mapping) ... ok
+test_packed_replay_matches_original_multilingual_chunking (test_stage5_semantic_compute.SemanticComputeTest.test_packed_replay_matches_original_multilingual_chunking) ... ok
+test_replay_refuses_mismatched_atom_order (test_stage5_semantic_compute.SemanticComputeTest.test_replay_refuses_mismatched_atom_order) ... ok
+test_wave_budget_and_oversized_document_are_explicit (test_stage5_semantic_compute.SemanticComputeTest.test_wave_budget_and_oversized_document_are_explicit) ... ok
+test_legacy_semantic_prefix_is_copied_without_recomputing (test_stage5_semantic_shards.SemanticShardsTest.test_legacy_semantic_prefix_is_copied_without_recomputing) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"phase": "loading_encoder", "shard_id": 0, "global_input_range": [1, 2]}
+{"phase": "semantic_batch", "shard_id": 0, "global_input_batch": 1, "range_end": 2}
+{"phase": "semantic_committed", "shard_id": 0, "global_input_batch": 1, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "loading_encoder", "shard_id": 1, "global_input_range": [2, 3]}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 2, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 2, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+ok
+test_merge_rejects_incomplete_or_swapped_parts (test_stage5_semantic_shards.SemanticShardsTest.test_merge_rejects_incomplete_or_swapped_parts) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "loading_encoder", "shard_id": 0, "global_input_range": [0, 1]}
+{"phase": "semantic_batch", "shard_id": 0, "global_input_batch": 0, "range_end": 1}
+{"phase": "semantic_committed", "shard_id": 0, "global_input_batch": 0, "documents": 1, "chunks": 10, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "loading_encoder", "shard_id": 1, "global_input_range": [1, 3]}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 1, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 1, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 2, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 2, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+ok
+test_plan_edits_and_wrong_shard_resume_are_rejected (test_stage5_semantic_shards.SemanticShardsTest.test_plan_edits_and_wrong_shard_resume_are_rejected) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "loading_encoder", "shard_id": 0, "global_input_range": [0, 1]}
+{"phase": "semantic_batch", "shard_id": 0, "global_input_batch": 0, "range_end": 1}
+{"phase": "semantic_committed", "shard_id": 0, "global_input_batch": 0, "documents": 1, "chunks": 10, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+ok
+test_resume_preserves_old_shard_batch_bytes (test_stage5_semantic_shards.SemanticShardsTest.test_resume_preserves_old_shard_batch_bytes) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "loading_encoder", "shard_id": 0, "global_input_range": [0, 1]}
+{"phase": "semantic_batch", "shard_id": 0, "global_input_batch": 0, "range_end": 1}
+{"phase": "semantic_committed", "shard_id": 0, "global_input_batch": 0, "documents": 1, "chunks": 10, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "loading_encoder", "shard_id": 1, "global_input_range": [1, 3]}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 1, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 1, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "loading_encoder", "shard_id": 1, "global_input_range": [1, 3]}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 2, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 2, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+ok
+test_two_ranges_cover_inputs_once_and_merge_matches_reference (test_stage5_semantic_shards.SemanticShardsTest.test_two_ranges_cover_inputs_once_and_merge_matches_reference) ... /home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675d9d50>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675d9c60>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675db100>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675db010>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675da110>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675d9f30>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675db6a0>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675dad40>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675daf20>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675db2e0>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675dba60>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675db970>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675db880>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675dbb50>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675dbd30>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675dbf10>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d12675dbe20>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1294210e50>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d34040>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d34130>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d34310>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d34220>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d344f0>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d34400>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d346d0>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/pathlib/_local.py:289: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7d1266d347c0>
+  @property
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "loading_encoder", "shard_id": 0, "global_input_range": [0, 1]}
+{"phase": "semantic_batch", "shard_id": 0, "global_input_batch": 0, "range_end": 1}
+{"phase": "semantic_committed", "shard_id": 0, "global_input_batch": 0, "documents": 1, "chunks": 10, "compute_seconds": 0.01, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "loading_encoder", "shard_id": 1, "global_input_range": [1, 3]}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 1, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 1, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"phase": "semantic_batch", "shard_id": 1, "global_input_batch": 2, "range_end": 3}
+{"phase": "semantic_committed", "shard_id": 1, "global_input_batch": 2, "documents": 1, "chunks": 0, "compute_seconds": 0.0, "backup_seconds": 0.0, "parent_peak_rss_gib": 0.66, "encoder_stats": {}}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_original_unicode_offsets_hard_budget_and_coverage (test_stage5_tokenizer.RealTokenizerTest.test_original_unicode_offsets_hard_budget_and_coverage) ... ok
+test_aggregate_equals_original_full_report_and_sources_unchanged (test_stage5_validation.BatchValidationTest.test_aggregate_equals_original_full_report_and_sources_unchanged) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_full_runner_and_resume_equal_original_without_rechecking_cached_rows (test_stage5_validation.BatchValidationTest.test_full_runner_and_resume_equal_original_without_rechecking_cached_rows) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "verify_batch_checksums", "output": "/tmp/tmp_fbs1i3w/chunks"}
+{"phase": "validated", "completed": 1, "total": 3, "elapsed_seconds": 0.0}
+{"phase": "validated", "completed": 3, "total": 3, "elapsed_seconds": 0.0}
+{"phase": "verify_batch_checksums", "output": "/tmp/tmp_fbs1i3w/chunks"}
+{"phase": "verify_batch_checksums", "output": "/tmp/tmp_fbs1i3w/chunks"}
+ok
+test_full_runner_rejects_false_manifest_totals (test_stage5_validation.BatchValidationTest.test_full_runner_rejects_false_manifest_totals) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "verify_batch_checksums", "output": "/tmp/tmploz97a9y/chunks"}
+{"phase": "validated", "completed": 1, "total": 3, "elapsed_seconds": 0.0}
+{"phase": "validated", "completed": 3, "total": 3, "elapsed_seconds": 0.0}
+ok
+test_incompatible_contracts_cannot_be_aggregated (test_stage5_validation.BatchValidationTest.test_incompatible_contracts_cannot_be_aggregated) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_removed_chunks_are_rejected_by_source_coverage (test_stage5_validation.BatchValidationTest.test_removed_chunks_are_rejected_by_source_coverage) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_wrong_chunk_text_is_rejected_even_with_updated_checksum (test_stage5_validation.BatchValidationTest.test_wrong_chunk_text_is_rejected_even_with_updated_checksum) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 0}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 10}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 0}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+
+----------------------------------------------------------------------
+Ran 51 tests in 9.266s
+
+OK (skipped=1)
