@@ -1,0 +1,337 @@
+{
+  "purpose": "Owner-authorized stage-5 closeout; one file per Conventional Commit; no push",
+  "base_commit": "71cbc72586e01f7d397f0cf43b275d2914c6207e",
+  "branch": "main",
+  "files": [
+    {
+      "path": ".gitignore",
+      "message": "chore(git): exclude historical upload snapshots",
+      "sha256": "1aab6cbcc2d33c8d6dd653bcac5ea1062bfb0b3a89a828fc2b33b4f0657ff3fa"
+    },
+    {
+      "path": "README.md",
+      "message": "docs(stage5): update readme",
+      "sha256": "fe58b12da95babfeb81e53a85435afb7ccadabe060cefba84a24d742803dc952"
+    },
+    {
+      "path": "colab/stage5_full.ipynb",
+      "message": "feat(colab): add stage 5 full",
+      "sha256": "590c1a4cac5f03a962a6c35aa0208e779287ae384bdf27a486f4c1d93fa3119f"
+    },
+    {
+      "path": "colab/stage5_semantic_two_shards.ipynb",
+      "message": "feat(colab): add stage 5 semantic two shards",
+      "sha256": "d4acbdfe45c9614d9234ab7f0a7704d13e275e6f4445e7ce6d416d3cd9ccdb00"
+    },
+    {
+      "path": "docs/CHUNKING_STAGE5.md",
+      "message": "docs(stage5): update chunking stage5",
+      "sha256": "c432f26edc925dd1af282b732b91be5f8eee2cbf243272bba894a72e02d1c611"
+    },
+    {
+      "path": "docs/CHUNKING_STAGE5_COLAB_FULL.md",
+      "message": "docs(stage5): update chunking stage5 colab full",
+      "sha256": "8b8fac4395524769f476f2e831bf4737b1ec462d62d4291b20928d651fa5bdc4"
+    },
+    {
+      "path": "docs/DEVELOPMENT_CONVENTIONS.md",
+      "message": "docs(stage5): update development conventions",
+      "sha256": "9d1c245b79f8b6f430faab0ba126391a81e006d82a8a92e62f10994e89074507"
+    },
+    {
+      "path": "docs/README.md",
+      "message": "docs(stage5): update readme",
+      "sha256": "797819a04b024cf8fe1553030e8c7628629756043661e53c09b2bc77422d9ddb"
+    },
+    {
+      "path": "docs/SEMANTIC_STAGE5_TWO_COLABS.md",
+      "message": "docs(stage5): update semantic stage5 two colabs",
+      "sha256": "e9c733f87e31c4c33adbe1eded5b4f9f66cb144971d1bb661792e21bc89dba1a"
+    },
+    {
+      "path": "docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md",
+      "message": "docs(stage5): update spec driven development vibiomir",
+      "sha256": "8bb57186233a27f72645a3071cfcbb89c750e303ac9d43d248905d054461d5f7"
+    },
+    {
+      "path": "docs/STAGE5_RESULTS_AND_HANDOFF.md",
+      "message": "docs(stage5): update stage5 results and handoff",
+      "sha256": "c23acd4d6d9e89f936be8291ad005dea28cd745c2d80cbd5b40fa885835784b6"
+    },
+    {
+      "path": "docs/TEAM_REVIEW_AND_SHARING.md",
+      "message": "docs(stage5): update team review and sharing",
+      "sha256": "6e1b89676f83798b38b433fbab2866fc5488438bccc2c0d3ea81d7eeca06c081"
+    },
+    {
+      "path": "reports/README.md",
+      "message": "chore(reports): record stage 5 readme",
+      "sha256": "8fe6a4aca917ec5ebce5dc7a70749c4e2b51b9855a6d8b2d50b1395506586128"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/README.md",
+      "message": "chore(reports): record stage 5 readme",
+      "sha256": "ace47a3bb3024548df99225d086204889d0e51291fd0f39294c525a04a9f7402"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/RECOVERY.json",
+      "message": "chore(reports): record stage 5 recovery",
+      "sha256": "f7695f70af21efcbc12e8ad200028afc7cf02c3e8e39700daa2c10b481675540"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/REVIEW_SAMPLE.csv",
+      "message": "chore(reports): record stage 5 review sample",
+      "sha256": "b48ea83594f2a1c395d4304d42ac996aa553b38adb93bd98a024e39a4c479df2"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/SAMPLE_CHECK.json",
+      "message": "chore(reports): record stage 5 sample check",
+      "sha256": "e59c20775a2e81d405ad6796a5e1099aa7741f47eed059ed0cf803313a6df666"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/check_sample.py",
+      "message": "chore(reports): preserve check sample execution",
+      "sha256": "75595a53f9a81f30f27e043c1cbaaf92cde1bb6371d12216d4a4f88d4c5ca7d6"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/plan.json",
+      "message": "chore(reports): record stage 5 plan",
+      "sha256": "b89d21c8de7f0aaa2e820bfde851aa19d6bc3a8da56e593fbd4df5625b48227b"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/recover_download.py",
+      "message": "chore(reports): preserve recover download execution",
+      "sha256": "52f7293f8b1c7accf954654b1bb424520c85548cb1e59b5c53c93eee82b85aec"
+    },
+    {
+      "path": "reports/maintenance/stage5_download_recovery_20261026/restored_files.csv",
+      "message": "chore(reports): record stage 5 restored files",
+      "sha256": "bdbef7f7e5550d03044805f50c8d07943ee4d30778a0355b8800cc9a3658c4c4"
+    },
+    {
+      "path": "reports/run_registry/README.md",
+      "message": "chore(reports): record run registry readme",
+      "sha256": "4cb56e98785b227d8006484445a42156f34fa9808a40571c22376d52988700fa"
+    },
+    {
+      "path": "reports/run_registry/index.json",
+      "message": "chore(reports): record run registry index",
+      "sha256": "976233fd5abe56849157f8042a4071ecc0c7a29d1b3a673496d62b3b60e01465"
+    },
+    {
+      "path": "reports/run_registry/stage5_full_semantic/VALIDATION.json",
+      "message": "chore(reports): record stage5 full semantic validation",
+      "sha256": "f38049ce4570db0b231150782629968e347683b6cd110185dadc8758fafaa391"
+    },
+    {
+      "path": "reports/run_registry/stage5_full_semantic/manifest.json",
+      "message": "chore(reports): record stage5 full semantic manifest",
+      "sha256": "16be274461da1210920527aea533497416ecda3f1da0e5d3f390e06a92dca4d3"
+    },
+    {
+      "path": "reports/run_registry/stage5_full_structure_20261026/VALIDATION.json",
+      "message": "chore(reports): record stage5 full structure 20261026 validation",
+      "sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993"
+    },
+    {
+      "path": "reports/run_registry/stage5_full_structure_20261026/manifest.json",
+      "message": "chore(reports): record stage5 full structure 20261026 manifest",
+      "sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1"
+    },
+    {
+      "path": "reports/run_registry/stage5_semantic_shard_0/manifest.json",
+      "message": "chore(reports): record stage5 semantic shard 0 manifest",
+      "sha256": "2b80fc3cd9fe769ca45d472ae35cf4952f2986ea642cacff7fc75fd499bb96fd"
+    },
+    {
+      "path": "reports/run_registry/stage5_semantic_shard_1/manifest.json",
+      "message": "chore(reports): record stage5 semantic shard 1 manifest",
+      "sha256": "4ef93c3cd3e23d782f26b59aa7e90e38dd22671927d79cbf2e6445f9849a6082"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/CLEANUP.json",
+      "message": "chore(reports): record stage 5 cleanup",
+      "sha256": "2250abaa212db2f3165286873ee0110f9c35212249355dc9a618df2608bc568a"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/COLAB_SEMANTIC_VALIDATION.json",
+      "message": "chore(reports): record stage 5 colab semantic validation",
+      "sha256": "f38049ce4570db0b231150782629968e347683b6cd110185dadc8758fafaa391"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/README.md",
+      "message": "chore(reports): record stage 5 readme",
+      "sha256": "8b613aebc47c964a94ce775565237d6e650ff6e6d54eac88ebbc1fda2efc42ab"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/RESULTS.json",
+      "message": "chore(reports): record stage 5 results",
+      "sha256": "550943e8470599cf96fba42be2626ca0be2d940b1f53ab22b0b626a01244c138"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/RETIRED_CHECKPOINT_MANIFEST.json",
+      "message": "chore(reports): record stage 5 retired checkpoint manifest",
+      "sha256": "efb5d12fea4b6b086fe0ecbc2e43a1ee109977a880280428ea74f295138d39c0"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/SEMANTIC_EXECUTION.json",
+      "message": "chore(reports): record stage 5 semantic execution",
+      "sha256": "2809eda17388e9695c04db80625eb8cf898ff5928dbbde6441e855f5be2ac91f"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/SEMANTIC_VALIDATION.json",
+      "message": "chore(reports): record stage 5 semantic validation",
+      "sha256": "f38049ce4570db0b231150782629968e347683b6cd110185dadc8758fafaa391"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/STRUCTURE_EXECUTION.json",
+      "message": "chore(reports): record stage 5 structure execution",
+      "sha256": "47ccafbfe1838fe7fab0761a299c97efe5cd10da61bf2cc5df9445fa3d30ace0"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/STRUCTURE_VALIDATION.json",
+      "message": "chore(reports): record stage 5 structure validation",
+      "sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/cleanup.log",
+      "message": "chore(reports): record stage 5 cleanup",
+      "sha256": "15136f656e39f5f5b303d88a4d7c0be8fbd74b5382aad3e1a231ae829411f89f"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/cleanup_files.csv",
+      "message": "chore(reports): record stage 5 cleanup files",
+      "sha256": "0cb605cd7458f45449f610a4a58e7ff074c703dbcb7a564d24dedb7ffd8521c4"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/cleanup_superseded.py",
+      "message": "chore(reports): preserve cleanup superseded execution",
+      "sha256": "d8e78b101db592c72792288e50436207f637b4e40e58641acb96a744f332d675"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/semantic.log",
+      "message": "chore(reports): record stage 5 semantic",
+      "sha256": "e8550231a7c3d84d83f04c9beca856f61fc00ea9434e46d2d2195508332d94c5"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/structure.log",
+      "message": "chore(reports): record stage 5 structure",
+      "sha256": "c707bfc79fc3f156e9597b1a9ba9e88b29267cca02fd06ac07798ca1e5195fa0"
+    },
+    {
+      "path": "reports/stage5_validation_20261026/tests_stage5.log",
+      "message": "chore(reports): record stage 5 tests stage5",
+      "sha256": "26c6e258dba7fa6195515d2998254b5f2132ea57cb1f25fc09879e0f5789c97d"
+    },
+    {
+      "path": "requirements-stage5-semantic.txt",
+      "message": "build(semantic): declare packed inference dependencies",
+      "sha256": "92453d884f74c8c1cb5080c9c05514c55a9002a6541da45796f4878a5b0811d1"
+    },
+    {
+      "path": "scripts/make_stage5_full_colab_bundle.py",
+      "message": "feat(colab): add make stage5 full colab bundle",
+      "sha256": "abf4b270a84b448d282a1babffca9ab06a311f99938b6145d32a831f98daa283"
+    },
+    {
+      "path": "scripts/make_stage5_semantic_parallel_bundle.py",
+      "message": "feat(colab): add make stage5 semantic parallel bundle",
+      "sha256": "5cb842250fb1ada895ec03b8e46e4655d2c7044d02643dbdde0288543898fa39"
+    },
+    {
+      "path": "sharing/colab_full_paths.txt",
+      "message": "chore(sharing): update colab full paths",
+      "sha256": "25f7d8430c0ef78aafdc2476e4eaf288705cf2230f51614783cd942cf2137a3f"
+    },
+    {
+      "path": "sharing/colab_semantic_parallel_paths.txt",
+      "message": "chore(sharing): update colab semantic parallel paths",
+      "sha256": "0b55fac18f31ce903e2f40115dcffbdfcbc51bdc74b9eb3373ee83f8ad728b0d"
+    },
+    {
+      "path": "sharing/drive_after_stage5.txt",
+      "message": "chore(sharing): update drive after stage5",
+      "sha256": "72205791dab2f5e3509f6d62f675ba08ce1b56f4389e12564c62df5123c2d928"
+    },
+    {
+      "path": "sharing/drive_optional_paths.txt",
+      "message": "chore(sharing): update drive optional paths",
+      "sha256": "164892104dc7e47299bb9fe2e4f18d6809f8f6c46b8d36684a4db049ae53986d"
+    },
+    {
+      "path": "sharing/drive_paths.txt",
+      "message": "chore(sharing): update drive paths",
+      "sha256": "6c0fb506977f5d9e3fcd58b12e51db7d0056811dd909012a7d62f9052da4aa06"
+    },
+    {
+      "path": "sharing/git_stage5_commit_plan.json",
+      "message": "chore(sharing): update git stage5 commit plan",
+      "sha256": null
+    },
+    {
+      "path": "sharing/git_stage5_files.txt",
+      "message": "chore(sharing): update git stage5 files",
+      "sha256": "58063c3d8c4dcffd0ec7295d5a71272af8b35bbf7f1361661cc5acb7122c05c0"
+    },
+    {
+      "path": "sharing/github_files.txt",
+      "message": "chore(sharing): update github files",
+      "sha256": "4a7f8d9db0d85765ce17e6e8f83f09b44747814a38205c61300a36dac0deab1d"
+    },
+    {
+      "path": "sharing/github_paths.txt",
+      "message": "chore(sharing): update github paths",
+      "sha256": "1ca3c03b196e8ecf53e1730e0794fc31d860ea26dffb552ef3e86412a0239b49"
+    },
+    {
+      "path": "tests/test_stage5_full_bundle.py",
+      "message": "test(stage5): verify full bundle",
+      "sha256": "6466d7b0436577548950ee8cccee1d813450af6ff226bfe0152dbe17752aa922"
+    },
+    {
+      "path": "tests/test_stage5_parallel.py",
+      "message": "test(stage5): verify parallel",
+      "sha256": "bd7fc4be293237e21804bf53547e9ec996b7d2e81d04aedc6a63f575e297b0fc"
+    },
+    {
+      "path": "tests/test_stage5_semantic_compute.py",
+      "message": "test(stage5): verify semantic compute",
+      "sha256": "5cb32ab6f196ed9adee9a07962b1c5f188d39acabedc0cb7bb4d7acca62b0579"
+    },
+    {
+      "path": "tests/test_stage5_semantic_shards.py",
+      "message": "test(stage5): verify semantic shards",
+      "sha256": "142b2f122f1bce199ec3f38630702ea73e22a5637e1aeb336ce741f348257ceb"
+    },
+    {
+      "path": "tests/test_stage5_validation.py",
+      "message": "test(stage5): verify validation",
+      "sha256": "b20db7286f0a551a0a8fabab6bcfeb671728680b957a7315fa556582d42543dd"
+    },
+    {
+      "path": "vibiomir/chunk_full_bundle.py",
+      "message": "feat(colab): package full chunk inputs and checkpoints",
+      "sha256": "beeaffb046feb22390630725c0e2b5ea96b8be918e427acae9854413c0db4dc9"
+    },
+    {
+      "path": "vibiomir/chunk_parallel.py",
+      "message": "perf(chunking): resume structural batches with CPU workers",
+      "sha256": "e7a9f32bc9e5fe717c36753a19fd48d5729a2bc751db384f52755bc101f58d57"
+    },
+    {
+      "path": "vibiomir/chunk_validation.py",
+      "message": "feat(validation): check full chunk stores with resumable CPU batches",
+      "sha256": "649b5aa127eb45d3c6ac5cd9e5f6287fde3446874b912c3588fbc4a8fdbdef2d"
+    },
+    {
+      "path": "vibiomir/semantic_compute.py",
+      "message": "perf(semantic): pack GPU batches with bounded CPU preparation",
+      "sha256": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e"
+    },
+    {
+      "path": "vibiomir/semantic_shards.py",
+      "message": "feat(semantic): split and merge two Colab chunk runs",
+      "sha256": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2"
+    }
+  ]
+}
