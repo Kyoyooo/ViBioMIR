@@ -63,6 +63,21 @@ notebooks or Colab packaging.** Only deliveries that need GPU should include
 Colab-ready files, upload layout, hardware/resource assumptions, manual execution,
 checkpoint/resume and result-export instructions.
 
+On 2026-10-26 the owner explicitly requested Colab execution for the full
+stage-5 workload after local structural chunking proved too slow. That request
+authorizes a full Colab notebook for this workload, including its CPU-bound
+structural continuation. Document actual CPU/GPU usage: GPU runtime selection
+does not make the structural tokenizer run on CUDA. Manual execution remains
+required; semantic CUDA chunks are a separate experiment.
+
+Later on 2026-10-26 the owner explicitly authorized the assistant to run full
+stage-5 validation, prepare the completion/sharing documentation, clean up
+superseded failed/incomplete versions, and create local Git commits. This is a
+scoped execution exception for that closeout; it does not authorize new GPU
+jobs, a new full chunk strategy, or automatic processing in later deliveries.
+The owner will push the commits. Preserve the standing one-file-per-commit
+publication convention and exclude runtime/Drive data from Git.
+
 State which checks were only written or statically reviewed and which were
 actually executed by the owner. Do not label unexecuted tests as passing,
 generated artifacts as existing, or full-data processing as complete because
