@@ -1,0 +1,3 @@
+# Two-GPU semantic sharding; keep the same public encoder/tokenizer revision.
+-r requirements-stage5-colab.txt
+numpy>=1.26,<3
