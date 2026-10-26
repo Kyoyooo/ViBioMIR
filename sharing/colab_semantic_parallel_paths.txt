@@ -1,0 +1,8 @@
+# Shared input package and same notebook used with SHARD_ID=0 and SHARD_ID=1.
+# The consumed 2026-10-26 ZIP is archived under local_assets/archives/stage5_handoff_20261026/.
+# Current semantic merge is complete; no new Colab upload is needed for validation.
+colab/stage5_semantic_two_shards.ipynb
+# Generated manually; not created merely by listing it here.
+artifacts/stage5_semantic_parallel.zip
+# Both machines must access the same physical shared plan/prefix directory.
+# Instructions: docs/SEMANTIC_STAGE5_TWO_COLABS.md
