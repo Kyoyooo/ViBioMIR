@@ -1,0 +1,42 @@
+{
+  "date": "2026-10-26",
+  "state": "complete",
+  "scope": "Full local validation of the existing complete structural and semantic stores",
+  "gpu_required": false,
+  "documents_per_strategy": 855745,
+  "strategies": {
+    "structure": {
+      "source": "artifacts/chunks_stage5_full_structure",
+      "validation": "passed",
+      "documents": 855745,
+      "chunks": 5512624,
+      "batches": 1712,
+      "seconds": 654.186,
+      "workers": 4,
+      "validation_checkpoint": "artifacts/validation_stage5/structure"
+    },
+    "semantic": {
+      "source": "artifacts/semantic_parallel_stage5_full/merged",
+      "validation": "passed",
+      "documents": 855745,
+      "chunks": 9036279,
+      "batches": 1712,
+      "seconds": 744.47,
+      "workers": 4,
+      "validation_checkpoint": "artifacts/validation_stage5/semantic"
+    }
+  },
+  "semantic_report_equals_colab": true,
+  "total_chunks_checked": 14548903,
+  "tests": {
+    "run": 51,
+    "passed": 50,
+    "skipped": 1,
+    "skip_reason": "Optional CUDA inference integration test; local closeout used CPU only",
+    "log": "tests_stage5.log"
+  },
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "fixed_full_baseline": "not built in this validation-only closeout"
+}
