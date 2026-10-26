@@ -1,0 +1,69 @@
+{
+  "validation": "passed",
+  "documents": 855745,
+  "chunks": 5512624,
+  "documents_without_chunks": 2774,
+  "short_chunks": 2805990,
+  "by_language_hint": {
+    "vi_diacritics": {
+      "documents": 653182,
+      "chunks": 4852127,
+      "retrieval_tokens": 851355216,
+      "short_chunks": 2697436,
+      "max_tokens": 512
+    },
+    "unknown": {
+      "documents": 2774,
+      "chunks": 0,
+      "retrieval_tokens": 0,
+      "short_chunks": 0,
+      "max_tokens": 0
+    },
+    "latin_undetermined": {
+      "documents": 19,
+      "chunks": 264,
+      "retrieval_tokens": 89409,
+      "short_chunks": 31,
+      "max_tokens": 501
+    },
+    "cjk_likely_zh": {
+      "documents": 197661,
+      "chunks": 648135,
+      "retrieval_tokens": 190299576,
+      "short_chunks": 106534,
+      "max_tokens": 512
+    },
+    "mixed_script": {
+      "documents": 2107,
+      "chunks": 12095,
+      "retrieval_tokens": 3568274,
+      "short_chunks": 1989,
+      "max_tokens": 512
+    },
+    "other_or_mixed": {
+      "documents": 2,
+      "chunks": 3,
+      "retrieval_tokens": 976,
+      "short_chunks": 0,
+      "max_tokens": 415
+    }
+  },
+  "overlapping_source_characters": 88304385,
+  "explicit_question_regions": 6,
+  "question_regions_with_multiple_chunks": 1,
+  "table_regions": 69254,
+  "header_semantics": "legacy tr has no reliable header labels; first-row context only",
+  "unmapped_legacy_blocks": 0,
+  "exact_prepared_source_slices_verified": true,
+  "all_retrieval_token_budgets_verified": true,
+  "stage4_source": {
+    "stage4_manifest": "768e4d17cebecda552a9edda20c49f0aacdb5d0da21342b939ac7e606ca2eb4b",
+    "stage4_validation": "31b2afcda322fefa39d0fb1ae0889ed5d700c354d8b90ab1f977c7a7606eb0eb",
+    "stage3_manifest": "ea0f6164a797b03a84173b30c3f3e735fee9399c302e09efffcfc066a8bc7865",
+    "verification": "validated stage4 snapshot + per-used-source slice; no full SQLite rehash"
+  },
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "gpu_required_for_validation": false
+}
