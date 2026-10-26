@@ -1,0 +1,161 @@
+{
+  "format": "vibiomir-document-batches-v1",
+  "identity": {
+    "operation": "build-chunks",
+    "parent_signature": "336ff927b965e75e5cf44057385245c8a5bc62929f7b2a2ffde31732ff57534e",
+    "code": {
+      "chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+      "chunking.py": "7bb7148d4f7404404693bd1fc4de7dd88300186d6b9c62604d627fb68e4cd176",
+      "chunk_models.py": "05383a2d6faa8606016de3c1625fc1f97f4e88bd7a131ee92e85f9c252d7a274",
+      "chunk_pipeline.py": "b55d114a46757f7ddc8ffc228283e01c1ea4af67e15e0b5d20342e4ae0db27ba",
+      "document_contracts.py": "c2a4f7a26d854ecd3fa0c42da8cdd9ffb22f1ad0cdc3e30da283510f39774e34"
+    },
+    "strategy": "semantic",
+    "config": {
+      "target_tokens": 384,
+      "max_tokens": 512,
+      "overlap_tokens": 64,
+      "min_tokens": 128,
+      "context_tokens": 48,
+      "semantic_threshold": 0.65
+    },
+    "tokenizer": "54f28ea626d993cf151f6e55267e0e863359d6b359e8102f54a510341f5fc18e",
+    "encoder": {
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "pooling": "CLS + L2",
+      "dtype": "float16",
+      "parameters": 567754752
+    }
+  },
+  "signature": "5eb330242915cec8f2a3d990ddab2ebb860028bb089e5b024cfefba3b83df6bc",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "merge_plan": "b54aa528a2cfe378f063ba7d42d86ad03cd01cb1016f0b60ba0fc0785b8c8dd8",
+  "shard_execution_history": [
+    [
+      {
+        "runner": "packed semantic shards",
+        "shard_id": 0,
+        "code": {
+          "semantic_compute.py": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e",
+          "semantic_shards.py": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2"
+        },
+        "cpu_workers": 2,
+        "max_batch_size": 64,
+        "max_padded_tokens": 8192,
+        "wave_documents": 16,
+        "wave_sentences": 1024,
+        "encoder": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+          "commit_date": "2024-07-03",
+          "parameters": 567754752,
+          "pooling": "CLS + L2",
+          "dtype": "float16",
+          "device": "NVIDIA A100-SXM4-80GB",
+          "torch": "2.11.0+cu130"
+        }
+      },
+      {
+        "runner": "packed semantic shards",
+        "shard_id": 0,
+        "code": {
+          "semantic_compute.py": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e",
+          "semantic_shards.py": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2"
+        },
+        "cpu_workers": 8,
+        "max_batch_size": 256,
+        "max_padded_tokens": 32768,
+        "wave_documents": 64,
+        "wave_sentences": 4096,
+        "encoder": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+          "commit_date": "2024-07-03",
+          "parameters": 567754752,
+          "pooling": "CLS + L2",
+          "dtype": "float16",
+          "device": "NVIDIA A100-SXM4-80GB",
+          "torch": "2.11.0+cu130"
+        }
+      }
+    ],
+    [
+      {
+        "runner": "packed semantic shards",
+        "shard_id": 1,
+        "code": {
+          "semantic_compute.py": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e",
+          "semantic_shards.py": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2"
+        },
+        "cpu_workers": 2,
+        "max_batch_size": 64,
+        "max_padded_tokens": 8192,
+        "wave_documents": 16,
+        "wave_sentences": 1024,
+        "encoder": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+          "commit_date": "2024-07-03",
+          "parameters": 567754752,
+          "pooling": "CLS + L2",
+          "dtype": "float16",
+          "device": "Tesla T4",
+          "torch": "2.11.0+cu130"
+        }
+      },
+      {
+        "runner": "packed semantic shards",
+        "shard_id": 1,
+        "code": {
+          "semantic_compute.py": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e",
+          "semantic_shards.py": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2"
+        },
+        "cpu_workers": 6,
+        "max_batch_size": 256,
+        "max_padded_tokens": 32768,
+        "wave_documents": 64,
+        "wave_sentences": 4096,
+        "encoder": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+          "commit_date": "2024-07-03",
+          "parameters": 567754752,
+          "pooling": "CLS + L2",
+          "dtype": "float16",
+          "device": "Tesla T4",
+          "torch": "2.11.0+cu130"
+        }
+      },
+      {
+        "runner": "packed semantic shards",
+        "shard_id": 1,
+        "code": {
+          "semantic_compute.py": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e",
+          "semantic_shards.py": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2"
+        },
+        "cpu_workers": 8,
+        "max_batch_size": 256,
+        "max_padded_tokens": 32768,
+        "wave_documents": 64,
+        "wave_sentences": 4096,
+        "encoder": {
+          "model_id": "BAAI/bge-m3",
+          "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+          "commit_date": "2024-07-03",
+          "parameters": 567754752,
+          "pooling": "CLS + L2",
+          "dtype": "float16",
+          "device": "NVIDIA A100-SXM4-80GB",
+          "torch": "2.11.0+cu130"
+        }
+      }
+    ]
+  ],
+  "batches": 1712,
+  "documents": 855745,
+  "chunks": 9036279
+}
