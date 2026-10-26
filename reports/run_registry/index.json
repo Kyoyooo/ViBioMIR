@@ -1,5 +1,6 @@
 {
   "observed_at_utc": "2026-10-25T16:07:43.795637+00:00",
+  "updated_on": "2026-10-26",
   "purpose": "Read-only review metadata, not runnable checkpoints",
   "snapshots": [
     {
@@ -95,6 +96,46 @@
       "files": [
         "manifest.json"
       ],
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_full_structure_20261026",
+      "source": "artifacts/chunks_stage5_full_structure",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-26",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage5_full_semantic",
+      "source": "artifacts/semantic_parallel_stage5_full/merged",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-26",
+      "checkpoint": false,
+      "validation": "passed on Colab and revalidated fully on local CPU"
+    },
+    {
+      "snapshot": "stage5_semantic_shard_0",
+      "source": "artifacts/semantic_parallel_stage5_full/shard_0",
+      "files": [
+        "manifest.json"
+      ],
+      "observed_on": "2026-10-26",
+      "checkpoint": false
+    },
+    {
+      "snapshot": "stage5_semantic_shard_1",
+      "source": "artifacts/semantic_parallel_stage5_full/shard_1",
+      "files": [
+        "manifest.json"
+      ],
+      "observed_on": "2026-10-26",
       "checkpoint": false
     },
     {
