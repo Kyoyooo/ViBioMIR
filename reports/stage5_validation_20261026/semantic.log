@@ -1,0 +1,145 @@
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{"phase": "verify_batch_checksums", "output": "artifacts/semantic_parallel_stage5_full/merged"}
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+{"phase": "validated", "completed": 1, "total": 1712, "elapsed_seconds": 12.8}
+{"phase": "validated", "completed": 25, "total": 1712, "elapsed_seconds": 24.0}
+{"phase": "validated", "completed": 50, "total": 1712, "elapsed_seconds": 42.6}
+{"phase": "validated", "completed": 75, "total": 1712, "elapsed_seconds": 51.3}
+{"phase": "validated", "completed": 100, "total": 1712, "elapsed_seconds": 68.6}
+{"phase": "validated", "completed": 125, "total": 1712, "elapsed_seconds": 76.8}
+{"phase": "validated", "completed": 150, "total": 1712, "elapsed_seconds": 85.6}
+{"phase": "validated", "completed": 175, "total": 1712, "elapsed_seconds": 95.5}
+{"phase": "validated", "completed": 200, "total": 1712, "elapsed_seconds": 111.8}
+{"phase": "validated", "completed": 225, "total": 1712, "elapsed_seconds": 122.5}
+{"phase": "validated", "completed": 250, "total": 1712, "elapsed_seconds": 137.0}
+{"phase": "validated", "completed": 275, "total": 1712, "elapsed_seconds": 159.4}
+{"phase": "validated", "completed": 300, "total": 1712, "elapsed_seconds": 167.5}
+{"phase": "validated", "completed": 325, "total": 1712, "elapsed_seconds": 174.9}
+{"phase": "validated", "completed": 350, "total": 1712, "elapsed_seconds": 186.4}
+{"phase": "validated", "completed": 375, "total": 1712, "elapsed_seconds": 199.9}
+{"phase": "validated", "completed": 400, "total": 1712, "elapsed_seconds": 213.7}
+{"phase": "validated", "completed": 425, "total": 1712, "elapsed_seconds": 230.7}
+{"phase": "validated", "completed": 450, "total": 1712, "elapsed_seconds": 248.6}
+{"phase": "validated", "completed": 475, "total": 1712, "elapsed_seconds": 269.6}
+{"phase": "validated", "completed": 500, "total": 1712, "elapsed_seconds": 281.3}
+{"phase": "validated", "completed": 525, "total": 1712, "elapsed_seconds": 292.9}
+{"phase": "validated", "completed": 550, "total": 1712, "elapsed_seconds": 303.0}
+{"phase": "validated", "completed": 575, "total": 1712, "elapsed_seconds": 313.8}
+{"phase": "validated", "completed": 600, "total": 1712, "elapsed_seconds": 323.7}
+{"phase": "validated", "completed": 625, "total": 1712, "elapsed_seconds": 332.8}
+{"phase": "validated", "completed": 650, "total": 1712, "elapsed_seconds": 343.5}
+{"phase": "validated", "completed": 675, "total": 1712, "elapsed_seconds": 354.1}
+{"phase": "validated", "completed": 700, "total": 1712, "elapsed_seconds": 365.8}
+{"phase": "validated", "completed": 725, "total": 1712, "elapsed_seconds": 378.9}
+{"phase": "validated", "completed": 750, "total": 1712, "elapsed_seconds": 390.8}
+{"phase": "validated", "completed": 775, "total": 1712, "elapsed_seconds": 401.2}
+{"phase": "validated", "completed": 800, "total": 1712, "elapsed_seconds": 411.8}
+{"phase": "validated", "completed": 825, "total": 1712, "elapsed_seconds": 423.1}
+{"phase": "validated", "completed": 850, "total": 1712, "elapsed_seconds": 434.1}
+{"phase": "validated", "completed": 875, "total": 1712, "elapsed_seconds": 445.5}
+{"phase": "validated", "completed": 900, "total": 1712, "elapsed_seconds": 454.9}
+{"phase": "validated", "completed": 925, "total": 1712, "elapsed_seconds": 466.0}
+{"phase": "validated", "completed": 950, "total": 1712, "elapsed_seconds": 478.6}
+{"phase": "validated", "completed": 975, "total": 1712, "elapsed_seconds": 493.8}
+{"phase": "validated", "completed": 1000, "total": 1712, "elapsed_seconds": 500.1}
+{"phase": "validated", "completed": 1025, "total": 1712, "elapsed_seconds": 506.5}
+{"phase": "validated", "completed": 1050, "total": 1712, "elapsed_seconds": 511.9}
+{"phase": "validated", "completed": 1075, "total": 1712, "elapsed_seconds": 518.4}
+{"phase": "validated", "completed": 1100, "total": 1712, "elapsed_seconds": 524.4}
+{"phase": "validated", "completed": 1125, "total": 1712, "elapsed_seconds": 533.7}
+{"phase": "validated", "completed": 1150, "total": 1712, "elapsed_seconds": 557.5}
+{"phase": "validated", "completed": 1175, "total": 1712, "elapsed_seconds": 571.3}
+{"phase": "validated", "completed": 1200, "total": 1712, "elapsed_seconds": 583.3}
+{"phase": "validated", "completed": 1225, "total": 1712, "elapsed_seconds": 595.1}
+{"phase": "validated", "completed": 1250, "total": 1712, "elapsed_seconds": 614.4}
+{"phase": "validated", "completed": 1275, "total": 1712, "elapsed_seconds": 627.9}
+{"phase": "validated", "completed": 1300, "total": 1712, "elapsed_seconds": 639.8}
+{"phase": "validated", "completed": 1325, "total": 1712, "elapsed_seconds": 650.0}
+{"phase": "validated", "completed": 1350, "total": 1712, "elapsed_seconds": 654.6}
+{"phase": "validated", "completed": 1375, "total": 1712, "elapsed_seconds": 658.5}
+{"phase": "validated", "completed": 1400, "total": 1712, "elapsed_seconds": 661.8}
+{"phase": "validated", "completed": 1425, "total": 1712, "elapsed_seconds": 665.1}
+{"phase": "validated", "completed": 1450, "total": 1712, "elapsed_seconds": 668.3}
+{"phase": "validated", "completed": 1475, "total": 1712, "elapsed_seconds": 671.5}
+{"phase": "validated", "completed": 1500, "total": 1712, "elapsed_seconds": 674.9}
+{"phase": "validated", "completed": 1525, "total": 1712, "elapsed_seconds": 681.6}
+{"phase": "validated", "completed": 1550, "total": 1712, "elapsed_seconds": 685.4}
+{"phase": "validated", "completed": 1575, "total": 1712, "elapsed_seconds": 690.1}
+{"phase": "validated", "completed": 1600, "total": 1712, "elapsed_seconds": 698.1}
+{"phase": "validated", "completed": 1625, "total": 1712, "elapsed_seconds": 706.2}
+{"phase": "validated", "completed": 1650, "total": 1712, "elapsed_seconds": 716.7}
+{"phase": "validated", "completed": 1675, "total": 1712, "elapsed_seconds": 729.2}
+{"phase": "validated", "completed": 1700, "total": 1712, "elapsed_seconds": 738.0}
+{"phase": "validated", "completed": 1712, "total": 1712, "elapsed_seconds": 744.1}
+{
+  "validation": "passed",
+  "documents": 855745,
+  "chunks": 9036279,
+  "documents_without_chunks": 2774,
+  "short_chunks": 3109735,
+  "by_language_hint": {
+    "vi_diacritics": {
+      "documents": 653182,
+      "chunks": 7514849,
+      "retrieval_tokens": 1012866128,
+      "short_chunks": 2942184,
+      "max_tokens": 512
+    },
+    "unknown": {
+      "documents": 2774,
+      "chunks": 0,
+      "retrieval_tokens": 0,
+      "short_chunks": 0,
+      "max_tokens": 0
+    },
+    "latin_undetermined": {
+      "documents": 19,
+      "chunks": 504,
+      "retrieval_tokens": 98784,
+      "short_chunks": 41,
+      "max_tokens": 485
+    },
+    "cjk_likely_zh": {
+      "documents": 197661,
+      "chunks": 1495256,
+      "retrieval_tokens": 233404288,
+      "short_chunks": 164661,
+      "max_tokens": 512
+    },
+    "mixed_script": {
+      "documents": 2107,
+      "chunks": 25664,
+      "retrieval_tokens": 4285649,
+      "short_chunks": 2848,
+      "max_tokens": 512
+    },
+    "other_or_mixed": {
+      "documents": 2,
+      "chunks": 6,
+      "retrieval_tokens": 1090,
+      "short_chunks": 1,
+      "max_tokens": 300
+    }
+  },
+  "overlapping_source_characters": 387550142,
+  "explicit_question_regions": 6,
+  "question_regions_with_multiple_chunks": 1,
+  "table_regions": 69254,
+  "header_semantics": "legacy tr has no reliable header labels; first-row context only",
+  "unmapped_legacy_blocks": 0,
+  "exact_prepared_source_slices_verified": true,
+  "all_retrieval_token_budgets_verified": true,
+  "stage4_source": {
+    "stage4_manifest": "768e4d17cebecda552a9edda20c49f0aacdb5d0da21342b939ac7e606ca2eb4b",
+    "stage4_validation": "31b2afcda322fefa39d0fb1ae0889ed5d700c354d8b90ab1f977c7a7606eb0eb",
+    "stage3_manifest": "ea0f6164a797b03a84173b30c3f3e735fee9399c302e09efffcfc066a8bc7865",
+    "verification": "validated stage4 snapshot + per-used-source slice; no full SQLite rehash"
+  },
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "gpu_required_for_validation": false
+}
