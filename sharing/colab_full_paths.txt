@@ -1,0 +1,8 @@
+# Full-run continuation upload; build ZIP manually after stopping the local writer.
+# The consumed 2026-10-26 ZIP is archived under local_assets/archives/stage5_handoff_20261026/.
+# Current full stores need no new Colab upload; regenerate this ZIP only for a new run.
+colab/stage5_full.ipynb
+# Generated ZIP: full prepared inputs, tokenizer, code/tests and optional old chunks.
+artifacts/stage5_full_colab.zip
+# Instructions: docs/CHUNKING_STAGE5_COLAB_FULL.md
+# No Data/, source SQLite stores or Upload_to_Drive/ archive is needed by this handoff.
