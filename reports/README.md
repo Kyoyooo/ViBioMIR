@@ -15,6 +15,8 @@ instructions for running the pipeline.
 | Stage-4 cleaning | [Execution evidence](cleaning_stage4_rule_review_01/EXECUTION.md) | Completed apply, validation and before/after comparison |
 | Cleaning rule decisions | [Rule review](cleaning_stage4_rule_review_01/DECISIONS.md) | Approved/disabled rules and real-source counterexamples |
 | Stage-3–5 metadata | [Run registry](run_registry/README.md) | Small manifests/validation snapshots readable without Drive data |
+| Full semantic recovery, 2026-10-26 | [Recovery and completion checklist](maintenance/stage5_download_recovery_20261026/README.md) | Restored 4 ZIPs, 17 missing files and 5 loose files; integrity checks passed; review packet and pending acceptance |
+| Stage-5 full local validation and closeout | [Execution evidence](stage5_validation_20261026/README.md) | Structural and semantic: 14,548,903 chunks passed; tests, cleanup record and handoff |
 | Repository maintenance | [Cleanup record](maintenance/repository_cleanup_20261025/README.md) | Exactly what was removed, retained and relocated |
 
 `data_audit/*/processing_plan.md` is an automatically generated **draft**.
