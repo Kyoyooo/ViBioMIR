@@ -1,16 +1,15 @@
-# Existing stable data and historical results to share on Drive.
+# Required canonical working data and current small validation evidence.
 # Keep these paths relative to the project root. Do not filter by .gitignore.
-# Excludes the active full stage-5 chunk output; see drive_after_stage5.txt.
+# Reuse already uploaded matching copies. See drive_after_stage5.txt for deltas.
+# Historical/pilot material is listed separately in drive_optional_paths.txt.
 Data/
 artifacts/document_store_stage3_full_v2/
 artifacts/cleaning_stage4_full_apply/
-artifacts/cleaning_stage4_full_dry/
-artifacts/cleaning_stage4_reviewed_pilot_dry/
-artifacts/cleaning_stage4_pilot_dry/
 artifacts/chunk_inputs_stage5_full/
-artifacts/chunk_inputs_stage5_smoke/
-artifacts/chunks_stage5_smoke_fixed/
-artifacts/chunks_stage5_smoke_structure/
 artifacts/tokenizers/bge_m3_stage5/
-reports/
-local_assets/
+artifacts/chunks_stage5_full_structure/
+artifacts/semantic_parallel_stage5_full/merged/
+artifacts/semantic_parallel_stage5_full/plan.json
+configs/chunking_stage5.json
+reports/stage5_validation_20261026/
+reports/run_registry/
