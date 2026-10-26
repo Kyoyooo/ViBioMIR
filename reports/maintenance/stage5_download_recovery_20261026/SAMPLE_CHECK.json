@@ -1,0 +1,61 @@
+{
+  "validation": "passed",
+  "scope": "Bounded deterministic source/token checks, not full validation or human QA",
+  "input_batches_sampled": [
+    0,
+    90,
+    180,
+    270,
+    360,
+    442,
+    444,
+    450,
+    540,
+    571,
+    630,
+    720,
+    788,
+    810,
+    862,
+    863,
+    901,
+    991,
+    1081,
+    1171,
+    1261,
+    1351,
+    1363,
+    1441,
+    1472,
+    1529,
+    1531,
+    1603,
+    1621,
+    1635,
+    1686,
+    1711
+  ],
+  "stores": {
+    "semantic": {
+      "documents": 63,
+      "chunks_checked": 410,
+      "by_language_hint": {
+        "vi_diacritics": 320,
+        "cjk_likely_zh": 86,
+        "mixed_script": 4
+      }
+    },
+    "structure": {
+      "documents": 63,
+      "chunks_checked": 287,
+      "by_language_hint": {
+        "vi_diacritics": 237,
+        "cjk_likely_zh": 46,
+        "mixed_script": 4
+      }
+    }
+  },
+  "review_rows": 35,
+  "human_qa": "pending",
+  "gpu_required": false
+}
