@@ -1,6 +1,6 @@
 # ViBioMIR — spec-driven development from Mentor Day to a complete retrieval system
 
-**Version:** 1.7 · **Date:** 2026-10-25 · **Status:** specification for implementation;
+**Version:** 1.8 · **Date:** 2026-10-26 · **Status:** specification for implementation;
 local-audit-first scope, with manual execution from delivery 3 onward.
 
 Target: Vietnamese-query retrieval of original VI–EN–ZH documents and evidence,
@@ -19,7 +19,24 @@ Language and compatibility policy: [development conventions](DEVELOPMENT_CONVENT
 Initial values, QA thresholds, budgets, and scheduling suggestions are **proposed
 engineering decisions**, not organizer rules or measured benchmarks.
 
-**v1.7 delivery 5:** S05 now has a manual implementation and fixtures for fixed,
+**2026-10-26 execution evidence:** the owner completed full structural chunking
+(855,745 documents / 5,512,624 chunks)
+and two-shard semantic chunking/merge (855,745 documents / 9,036,279 chunks;
+full Colab validation passed). At the owner's explicit request, the assistant
+recovered the four downloaded ZIPs, repaired 17 missing extraction files,
+identified five misplaced loose files, verified all batch checksums and exact
+merged/shard payload equivalence, and checked a bounded local tokenizer sample.
+The owner subsequently authorized full local validation of both outputs:
+14,548,903 chunks passed original-slice, version, ID, token-budget, coverage
+and accounting checks. The local semantic report matches the full Colab report.
+The stage-5 suite ran 51 tests: 50 passed, one optional CUDA integration skipped.
+See [closeout evidence and handoff](STAGE5_RESULTS_AND_HANDOFF.md) and
+[download recovery](../reports/maintenance/stage5_download_recovery_20261026/README.md).
+This closes full technical validation for the two built full stores; clinical
+QA, complete S05 experimental acceptance, full fixed comparison, parameter
+pilots, corpus freeze and downstream strategy comparison remain pending.
+
+**v1.7 delivery 5 (historical implementation status):** S05 now has a manual implementation and fixtures for fixed,
 structural and semantic chunking; see [the stage-5 runbook](CHUNKING_STAGE5.md).
 Selected stage-4 versions are verified against their original stage-3 slices
 and exported as portable gzip document batches. CPU baselines share that
