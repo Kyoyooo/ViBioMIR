@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-26",
+  "state": "complete",
+  "deleted_files": 11227,
+  "deleted_bytes": 10151697136,
+  "deleted_directories": [
+    "local_assets/archives/stage5_colab_download_20261026/extracted_snapshot",
+    "artifacts/stage5_full_colab"
+  ],
+  "retired_checkpoint_batches_verified": 457,
+  "archive_moves": [
+    {
+      "from": "artifacts/stage5_full_colab.zip",
+      "to": "local_assets/archives/stage5_handoff_20261026/stage5_full_colab.zip",
+      "bytes": 3069324985,
+      "sha256": "3c012b63de1d4c0d40ea703b58307743ecc23b61c29e158ee4b0dc32d8bcb1a5"
+    },
+    {
+      "from": "artifacts/stage5_semantic_parallel.zip",
+      "to": "local_assets/archives/stage5_handoff_20261026/stage5_semantic_parallel.zip",
+      "bytes": 2108891330,
+      "sha256": "981cf48df66a06da497f295f741491791397a207b2895841098f1f1756168026"
+    }
+  ],
+  "preserved": [
+    "All four original Drive ZIPs and five loose originals",
+    "Full structural/semantic stores and both semantic shards",
+    "Successful stage-3/4 stores and stage-5 smoke fixtures",
+    "Upload_to_Drive (owner-managed historical snapshot; not used for current handoff)"
+  ]
+}
