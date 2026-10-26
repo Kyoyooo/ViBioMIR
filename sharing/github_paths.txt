@@ -16,5 +16,6 @@ requirements-stage3.txt
 requirements-stage4.txt
 requirements-stage5.txt
 requirements-stage5-colab.txt
+requirements-stage5-semantic.txt
 sharing/
 reports/
