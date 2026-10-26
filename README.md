@@ -15,7 +15,7 @@ The [original mentor summary](261012_R2_AI_S3_MentorDay1_summary.md) is preserve
 in Vietnamese. See [development conventions](docs/DEVELOPMENT_CONVENTIONS.md)
 for the manual-execution policy. The owner runs processing, tests and model jobs.
 
-## Observed progress — 2026-10-25
+## Observed progress — 2026-10-26
 
 | Stage | Observed state | Evidence |
 | --- | --- | --- |
@@ -24,12 +24,16 @@ for the manual-execution policy. The owner runs processing, tests and model jobs
 | Stage 4 | Full apply complete and validated: 1,029,307 regions across all versions; zero failed documents | [Execution evidence](reports/cleaning_stage4_rule_review_01/EXECUTION.md) |
 | Stage 5 inputs | Full preparation complete: 855,745 documents / 1,712 batches | [Manifest snapshot](reports/run_registry/stage5_inputs_full/manifest.json) |
 | Stage 5 smoke | Fixed: 765 chunks; structural: 687 chunks, each over 200 documents; both validated | [Run registry](reports/run_registry/README.md) |
-| Stage 5 full structural chunks | **Running when observed**; do not move, delete or upload as a completed result yet | [Observed metadata](reports/run_registry/stage5_full_structure_observed/manifest.json) |
-| Semantic / ICD / indexes / retrieval | Semantic code and Colab handoff supplied; no completed GPU run recorded; later retrieval stages pending | [Stage-5 runbook](docs/CHUNKING_STAGE5.md) |
+| Stage 5 full structural chunks | Full local validation passed: 855,745 documents / 5,512,624 chunks | [Validation](reports/run_registry/stage5_full_structure_20261026/VALIDATION.json) |
+| Stage 5 full semantic chunks | Full local validation passed: 855,745 documents / 9,036,279 chunks; report matches the original Colab full validation | [Validation](reports/run_registry/stage5_full_semantic/VALIDATION.json) |
+| ICD / indexes / retrieval | Not implemented; full fixed baseline and stage-5 acceptance/QA still pending | [Stage-5 runbook](docs/CHUNKING_STAGE5.md) |
 
 These are technical processing results. Human/clinical QA, official-ID
 eligibility, corpus freeze and retrieval evaluation remain pending. Published URL
 counts are reference snapshots, not an acquisition quota; recrawling is deferred.
+
+For stage-5 output paths, full validation evidence, cleanup and GitHub/Drive
+handoff, read [Stage-5 results and handoff](docs/STAGE5_RESULTS_AND_HANDOFF.md).
 
 ## Run instructions
 
@@ -44,6 +48,8 @@ Run tests and a small pilot before a new full run.
 | Offline recovery and reviewed cleaning | [Stage 4](docs/CLEANING_STAGE4.md) | Local CPU |
 | Prepare inputs, fixed/structural chunks, validation | [Stage 5](docs/CHUNKING_STAGE5.md) | Local CPU; tokenizer only |
 | Semantic boundary pilot | [Stage-5 Colab notebook](colab/stage5_semantic.ipynb) | CUDA GPU |
+| Resume full chunks on Colab; separate full semantic experiment | [Full Colab handoff](docs/CHUNKING_STAGE5_COLAB_FULL.md) | Structural: parallel CPU; semantic: CUDA |
+| Split remaining semantic chunks across two Colabs and merge | [Two-Colab semantic workflow](docs/SEMANTIC_STAGE5_TWO_COLABS.md) | One CUDA GPU per shard |
 
 ## Repository layout
 
