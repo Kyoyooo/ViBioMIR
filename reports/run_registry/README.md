@@ -1,8 +1,8 @@
 # Run metadata for team review
 
-These are small copies observed on 2026-10-25, not runnable checkpoints.
+These are small copies observed on 2026-10-25 and 2026-10-26, not runnable checkpoints.
 [index.json](index.json) records original source directories and observation
-time. Original artifacts and all their data parts belong on Drive. A registry
+time; newer entries have an explicit `observed_on` date. Original artifacts and all their data parts belong on Drive. A registry
 copy must never replace an original manifest or be used to resume a run.
 
 | Snapshot | Observed outcome | Review metadata |
@@ -17,6 +17,10 @@ copy must never replace an original manifest or be used to resume a run.
 | `stage5_smoke_fixed` | 200 documents / 765 chunks; validation passed | [Validation](stage5_smoke_fixed/VALIDATION.json) |
 | `stage5_smoke_structure` | 200 documents / 687 chunks; validation passed | [Validation](stage5_smoke_structure/VALIDATION.json) |
 | `stage5_full_structure_observed` | **Building when observed**; preserved as active work | [Observed manifest](stage5_full_structure_observed/manifest.json) |
+| `stage5_full_structure_20261026` | Full local validation passed: 855,745 documents / 5,512,624 chunks | [Manifest](stage5_full_structure_20261026/manifest.json), [validation](stage5_full_structure_20261026/VALIDATION.json) |
+| `stage5_full_semantic` | Full local and Colab validation passed: 855,745 documents / 9,036,279 chunks; reports agree | [Manifest](stage5_full_semantic/manifest.json), [validation](stage5_full_semantic/VALIDATION.json) |
+| `stage5_semantic_shard_0` | Complete: 863 batches; provenance backup, not a full-corpus output | [Manifest](stage5_semantic_shard_0/manifest.json) |
+| `stage5_semantic_shard_1` | Complete: 849 batches; provenance backup, not a full-corpus output | [Manifest](stage5_semantic_shard_1/manifest.json) |
 | `stage5_tokenizer` | Local tokenizer provenance and file checksums | [Registry](stage5_tokenizer/REGISTRY.json) |
 
 `chunks: 0` in a `prepare-chunk-inputs` manifest means that preparation has
