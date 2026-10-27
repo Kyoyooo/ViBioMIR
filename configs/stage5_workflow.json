@@ -1,0 +1,27 @@
+{
+  "input_dir": "artifacts/chunk_inputs_stage5_full",
+  "stage3_dir": "artifacts/document_store_stage3_full_v2",
+  "stage4_dir": "artifacts/cleaning_stage4_full_apply",
+  "data_dir": "Data",
+  "tokenizer_dir": "artifacts/tokenizers/bge_m3_stage5",
+  "chunk_config": "configs/chunking_stage5.json",
+  "stores": {
+    "fixed": "artifacts/chunks_stage5_full_fixed",
+    "structure": "artifacts/chunks_stage5_full_structure",
+    "semantic": "artifacts/semantic_parallel_stage5_full/merged"
+  },
+  "qa_dir": "artifacts/stage5_qa_v1",
+  "fixed_validation_dir": "artifacts/validation_stage5/fixed",
+  "fixed_report_dir": "artifacts/stage5_fixed_v1",
+  "comparison_dir": "artifacts/stage5_comparison_v1",
+  "pilot_dir": "artifacts/stage5_pilots_v1",
+  "seed": 270126,
+  "random_documents": 600,
+  "minimum_per_domain": 3,
+  "minimum_per_language_hint": 3,
+  "minimum_per_type": 3,
+  "risk_documents": 100,
+  "second_review_fraction": 0.2,
+  "proposed_main_content_target": 0.98,
+  "workers": 2
+}
