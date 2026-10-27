@@ -1,0 +1,37 @@
+{
+  "schema": "vibiomir-icd10-chapters-v1",
+  "classification": "WHO ICD-10",
+  "version": "2019",
+  "granularity": "chapter",
+  "sources": [
+    "https://icd.who.int/browse10/2019/en/",
+    "https://klassifikationen.bfarm.de/icd-10-who/kode-suche/htmlamtl2019/index.htm",
+    "261012_R2_AI_S3_MentorDay1_summary.md#4-phụ-lục-a--danh-sách-các-chương-icd-10"
+  ],
+  "reference_checked_date": "2026-10-27",
+  "description_status": "Project-authored short multilingual topic descriptions and seed phrases; clinical review pending. Not official translations, not exhaustive code-level mappings or ICD-10-CM.",
+  "chapters": [
+    {"id":"I","range":["A00","B99"],"topics":{"en":"Infections and parasites","vi":"Nhiễm trùng và ký sinh trùng","zh":"感染与寄生虫病"},"terms":{"en":["tuberculosis","malaria","dengue","viral hepatitis"],"vi":["bệnh lao","sốt rét","sốt xuất huyết","viêm gan virus"],"zh":["结核病","疟疾","登革热","病毒性肝炎"]}},
+    {"id":"II","range":["C00","D48"],"topics":{"en":"Tumours and neoplasms","vi":"Khối u và ung thư","zh":"肿瘤"},"terms":{"en":["cancer","neoplasm","carcinoma","benign tumour"],"vi":["ung thư","khối u","u lành tính"],"zh":["癌症","恶性肿瘤","良性肿瘤"]}},
+    {"id":"III","range":["D50","D89"],"topics":{"en":"Blood and immune disorders","vi":"Bệnh máu và rối loạn miễn dịch","zh":"血液与免疫疾病"},"terms":{"en":["anaemia","anemia","haemophilia","immunodeficiency"],"vi":["thiếu máu","bệnh máu khó đông","suy giảm miễn dịch"],"zh":["贫血","血友病","免疫缺陷"]}},
+    {"id":"IV","range":["E00","E90"],"topics":{"en":"Endocrine, nutrition and metabolism","vi":"Nội tiết, dinh dưỡng và chuyển hóa","zh":"内分泌、营养与代谢疾病"},"terms":{"en":["type 2 diabetes","type ii diabetes","diabetes mellitus","hypothyroidism","hyperthyroidism"],"vi":["đái tháo đường","tiểu đường","suy giáp","cường giáp"],"zh":["2型糖尿病","二型糖尿病","糖尿病","甲状腺功能减退","甲状腺功能亢进"]}},
+    {"id":"V","range":["F00","F99"],"topics":{"en":"Mental health and behaviour","vi":"Sức khỏe tâm thần và hành vi","zh":"精神与行为障碍"},"terms":{"en":["schizophrenia","depressive disorder","bipolar disorder"],"vi":["tâm thần phân liệt","rối loạn trầm cảm","rối loạn lưỡng cực"],"zh":["精神分裂症","抑郁症","双相情感障碍"]}},
+    {"id":"VI","range":["G00","G99"],"topics":{"en":"Neurological conditions","vi":"Bệnh hệ thần kinh","zh":"神经系统疾病"},"terms":{"en":["epilepsy","parkinson disease","parkinson's disease","multiple sclerosis"],"vi":["động kinh","bệnh parkinson","đa xơ cứng"],"zh":["癫痫","帕金森病","多发性硬化"]}},
+    {"id":"VII","range":["H00","H59"],"topics":{"en":"Eye conditions","vi":"Bệnh mắt","zh":"眼部疾病"},"terms":{"en":["cataract","glaucoma","conjunctivitis"],"vi":["đục thủy tinh thể","tăng nhãn áp","viêm kết mạc"],"zh":["白内障","青光眼","结膜炎"]}},
+    {"id":"VIII","range":["H60","H95"],"topics":{"en":"Ear and mastoid conditions","vi":"Bệnh tai và xương chũm","zh":"耳与乳突疾病"},"terms":{"en":["otitis media","otitis externa","mastoiditis"],"vi":["viêm tai giữa","viêm tai ngoài","viêm xương chũm"],"zh":["中耳炎","外耳炎","乳突炎"]}},
+    {"id":"IX","range":["I00","I99"],"topics":{"en":"Heart and circulation","vi":"Tim mạch và tuần hoàn","zh":"心血管与循环系统疾病"},"terms":{"en":["hypertension","coronary artery disease","myocardial infarction","heart failure"],"vi":["tăng huyết áp","bệnh mạch vành","nhồi máu cơ tim","suy tim"],"zh":["高血压","冠心病","心肌梗死","心力衰竭"]}},
+    {"id":"X","range":["J00","J99"],"topics":{"en":"Respiratory conditions","vi":"Bệnh hô hấp","zh":"呼吸系统疾病"},"terms":{"en":["asthma","pneumonia","chronic obstructive pulmonary disease"],"vi":["hen phế quản","hen suyễn","viêm phổi","bệnh phổi tắc nghẽn mạn tính"],"zh":["哮喘","肺炎","慢性阻塞性肺疾病"]}},
+    {"id":"XI","range":["K00","K93"],"topics":{"en":"Digestive and oral conditions","vi":"Bệnh tiêu hóa và răng miệng","zh":"消化与口腔疾病"},"terms":{"en":["gastritis","peptic ulcer","appendicitis","dental caries"],"vi":["viêm dạ dày","loét dạ dày","viêm ruột thừa","sâu răng"],"zh":["胃炎","消化性溃疡","阑尾炎","龋齿"]}},
+    {"id":"XII","range":["L00","L99"],"topics":{"en":"Skin and subcutaneous conditions","vi":"Bệnh da và mô dưới da","zh":"皮肤与皮下组织疾病"},"terms":{"en":["psoriasis","atopic dermatitis","eczema"],"vi":["vảy nến","viêm da cơ địa","bệnh chàm"],"zh":["银屑病","特应性皮炎","湿疹"]}},
+    {"id":"XIII","range":["M00","M99"],"topics":{"en":"Musculoskeletal and connective tissue","vi":"Cơ xương và mô liên kết","zh":"肌肉骨骼与结缔组织疾病"},"terms":{"en":["rheumatoid arthritis","osteoarthritis","osteoporosis"],"vi":["viêm khớp dạng thấp","thoái hóa khớp","loãng xương"],"zh":["类风湿关节炎","骨关节炎","骨质疏松"]}},
+    {"id":"XIV","range":["N00","N99"],"topics":{"en":"Urinary and genital conditions","vi":"Bệnh tiết niệu và sinh dục","zh":"泌尿与生殖系统疾病"},"terms":{"en":["kidney stone","renal calculi","chronic kidney disease","cystitis"],"vi":["sỏi thận","bệnh thận mạn","viêm bàng quang"],"zh":["肾结石","慢性肾病","膀胱炎"]}},
+    {"id":"XV","range":["O00","O99"],"topics":{"en":"Pregnancy, birth and postpartum","vi":"Thai kỳ, sinh đẻ và hậu sản","zh":"妊娠、分娩与产褥期"},"terms":{"en":["preeclampsia","ectopic pregnancy","postpartum haemorrhage"],"vi":["tiền sản giật","thai ngoài tử cung","băng huyết sau sinh"],"zh":["子痫前期","异位妊娠","产后出血"]}},
+    {"id":"XVI","range":["P00","P96"],"topics":{"en":"Perinatal conditions","vi":"Bệnh lý thời kỳ chu sinh","zh":"围生期疾病"},"terms":{"en":["neonatal jaundice","neonatal sepsis","birth asphyxia"],"vi":["vàng da sơ sinh","nhiễm trùng sơ sinh","ngạt khi sinh"],"zh":["新生儿黄疸","新生儿败血症","出生窒息"]}},
+    {"id":"XVII","range":["Q00","Q99"],"topics":{"en":"Congenital and chromosomal conditions","vi":"Dị tật bẩm sinh và bất thường nhiễm sắc thể","zh":"先天畸形与染色体异常"},"terms":{"en":["down syndrome","cleft palate","congenital malformation"],"vi":["hội chứng down","hở hàm ếch","dị tật bẩm sinh"],"zh":["唐氏综合征","腭裂","先天畸形"]}},
+    {"id":"XVIII","range":["R00","R99"],"topics":{"en":"Symptoms and abnormal findings without an established cause","vi":"Triệu chứng và dấu hiệu chưa xác định nguyên nhân","zh":"未明确病因的症状与异常检查结果"},"terms":{"en":["chest pain","fever","abdominal pain","dizziness"],"vi":["đau ngực","sốt","đau bụng","chóng mặt"],"zh":["胸痛","发热","腹痛","头晕"]}},
+    {"id":"XIX","range":["S00","T98"],"topics":{"en":"Injury and poisoning","vi":"Chấn thương và ngộ độc","zh":"损伤与中毒"},"terms":{"en":["fracture","poisoning","traumatic brain injury"],"vi":["gãy xương","ngộ độc","chấn thương sọ não"],"zh":["骨折","中毒","创伤性脑损伤"]}},
+    {"id":"XX","range":["V01","Y98"],"topics":{"en":"External causes of injury and mortality","vi":"Nguyên nhân bên ngoài gây thương tích và tử vong","zh":"损伤与死亡的外部原因"},"terms":{"en":["traffic accident","accidental fall","pedestrian injured"],"vi":["tai nạn giao thông","té ngã","ngã cầu thang"],"zh":["交通事故","意外跌倒","行人受伤"]}},
+    {"id":"XXI","range":["Z00","Z99"],"topics":{"en":"Health services, screening and health status factors","vi":"Dịch vụ y tế, sàng lọc và yếu tố sức khỏe","zh":"医疗服务、筛查与健康影响因素"},"terms":{"en":["health screening","vaccination","contraceptive counselling"],"vi":["khám sức khỏe","tiêm chủng","tư vấn tránh thai"],"zh":["健康筛查","疫苗接种","避孕咨询"]}},
+    {"id":"XXII","range":["U00","U85"],"topics":{"en":"Special-purpose coding and antimicrobial resistance","vi":"Mã mục đích đặc biệt và kháng thuốc","zh":"特殊用途编码与耐药性"},"terms":{"en":["antimicrobial resistance","antibiotic resistance","codes for special purposes"],"vi":["kháng kháng sinh","mã mục đích đặc biệt"],"zh":["抗菌药物耐药性","抗生素耐药","特殊用途编码"]}}
+  ]
+}
