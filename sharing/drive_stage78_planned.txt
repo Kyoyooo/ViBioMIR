@@ -1,0 +1,22 @@
+# PLANNED outputs; not evidence that jobs or packaging have been run.
+# S07 local CPU: full folder incl SQLite, manifest and validation.
+artifacts/lexical_stage7_structure/
+# S08: upload plan + six bundles, one matching ZIP per Colab worker 0..5.
+artifacts/dense_stage8_bge_structure/plan.json
+artifacts/dense_stage8_bge_structure/bundles/
+# Upload colab/stage8_dense_worker.ipynb to six CUDA sessions.
+# Outputs: preserve each complete folder, including vector/mapping batches and registry.
+artifacts/dense_stage8_bge_structure/worker_0/
+artifacts/dense_stage8_bge_structure/worker_1/
+artifacts/dense_stage8_bge_structure/worker_2/
+artifacts/dense_stage8_bge_structure/worker_3/
+artifacts/dense_stage8_bge_structure/worker_4/
+artifacts/dense_stage8_bge_structure/worker_5/
+artifacts/dense_stage8_bge_structure/query_vectors/
+artifacts/dense_stage8_bge_structure/merged/
+artifacts/dense_stage8_bge_structure/index_ivfpq/
+# Candidate generation optional now; needed for later S09 integration:
+artifacts/candidates_stage7_bm25/
+artifacts/candidates_stage7_tfidf/
+artifacts/candidates_stage8_bge/
+# Runtime environments, model caches, .partial files and duplicate downloads stay out.
