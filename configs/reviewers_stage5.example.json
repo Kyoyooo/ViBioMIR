@@ -1,0 +1,6 @@
+{
+  "reviewer_vi": {"languages": ["vi"], "clinical_qualified": false},
+  "reviewer_en": {"languages": ["en"], "clinical_qualified": false},
+  "reviewer_zh": {"languages": ["zh"], "clinical_qualified": false},
+  "clinical_reviewer": {"languages": ["vi", "en"], "clinical_qualified": true}
+}
