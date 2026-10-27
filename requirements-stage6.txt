@@ -1,0 +1,3 @@
+# CPU rules need only the standard library. Semantic fixtures use NumPy.
+# Colab packaging uses the existing stage-5 environment for its pinned tokenizer.
+numpy>=1.26,<3
