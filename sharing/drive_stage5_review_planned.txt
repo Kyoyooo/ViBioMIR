@@ -1,0 +1,17 @@
+# PLANNED outputs for the 2026-10-27 code-only delivery, not existing results.
+# DEFERRED by owner: no new upload/build needed to move from S05 to S06.
+# Resume relevant QA/experiments after S07-S09 retrieval; full fixed is optional.
+# Upload only after owner-run generation/review; keep complete stores and hashes.
+# Reuse existing matching stage3/stage4, inputs, tokenizer and full structure/semantic.
+artifacts/chunks_stage5_full_fixed/
+artifacts/stage5_fixed_v1/
+artifacts/stage5_review_tests/
+artifacts/stage5_qa_v1/
+artifacts/stage5_comparison_v1/
+artifacts/local_eval_v1/
+# Optional bounded parameter experiments (including downloaded semantic outputs):
+artifacts/stage5_pilots_v1/
+# Validation checkpoints are recovery caches, optional rather than review evidence:
+# artifacts/validation_stage5/fixed/
+# Colab upload: generated stage5_pilots_v1/colab/NAME.zip + colab/stage5_full.ipynb.
+# Do not upload environments/caches; do not put original text/large stores on GitHub.
