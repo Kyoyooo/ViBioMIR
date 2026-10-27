@@ -1,0 +1,11 @@
+{
+  "schema": "vibiomir-lexical-v1",
+  "chunk_dir": "artifacts/chunks_stage5_full_structure",
+  "output_dir": "artifacts/lexical_stage7_structure",
+  "analyzer": "pyvi_jieba_v1",
+  "workers": 2,
+  "k1": 1.2,
+  "b": 0.75,
+  "sqlite_cache_mib": 256,
+  "top_k": 500
+}
