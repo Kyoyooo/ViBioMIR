@@ -1,0 +1,13 @@
+{
+  "schema": "vibiomir-dense-v1",
+  "chunk_dir": "artifacts/chunks_stage5_full_structure",
+  "run_dir": "artifacts/dense_stage8_bge_structure",
+  "tokenizer_dir": "artifacts/tokenizers/bge_m3_stage5",
+  "model": "bge_m3",
+  "workers": 6,
+  "worker_weights": [1, 1, 1, 1, 1, 1],
+  "max_tokens": 512,
+  "window_overlap": 32,
+  "storage_dtype": "float16",
+  "seed": 270126
+}
