@@ -1,0 +1,21 @@
+# S07/S08 source delivery; new tests/pipelines remain owner-run.
+configs/lexical_stage7.json
+configs/dense_stage8.json
+requirements-stage7.txt
+requirements-stage8.txt
+requirements-stage8-colab.txt
+vibiomir/retrieval_contracts.py
+vibiomir/lexical_stage7.py
+vibiomir/dense_models.py
+vibiomir/dense_stage8.py
+vibiomir/dense_index.py
+tests/test_stage78_retrieval.py
+colab/stage8_dense_worker.ipynb
+docs/RETRIEVAL_STAGES7_8.md
+README.md
+docs/README.md
+docs/DEVELOPMENT_CONVENTIONS.md
+docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md
+sharing/github_paths.txt
+sharing/stage78_source_files.txt
+sharing/drive_stage78_planned.txt
