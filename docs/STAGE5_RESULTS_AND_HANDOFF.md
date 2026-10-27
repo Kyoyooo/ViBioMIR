@@ -13,6 +13,21 @@ See [execution evidence](../reports/stage5_validation_20261026/README.md) and
 The two validations ran concurrently. The stage-5 test suite ran 51 tests:
 50 passed, one optional CUDA integration test skipped. Human QA remains pending.
 
+**2026-10-27 implementation follow-up:** the
+[QA/experiment runbook](STAGE5_QA_AND_EXPERIMENTS.md) now covers the remaining
+human review, full fixed build and controlled comparisons. New code and tests
+are provided for owner execution; the 51-test observation above applies only
+to the 2026-10-26 suite. Full fixed counts, new test outcomes and actual human
+judgments have not been produced by this delivery.
+
+**Current owner priority, 2026-10-27:** proceed to S06 using the validated
+structural/semantic snapshot. No additional stage-5 build, full validation,
+QA export or comparison is required solely for this transition with unchanged
+inputs. Extended human/clinical review, full fixed (optional), statistics,
+benchmark labels and parameter comparisons are deferred until after retrieval
+implementation. See [the current route](STAGE5_QA_AND_EXPERIMENTS.md#current-route-to-s06--owner-decision-2026-10-27).
+This is an experimental handoff; pending acceptance/readiness flags remain.
+
 ## Canonical data
 
 All strategies use the same prepared snapshot: 855,745 document ledger rows
@@ -122,9 +137,11 @@ comparison is required. Overlap/threshold sweeps and retrieval comparisons
 remain declared S05/S10 experiment work. No full fixed build was implicitly
 launched as part of the owner's request to validate existing outputs.
 
-Review the original chunk examples, extend sampling to English and rare
-formats, resolve inherited stage-4 selection/clinical QA, and record reviewer
-decisions before freezing the working corpus. Then use the validated stores
-for lexical/dense retrieval pilots. Semantic boundary embeddings are not a
+Use the existing validated stores for S06 metadata and lexical/dense retrieval
+implementation now. After retrieval, review the original chunk examples,
+extend sampling to English and rare formats, resolve inherited stage-4
+selection/clinical QA, and record reviewer decisions before final corpus
+approval. Pin the current snapshot for reproducible experimental indexes.
+Semantic boundary embeddings are not a
 persisted dense index; indexing still requires encoding the final retrieval
 texts with stable chunk-ID mappings.
