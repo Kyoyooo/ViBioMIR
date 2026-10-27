@@ -7,6 +7,14 @@ including actual tokenizer budgets and exact source coverage for every chunk.
 See [results and handoff](STAGE5_RESULTS_AND_HANDOFF.md) for execution evidence,
 canonical paths, Drive/Git publication and remaining S05 review/experiment scope.
 
+**Current priority, 2026-10-27:** the owner has deferred additional stage-5
+QA/statistics/comparison campaigns until after retrieval implementation. Reuse
+these complete validated stores and proceed to S06; no rebuild or repeated full
+validation is needed solely for this unchanged-snapshot handoff. See
+[the current route](STAGE5_QA_AND_EXPERIMENTS.md#current-route-to-s06--owner-decision-2026-10-27)
+before following the construction/experiment commands below. Final QA and
+selection flags remain pending.
+
 **Full-run continuation on Colab:** if the sequential structural build is too
 slow, use [the full Colab handoff](CHUNKING_STAGE5_COLAB_FULL.md). It preserves
 completed local batches, adds parallel CPU execution/tokenizer caching, and
