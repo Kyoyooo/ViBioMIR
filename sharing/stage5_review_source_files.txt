@@ -1,0 +1,25 @@
+# Source delivery 2026-10-27. No pipelines/tests executed; no new commit receipt.
+configs/reviewers_stage5.example.json
+configs/stage5_workflow.json
+requirements-stage5-review.txt
+scripts/run_stage5_review_tests.py
+tests/test_stage5_benchmark_tools.py
+tests/test_stage5_evaluation.py
+tests/test_stage5_experiment_tools.py
+tests/test_stage5_review_tools.py
+vibiomir/local_benchmark.py
+vibiomir/reference_bm25.py
+vibiomir/retrieval_evaluation.py
+vibiomir/review_common.py
+vibiomir/stage5_experiments.py
+vibiomir/stage5_review.py
+docs/STAGE5_QA_AND_EXPERIMENTS.md
+docs/STAGE5_ANNOTATION_GUIDE.md
+docs/STAGE5_RESULTS_AND_HANDOFF.md
+docs/CHUNKING_STAGE5.md
+docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md
+docs/README.md
+README.md
+sharing/github_paths.txt
+sharing/stage5_review_source_files.txt
+sharing/drive_stage5_review_planned.txt
