@@ -1,0 +1,17 @@
+{
+  "schema": "vibiomir-icd-settings-v1",
+  "taxonomy_path": "taxonomy/icd10_chapters.json",
+  "rules_revision": "seed-vi-en-zh-v1",
+  "rule_threshold": 0.7,
+  "semantic_threshold": 0.65,
+  "semantic_margin": 0.05,
+  "max_labels": 4,
+  "max_evidence_per_label": 2,
+  "max_semantic_segments": 4,
+  "segment_tokens": 448,
+  "segment_characters": 1600,
+  "rules_scan_characters_per_field": 200000,
+  "calibration": "pending",
+  "retrieval_boost_enabled": false,
+  "hard_filter_enabled": false
+}
