@@ -83,3 +83,13 @@ actually executed by the owner. Do not label unexecuted tests as passing,
 generated artifacts as existing, or full-data processing as complete because
 code exists. Any supplied GPU notebook must have null execution counts and
 empty outputs on delivery.
+
+## S08 infrastructure update — 2026-10-27
+
+The owner now requests six concurrent Colab GPU machines for S08, superseding
+the earlier three-account planning limit for this workload. Design six logical
+workers with one shared immutable source/model plan, disjoint source batches,
+private checkpoints/backups and a verified merge. Do not infer six shared-memory
+GPUs or automate account/session access. Fewer machines may execute the same
+logical workers sequentially. S07 remains local CPU and independent of S08
+encoding. The manual-execution policy and deferred evaluation/QA order remain.
