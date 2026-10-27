@@ -1,0 +1,4 @@
+# CPU QA, fixed baseline and local comparison tools; no torch required.
+-r requirements-stage5.txt
+# Existing semantic fixtures use NumPy without loading the GPU model.
+numpy>=1.26,<3
