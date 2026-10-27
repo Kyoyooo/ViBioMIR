@@ -1,0 +1,3 @@
+-r requirements-stage5.txt
+numpy>=1.26,<3
+faiss-cpu==1.12.0
