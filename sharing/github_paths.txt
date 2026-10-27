@@ -8,6 +8,7 @@ docs/
 configs/
 colab/
 vibiomir/
+taxonomy/
 exploration/
 scripts/
 tests/
@@ -15,6 +16,12 @@ requirements-eda.txt
 requirements-stage3.txt
 requirements-stage4.txt
 requirements-stage5.txt
+requirements-stage5-review.txt
+requirements-stage6.txt
+requirements-stage6-colab.txt
+requirements-stage7.txt
+requirements-stage8.txt
+requirements-stage8-colab.txt
 requirements-stage5-colab.txt
 requirements-stage5-semantic.txt
 sharing/
