@@ -1,0 +1,2 @@
+-r requirements-stage8.txt
+torch>=2.6,<3
