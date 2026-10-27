@@ -1,0 +1,17 @@
+# S06 code-only delivery 2026-10-27; no tests/pipelines/GPU jobs executed.
+taxonomy/icd10_chapters.json
+configs/icd_stage6.json
+requirements-stage6.txt
+requirements-stage6-colab.txt
+vibiomir/icd.py
+vibiomir/icd_pipeline.py
+vibiomir/icd_bundle.py
+tests/test_stage6_icd.py
+colab/stage6_icd.ipynb
+docs/ICD_STAGE6.md
+README.md
+docs/README.md
+docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md
+sharing/github_paths.txt
+sharing/drive_stage6_planned.txt
+sharing/stage6_source_files.txt
