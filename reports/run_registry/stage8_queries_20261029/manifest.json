@@ -1,0 +1,15 @@
+{
+  "identity": {
+    "operation": "dense-queries",
+    "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+    "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08"
+  },
+  "signature": "956d98cc1f890a2a040bd90ee5aadef03c6ccf4d7a959603264bde94ecf5eb39",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "queries": 1200,
+  "vectors_sha256": "3dcc505504324343ead65460269bbac9a9afe1abb7c1b9b77f3efe3274280639",
+  "queries_sha256": "f29a33108e19e990abd79abef580b75e26ff2f491c3bbb069faf89093bf3fd4c"
+}
