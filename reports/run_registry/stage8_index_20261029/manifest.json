@@ -1,0 +1,29 @@
+{
+  "identity": {
+    "operation": "dense-search-index",
+    "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+    "kind": "ivfpq",
+    "nlist": 4096,
+    "m": 64,
+    "nbits": 8,
+    "nprobe": 32,
+    "train_size": 200000,
+    "seed": 270126,
+    "code_sha256": "77dcc1b5085a4f26fbefd42eef6fda39e1a60f6f9c7ebe4248ffcef83f85c27b"
+  },
+  "signature": "5b1f47cebe3232935a64741805d4258bef8259c653d3386f609ae86cdd6f2f19",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "training_rows": 200000,
+  "effective_nlist": 4096,
+  "effective_nbits": 8,
+  "sampling": "seeded language_hint strata; domains unavailable in chunk packets, not domain-stratified",
+  "faiss": "1.12.0",
+  "checkpoint": "checkpoint-001712.faiss",
+  "index_sha256": "42570807d03ee276643789d025d1e3d810e4f6dcccaa364977229afdc5f5fc12",
+  "batches_added": 1712,
+  "rows": 5512624,
+  "ann_quality": "not measured; recall@200 audit deferred"
+}
