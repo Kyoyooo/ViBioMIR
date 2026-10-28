@@ -1,0 +1,26 @@
+{
+  "validation": "passed",
+  "queries": 1200,
+  "candidates": 600000,
+  "minimum_candidates": 500,
+  "maximum_candidates": 500,
+  "empty_query_ids": [],
+  "language_hint_counts": {
+    "vi_diacritics": 481906,
+    "cjk_likely_zh": 113700,
+    "mixed_script": 4287,
+    "latin_undetermined": 107
+  },
+  "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+  "manifest_sha256": "d4dc947c2e3288f0ad6da3f4f0615ab405dd58f7e69f5b0c6fea06c15f043e66",
+  "all_source_mappings_verified": true,
+  "source": {
+    "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+    "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+    "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+    "documents": 855745,
+    "chunks": 5512624,
+    "batches": 1712
+  },
+  "quality_measured": false
+}
