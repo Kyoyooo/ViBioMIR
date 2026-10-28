@@ -1,0 +1,36 @@
+{
+  "identity": {
+    "operation": "dense-merged",
+    "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+    "source": {
+      "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+      "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+      "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+      "documents": 855745,
+      "chunks": 5512624,
+      "batches": 1712
+    },
+    "encoding": {
+      "model": "bge_m3",
+      "max_tokens": 512,
+      "window_overlap": 32,
+      "storage_dtype": "float16",
+      "model_spec": {
+        "model_id": "BAAI/bge-m3",
+        "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+        "commit_date": "2024-07-03",
+        "dimension": 1024,
+        "pooling": "CLS"
+      },
+      "tokenizer": "54f28ea626d993cf151f6e55267e0e863359d6b359e8102f54a510341f5fc18e",
+      "aggregation": "weighted mapped windows + L2; no ICD input"
+    }
+  },
+  "signature": "c5883e6dbcaf2533bf014b39c4a074f011d91ae0f98079ca34a23753b31088a1",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "rows": 5512624,
+  "batches": 1712
+}
