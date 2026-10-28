@@ -1,6 +1,6 @@
 # ViBioMIR — spec-driven development from Mentor Day to a complete retrieval system
 
-**Version:** 1.12 · **Date:** 2026-10-27 · **Status:** specification for implementation;
+**Version:** 1.13 · **Date:** 2026-10-29 · **Status:** specification for implementation;
 local-audit-first scope, with manual execution from delivery 3 onward.
 
 Target: Vietnamese-query retrieval of original VI–EN–ZH documents and evidence,
@@ -17,6 +17,22 @@ Existing evidence: [EDA report](../reports/eda/REPORT.md),
 [corpus summary](../reports/eda/corpus_summary.json),
 [reference reconciliation](../reports/eda/references_summary.json).
 Language and compatibility policy: [development conventions](DEVELOPMENT_CONVENTIONS.md).
+
+**v1.13 observed baseline, 2026-10-29:** S06 rules (855,745 document
+annotations), S07 BM25/TF-IDF index (5,512,624 chunks) and S08 BGE-M3
+(5,512,624 indexed vectors; 1,200 queries × 500 dense candidates) have current
+technical evidence. The owner authorized execution for this closeout and then
+**deferred full S07 query generation** because of local query cost. Keep its
+validated index; proceed with the dense-only S09 branch when implemented.
+Hybrid/RRF requires lexical candidates later. See
+[baseline results and handoff](STAGES6_8_BASELINE_HANDOFF.md) and
+[execution evidence](../reports/stage678_baseline_20261029/README.md).
+The executed suites have 39 passes and one optional CPU pooling skip.
+Semantic/combined ICD, mBERT, full fixed/comparative runs, clinical QA,
+calibration, relevance metrics and ANN recall checks remain at S10. This
+scheduling decision does not close the formal clinical/quality acceptance
+criteria below or change pending corpus-readiness flags. Earlier delivery
+notes record historical source-delivery scope, not current execution status.
 
 Initial values, QA thresholds, budgets, and scheduling suggestions are **proposed
 engineering decisions**, not organizer rules or measured benchmarks.
@@ -1418,9 +1434,13 @@ Delivery 4 supplies local CPU implementations and tests for offline recovery,
 source-mapped cleaning and before/after diagnostics in S04. The owner completed
 the full dry-run; the subsequently authorized rule review, apply, full validator
 and cross-run checks completed successfully. Independent clinical/main-content
-QA and the final working-corpus freeze remain pending. Remaining
-stage work is **not implemented**, while S03 is **deferred**. Supplied code is
-not proof of meaning-preserving cleaning or final corpus QA.
+QA and the final working-corpus freeze remain pending. S05 full structural and
+semantic stores have technical validation. S06 rules, the S07 index and the
+S08 BGE-M3 baseline have the dated evidence linked above; full S07 candidate
+generation is deferred by the owner. S09 onward remains future work, while
+S03 is deferred. Supplied code is not proof of meaning-preserving cleaning or
+final corpus QA. The table describes full target scope, including experiments
+and acceptance work deferred to S10.
 
 | Stage | Concrete work | Dependencies | Outputs and acceptance |
 | --- | --- | --- | --- |
