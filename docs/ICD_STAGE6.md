@@ -1,9 +1,12 @@
 # S06 — provisional ICD-10 chapter metadata
 
-Delivery: 2026-10-27. **Code/tests/notebook supplied; no new tests, processing,
-packaging, downloads or GPU jobs have been executed by the assistant.** Follow
-the current [S05 handoff](STAGE5_QA_AND_EXPERIMENTS.md#current-route-to-s06--owner-decision-2026-10-27).
+Updated 2026-10-29: the full rules store contains 855,745 annotations across
+1,712 batches. Its existing full evidence validation and current snapshot seals
+have been verified; all 14 S06 tests passed during the authorized closeout.
+Read the [baseline handoff](STAGES6_8_BASELINE_HANDOFF.md) for evidence and next
+steps. Semantic/combined ICD and clinical acceptance remain deferred to S10.
 No stage-5 fixed baseline, catalog, QA export or comparison is required here.
+The commands below reproduce or resume a run; the current rules store is complete.
 
 ## Fast route now: local rules, then S07
 
@@ -36,8 +39,9 @@ remaining batches. Defaults:
 
 Expect one ledger row per input document, including unavailable documents with
 unknown labels. Counts derive from the input manifest rather than a URL quota.
-For the current snapshot this is 855,745 rows / 1,712 batches; no measured label
-coverage or duration is claimed. A completed build is followed by technical
+For the current snapshot this is 855,745 rows / 1,712 batches, with 461,658
+labeled documents and 394,087 unknown documents. This is topic coverage,
+not clinical accuracy; no build duration is claimed. A completed build is followed by technical
 validation; after that, the rules metadata is usable provisionally during S07
 implementation. Semantic/combined full execution is optional for this fast
 route and can be scheduled with the later GPU work. Full S06 acceptance remains
@@ -227,5 +231,6 @@ confidence or complete A10 acceptance is claimed. Preserve source-store
 GitHub: source, taxonomy, configuration, tests, notebook and this guide, listed
 in [stage6_source_files.txt](../sharing/stage6_source_files.txt). Drive: generated
 label stores with all batches/validation/registry; see
-[drive_stage6_planned.txt](../sharing/drive_stage6_planned.txt). No new generated
-store or ZIP is claimed to exist. No Git commit/push is executed by this delivery.
+[drive_stage6_planned.txt](../sharing/drive_stage6_planned.txt). The full rules
+store is present and verified; no semantic/combined GPU run is claimed here.
+The authorized closeout creates local commits only; the owner pushes.
