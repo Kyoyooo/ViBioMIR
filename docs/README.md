@@ -19,6 +19,7 @@ Use one document for each purpose rather than copying its instructions elsewhere
 | How do I run semantic chunks on two GPUs and merge their results? | [Two-Colab semantic workflow](SEMANTIC_STAGE5_TWO_COLABS.md) |
 | What passed full stage-5 validation, and what should the team upload/review? | [Results and handoff](STAGE5_RESULTS_AND_HANDOFF.md) |
 | What must run now to proceed to S06, and which experiments are deferred? | [Current S05-to-S06 route](STAGE5_QA_AND_EXPERIMENTS.md#current-route-to-s06--owner-decision-2026-10-27) |
+| What is complete in S06–S08, and what can S09 consume now? | [Baseline results and handoff](STAGES6_8_BASELINE_HANDOFF.md) |
 | How do I build/validate ICD chapter labels and run optional semantic tagging on Colab? | [S06 ICD runbook](ICD_STAGE6.md) |
 | How do I run CPU lexical retrieval and dense embedding on six Colab GPUs in parallel? | [S07/S08 parallel runbook](RETRIEVAL_STAGES7_8.md) |
 | How do I complete QA, the full fixed baseline and controlled local comparisons? | [QA and experiments](STAGE5_QA_AND_EXPERIMENTS.md) |
