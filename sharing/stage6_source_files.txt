@@ -1,4 +1,4 @@
-# S06 code-only delivery 2026-10-27; no tests/pipelines/GPU jobs executed.
+# S06 rules snapshot verified 2026-10-29; 14 tests passed; clinical QA deferred.
 taxonomy/icd10_chapters.json
 configs/icd_stage6.json
 requirements-stage6.txt
@@ -15,3 +15,7 @@ docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md
 sharing/github_paths.txt
 sharing/drive_stage6_planned.txt
 sharing/stage6_source_files.txt
+requirements-baseline-cpu.txt
+vibiomir/stage678_validation.py
+docs/STAGES6_8_BASELINE_HANDOFF.md
+reports/stage678_baseline_20261029/
