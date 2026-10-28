@@ -1,9 +1,37 @@
 # S07 local CPU and S08 on six Colab GPUs
 
-Delivery: 2026-10-27. Code, fixtures and an unexecuted notebook are supplied.
-**The assistant has not run new tests, indexing, packaging, downloads, embedding
-or retrieval jobs.** The owner manually runs every command. Comparisons,
-clinical review, ICD calibration and ANN quality measurement remain deferred.
+Updated **2026-10-29**: the full BM25/TF-IDF index is verified. BGE-M3 vectors,
+all 1,200 query vectors, the full IVF-PQ index and 600,000 dense candidates are
+technically validated. **Full S07 candidate generation is deferred by the owner.**
+Read [baseline results and handoff](STAGES6_8_BASELINE_HANDOFF.md) for observed
+counts, timing, tests and the dense-only S09 entry point. The commands below
+remain reproduction instructions; completed jobs need not be rerun.
+Comparisons, clinical review, ICD calibration and ANN quality measurement stay
+at S10. This closeout was explicitly authorized to execute CPU jobs and tests.
+
+## Encoding compatibility for existing S08 bundles
+
+Use the updated [GPU notebook](../colab/stage8_dense_worker.ipynb) with the
+existing six worker ZIPs and their original `WORKER_ID`/`DRIVE_RUN`. Setup
+embeds `dense_tokenizer_compat.py` after extraction; preflight checks the actual
+bundled tokenizer. The worker and query cells use the adapter entrypoint
+`python -m vibiomir.dense_tokenizer_compat`. Planning, merge and indexing retain
+the original CLI. Use the adapter for both corpus and query encoding with this
+source revision.
+
+The adapter handles fast-tokenizer special-position masks without changing
+content token IDs, window/offset policy, pooling or model revision. Unknown and
+literal special tokens in source text remain content positions. Its version
+and SHA-256 are recorded in each new signed vector batch's model registry.
+The five original plan-bound modules remain unchanged; all plan and batch
+checksum checks remain enforced. Do not patch or re-sign the distributed plan.
+
+Committed batches are reused, while an uncommitted batch restarts. Keep the
+existing ZIPs: repackaging them after source/notebook changes correctly fails
+the frozen package identity check. A new packaged experiment needs a new run
+directory. The notebook embeds the adapter, so no separate Drive upload is
+required. Fast BERT/XLM-R and local registered BGE tokenizer regressions passed
+during the closeout; notebook execution counts and outputs remain cleared.
 
 ## Shared inputs and parallel execution
 
@@ -26,7 +54,7 @@ snapshot, with final QA/readiness flags still pending.
 | S08 plan and six bundles | Local CPU/SSD | Same chunks and pinned tokenizer |
 | S08 embedding | Six independent Colab CUDA sessions | Matching bundle per worker |
 | S08 merge and vector index | One local machine or one Colab CPU | All worker outputs complete |
-| S09 fusion/reranking | Later delivery | Compatible S07/S08 candidates |
+| S09 dense reranking; later hybrid fusion | Later delivery | Dense candidates now; compatible lexical candidates needed for hybrid |
 
 ## 1. Local environment and fixtures
 
@@ -36,8 +64,8 @@ python -m pip install -r requirements-stage7.txt -r requirements-stage8.txt
 python -m unittest discover -s tests -p 'test_stage78*.py' -v
 ```
 
-Fixtures use tiny synthetic corpora and a fake encoder; no model/GPU/download
-is needed by the tests. Real analyzer and CPU tensor pooling fixtures run when
+Fixtures use tiny synthetic corpora, fake encoders and local fast tokenizers;
+no model-weight download or GPU is needed by the tests. Real analyzer and CPU tensor pooling fixtures run when
 their optional packages are installed. Passing fixtures is not full-data quality
 acceptance. Run from the project root. S07 global `--config` goes before its
 subcommand; S08 `--config` follows `plan`/`bundle`.
@@ -79,7 +107,8 @@ SQLite uses a 256 MiB page cache and disk-backed temporary aggregation. Keep
 the database on a local SSD, not mounted Drive/network storage. The postings,
 term dictionary, mapping and temporary files can be much larger than the 2.58
 GiB compressed chunk store: plan for tens of GiB and check actual growth after
-the pilot. There is no measured full-build duration or final index size yet.
+the pilot. The current SQLite index is about 14 GiB; its full build duration
+was not measured by this closeout.
 One batch is retained in memory; no corpus-sized Python postings dictionary is
 created. CPU work can remain lengthy even without a model.
 
@@ -88,7 +117,9 @@ alone writes SQLite transactions. Set config `workers` to 1–8 according to CPU
 Workers, SQLite cache and default output top-k can change without rebuilding
 the unchanged postings. Input/analyzer/scoring changes still require a new run.
 
-Candidate generation, when needed for S09 (no relevance scoring is run):
+**Optional/deferred:** full lexical candidate generation is not required for
+the current closeout. Run these only when resuming the lexical S09 branch;
+no relevance evaluation occurs:
 
 ```bash
 python -m vibiomir.lexical_stage7 search \
@@ -199,6 +230,10 @@ validation, and copies the merged result to Drive. Other GPU sessions can stop.
 It checks local disk space first; Drive is backup storage, not a SQLite workdir.
 
 For local merging, restore:
+
+Canonical local embedding path:
+`artifacts/dense_stage8_bge_structure/merged/` (absolute:
+`/home/duyhoang/Downloads/AI_Guru/artifacts/dense_stage8_bge_structure/merged/`).
 
 ```text
 artifacts/dense_stage8_bge_structure/
@@ -318,9 +353,11 @@ Dense exact ties use stable global row IDs; lexical ties use stable chunk IDs.
 Keep QA/clinical approval and final corpus freeze pending. Domain-stratified
 ANN training, full ANN-vs-exact recovery checks, model comparisons, relevance
 metrics, clinical review and threshold tuning remain later acceptance work.
-No new corpus quality score, ANN recall, index size or runtime was measured by
-this delivery. Spec A11/A12/A17 require owner-run evidence before acceptance.
+Measured index size and CPU timing are in the dated baseline handoff. No corpus
+quality score or ANN recall was measured. Technical baseline completion does
+not close deferred clinical/quality gates, including A10/A12.
 
 GitHub source list: [stage78_source_files.txt](../sharing/stage78_source_files.txt).
 Drive/upload plan: [drive_stage78_planned.txt](../sharing/drive_stage78_planned.txt).
-No Git commit or push is executed by this delivery.
+The authorized closeout creates local commits, one file per Conventional
+Commit. The owner performs the push; runtime data remain outside Git.
