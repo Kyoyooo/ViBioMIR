@@ -1,0 +1,10 @@
+{
+  "validation": "passed",
+  "rows": 5512624,
+  "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+  "mapping_checked": true,
+  "vectors_checked": true,
+  "quality_measured": false,
+  "mapping_sha256": "6cf158bde159c8df6373e785c2a310f573a414d600666c21ea4910185b579fa9",
+  "manifest_sha256": "656d6a929b2e49e715acad46a0fd5d26638c80f365bc632db2b0a5362f587af6"
+}
