@@ -1,0 +1,17 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.614 seconds.
+Prefix dict has been built successfully.
+{
+  "validation": "passed",
+  "chunks": 5512624,
+  "terms": 737967,
+  "batches": 1712,
+  "average_length": 120.66380384368678,
+  "database_sha256": "27fcfe14d08304beb444f54d990cad27d42bed74656904f6368f00ea731a669c",
+  "original_full_validation_sha256": "e2a15fe72fa28ff56c3b49111a96cc2637e0dd434dfea50673ce06f318671ce4",
+  "previous_full_source_mapping_validation_reused": true,
+  "database_snapshot_checksum_verified": true,
+  "full_query_generation": "deferred by owner",
+  "quality_measured": false
+}
