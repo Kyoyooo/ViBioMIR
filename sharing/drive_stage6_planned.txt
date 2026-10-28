@@ -1,10 +1,4 @@
-# PLANNED S06 outputs; owner executes all jobs/packaging/tests manually.
-# Fast current route: CPU rules + technical validation, then S07.
+# Current observed baseline: 2026-10-29. Preserve the complete validated store.
 artifacts/icd_stage6_rules/
-# Optional GPU combined run: upload generated ZIP plus colab/stage6_icd.ipynb.
-# The ZIP contains prepared inputs/tokenizer; no need to upload raw Data/SQLite.
-artifacts/stage6_icd_colab.zip
-# Preserve the WHO taxonomy/config revision with the generated results.
-# Download/upload whole GPU store including MODEL_REGISTRY.json and VALIDATION.json:
-artifacts/icd_stage6_combined/
-# No quality comparison or 300-document audit artifacts are required now.
+# Semantic/combined ICD and its optional Colab packaging remain deferred to S10.
+# No new GPU run or combined store is required for the current handoff.
