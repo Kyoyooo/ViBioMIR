@@ -1,4 +1,4 @@
-# S07/S08 source delivery; new tests/pipelines remain owner-run.
+# S07/S08 baseline verified 2026-10-29; full S07 queries deferred by owner.
 configs/lexical_stage7.json
 configs/dense_stage8.json
 requirements-stage7.txt
@@ -7,9 +7,11 @@ requirements-stage8-colab.txt
 vibiomir/retrieval_contracts.py
 vibiomir/lexical_stage7.py
 vibiomir/dense_models.py
+vibiomir/dense_tokenizer_compat.py
 vibiomir/dense_stage8.py
 vibiomir/dense_index.py
 tests/test_stage78_retrieval.py
+tests/test_stage78_fast_tokenizer.py
 colab/stage8_dense_worker.ipynb
 docs/RETRIEVAL_STAGES7_8.md
 README.md
@@ -19,3 +21,9 @@ docs/SPEC_DRIVEN_DEVELOPMENT_VIBIOMIR.md
 sharing/github_paths.txt
 sharing/stage78_source_files.txt
 sharing/drive_stage78_planned.txt
+requirements-baseline-cpu.txt
+vibiomir/stage678_validation.py
+tests/test_stage78_validation.py
+docs/STAGES6_8_BASELINE_HANDOFF.md
+reports/stage678_baseline_20261029/
+reports/run_registry/
