@@ -1,6 +1,6 @@
 {
   "observed_at_utc": "2026-10-25T16:07:43.795637+00:00",
-  "updated_on": "2026-10-26",
+  "updated_on": "2026-10-29",
   "purpose": "Read-only review metadata, not runnable checkpoints",
   "snapshots": [
     {
@@ -145,6 +145,74 @@
         "REGISTRY.json"
       ],
       "checkpoint": false
+    },
+    {
+      "snapshot": "stage6_rules_20261029",
+      "source": "artifacts/icd_stage6_rules",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage7_structure_20261029",
+      "source": "artifacts/lexical_stage7_structure",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage8_merged_20261029",
+      "source": "artifacts/dense_stage8_bge_structure/merged",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json",
+        "plan.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage8_queries_20261029",
+      "source": "artifacts/dense_stage8_bge_structure/query_vectors",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json",
+        "MODEL_REGISTRY.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage8_index_20261029",
+      "source": "artifacts/dense_stage8_bge_structure/index_ivfpq",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage8_candidates_20261029",
+      "source": "artifacts/candidates_stage8_bge",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
     }
   ]
 }
