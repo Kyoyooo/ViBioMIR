@@ -19,6 +19,10 @@ been uploaded or published by this cleanup.
    [runbook](CHUNKING_STAGE5.md), then `vibiomir/chunking.py`,
    `chunk_pipeline.py`, `chunk_batches.py`, `chunk_models.py` and their tests.
 
+7. [S06–S08 baseline handoff](STAGES6_8_BASELINE_HANDOFF.md), then
+   [current evidence](../reports/stage678_baseline_20261029/README.md): verified
+   rules/index stores and complete dense candidates; lexical queries deferred.
+
 Use the [documentation map](README.md) and [report index](../reports/README.md)
 for supporting material. Do not read generated audit draft plans as reviewed
 cleaning policy. A technical validation pass is not clinical QA.
@@ -58,16 +62,18 @@ git diff --cached --name-only
 git commit -m "fix(chunking): describe the concrete change"
 ```
 
-For the 2026-10-26 closeout, the owner explicitly requested that the assistant
-create local commits. After those complete, the owner only needs to push:
+For the 2026-10-26 S05 closeout and the 2026-10-29 S06–S08 baseline closeout,
+the owner explicitly requested local commits. The owner only needs to push:
 
 ```bash
 git push -u origin main
 ```
 
-The exact changed-file inventory is in
-[sharing/git_stage5_files.txt](../sharing/git_stage5_files.txt). Give reviewers the
-commit ID alongside the Drive folder so they can match code to data. The code
+The historical S05 changed-file inventory is in
+[sharing/git_stage5_files.txt](../sharing/git_stage5_files.txt). Current source
+selection is in [sharing/github_files.txt](../sharing/github_files.txt); Git
+history records the exact committed changes. Give reviewers the commit ID
+alongside the Drive folder so they can match code to data. The code
 license does not replace upstream dataset/model/media licenses; source citation
 and dataset licensing are documented in the task definition.
 
@@ -134,6 +140,15 @@ Upload the complete structural output directory: `manifest.json`,
 `VALIDATION.json`, and every committed `batch-*` directory. Do not upload a
 changing folder and label the result a reproducible snapshot. Keep code/config
 hashes compatible if resuming; this cleanup did not modify pipeline code.
+
+## S06–S08 baseline outputs
+
+The [baseline handoff](STAGES6_8_BASELINE_HANDOFF.md) is the current entry point.
+Share whole rules and lexical stores, the frozen dense plan, merged vectors,
+query vectors, FAISS index and dense candidates at their canonical paths.
+[The S06 inventory](../sharing/drive_stage6_planned.txt) and
+[S07/S08 inventory](../sharing/drive_stage78_planned.txt) list these directories.
+No full S07 candidate output is claimed. Keep large data outside Git.
 
 ## Smallest optional pilot upload
 
