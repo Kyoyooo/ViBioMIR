@@ -1,0 +1,21 @@
+{
+  "model_id": "BAAI/bge-m3",
+  "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+  "commit_date": "2024-07-03",
+  "dimension": 1024,
+  "pooling": "CLS",
+  "parameters": 567754752,
+  "compute_dtype": "float16",
+  "storage_dtype": "float16",
+  "torch": "2.11.0+cu130",
+  "transformers": "4.57.1",
+  "tokenizers": "0.22.1",
+  "device": "Tesla T4",
+  "aggregation": "token-count-weighted mean of L2-normalized mapped windows, then L2; overlap counted in each window",
+  "tokenizer_compatibility": {
+    "id": "s08-fast-special-mask-v1",
+    "sha256": "fceeafb2a5272c01b18aa930b70f85e32a26d84890bde3ccaac127739d07903f",
+    "encoder_source_sha256": "f0cd5f5466433639830945a7fbe989d4fad3c43a9f7ce54823109a873bdf9b70",
+    "policy": "unchanged token IDs/windows; mask inserted template positions only"
+  }
+}
