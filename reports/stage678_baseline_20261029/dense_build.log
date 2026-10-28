@@ -1,0 +1,58 @@
+{"phase": "dense_index", "batches_added": 100, "rows": 653323}
+{"phase": "dense_index", "batches_added": 200, "rows": 897444}
+{"phase": "dense_index", "batches_added": 300, "rows": 1429118}
+{"phase": "dense_index", "batches_added": 400, "rows": 1776523}
+{"phase": "dense_index", "batches_added": 500, "rows": 2529806}
+{"phase": "dense_index", "batches_added": 600, "rows": 2757078}
+{"phase": "dense_index", "batches_added": 700, "rows": 2981658}
+{"phase": "dense_index", "batches_added": 800, "rows": 3254786}
+{"phase": "dense_index", "batches_added": 900, "rows": 3472580}
+{"phase": "dense_index", "batches_added": 1000, "rows": 3696668}
+{"phase": "dense_index", "batches_added": 1100, "rows": 3807738}
+{"phase": "dense_index", "batches_added": 1200, "rows": 4307489}
+{"phase": "dense_index", "batches_added": 1300, "rows": 4767007}
+{"phase": "dense_index", "batches_added": 1400, "rows": 4958293}
+{"phase": "dense_index", "batches_added": 1500, "rows": 5066030}
+{"phase": "dense_index", "batches_added": 1600, "rows": 5224178}
+{"phase": "dense_index", "batches_added": 1700, "rows": 5457950}
+{"phase": "dense_index", "batches_added": 1712, "rows": 5512624}
+{
+  "signature": "5b1f47cebe3232935a64741805d4258bef8259c653d3386f609ae86cdd6f2f19",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "training_rows": 200000,
+  "effective_nlist": 4096,
+  "effective_nbits": 8,
+  "sampling": "seeded language_hint strata; domains unavailable in chunk packets, not domain-stratified",
+  "faiss": "1.12.0",
+  "checkpoint": "checkpoint-001712.faiss",
+  "index_sha256": "42570807d03ee276643789d025d1e3d810e4f6dcccaa364977229afdc5f5fc12",
+  "batches_added": 1712,
+  "rows": 5512624,
+  "ann_quality": "not measured; recall@200 audit deferred"
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.dense_index build --vector-dir artifacts/dense_stage8_bge_structure/merged --output-dir artifacts/dense_stage8_bge_structure/index_ivfpq"
+	User time (seconds): 1214.66
+	System time (seconds): 239.15
+	Percent of CPU this job got: 168%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 14:22.66
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1420040
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 75619
+	Minor (reclaiming a frame) page faults: 90123956
+	Voluntary context switches: 261988
+	Involuntary context switches: 72883
+	Swaps: 0
+	File system inputs: 63104920
+	File system outputs: 9424344
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
