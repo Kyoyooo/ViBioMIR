@@ -1,0 +1,230 @@
+{
+  "observed_on": "2026-10-29",
+  "scope": "Confirmed baseline: S06 rules, S07 validated lexical index, S08 BGE-M3 IVF-PQ and dense candidates",
+  "stages": {
+    "S06": {
+      "status": "baseline_snapshot_verified",
+      "documents": 855745,
+      "unknown_documents": 394087,
+      "chapter_counts": {
+        "II": 130396,
+        "IV": 112517,
+        "IX": 74790,
+        "XVIII": 152975,
+        "VIII": 5434,
+        "X": 38449,
+        "XIX": 48652,
+        "XXI": 66192,
+        "I": 31826,
+        "XX": 11671,
+        "XXII": 1717,
+        "VII": 11930,
+        "XII": 26670,
+        "XIV": 12939,
+        "XI": 21858,
+        "VI": 34734,
+        "III": 37961,
+        "XIII": 27841,
+        "XVII": 7658,
+        "V": 14683,
+        "XV": 5337,
+        "XVI": 846
+      },
+      "full_evidence_validation_reused": true,
+      "clinical_acceptance": "deferred to S10"
+    },
+    "S07": {
+      "status": "index_verified; full candidate generation deferred by owner",
+      "chunks": 5512624,
+      "terms": 737967,
+      "average_length": 120.66380384368678,
+      "database_sha256": "27fcfe14d08304beb444f54d990cad27d42bed74656904f6368f00ea731a669c"
+    },
+    "S08": {
+      "status": "technical_baseline_complete",
+      "vectors": 5512624,
+      "dimension": 1024,
+      "index_parameters": {
+        "operation": "dense-search-index",
+        "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+        "kind": "ivfpq",
+        "nlist": 4096,
+        "m": 64,
+        "nbits": 8,
+        "nprobe": 32,
+        "train_size": 200000,
+        "seed": 270126,
+        "code_sha256": "77dcc1b5085a4f26fbefd42eef6fda39e1a60f6f9c7ebe4248ffcef83f85c27b"
+      },
+      "index_bytes": 414767668,
+      "training_rows": 200000,
+      "query_validation": {
+        "validation": "passed",
+        "queries": 1200,
+        "dimension": 1024,
+        "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+        "manifest_sha256": "773910245695247edd7224d75987d9bc7b07fd20b4238fb8c7021558c8c166e5",
+        "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+        "all_vectors_finite_and_normalized": true
+      },
+      "index_validation": {
+        "validation": "passed",
+        "rows": 5512624,
+        "batches": 1712,
+        "dimension": 1024,
+        "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+        "kind": "ivfpq",
+        "manifest_sha256": "1c6140675f8bfe59c4b9abfa3723f19a5be573bfbecc60513d02d3500668c6e9",
+        "unique_complete_vector_ids": true,
+        "source_payload_checksums_verified": true,
+        "ann_quality_measured": false,
+        "relevance_quality_measured": false
+      },
+      "candidate_validation": {
+        "validation": "passed",
+        "queries": 1200,
+        "candidates": 600000,
+        "minimum_candidates": 500,
+        "maximum_candidates": 500,
+        "empty_query_ids": [],
+        "language_hint_counts": {
+          "vi_diacritics": 481906,
+          "cjk_likely_zh": 113700,
+          "mixed_script": 4287,
+          "latin_undetermined": 107
+        },
+        "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+        "manifest_sha256": "d4dc947c2e3288f0ad6da3f4f0615ab405dd58f7e69f5b0c6fea06c15f043e66",
+        "all_source_mappings_verified": true,
+        "source": {
+          "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+          "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+          "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+          "documents": 855745,
+          "chunks": 5512624,
+          "batches": 1712
+        },
+        "quality_measured": false
+      }
+    }
+  },
+  "tests": {
+    "runs": [
+      {
+        "log": "tests_stage6.log",
+        "tests": 14,
+        "passed": 14,
+        "skipped": 0,
+        "seconds": 0.157
+      },
+      {
+        "log": "tests_stage78.log",
+        "tests": 26,
+        "passed": 25,
+        "skipped": 1,
+        "seconds": 4.122
+      }
+    ],
+    "total": 40,
+    "passed": 39,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "skip_reason": "Optional mBERT CPU tensor-pooling fixture requires torch; no torch installed in CPU environment"
+  },
+  "measured_execution": {
+    "dense_build": {
+      "User time (seconds)": "1214.66",
+      "System time (seconds)": "239.15",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "14:22.66",
+      "Maximum resident set size (kbytes)": "1420040",
+      "Exit status": "0"
+    },
+    "dense_candidate_generation": {
+      "User time (seconds)": "20.63",
+      "System time (seconds)": "8.47",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "1:21.01",
+      "Maximum resident set size (kbytes)": "461184",
+      "Exit status": "0"
+    },
+    "candidate_validation": {
+      "User time (seconds)": "9.11",
+      "System time (seconds)": "2.67",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:17.09",
+      "Maximum resident set size (kbytes)": "224620",
+      "Exit status": "0"
+    }
+  },
+  "paths": {
+    "stage6_rules_20261029": "artifacts/icd_stage6_rules",
+    "stage7_structure_20261029": "artifacts/lexical_stage7_structure",
+    "stage8_merged_20261029": "artifacts/dense_stage8_bge_structure/merged",
+    "stage8_queries_20261029": "artifacts/dense_stage8_bge_structure/query_vectors",
+    "stage8_index_20261029": "artifacts/dense_stage8_bge_structure/index_ivfpq",
+    "stage8_candidates_20261029": "artifacts/candidates_stage8_bge"
+  },
+  "deferred": [
+    "Full S07 candidate generation",
+    "Semantic/combined ICD",
+    "mBERT control",
+    "Human/clinical QA and calibrated ICD",
+    "ANN recall@200 audit and relevance/strategy comparisons",
+    "S09 hybrid/reranking and S11 competition submission"
+  ],
+  "source_code_sha256": {
+    "vibiomir/__init__.py": "99a38631723c8ffc57be89fd2379e8ec59693b4c5f39af075cdc4a313eeac539",
+    "vibiomir/__main__.py": "cf646937fe0075b6f1333584f21a71374a2ead780752d21afea4b11e1403a89d",
+    "vibiomir/chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+    "vibiomir/chunk_colab.py": "f8959a8463175dff8b99b78ddc3517e9b453de64d860c4ac78bae1033792cf51",
+    "vibiomir/chunk_full_bundle.py": "beeaffb046feb22390630725c0e2b5ea96b8be918e427acae9854413c0db4dc9",
+    "vibiomir/chunk_models.py": "05383a2d6faa8606016de3c1625fc1f97f4e88bd7a131ee92e85f9c252d7a274",
+    "vibiomir/chunk_parallel.py": "e7a9f32bc9e5fe717c36753a19fd48d5729a2bc751db384f52755bc101f58d57",
+    "vibiomir/chunk_pipeline.py": "b55d114a46757f7ddc8ffc228283e01c1ea4af67e15e0b5d20342e4ae0db27ba",
+    "vibiomir/chunk_validation.py": "649b5aa127eb45d3c6ac5cd9e5f6287fde3446874b912c3588fbc4a8fdbdef2d",
+    "vibiomir/chunking.py": "7bb7148d4f7404404693bd1fc4de7dd88300186d6b9c62604d627fb68e4cd176",
+    "vibiomir/cleaning.py": "40fb47f01bf6084ae7cc55060d573f8750bb36537238f718932627571e3bde39",
+    "vibiomir/cleaning_contracts.py": "b9f2f3aba84bb94f398f26d1237b037e1731e61b1de9609e4f6e09d8db6843b0",
+    "vibiomir/cleaning_rules.py": "473713fa393e489e132cbcea8a39b4c27ecb80aa04270b289fda485bd657c2ad",
+    "vibiomir/cleaning_source.py": "34745903ffd34d59a599ec29e19ca75a3abd242e19126687192eb6ca9e23cd2a",
+    "vibiomir/cleaning_transform.py": "376eb5e8bb33874a7cacf9773c86672cd790c672218ae3e8fe62c07adf8c23bf",
+    "vibiomir/dense_index.py": "77dcc1b5085a4f26fbefd42eef6fda39e1a60f6f9c7ebe4248ffcef83f85c27b",
+    "vibiomir/dense_models.py": "f0cd5f5466433639830945a7fbe989d4fad3c43a9f7ce54823109a873bdf9b70",
+    "vibiomir/dense_stage8.py": "2f7d8630553e92d4b988fedc83817f8aebe59fe45562afb48002195f8f41b86a",
+    "vibiomir/dense_tokenizer_compat.py": "fceeafb2a5272c01b18aa930b70f85e32a26d84890bde3ccaac127739d07903f",
+    "vibiomir/document_contracts.py": "c2a4f7a26d854ecd3fa0c42da8cdd9ffb22f1ad0cdc3e30da283510f39774e34",
+    "vibiomir/documents.py": "d4c099db2fc22807fa292861a44b7532137b7a3a45a9199d74cd888c379fc5b1",
+    "vibiomir/icd.py": "ea75265e34bc47636546ab1290af7486eb6832d4d7e826f74888fbb57c76f451",
+    "vibiomir/icd_bundle.py": "6d2c7d67ab81322aea144f0920e6ed362dc074b96ecbe1e68196c2930fd95de4",
+    "vibiomir/icd_pipeline.py": "57a0762498b7da8ad21a7116e3a035f3b665bb1209d71b96e2d14d4a36f92c80",
+    "vibiomir/io.py": "a407bc4837869f7d47aa00f88553bbfb6ba2e5e5c26f9249f8969f04a62a3b37",
+    "vibiomir/lexical_stage7.py": "c793becbe9a2525056c0b13849e101c8abc017f82408089fb4eb7dcc9a4e1625",
+    "vibiomir/local_benchmark.py": "65ecd756049d6b2a3bb30c6530c954bb66cfc32b33c9a12ee002db7b225e5e4f",
+    "vibiomir/metadata.py": "4a49ab6b736556d30c7f0e2c6f51e648ee66deb3fa41194279d6ca0537c28632",
+    "vibiomir/reference_bm25.py": "9d5865361e3ace7ef9044266c7716331b7a690485f0db92147395a778fe12773",
+    "vibiomir/retrieval_contracts.py": "5c4281e9059a0ff205c833bd60372827087ab80c5e2c7aaf37f845f4b6b51d79",
+    "vibiomir/retrieval_evaluation.py": "8ddb4ddbf184e9166bda4d12e2b02f0fecaf4412d854d0659b2c31fa0349cef6",
+    "vibiomir/review_common.py": "4607e3b025abcf88a63308196ae2db325a9499fe667d574f4dbebb37f00ab1b5",
+    "vibiomir/semantic_compute.py": "e49c18b194f4b078de60856c186164788973f4da2d46a70c9e290913c418d31e",
+    "vibiomir/semantic_shards.py": "48b6f070aae4df86fe6efd647a823fab5b4b95fe819879b686041e0355a6f0f2",
+    "vibiomir/stage5_experiments.py": "e7c36724aac7a40da6b3d00ff6e5427eee97663dc07f8261be149b27c6675dd2",
+    "vibiomir/stage5_review.py": "e62715396873c6b6158306da1e8ff773361bb0d1c02f969aedd63ac2da807e6b",
+    "vibiomir/stage678_validation.py": "d75aa66c202db21ac5cd69dbf64f6c4bdf70286329753fbda5831192eff4ba2c",
+    "vibiomir/validate_cleaning.py": "78aee41d58f8bc95faac252685989aeeb816f7da4e6df79024a17d50a94c9666",
+    "vibiomir/validate_documents.py": "71d48b6a9f0aa970e963c2c75004ef826a9b566492b20ca11a395742c27eec9a"
+  },
+  "cleanup": {
+    "removed": "Stopped optional S07 query/cache pilot code and incomplete outputs; transient bytecode cleaned after checks",
+    "preserved": "All completed validated stores, frozen plan/bundles, original archives, owner-managed upload snapshots",
+    "source_data_deleted": false,
+    "removed_cache_directories": [
+      "vibiomir/__pycache__",
+      "tests/__pycache__",
+      "exploration/__pycache__",
+      "colab/.ipynb_checkpoints"
+    ]
+  },
+  "publication": {
+    "base_commit": "1df46bd900c2f37693f886c11bfbaa708fb2fd3c",
+    "policy": "One file per Conventional Commit; local commits only; owner pushes"
+  }
+}
