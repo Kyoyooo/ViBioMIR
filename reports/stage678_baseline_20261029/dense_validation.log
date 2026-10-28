@@ -1,0 +1,13 @@
+{
+  "validation": "passed",
+  "rows": 5512624,
+  "batches": 1712,
+  "dimension": 1024,
+  "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+  "kind": "ivfpq",
+  "manifest_sha256": "1c6140675f8bfe59c4b9abfa3723f19a5be573bfbecc60513d02d3500668c6e9",
+  "unique_complete_vector_ids": true,
+  "source_payload_checksums_verified": true,
+  "ann_quality_measured": false,
+  "relevance_quality_measured": false
+}
