@@ -1,0 +1,41 @@
+{
+  "validation": "passed",
+  "documents": 855745,
+  "batches": 1712,
+  "methods": {
+    "rules": {
+      "unknown": 394087,
+      "II": 130396,
+      "IV": 112517,
+      "IX": 74790,
+      "XVIII": 152975,
+      "VIII": 5434,
+      "X": 38449,
+      "XIX": 48652,
+      "XXI": 66192,
+      "I": 31826,
+      "XX": 11671,
+      "XXII": 1717,
+      "VII": 11930,
+      "XII": 26670,
+      "XIV": 12939,
+      "XI": 21858,
+      "VI": 34734,
+      "III": 37961,
+      "XIII": 27841,
+      "XVII": 7658,
+      "V": 14683,
+      "XV": 5337,
+      "XVI": 846
+    }
+  },
+  "annotation_records": 855745,
+  "manifest_sha256": "fe8fbc73fd837752f9e7e6a9684929265bbf26f8aec28575fbfbd2c7063be794",
+  "source_evidence_checked": true,
+  "semantic_vectors_recomputed": false,
+  "clinical_quality_measured": false,
+  "calibration": "pending",
+  "human_qa": "pending",
+  "ready_for_retrieval": false,
+  "retrieval_boost_enabled": false
+}
