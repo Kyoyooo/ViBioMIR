@@ -1,0 +1,9 @@
+{
+  "validation": "passed",
+  "queries": 1200,
+  "dimension": 1024,
+  "plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+  "manifest_sha256": "773910245695247edd7224d75987d9bc7b07fd20b4238fb8c7021558c8c166e5",
+  "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+  "all_vectors_finite_and_normalized": true
+}
