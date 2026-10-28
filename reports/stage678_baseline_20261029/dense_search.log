@@ -1,0 +1,30 @@
+{
+  "signature": "b3bb6d94efebb6b80495705a824a51e2e14a6f8681b32c35f4932bed2408a703",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.dense_index search --vector-dir artifacts/dense_stage8_bge_structure/merged --index-dir artifacts/dense_stage8_bge_structure/index_ivfpq --query-dir artifacts/dense_stage8_bge_structure/query_vectors --output-dir artifacts/candidates_stage8_bge"
+	User time (seconds): 20.63
+	System time (seconds): 8.47
+	Percent of CPU this job got: 35%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:21.01
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 461184
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 2
+	Minor (reclaiming a frame) page faults: 925169
+	Voluntary context switches: 252159
+	Involuntary context switches: 2490
+	Swaps: 0
+	File system inputs: 27732720
+	File system outputs: 614424
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
