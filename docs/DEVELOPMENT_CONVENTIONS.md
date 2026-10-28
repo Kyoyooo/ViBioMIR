@@ -93,3 +93,17 @@ private checkpoints/backups and a verified merge. Do not infer six shared-memory
 GPUs or automate account/session access. Fewer machines may execute the same
 logical workers sequentially. S07 remains local CPU and independent of S08
 encoding. The manual-execution policy and deferred evaluation/QA order remain.
+
+## S06–S08 baseline closeout authorization — 2026-10-29
+
+The owner explicitly authorizes the assistant to execute the remaining baseline
+processing, tests and technical validation, update documentation, remove proven
+obsolete project outputs and create local Git commits. The confirmed scope is
+S06 rules, S07 BM25/TF-IDF and S08 BGE-M3. Semantic/combined ICD, mBERT,
+comparative experiments and clinical QA remain deferred to S10. Reuse completed
+validated stores instead of rebuilding unchanged corpora. Keep pending clinical
+and final-corpus flags truthful; technical completion is separate from clinical
+acceptance. Do not publish or push. Preserve one file per Conventional Commit.
+Retain canonical data paths and the resulting verified snapshots. The owner
+subsequently deferred expensive full S07 query generation; retain the validated
+lexical index and complete the dense baseline without that workload.
