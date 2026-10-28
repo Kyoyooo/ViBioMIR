@@ -1,0 +1,120 @@
+{
+  "identity": {
+    "operation": "lexical-global-index",
+    "source": {
+      "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+      "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+      "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+      "documents": 855745,
+      "chunks": 5512624,
+      "batches": 1712
+    },
+    "config": {
+      "schema": "vibiomir-lexical-v1",
+      "chunk_dir": "artifacts/chunks_stage5_full_structure",
+      "output_dir": "artifacts/lexical_stage7_structure",
+      "analyzer": "pyvi_jieba_v1",
+      "k1": 1.2,
+      "b": 0.75
+    },
+    "analyzer": {
+      "kind": "pyvi_jieba_v1",
+      "pyvi": {
+        "version": "0.1.1",
+        "files": {
+          "__init__.py": "63af278b951cecf56b84a0cec0fa8d4758e54b8d184c876347109923a0201b25",
+          "ViTokenizer.py": "ad11cdacf45b5b2801cd97a473f70effb3a36b94779b80c776a11cedaa18e1c1",
+          "ViUtils.py": "ae14a74753de9192ca8ccec6e293ef5190eace11f366358d5d53f3a89bd27938",
+          "ViDiac.py": "e6c0db3cdf1c95fdaaf1662f6d137eb15846c7d4081ba1df792c4aff1f9df1a0",
+          "train_tokenizer.py": "7a7681f64027c9ec6901b3132335509f6c47c826b970332389e7cc69de55d1b0",
+          "ViPosTagger.py": "c7d06796afdc494e9cdc5262777d80053af166b22421172fc608626a45972b45",
+          "models/pyvipos3.pkl": "273e0b10a2c91cbdfffe62ffd699486bb6de74004f49b4d169a6975830395b7b",
+          "models/words.txt": "517743d27e71d43343e4b8e9e89015cdc68d84ebe1d48106449e501d918ece4a",
+          "models/pyvipos.pkl": "df07fdb6b693c6388bc71ff614123ebe0da720eeb64c8753e914cb3d667dd958",
+          "models/vidiac.crfsuite": "77ae71a98f92939adbafc74bcaf2c8a198149cd324f866c9d2cc3a240118844c",
+          "models/pyvi3.pkl": "6cdd73aee04b6a4ad7320ca85d27d931a7ef870cfdd41beb148e86bdb8aca134",
+          "models/pyvi.pkl": "7a652bd7e0b5090eedb97c36b7dd1784ccd84459c198b1dd483082aa5d091b95"
+        }
+      },
+      "jieba": {
+        "version": "0.42.1",
+        "files": {
+          "__main__.py": "a65d20e25ba1a46d9b2ec347c3805c8f99aa0e7e0e7962d133a90397b31b6f07",
+          "__init__.py": "b47cefcfd0bf683b0c708c1de0328df83be2c35264637c442106e79d739fb7f3",
+          "dict.txt": "7197c3211ddd98962b036cdf40324d1ea2bfaa12bd028e68faa70111a88e12a8",
+          "_compat.py": "ce079f41be19a25857607275336073703a3fa116c66472821a1f6f53472a6023",
+          "analyse/textrank.py": "b0709b5032453622eb8ea6b87845b0cc40eac1b5301deecc80aba530b64b16c4",
+          "analyse/idf.txt": "501b70ec56c34d90f3f590f1918ca4b1bd617d5b46cd99bd6d17c7de6e4f80ed",
+          "analyse/__init__.py": "e136293cb1979bed752085887c98368500566bfb45036a88b09998b913e70301",
+          "analyse/tfidf.py": "68dd362657c0edc29616e8f883449208d14b2b4756d1605022ef086489f8b4ae",
+          "analyse/analyzer.py": "461244a181abe1398d85cb4763372007b4ecdfa7cd9b6eec62879190d4950e9d",
+          "posseg/prob_trans.p": "236726f5a4efc2f023652925ca1e94f1fe4bfcb9d60224e9db3de0135b21385b",
+          "posseg/prob_emit.py": "dd82a34938b4059be6026ffed621c3f7121013ae587038269ee8419bdaaada81",
+          "posseg/__init__.py": "accf3cf3442bfd3dd9cf5d3543bf2c6966b41177a214e40eab62b6a574a9fc8b",
+          "posseg/viterbi.py": "aaa6dc08186cd4bffcbdfc4e1602a1c7c22e7176b5e532dab595ce08bf3329e7",
+          "posseg/char_state_tab.p": "c0ef4bb3d698eed188225d430ac291000b30c3d6e253a538d26b7ac9687424b1",
+          "posseg/prob_start.p": "0fb0fbc6b1840d35a5a8499cff0ae75e06af788e348f9b4b8b9630804cd6cf09",
+          "posseg/prob_emit.p": "449b2304b6c73034187d3c8a6f26a7a20037f4ab45659844acd0ef2114171fa8",
+          "posseg/prob_trans.py": "24328e8b81388f3b0eed6127f597cad8ef9f54cbd44efe1db486e0c2ddd0cbbc",
+          "posseg/prob_start.py": "b43aaebcd8b21c2d7e9f67efaeb22c26835e47083356cba0c23ef6d9a37eb8f2",
+          "posseg/char_state_tab.py": "9de75c6c08fcb9b72d6546fcfc7c23a6385152a5515c7cd3fad6aedd0f1c0a6c",
+          "finalseg/prob_trans.p": "ea7f50162ffa01db4973c7a8120b3c0233fbc5819fc0d617513535f1f2c7fedc",
+          "finalseg/prob_emit.py": "27d46b1c9efe4dd148fde8be042a21be40e3562d0c7f1273f9de7abae12ebb8d",
+          "finalseg/__init__.py": "2168475bf522c0dae9d0a5e2bcb63c11b8c15931a622035cb8905d1e77e94f84",
+          "finalseg/prob_start.p": "dfd45976dd4f8f2bc12535a680a178bf9e75eaa38bdfdcb844469e54468d6245",
+          "finalseg/prob_emit.p": "1e1d1d835b0c77d234acaa6afa23a13ffce597a295be0d7a1ece6a0d440dcf08",
+          "finalseg/prob_trans.py": "54dfbc252ed71480d4f0cdfdf516ecfbe44efd0f6c3c64b158e7039f2906c91b",
+          "finalseg/prob_start.py": "14c5706ced5cd3b42eb4873d4b88f7f52a7bdf80fbd767bc4423d361e20c5330",
+          "lac_small/nets.py": "279bce3f6e2fbcceb6a41c3fafe9df4aa60055eaa2af497134adccd07ea461ca",
+          "lac_small/predict.py": "4099d712d1b9544a0641ceba16dfdeb01129307953a4e39b4fd914d95d077a9e",
+          "lac_small/creator.py": "c8841f01b8551daaa5dc7baf0e43f769ace68f3dacde7f6eb95613a6f970c22c",
+          "lac_small/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "lac_small/word.dic": "0d21d1e11490c1f74b3dbb5d291213593dcf443dad742027551972f7ef0d9f25",
+          "lac_small/reader_small.py": "1294cd258cbce4255968bb657ae33e1b5482035a30382def7445898c542dd91d",
+          "lac_small/utils.py": "68599cde5cec228891ce822e310c99207a231b3ad120286480864dacab82eb46",
+          "lac_small/tag.dic": "ae35d28de6256118b80174526f03de95d3227f3219b4170e1dc8aa010908ea4a",
+          "lac_small/model_baseline/gru_3.b_0": "5dee386ee162fc417024886ac83d4d4659baa08bc75a3acb0940c4310c7cb5da",
+          "lac_small/model_baseline/fc_3.w_0": "a8fb02bf59bd971abc47872c11482fbee242343639a6bddd6e559c3c9c009492",
+          "lac_small/model_baseline/fc_0.w_0": "f07f01d3ff0a5e9b93b623a28fda050e16010640a5516cd83b0501add0b7b435",
+          "lac_small/model_baseline/gru_0.w_0": "b9822a37d80c79f77f28a7395e3d04f00c9834a9b21d37f535a38c4a5fd7b720",
+          "lac_small/model_baseline/fc_4.b_0": "899a1aba22b4cb1f23cf703d0061c024a661ff33523bf4bb1cb3cafcf8444ecb",
+          "lac_small/model_baseline/fc_3.b_0": "9d7e41b09e929f3817148687fd03d17c239887bff18a5599b87cbd2b4290af8c",
+          "lac_small/model_baseline/gru_0.b_0": "3940a09d14029870b442c55841cd2f4d4ea4ac7142221ebb50eeaea78aaae839",
+          "lac_small/model_baseline/fc_1.b_0": "c3f42160370292134e7ddb21dadb30b9320b324204e1038a437ea51b05d53312",
+          "lac_small/model_baseline/word_emb": "3b65cdc2d4ebd78f03bbfe8747162c1e63f5b1c821d08f0ec695248c40f8be38",
+          "lac_small/model_baseline/gru_3.w_0": "91f837f6deaa75ba877f048bedd987198a1f635c061b85c39cd773ea6e69136b",
+          "lac_small/model_baseline/gru_2.w_0": "f38ae5d2a94eee65c41232ba834ad0b7ab63de739664c01a33dcec608932f664",
+          "lac_small/model_baseline/gru_1.b_0": "ed17bdf16b928323d23b7652fca9003362908909360a874cc3cbe6f2a68eae12",
+          "lac_small/model_baseline/fc_0.b_0": "815e0a25669ea66f6cf58a719fbe09eeb8007ad5cdc7c28b73fdf5640aea475e",
+          "lac_small/model_baseline/fc_4.w_0": "9a5666f104851dddb51bedf267d7b829e71f26a257be4f67cdc08c7d861e3c30",
+          "lac_small/model_baseline/gru_2.b_0": "cda019c833a1abf4986dec6dfa04e4115acdbf589c4ad5151277c4958338712e",
+          "lac_small/model_baseline/fc_2.b_0": "f83b10a5e1b53deef130c68df5d385ed0412351012af5415ee8cb4b055041696",
+          "lac_small/model_baseline/gru_1.w_0": "1d2e72eefdea8649929a9b625716643e18cad11530b270af412ea237e6778351",
+          "lac_small/model_baseline/fc_2.w_0": "514f9904cda432864b5f1faa257be1f1d24c205e29eb97e968dd38b425297f1d",
+          "lac_small/model_baseline/fc_1.w_0": "147454ee4c8e960e168347dd76bdc08c9bb865896c4bfbbb5a9d090693852f3a",
+          "lac_small/model_baseline/crfw": "1883c72d43449227dc301a56fd9d22dedcb3536ce5032700d5ea23be4f56587b"
+        }
+      },
+      "dependencies": {
+        "numpy": "2.5.4",
+        "scikit-learn": "1.9.1",
+        "sklearn-crfsuite": "0.5.0",
+        "python-crfsuite": "0.9.12",
+        "joblib": "1.6.0"
+      }
+    },
+    "code": {
+      "lexical_stage7.py": "c793becbe9a2525056c0b13849e101c8abc017f82408089fb4eb7dcc9a4e1625",
+      "retrieval_contracts.py": "5c4281e9059a0ff205c833bd60372827087ab80c5e2c7aaf37f845f4b6b51d79"
+    }
+  },
+  "signature": "0bdbb1965aeeba2cd767df3e87166126e165d11ab4589c85b07e3c3331e22e97",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "phase": "complete",
+  "chunks": 5512624,
+  "average_length": 120.66380384368678,
+  "terms": 737967
+}
