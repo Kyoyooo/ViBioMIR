@@ -1,0 +1,52 @@
+{
+  "format": "vibiomir-icd-document-batches-v1",
+  "identity": {
+    "operation": "icd-chapter-annotations",
+    "parent_signature": "336ff927b965e75e5cf44057385245c8a5bc62929f7b2a2ffde31732ff57534e",
+    "parent_manifest_sha256": "7793325f7f3276cd72d61718cf23cacaec559988512c20fda1339d9dfd35dc6c",
+    "mode": "rules",
+    "config": {
+      "schema": "vibiomir-icd-settings-v1",
+      "taxonomy_path": "taxonomy/icd10_chapters.json",
+      "rules_revision": "seed-vi-en-zh-v1",
+      "rule_threshold": 0.7,
+      "semantic_threshold": 0.65,
+      "semantic_margin": 0.05,
+      "max_labels": 4,
+      "max_evidence_per_label": 2,
+      "max_semantic_segments": 4,
+      "segment_tokens": 448,
+      "segment_characters": 1600,
+      "rules_scan_characters_per_field": 200000,
+      "calibration": "pending",
+      "retrieval_boost_enabled": false,
+      "hard_filter_enabled": false
+    },
+    "taxonomy_sha256": "06f7a7a19a8b99ecf490d7db8d97a2756da2675b269659cb97cc7ca75c7c584e",
+    "code": {
+      "icd.py": "ea75265e34bc47636546ab1290af7486eb6832d4d7e826f74888fbb57c76f451",
+      "icd_pipeline.py": "57a0762498b7da8ad21a7116e3a035f3b665bb1209d71b96e2d14d4a36f92c80",
+      "chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+      "io.py": "a407bc4837869f7d47aa00f88553bbfb6ba2e5e5c26f9249f8969f04a62a3b37"
+    },
+    "encoder": null
+  },
+  "signature": "61802fdf843486e7823501b4e11bfe0b7e90b2aa51e157aa71096fe438979f0b",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "taxonomy_version": "WHO ICD-10 2019",
+  "annotation_methods": [
+    "rules"
+  ],
+  "calibration": "pending",
+  "clinical_audit": "deferred",
+  "retrieval_boost_enabled": false,
+  "hard_filter_enabled": false,
+  "batches": 1712,
+  "documents": 855745,
+  "chunks": 0,
+  "annotation_records": 855745,
+  "seconds_this_invocation": 8293.081
+}
