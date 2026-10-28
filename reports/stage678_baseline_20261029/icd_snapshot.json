@@ -1,0 +1,38 @@
+{
+  "validation": "passed",
+  "documents": 855745,
+  "batches": 1712,
+  "methods": {
+    "rules": {
+      "unknown": 394087,
+      "II": 130396,
+      "IV": 112517,
+      "IX": 74790,
+      "XVIII": 152975,
+      "VIII": 5434,
+      "X": 38449,
+      "XIX": 48652,
+      "XXI": 66192,
+      "I": 31826,
+      "XX": 11671,
+      "XXII": 1717,
+      "VII": 11930,
+      "XII": 26670,
+      "XIV": 12939,
+      "XI": 21858,
+      "VI": 34734,
+      "III": 37961,
+      "XIII": 27841,
+      "XVII": 7658,
+      "V": 14683,
+      "XV": 5337,
+      "XVI": 846
+    }
+  },
+  "original_full_validation_sha256": "c00400179f361078d2f36689fd2aafcbb44d777aa11ff9a1051d451ece9581db",
+  "input_and_output_payload_checksums_verified": true,
+  "deterministic_rules_recomputed_this_check": false,
+  "previous_full_evidence_validation_reused": true,
+  "clinical_quality_measured": false,
+  "calibration": "pending"
+}
