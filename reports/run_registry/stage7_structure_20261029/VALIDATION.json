@@ -1,0 +1,15 @@
+{
+  "validation": "passed",
+  "chunks": 5512624,
+  "source": {
+    "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+    "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+    "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+    "documents": 855745,
+    "chunks": 5512624,
+    "batches": 1712
+  },
+  "database_sha256": "27fcfe14d08304beb444f54d990cad27d42bed74656904f6368f00ea731a669c",
+  "manifest_sha256": "37988cd4ef323dd9d3ed62617a3674c6a502d0723b2992e2bf9e08a76e99b3e8",
+  "quality_measured": false
+}
