@@ -19,6 +19,7 @@ requirements-stage5.txt
 requirements-stage5-review.txt
 requirements-stage6.txt
 requirements-stage6-colab.txt
+requirements-baseline-cpu.txt
 requirements-stage7.txt
 requirements-stage8.txt
 requirements-stage8-colab.txt
