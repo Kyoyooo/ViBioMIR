@@ -13,9 +13,9 @@ Code and technical documentation use English; corpus text retains its language.
 
 The [original mentor summary](261012_R2_AI_S3_MentorDay1_summary.md) is preserved
 in Vietnamese. See [development conventions](docs/DEVELOPMENT_CONVENTIONS.md)
-for the manual-execution policy. The owner runs processing, tests and model jobs.
+for the manual-execution policy and the authorized baseline closeout exception.
 
-## Observed progress — 2026-10-26
+## Observed progress — 2026-10-29
 
 | Stage | Observed state | Evidence |
 | --- | --- | --- |
@@ -26,7 +26,9 @@ for the manual-execution policy. The owner runs processing, tests and model jobs
 | Stage 5 smoke | Fixed: 765 chunks; structural: 687 chunks, each over 200 documents; both validated | [Run registry](reports/run_registry/README.md) |
 | Stage 5 full structural chunks | Full local validation passed: 855,745 documents / 5,512,624 chunks | [Validation](reports/run_registry/stage5_full_structure_20261026/VALIDATION.json) |
 | Stage 5 full semantic chunks | Full local validation passed: 855,745 documents / 9,036,279 chunks; report matches the original Colab full validation | [Validation](reports/run_registry/stage5_full_semantic/VALIDATION.json) |
-| ICD / indexes / retrieval | Not implemented; full fixed baseline and stage-5 acceptance/QA still pending | [Stage-5 runbook](docs/CHUNKING_STAGE5.md) |
+| S06 rules | 855,745 document annotations; existing full validation and snapshot seals verified | [Baseline handoff](docs/STAGES6_8_BASELINE_HANDOFF.md) |
+| S07 BM25/TF-IDF | Index verified: 5,512,624 chunks / 737,967 terms; full query generation deferred by owner | [Snapshot evidence](reports/stage678_baseline_20261029/lexical_snapshot.json) |
+| S08 BGE-M3 | 5,512,624 vectors indexed; all 1,200 queries have 500 validated dense candidates | [Execution evidence](reports/stage678_baseline_20261029/README.md) |
 
 These are technical processing results. Human/clinical QA, official-ID
 eligibility, corpus freeze and retrieval evaluation remain pending. Published URL
@@ -35,33 +37,16 @@ counts are reference snapshots, not an acquisition quota; recrawling is deferred
 For stage-5 output paths, full validation evidence, cleanup and GitHub/Drive
 handoff, read [Stage-5 results and handoff](docs/STAGE5_RESULTS_AND_HANDOFF.md).
 
-**2026-10-27 source delivery:** tools and fixtures for human/clinical QA, a
-resumable full fixed baseline, intrinsic/parameter comparisons and a human-labeled
-local retrieval benchmark are available in
-[QA and experiments](docs/STAGE5_QA_AND_EXPERIMENTS.md). Their new tests and
-pipelines await owner execution; no new quality scores or clinical approval
-are claimed. Existing observed processing results above remain unchanged.
+**Current handoff:** [S06–S08 baseline results](docs/STAGES6_8_BASELINE_HANDOFF.md)
+records completed technical checks and the dense-only entry point to S09.
+The authorized closeout executed 40 tests: 39 passed, one optional mBERT CPU
+pooling test skipped because PyTorch is absent. The S07 index remains available;
+full lexical candidate generation is deferred because of query cost.
 
-**Current execution priority, 2026-10-27:** move directly to S06 ICD implementation
-using the validated structural/semantic inputs. No further stage-5 run is needed
-for unchanged inputs. Full fixed, extended QA and comparison campaigns are
-deferred until after S07–S09 retrieval; final acceptance stays pending. Follow
-the [current handoff route](docs/STAGE5_QA_AND_EXPERIMENTS.md#current-route-to-s06--owner-decision-2026-10-27).
-
-**S06 source delivery, 2026-10-27:** chapter-level ICD rules, semantic/combined
-annotation, source-backed evidence, resumable batches, technical validator and
-a Colab GPU handoff are implemented in source. Start with the
-[S06 runbook](docs/ICD_STAGE6.md): local rules + validation is the fast route
-to S07; CUDA semantic/combined execution is optional now. Tests/jobs remain
-owner-run and unexecuted by the assistant. Clinical audit/calibration is deferred;
-ICD boosts and hard filters remain disabled. No corpus labels are claimed yet.
-
-**S07/S08 source delivery, 2026-10-27:** disk-backed BM25/TF-IDF for local CPU
-and dense encoding across up to six independent Colab GPU workers are supplied.
-Both default to the same validated structural chunk snapshot. See
-[parallel S07/S08 instructions](docs/RETRIEVAL_STAGES7_8.md) for fixture checks,
-six worker bundles, resume/merge, IVF-PQ and candidate generation. These new
-jobs/tests have not been run by the assistant; final quality checks stay deferred.
+Human/clinical QA, full fixed comparisons, semantic/combined ICD, mBERT,
+ICD calibration, relevance metrics and ANN recall measurement remain at S10.
+No new quality scores or final corpus approval are claimed. Existing QA and
+experiment tools remain available in [QA and experiments](docs/STAGE5_QA_AND_EXPERIMENTS.md).
 
 ## Run instructions
 
