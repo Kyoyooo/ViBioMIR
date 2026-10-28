@@ -1,0 +1,61 @@
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 100}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 200}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 300}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 400}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 500}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 600}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 700}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 800}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 900}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 1000}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 1100}
+{"validation": "candidates", "directory": "artifacts/candidates_stage8_bge", "queries": 1200}
+{
+  "validation": "passed",
+  "queries": 1200,
+  "candidates": 600000,
+  "minimum_candidates": 500,
+  "maximum_candidates": 500,
+  "empty_query_ids": [],
+  "language_hint_counts": {
+    "vi_diacritics": 481906,
+    "cjk_likely_zh": 113700,
+    "mixed_script": 4287,
+    "latin_undetermined": 107
+  },
+  "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+  "manifest_sha256": "d4dc947c2e3288f0ad6da3f4f0615ab405dd58f7e69f5b0c6fea06c15f043e66",
+  "all_source_mappings_verified": true,
+  "source": {
+    "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+    "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+    "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+    "documents": 855745,
+    "chunks": 5512624,
+    "batches": 1712
+  },
+  "quality_measured": false
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.stage678_validation candidates --candidate-dir artifacts/candidates_stage8_bge --report artifacts/candidates_stage8_bge/VALIDATION.json"
+	User time (seconds): 9.11
+	System time (seconds): 2.67
+	Percent of CPU this job got: 68%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:17.09
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 224620
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 45368
+	Voluntary context switches: 66274
+	Involuntary context switches: 758
+	Swaps: 0
+	File system inputs: 5870240
+	File system outputs: 16
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
