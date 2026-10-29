@@ -1,0 +1,73 @@
+{
+  "scope": "Offline fixtures and local tokenizer/native helper checks; no production rebuild or model inference",
+  "suites": [
+    {
+      "pattern": "test_stage6*.py",
+      "run": 14,
+      "passed": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.218
+    },
+    {
+      "pattern": "test_stage78*.py",
+      "run": 26,
+      "passed": 26,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 4.837
+    },
+    {
+      "pattern": "test_stage7_search.py",
+      "run": 7,
+      "passed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 1.473
+    },
+    {
+      "pattern": "test_stage9*.py",
+      "run": 22,
+      "passed": 22,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.787
+    },
+    {
+      "pattern": "test_stage10*.py",
+      "run": 16,
+      "passed": 16,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.481
+    },
+    {
+      "pattern": "test_stage5_evaluation.py",
+      "run": 8,
+      "passed": 8,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.006
+    },
+    {
+      "pattern": "test_stage5_benchmark_tools.py",
+      "run": 7,
+      "passed": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "seconds": 0.017
+    }
+  ],
+  "passed": 100,
+  "skipped": 0,
+  "failures": 0,
+  "errors": 0,
+  "launcher_note": "S78 rerun with the unittest module entry point: multiprocessing spawn cannot import an stdin test launcher. No product code change."
+}
