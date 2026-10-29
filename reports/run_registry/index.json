@@ -1,6 +1,6 @@
 {
   "observed_at_utc": "2026-10-25T16:07:43.795637+00:00",
-  "updated_on": "2026-10-29",
+  "updated_on": "2026-10-30",
   "purpose": "Read-only review metadata, not runnable checkpoints",
   "snapshots": [
     {
@@ -213,6 +213,69 @@
       "observed_on": "2026-10-29",
       "checkpoint": false,
       "validation": "passed"
+    },
+    {
+      "snapshot": "stage7_projection_20261029",
+      "source": "artifacts/lexical_stage7_query_cache",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage7_bm25_candidates_20261029",
+      "source": "artifacts/candidates_stage7_bm25",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage7_tfidf_candidates_20261029",
+      "source": "artifacts/candidates_stage7_tfidf",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-29",
+      "checkpoint": false,
+      "validation": "passed"
+    },
+    {
+      "snapshot": "stage9_prepared_20261029",
+      "source": "artifacts/retrieval_stage9_hybrid_rrf",
+      "files": [
+        "manifest.json"
+      ],
+      "checkpoint": false,
+      "observed_on": "2026-10-29"
+    },
+    {
+      "snapshot": "stage9_hybrid_baseline_20261029",
+      "source": "artifacts/results_stage9_hybrid_baseline",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "checkpoint": false,
+      "observed_on": "2026-10-29"
+    },
+    {
+      "snapshot": "stage9_hybrid_reranked_20261030",
+      "source": "artifacts/results_stage9_hybrid_reranked",
+      "files": [
+        "manifest.json",
+        "VALIDATION.json"
+      ],
+      "observed_on": "2026-10-30",
+      "checkpoint": false,
+      "validation": "passed; later owner-reported Dashboard scores in reports/baseline_submission_20261030"
     }
   ]
 }
