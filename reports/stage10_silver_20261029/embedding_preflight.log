@@ -1,0 +1,31 @@
+{"phase": "chunks", "strategy": "structure", "chunks": 276}
+{"phase": "chunks", "strategy": "fixed", "chunks": 302}
+{"phase": "chunks", "strategy": "semantic", "chunks": 467}
+{"phase": "chunks", "strategy": "target256", "chunks": 322}
+{"phase": "chunks", "strategy": "overlap0", "chunks": 271}
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+S10: RuleTagger.__init__() missing 1 required positional argument: 'config'
+Command exited with non-zero status 2
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.stage10_experiments run --accept-silver"
+	User time (seconds): 1042.46
+	System time (seconds): 16.68
+	Percent of CPU this job got: 347%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 5:04.86
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2686284
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 3128
+	Minor (reclaiming a frame) page faults: 5084972
+	Voluntary context switches: 29218
+	Involuntary context switches: 54503
+	Swaps: 0
+	File system inputs: 5517096
+	File system outputs: 47704
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 2
