@@ -1,0 +1,32 @@
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 1695}
+{
+  "state": "paused",
+  "signature": "a68ae3f7d23f4f1fb30a3bc0438b1293415e572a69f680eb498a2f8523db1756",
+  "extraction_batches": 1,
+  "output_dir": "artifacts/retrieval_stage9_hybrid_rrf",
+  "scope": "all_queries",
+  "quality_measured": false
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.stage9_pipeline prepare --stop-after-batches 1"
+	User time (seconds): 13.39
+	System time (seconds): 0.63
+	Percent of CPU this job got: 99%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:14.14
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 400404
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 90289
+	Voluntary context switches: 1801
+	Involuntary context switches: 137
+	Swaps: 0
+	File system inputs: 16328
+	File system outputs: 385464
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
