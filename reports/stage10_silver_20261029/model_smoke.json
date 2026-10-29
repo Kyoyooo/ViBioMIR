@@ -1,0 +1,88 @@
+{
+  "bge_m3": {
+    "shape": [
+      3,
+      1024
+    ],
+    "windows": [
+      1,
+      1,
+      1
+    ],
+    "seconds": 5.0073278079999,
+    "registry": {
+      "model_id": "BAAI/bge-m3",
+      "revision": "5617a9f61b028005a4858fdac845db406aefb181",
+      "commit_date": "2024-07-03",
+      "dimension": 1024,
+      "pooling": "CLS",
+      "parameters": 567754752,
+      "device": "cpu",
+      "compute_dtype": "float32",
+      "threads": 4,
+      "batch_size": 4,
+      "window_policy": {
+        "max_tokens": 512,
+        "window_overlap": 32
+      },
+      "torch": "2.9.0+cpu",
+      "production_equivalence": "not claimed; production uses CUDA FP16"
+    }
+  },
+  "mbert": {
+    "shape": [
+      3,
+      768
+    ],
+    "windows": [
+      1,
+      1,
+      1
+    ],
+    "seconds": 0.3205614959988452,
+    "registry": {
+      "model_id": "google-bert/bert-base-multilingual-cased",
+      "revision": "3f076fdb1ab68d5b2880cb87a0886f315b8146f8",
+      "commit_date": "2024-02-19",
+      "dimension": 768,
+      "pooling": "masked_mean_excluding_special_and_padding",
+      "parameters": 177853440,
+      "device": "cpu",
+      "compute_dtype": "float32",
+      "threads": 4,
+      "batch_size": 4,
+      "window_policy": {
+        "max_tokens": 512,
+        "window_overlap": 32
+      },
+      "torch": "2.9.0+cpu",
+      "production_equivalence": "not claimed; production uses CUDA FP16"
+    }
+  },
+  "reranker": {
+    "scores": [
+      5.7242937088012695,
+      2.1522774696350098
+    ],
+    "registry": {
+      "model_id": "BAAI/bge-reranker-v2-m3",
+      "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "commit_date": "2024-06-24",
+      "parameters": 567755777,
+      "device": "cpu",
+      "compute_dtype": "float32",
+      "threads": 4,
+      "window_policy": {
+        "model_id": "BAAI/bge-reranker-v2-m3",
+        "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+        "commit_date": "2024-06-24",
+        "max_pair_tokens": 512,
+        "query_window_tokens": 192,
+        "window_overlap": 32,
+        "aggregation": "mean_query_windows_of_max_passage_logit"
+      },
+      "scores": "raw uncalibrated logits",
+      "torch": "2.9.0+cpu"
+    }
+  }
+}
