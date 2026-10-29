@@ -1,0 +1,37 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.398 seconds.
+Prefix dict has been built successfully.
+{"scanned_postings":50000000,"selected":34416499}
+{"scanned_postings":100000000,"selected":72479001}
+{"scanned_postings":150000000,"selected":108516975}
+{"scanned_postings":200000000,"selected":141182584}
+{"scanned_postings":250000000,"selected":178556298}
+{"scanned_postings":300000000,"selected":215652613}
+{"scanned_postings":350000000,"selected":232852349}
+{"scanned_postings":400000000,"selected":234189812}
+{"state":"complete","scanned_postings":404849605,"selected_postings":234349921,"sqlite":"3.45.1"}
+{"state": "complete", "queries": 1200, "terms": 2819, "postings": 234349921, "seconds": 146.57914176900022}
+	Command being timed: ".venv-stage5/bin/python -u -c from vibiomir.lexical_projection import build_projection; import json; s=build_projection('configs/lexical_stage7.json','Data/official/ViBioMIR/query.parquet','artifacts/lexical_stage7_query_cache'); print(json.dumps({k:s[k] for k in ('state','queries','terms','postings','seconds')}))"
+	User time (seconds): 59.25
+	System time (seconds): 15.16
+	Percent of CPU this job got: 49%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 2:31.17
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2298604
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 439528
+	Minor (reclaiming a frame) page faults: 174061
+	Voluntary context switches: 606216
+	Involuntary context switches: 4968
+	Swaps: 0
+	File system inputs: 64406824
+	File system outputs: 4656344
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
