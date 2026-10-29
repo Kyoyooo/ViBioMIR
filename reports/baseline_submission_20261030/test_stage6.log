@@ -1,0 +1,43 @@
+test_all_22_chapters_and_version_ranges_are_required (test_stage6_icd.ICDTest.test_all_22_chapters_and_version_ranges_are_required) ... ok
+test_chest_pain_does_not_establish_coronary_disease (test_stage6_icd.ICDTest.test_chest_pain_does_not_establish_coronary_disease) ... ok
+test_diabetes_in_all_languages_maps_to_chapter_iv (test_stage6_icd.ICDTest.test_diabetes_in_all_languages_maps_to_chapter_iv) ... ok
+test_disagreement_and_semantic_margin_abstain (test_stage6_icd.ICDTest.test_disagreement_and_semantic_margin_abstain) ... ok
+test_multiple_topics_negation_unknown_and_word_boundaries (test_stage6_icd.ICDTest.test_multiple_topics_negation_unknown_and_word_boundaries) ... ok
+test_segments_bound_tokenization_and_preserve_source_slices (test_stage6_icd.ICDTest.test_segments_bound_tokenization_and_preserve_source_slices) ... ok
+test_semantic_cosine_multilabel_and_invalid_vectors (test_stage6_icd.ICDTest.test_semantic_cosine_multilabel_and_invalid_vectors) ... ok
+test_unicode_offsets_are_exact_after_nfkc_and_combining_normalization (test_stage6_icd.ICDTest.test_unicode_offsets_are_exact_after_nfkc_and_combining_normalization) ... ok
+test_bundle_is_portable_and_protects_existing_zip (test_stage6_icd.PipelineTest.test_bundle_is_portable_and_protects_existing_zip) ... {"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+ok
+test_combined_resume_from_drive_backup_preserves_model_registry (test_stage6_icd.PipelineTest.test_combined_resume_from_drive_backup_preserves_model_registry) ... {"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+{"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"phase": "icd", "mode": "combined", "batch": 0, "documents_done": 2, "unknown_in_batch": {"rules": 0, "semantic": 2, "combined": 0}}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+{"phase": "icd", "mode": "combined", "batch": 1, "documents_done": 4, "unknown_in_batch": {"rules": 1, "semantic": 2, "combined": 1}}
+ok
+test_missing_output_and_invalid_settings_fail_before_processing (test_stage6_icd.PipelineTest.test_missing_output_and_invalid_settings_fail_before_processing) ... {"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+ok
+test_rules_pause_resume_complete_validate_and_preserve_inputs (test_stage6_icd.PipelineTest.test_rules_pause_resume_complete_validate_and_preserve_inputs) ... {"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+{"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"phase": "icd", "mode": "rules", "batch": 0, "documents_done": 2, "unknown_in_batch": {"rules": 0}}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+{"phase": "icd", "mode": "rules", "batch": 1, "documents_done": 4, "unknown_in_batch": {"rules": 1}}
+ok
+test_text_annotation_reuses_schema_and_preserves_file_provenance (test_stage6_icd.PipelineTest.test_text_annotation_reuses_schema_and_preserves_file_provenance) ... {"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+ok
+test_wrong_mode_changed_source_and_tampered_evidence_are_rejected (test_stage6_icd.PipelineTest.test_wrong_mode_changed_source_and_tampered_evidence_are_rejected) ... {"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+{"batch": 0, "last_doc_id": 2, "documents": 2, "chunks": 0}
+{"phase": "icd", "mode": "rules", "batch": 0, "documents_done": 2, "unknown_in_batch": {"rules": 0}}
+{"batch": 1, "last_doc_id": 4, "documents": 2, "chunks": 0}
+{"phase": "icd", "mode": "rules", "batch": 1, "documents_done": 4, "unknown_in_batch": {"rules": 1}}
+ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.137s
+
+OK
