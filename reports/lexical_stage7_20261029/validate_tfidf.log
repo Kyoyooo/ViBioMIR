@@ -1,0 +1,54 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.430 seconds.
+Prefix dict has been built successfully.
+{"validation": "lexical_candidates", "queries": 200}
+{"validation": "lexical_candidates", "queries": 400}
+{"validation": "lexical_candidates", "queries": 600}
+{"validation": "lexical_candidates", "queries": 800}
+{"validation": "lexical_candidates", "queries": 1000}
+{"validation": "lexical_candidates", "queries": 1200}
+{
+  "validation": "passed",
+  "queries": 1200,
+  "candidates": 600000,
+  "minimum_candidates": 500,
+  "maximum_candidates": 500,
+  "empty_query_ids": [],
+  "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+  "manifest_sha256": "c8dc31568abfe302e42f857f7260278abd1975dbf7d0d0b7de37690310d6efd6",
+  "source": {
+    "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+    "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+    "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+    "documents": 855745,
+    "chunks": 5512624,
+    "batches": 1712
+  },
+  "all_source_mappings_verified": true,
+  "database_sha256": "27fcfe14d08304beb444f54d990cad27d42bed74656904f6368f00ea731a669c",
+  "quality_measured": false
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.lexical_search validate --output-dir artifacts/candidates_stage7_tfidf"
+	User time (seconds): 17.63
+	System time (seconds): 4.96
+	Percent of CPU this job got: 35%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:03.97
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 287800
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 7
+	Minor (reclaiming a frame) page faults: 78506
+	Voluntary context switches: 242568
+	Involuntary context switches: 894
+	Swaps: 0
+	File system inputs: 14219200
+	File system outputs: 1280
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
