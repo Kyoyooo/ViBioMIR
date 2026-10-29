@@ -5,6 +5,13 @@ Drive for complete datasets, databases, generated artifacts and original media.
 The supplied path lists are inventories, not upload commands; no files have
 been uploaded or published by this cleanup.
 
+For the current submitted baseline, start with the
+[Dashboard score and optimization record](../reports/baseline_submission_20261030/README.md).
+S09 reranking is complete; the earlier CPU handoff report is historical. S10's
+silver pilot is a separate research comparison, with human/full-corpus
+acceptance still pending. Runtime data and the submitted JSON/ZIP stay outside
+Git at the canonical artifact paths in the score record.
+
 ## Reading order for reviewers
 
 1. [Root README](../README.md): goal, measured progress and pending work.
@@ -21,7 +28,15 @@ been uploaded or published by this cleanup.
 
 7. [S06–S08 baseline handoff](STAGES6_8_BASELINE_HANDOFF.md), then
    [current evidence](../reports/stage678_baseline_20261029/README.md): verified
-   rules/index stores and complete dense candidates; lexical queries deferred.
+   rules/index stores and complete dense/lexical candidates for hybrid S09.
+
+8. [Scored baseline](../reports/baseline_submission_20261030/README.md) and
+   [S09 runbook](RETRIEVAL_STAGE9.md): completed hybrid reranking, package
+   provenance and the next optimization experiments. The
+   [earlier CPU execution evidence](../reports/stage9_execution_20261029/README.md)
+   remains a historical handoff record.
+9. [S10 silver closeout](../reports/stage10_silver_20261029/CLOSEOUT.json):
+   bounded comparisons and remaining human/full-corpus acceptance work.
 
 Use the [documentation map](README.md) and [report index](../reports/README.md)
 for supporting material. Do not read generated audit draft plans as reviewed
@@ -148,7 +163,8 @@ Share whole rules and lexical stores, the frozen dense plan, merged vectors,
 query vectors, FAISS index and dense candidates at their canonical paths.
 [The S06 inventory](../sharing/drive_stage6_planned.txt) and
 [S07/S08 inventory](../sharing/drive_stage78_planned.txt) list these directories.
-No full S07 candidate output is claimed. Keep large data outside Git.
+Both full S07 candidate outputs now exist and passed validation. The compact
+query cache is optional for sharing; keep large data outside Git.
 
 ## Smallest optional pilot upload
 
