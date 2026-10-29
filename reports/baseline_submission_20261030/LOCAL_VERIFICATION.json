@@ -1,0 +1,38 @@
+{
+  "checked_on": "2026-10-30",
+  "validation": "passed",
+  "scope": "Existing result seals, local official reference coverage/schema, ZIP roundtrip, frozen producer code. No repeat full-corpus source scan or Dashboard access.",
+  "queries": 1200,
+  "eligible_document_predictions": 24000,
+  "chunks": 41086,
+  "official_links_sha256": "87e44a792d7a99fb0fde5dff7f09f1a38a0a1fdf02ddd1ac93a005736e00b0a7",
+  "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+  "previous_original_evidence_validation": {
+    "validation": "passed",
+    "queries": 1200,
+    "scope": "all_queries",
+    "mode": "reranked",
+    "chunks": 41086,
+    "unique_selected_chunks": 37132,
+    "original_evidence_verified": true,
+    "manifest_sha256": "4e423c29320d372cd7f1324385a8d4cd4dceaa50b1ae4b5754731024f8b00879",
+    "predictions_sha256": "37230a0e3859f534e5e37dd42436d278a18da931c072d8be500c372ba1be4b05",
+    "quality_measured": false,
+    "official_submission_ready": false,
+    "official_eligibility": "pending S11"
+  },
+  "frozen_code": {
+    "vibiomir/stage9_pipeline.py": "c47aa5d7f6a58bf578bbe92c14b93a89bab6086b042d4a5dd0f686a723da09ae",
+    "vibiomir/stage9_core.py": "488979818141dda477c94010692f32656cc74d7a0340021cf9f3c12b6a240325",
+    "vibiomir/stage9_reranker.py": "01b9165dd31b96bcc73c631e98fea8f18d71c586b7fa031da727c215cf571891",
+    "vibiomir/retrieval_contracts.py": "5c4281e9059a0ff205c833bd60372827087ab80c5e2c7aaf37f845f4b6b51d79",
+    "vibiomir/chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+    "vibiomir/io.py": "a407bc4837869f7d47aa00f88553bbfb6ba2e5e5c26f9249f8969f04a62a3b37",
+    "vibiomir/dense_models.py": "f0cd5f5466433639830945a7fbe989d4fad3c43a9f7ce54823109a873bdf9b70",
+    "vibiomir/dense_stage8.py": "2f7d8630553e92d4b988fedc83817f8aebe59fe45562afb48002195f8f41b86a"
+  },
+  "submission_json_equals_validated_predictions": true,
+  "zip_single_root_json": true,
+  "scoring_phase": "unknown",
+  "human_acceptance": "pending"
+}
