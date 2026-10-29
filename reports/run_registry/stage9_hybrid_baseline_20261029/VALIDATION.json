@@ -1,0 +1,14 @@
+{
+  "validation": "passed",
+  "queries": 1200,
+  "scope": "all_queries",
+  "mode": "baseline",
+  "chunks": 42051,
+  "unique_selected_chunks": 37626,
+  "original_evidence_verified": true,
+  "manifest_sha256": "c2f425381150d5a64dcf439dbb93300e10236934cb8cd18026a4686f144775c4",
+  "predictions_sha256": "487dff16a611938dc2697098607f8e77958db97a2e15de55d1c1d2d3d200abbe",
+  "quality_measured": false,
+  "official_submission_ready": false,
+  "official_eligibility": "pending S11"
+}
