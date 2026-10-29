@@ -1,0 +1,39 @@
+{
+  "split": "dev",
+  "label_tier": "silver",
+  "benchmark_sha256": "eef39870e1386ea2559821cc1c26b1de8469c2e847869ebc4090059286782a99",
+  "frontier": [
+    "E04_bge",
+    "E07_reranker"
+  ],
+  "all_run_names": [
+    "E01_tfidf",
+    "E02_bm25",
+    "E03_mbert",
+    "E04_bge",
+    "E05_rrf",
+    "E06_weighted_0.25",
+    "E06_weighted_0.5",
+    "E06_weighted_0.75",
+    "E07_reranker",
+    "E07_same_pool_rrf",
+    "E08_bm25_fixed",
+    "E08_bm25_semantic",
+    "E09_icd_combined",
+    "E09_icd_rules",
+    "E09_icd_semantic",
+    "E10_facets",
+    "E10_no_dedup",
+    "E11_bm25_overlap0",
+    "E11_bm25_target256",
+    "E11_chunkcap_20",
+    "E11_chunkcap_5",
+    "E11_doccap_1",
+    "E11_doccap_10",
+    "E11_pool_10",
+    "E11_pool_20"
+  ],
+  "production_selection": "unchanged",
+  "selection_policy": "both F2 metrics kept separate; silver frontier is diagnostic, not a release decision",
+  "signature": "ff7dff5d890a4c40c526f74efca94b3bc1468cf58f56dfeac6c91f193503828c"
+}
