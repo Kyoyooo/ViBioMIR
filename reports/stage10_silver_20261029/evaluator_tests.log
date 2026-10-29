@@ -1,0 +1,13 @@
+test_bitset_lcs_matches_reference_exhaustively_with_repetitions (test_stage5_evaluation.EvaluationTest.test_bitset_lcs_matches_reference_exhaustively_with_repetitions) ... ok
+test_macro_f2_is_average_of_query_f2_and_zero_cases_are_explicit (test_stage5_evaluation.EvaluationTest.test_macro_f2_is_average_of_query_f2_and_zero_cases_are_explicit) ... ok
+test_many_to_many_counts_each_reference_once_and_deduplicates_predictions (test_stage5_evaluation.EvaluationTest.test_many_to_many_counts_each_reference_once_and_deduplicates_predictions) ... ok
+test_missing_queries_bad_order_and_empty_gold_are_rejected (test_stage5_evaluation.EvaluationTest.test_missing_queries_bad_order_and_empty_gold_are_rejected) ... ok
+test_normalization_order_and_40_percent_subsequence_boundary (test_stage5_evaluation.EvaluationTest.test_normalization_order_and_40_percent_subsequence_boundary) ... ok
+test_paired_bootstrap_is_reproducible (test_stage5_evaluation.EvaluationTest.test_paired_bootstrap_is_reproducible) ... ok
+test_proxy_profiles_and_holdout_unjudged_checks (test_stage5_evaluation.EvaluationTest.test_proxy_profiles_and_holdout_unjudged_checks) ... ok
+test_reference_bm25_hand_calculation_and_han_analysis (test_stage5_evaluation.EvaluationTest.test_reference_bm25_hand_calculation_and_han_analysis) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.009s
+
+OK
