@@ -1,0 +1,19 @@
+# S09 update 2026-10-30: owner-run GPU results complete and source-validated.
+configs/retrieval_stage9.json
+# Default branches: validated BM25 + BGE-M3 dense, fused with RRF.
+vibiomir/stage9_core.py
+vibiomir/stage9_pipeline.py
+vibiomir/stage9_reranker.py
+tests/test_stage9_retrieval.py
+requirements-stage9.txt
+requirements-stage9-colab.txt
+colab/stage9_rerank.ipynb
+docs/RETRIEVAL_STAGE9.md
+sharing/stage9_source_files.txt
+reports/stage9_execution_20261029/
+reports/run_registry/stage9_prepared_20261029/
+reports/run_registry/stage9_hybrid_baseline_20261029/
+reports/run_registry/stage9_hybrid_reranked_20261030/
+reports/baseline_submission_20261030/
+# GPU upload: existing artifacts/stage9_rerank_colab.zip + the notebook above.
+# No raw Data, S07 index, full source corpus or embedding upload is required.
