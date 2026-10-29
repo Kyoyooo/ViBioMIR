@@ -1,0 +1,118 @@
+test_conflicting_mappings_duplicates_and_nonfinite_scores_fail (test_stage9_retrieval.FusionAndIntentTest.test_conflicting_mappings_duplicates_and_nonfinite_scores_fail) ... ok
+test_original_query_and_conditions_are_preserved (test_stage9_retrieval.FusionAndIntentTest.test_original_query_and_conditions_are_preserved) ... ok
+test_rrf_missing_branch_and_stable_ties (test_stage9_retrieval.FusionAndIntentTest.test_rrf_missing_branch_and_stable_ties) ... ok
+test_score_cache_key_changes_for_query_text_passage_or_revision (test_stage9_retrieval.FusionAndIntentTest.test_score_cache_key_changes_for_query_text_passage_or_revision) ... ok
+test_shipped_configuration_is_valid_and_rejects_bool_or_bad_budgets (test_stage9_retrieval.FusionAndIntentTest.test_shipped_configuration_is_valid_and_rejects_bool_or_bad_budgets) ... ok
+test_weighted_constant_lists_and_family_weight_cap (test_stage9_retrieval.FusionAndIntentTest.test_weighted_constant_lists_and_family_weight_cap) ... ok
+test_gpu_memory_profiles_are_bounded_and_override_friendly (test_stage9_retrieval.PairWindowTest.test_gpu_memory_profiles_are_bounded_and_override_friendly) ... ok
+test_long_query_and_passage_keep_complete_mapped_token_coverage (test_stage9_retrieval.PairWindowTest.test_long_query_and_passage_keep_complete_mapped_token_coverage) ... ok
+test_model_query_passage_cache_reuses_scored_windows (test_stage9_retrieval.PairWindowTest.test_model_query_passage_cache_reuses_scored_windows) ... ok
+test_oom_splits_microbatch_without_dropping_or_reordering (test_stage9_retrieval.PairWindowTest.test_oom_splits_microbatch_without_dropping_or_reordering) ... ok
+test_real_fast_pair_api_does_not_request_unsupported_mask (test_stage9_retrieval.PairWindowTest.test_real_fast_pair_api_does_not_request_unsupported_mask) ... <frozen importlib._bootstrap>:488: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7a398d2255d0>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+None of PyTorch, TensorFlow >= 2.0, or Flax have been found. Models won't be available and only tokenizers, configuration and file/data utilities can be used.
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ok
+test_registered_local_bge_pair_windows_cover_real_vi_en_zh_tokens (test_stage9_retrieval.PairWindowTest.test_registered_local_bge_pair_windows_cover_real_vi_en_zh_tokens) ... You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ok
+test_bounds_document_scores_exact_dedup_and_no_cross_doc_dedup (test_stage9_retrieval.Stage9PipelineTest.test_bounds_document_scores_exact_dedup_and_no_cross_doc_dedup) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_missing_and_tampered_worker_archives_fail_before_export (test_stage9_retrieval.Stage9PipelineTest.test_missing_and_tampered_worker_archives_fail_before_export) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 1}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 2}
+ok
+test_missing_workers_changed_config_and_tampered_packets_fail_early (test_stage9_retrieval.Stage9PipelineTest.test_missing_workers_changed_config_and_tampered_packets_fail_early) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_portable_bundle_checks_payloads_and_reuses_identical_archive (test_stage9_retrieval.Stage9PipelineTest.test_portable_bundle_checks_payloads_and_reuses_identical_archive) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_prepare_resume_baseline_empty_results_and_cross_doc_identity (test_stage9_retrieval.Stage9PipelineTest.test_prepare_resume_baseline_empty_results_and_cross_doc_identity) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_query_subset_is_labeled_and_cannot_be_validated_as_full (test_stage9_retrieval.Stage9PipelineTest.test_query_subset_is_labeled_and_cannot_be_validated_as_full) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_rerank_pause_restore_no_repeat_and_complete_export (test_stage9_retrieval.Stage9PipelineTest.test_rerank_pause_restore_no_repeat_and_complete_export) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 1}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 0}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 1}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 1}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 0}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 0}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 0}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 0}
+ok
+test_reranker_cannot_return_more_scores_than_input_candidates (test_stage9_retrieval.Stage9PipelineTest.test_reranker_cannot_return_more_scores_than_input_candidates) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_selected_original_source_mutation_and_changed_prediction_fail (test_stage9_retrieval.Stage9PipelineTest.test_selected_original_source_mutation_and_changed_prediction_fail) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_worker_archives_finish_and_reuse_without_gpu (test_stage9_retrieval.Stage9PipelineTest.test_worker_archives_finish_and_reuse_without_gpu) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 1}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 2}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 1}
+ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 1.621s
+
+OK
+	Command being timed: ".venv-stage5/bin/python -m unittest discover -s tests -p test_stage9*.py -v"
+	User time (seconds): 1.33
+	System time (seconds): 0.31
+	Percent of CPU this job got: 94%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.74
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 370400
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 98212
+	Voluntary context switches: 334
+	Involuntary context switches: 20
+	Swaps: 0
+	File system inputs: 0
+	File system outputs: 6072
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
