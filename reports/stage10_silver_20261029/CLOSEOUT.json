@@ -1,0 +1,31 @@
+{
+  "state": "complete_silver_pilot",
+  "experiments": {
+    "E01": "TF-IDF",
+    "E02": "BM25",
+    "E03": "pinned mBERT exact dense",
+    "E04": "pinned BGE-M3 exact dense",
+    "E05": "RRF",
+    "E06": "weighted alpha 0.25/0.5/0.75",
+    "E07": "real pinned CPU reranker plus same-pool control",
+    "E08": "fixed/structure/semantic with same corpus",
+    "E09": "ICD off/rules/semantic/combined soft boost",
+    "E10": "original/additional source slices and dedup off/on",
+    "E11": "target/overlap/candidate/output cap pilots",
+    "E12": "pilot exact/IVF-Flat + 1/2/3 CPU search threads + reusable caches"
+  },
+  "scope": "30 assistant silver questions; 60 selected documents; exact counts in COST.json",
+  "human_reviewed": false,
+  "clinical_qa": "pending human review",
+  "icd_300_document_audit": "pending human review",
+  "production_ann_recall": "not established by this small IVF-Flat probe",
+  "full_corpus_quality": "not established",
+  "competition_training_eligible": false,
+  "production_configuration_changed": false,
+  "official_submission_ready": false,
+  "silver_dev_frontier": [
+    "E04_bge",
+    "E07_reranker"
+  ],
+  "next": "replace with reviewed labels; rerun comparisons before production selection/S11 release"
+}
