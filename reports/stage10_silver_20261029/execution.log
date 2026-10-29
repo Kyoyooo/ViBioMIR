@@ -1,0 +1,77 @@
+{"phase": "chunks", "strategy": "structure", "chunks": 276}
+{"phase": "chunks", "strategy": "fixed", "chunks": 302}
+{"phase": "chunks", "strategy": "semantic", "chunks": 467}
+{"phase": "chunks", "strategy": "target256", "chunks": 322}
+{"phase": "chunks", "strategy": "overlap0", "chunks": 271}
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.490 seconds.
+Prefix dict has been built successfully.
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+{"phase": "rerank", "query_id": 100001, "pairs": 20}
+{"phase": "rerank", "query_id": 100002, "pairs": 20}
+{"phase": "rerank", "query_id": 100003, "pairs": 20}
+{"phase": "rerank", "query_id": 100004, "pairs": 20}
+{"phase": "rerank", "query_id": 100005, "pairs": 20}
+{"phase": "rerank", "query_id": 100006, "pairs": 20}
+{"phase": "rerank", "query_id": 100007, "pairs": 20}
+{"phase": "rerank", "query_id": 100008, "pairs": 20}
+{"phase": "rerank", "query_id": 100009, "pairs": 20}
+{"phase": "rerank", "query_id": 100010, "pairs": 20}
+{"phase": "rerank", "query_id": 100011, "pairs": 20}
+{"phase": "rerank", "query_id": 100012, "pairs": 20}
+{"phase": "rerank", "query_id": 100013, "pairs": 20}
+{"phase": "rerank", "query_id": 100014, "pairs": 20}
+{"phase": "rerank", "query_id": 100015, "pairs": 20}
+{"phase": "rerank", "query_id": 100016, "pairs": 20}
+{"phase": "rerank", "query_id": 100017, "pairs": 20}
+{"phase": "rerank", "query_id": 100018, "pairs": 20}
+{"phase": "rerank", "query_id": 100019, "pairs": 20}
+{"phase": "rerank", "query_id": 100020, "pairs": 20}
+{"phase": "rerank", "query_id": 100021, "pairs": 20}
+{"phase": "rerank", "query_id": 100022, "pairs": 20}
+{"phase": "rerank", "query_id": 100023, "pairs": 20}
+{"phase": "rerank", "query_id": 100024, "pairs": 20}
+{"phase": "rerank", "query_id": 100025, "pairs": 20}
+{"phase": "rerank", "query_id": 100026, "pairs": 20}
+{"phase": "rerank", "query_id": 100027, "pairs": 20}
+{"phase": "rerank", "query_id": 100028, "pairs": 20}
+{"phase": "rerank", "query_id": 100029, "pairs": 20}
+{"phase": "rerank", "query_id": 100030, "pairs": 20}
+{
+  "validation": "passed",
+  "scope": "bounded silver pilot only",
+  "human_reviewed": false,
+  "queries": 30,
+  "documents": 60,
+  "runs": 25,
+  "source_evidence_verified": true,
+  "manifest_sha256": "a15d9ac90e1a792b911bc1c1c1ae98df91e89a4eddf651a8a18de7bd20ecc6a2",
+  "production_configuration_changed": false,
+  "human_acceptance": "pending"
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.stage10_experiments run --accept-silver"
+	User time (seconds): 2410.55
+	System time (seconds): 25.34
+	Percent of CPU this job got: 344%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 11:47.04
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 2702632
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 6880
+	Minor (reclaiming a frame) page faults: 7106270
+	Voluntary context switches: 61061
+	Involuntary context switches: 111150
+	Swaps: 0
+	File system inputs: 5997184
+	File system outputs: 233384
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
