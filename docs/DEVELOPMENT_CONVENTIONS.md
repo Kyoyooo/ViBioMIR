@@ -107,3 +107,37 @@ acceptance. Do not publish or push. Preserve one file per Conventional Commit.
 Retain canonical data paths and the resulting verified snapshots. The owner
 subsequently deferred expensive full S07 query generation; retain the validated
 lexical index and complete the dense baseline without that workload.
+
+## S07 query completion authorization — later on 2026-10-29
+
+The owner resumes full lexical retrieval and explicitly authorizes the assistant
+to run S07 code, optimize CPU/I/O and parallel computation, execute relevant
+fixtures and technical validation, and produce the complete BM25/TF-IDF
+candidate sets. This supersedes the earlier S07 query deferral. Reuse the
+sealed original index; keep its code/analyzer/source identity unchanged.
+Configure S09 to consume the resulting validated lexical and dense branches.
+This does not launch full S09 processing or new GPU jobs; those remain owner-run.
+
+## S09 execution and GPU handoff authorization — 2026-10-29
+
+The owner subsequently authorizes the assistant to finish and execute S09.
+Run the dedicated tests, full CPU preparation, hybrid baseline export,
+original-source validation and GPU bundle creation locally. This supersedes
+the earlier S09 manual-only delivery note. Local CUDA is unavailable, and the
+owner explicitly chooses to run the supplied Colab notebook. Prepare the GPU
+inputs and result-return commands; do not claim GPU reranking has executed.
+Clinical QA, quality comparisons and tuning remain at S10; official submission
+checks remain at S11. This request does not authorize a Git push.
+
+## Scored baseline closeout authorization — 2026-10-30
+
+The owner supplied Dashboard scores and explicitly requested preserving them
+for future optimization, cleaning redundant project files and committing the
+entire implemented baseline locally. Record scores as owner-reported, bind the
+existing submission/configuration by hashes, and keep an unknown scoring phase
+or submission ID unknown. The S09 GPU results are complete; the S10 silver
+pilot does not establish human/full-corpus acceptance or tune this submission.
+Necessary local fixture and integrity checks are authorized for this closeout;
+no new full-corpus/model job or push is implied. Preserve successful stores,
+source receipts and cache dependencies; remove only verified obsolete scratch
+outputs or regenerable caches. Keep one file per Conventional Commit.
