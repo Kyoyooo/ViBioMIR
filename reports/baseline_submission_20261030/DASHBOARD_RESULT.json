@@ -1,0 +1,116 @@
+{
+  "schema": "vibiomir-dashboard-baseline-v1",
+  "baseline_id": "stage9_hybrid_reranked_provisional_v1",
+  "reported_on": "2026-10-30",
+  "reporting_timezone": "Asia/Ho_Chi_Minh",
+  "provenance": {
+    "kind": "owner_reported_dashboard_result",
+    "independently_reproduced": false,
+    "dashboard_submission_id": null,
+    "submitted_at": null,
+    "scored_phase": null,
+    "scored_query_count": null,
+    "artifact_association": "Owner conversation identifies the current submission; local package hashes verified. No Dashboard receipt/digest was supplied."
+  },
+  "metrics": {
+    "FINAL_SCORE": 0.0916,
+    "DOCS_F2MACRO": 0.1323,
+    "CHUNKS_F2MACRO": 0.0509,
+    "DOCS_PRECISION": 0.3155,
+    "DOCS_RECALL": 0.128,
+    "CHUNKS_PRECISION": 0.0871,
+    "CHUNKS_RECALL": 0.0543
+  },
+  "submitted_prediction_counts": {
+    "queries": 1200,
+    "documents": 24000,
+    "chunks": 41086
+  },
+  "configuration": {
+    "schema": "vibiomir-stage9-v1",
+    "queries": "Data/official/ViBioMIR/query.parquet",
+    "chunk_dir": "artifacts/chunks_stage5_full_structure",
+    "output_dir": "artifacts/retrieval_stage9_hybrid_rrf",
+    "branches": [
+      {
+        "name": "bge_m3_original",
+        "family": "dense",
+        "facet_id": "original",
+        "candidate_dir": "artifacts/candidates_stage8_bge"
+      },
+      {
+        "name": "bm25_original",
+        "family": "lexical",
+        "facet_id": "original",
+        "candidate_dir": "artifacts/candidates_stage7_bm25"
+      }
+    ],
+    "fusion": "rrf",
+    "rrf_k": 60,
+    "lexical_alpha": 0.5,
+    "fused_top_k": 1000,
+    "rerank_top_k": 200,
+    "workers": 2,
+    "reranker": {
+      "model_id": "BAAI/bge-reranker-v2-m3",
+      "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+      "commit_date": "2024-06-24",
+      "max_pair_tokens": 1024,
+      "query_window_tokens": 384,
+      "window_overlap": 32,
+      "aggregation": "mean_query_windows_of_max_passage_logit"
+    },
+    "selection": {
+      "max_docs": 20,
+      "max_chunks": 40,
+      "max_chunks_per_doc": 4,
+      "overlap_iou_threshold": 0.8
+    }
+  },
+  "source_run_signature": "ea1434680861f45c96615f868d7d13901ec7ba458f6a0562bad172b1cab29013",
+  "files": {
+    "artifacts/results_stage9_hybrid_reranked/manifest.json": {
+      "sha256": "4e423c29320d372cd7f1324385a8d4cd4dceaa50b1ae4b5754731024f8b00879",
+      "bytes": 283869
+    },
+    "artifacts/results_stage9_hybrid_reranked/VALIDATION.json": {
+      "sha256": "33bf589bcd1350f0e66db643d6edda5616b7a5ede4820fd1b0e43bf96bc021cb",
+      "bytes": 477
+    },
+    "artifacts/results_stage9_hybrid_reranked/predictions.json": {
+      "sha256": "37230a0e3859f534e5e37dd42436d278a18da931c072d8be500c372ba1be4b05",
+      "bytes": 57340937
+    },
+    "artifacts/submissions/stage9_hybrid_reranked_provisional/submission.json": {
+      "sha256": "37230a0e3859f534e5e37dd42436d278a18da931c072d8be500c372ba1be4b05",
+      "bytes": 57340937
+    },
+    "artifacts/submissions/stage9_hybrid_reranked_provisional/submission.zip": {
+      "sha256": "e3e404523c17cadabc2f08be072ea6b4d6d4de12cf488f7d4fb42e2ae98cb871",
+      "bytes": 14386896
+    },
+    "configs/retrieval_stage9.json": {
+      "sha256": "9b4d852baa40daef0379e32dc2c6fa5d09e341a1186d72c5c45b20d4f8d1fb80",
+      "bytes": 1092
+    },
+    "Data/official/ViBioMIR/query.parquet": {
+      "sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+      "bytes": 81826
+    },
+    "Data/official/ViBioMIR/links_corpus_vi_en_zh.parquet": {
+      "sha256": "87e44a792d7a99fb0fde5dff7f09f1a38a0a1fdf02ddd1ac93a005736e00b0a7",
+      "bytes": 37689434
+    }
+  },
+  "human_reviewed": false,
+  "clinical_qa": "pending",
+  "s10_scope": "complete_silver_pilot; separate research experiment, no production tuning",
+  "production_configuration_changed": false,
+  "optimization_status": "hypotheses documented; no new retrieval/model run",
+  "interpretation_limitations": [
+    "Macro F2 cannot be recomputed from macro precision and recall.",
+    "Submission size does not establish the scored phase size.",
+    "Aggregate metrics do not establish causal retrieval failure categories.",
+    "Silver pilot proxy metrics are not comparable to Dashboard metrics."
+  ]
+}
