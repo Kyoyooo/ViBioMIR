@@ -1,0 +1,11 @@
+{
+  "validation": "passed",
+  "files_checked": 1209,
+  "compressed_bytes": 238769633,
+  "uncompressed_bytes": 239027594,
+  "sha256": "fe95dc61a160584579c9d5f1d27f48e1272754e57c8d75640b7b3bc6a7f869da",
+  "prepared_signature": "a68ae3f7d23f4f1fb30a3bc0438b1293415e572a69f680eb498a2f8523db1756",
+  "all_payload_hashes_verified": true,
+  "isolated_portable_import_and_packet": true,
+  "gpu_inference_executed": false
+}
