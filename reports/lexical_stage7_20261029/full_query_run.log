@@ -1,0 +1,101 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.401 seconds.
+Prefix dict has been built successfully.
+{"phase": "lexical_query", "id": 25, "complete": 25, "total": 1200, "seconds": 48.41}
+{"phase": "lexical_query", "id": 50, "complete": 50, "total": 1200, "seconds": 53.34}
+{"phase": "lexical_query", "id": 75, "complete": 75, "total": 1200, "seconds": 57.72}
+{"phase": "lexical_query", "id": 100, "complete": 100, "total": 1200, "seconds": 63.04}
+{"phase": "lexical_query", "id": 125, "complete": 125, "total": 1200, "seconds": 68.26}
+{"phase": "lexical_query", "id": 150, "complete": 150, "total": 1200, "seconds": 73.47}
+{"phase": "lexical_query", "id": 175, "complete": 175, "total": 1200, "seconds": 79.76}
+{"phase": "lexical_query", "id": 200, "complete": 200, "total": 1200, "seconds": 83.95}
+{"phase": "lexical_query", "id": 225, "complete": 225, "total": 1200, "seconds": 89.44}
+{"phase": "lexical_query", "id": 250, "complete": 250, "total": 1200, "seconds": 95.18}
+{"phase": "lexical_query", "id": 275, "complete": 275, "total": 1200, "seconds": 100.9}
+{"phase": "lexical_query", "id": 300, "complete": 300, "total": 1200, "seconds": 105.49}
+{"phase": "lexical_query", "id": 325, "complete": 325, "total": 1200, "seconds": 110.55}
+{"phase": "lexical_query", "id": 350, "complete": 350, "total": 1200, "seconds": 115.57}
+{"phase": "lexical_query", "id": 375, "complete": 375, "total": 1200, "seconds": 120.39}
+{"phase": "lexical_query", "id": 400, "complete": 400, "total": 1200, "seconds": 124.78}
+{"phase": "lexical_query", "id": 425, "complete": 425, "total": 1200, "seconds": 128.83}
+{"phase": "lexical_query", "id": 450, "complete": 450, "total": 1200, "seconds": 134.12}
+{"phase": "lexical_query", "id": 475, "complete": 475, "total": 1200, "seconds": 139.58}
+{"phase": "lexical_query", "id": 500, "complete": 500, "total": 1200, "seconds": 144.58}
+{"phase": "lexical_query", "id": 525, "complete": 525, "total": 1200, "seconds": 148.91}
+{"phase": "lexical_query", "id": 550, "complete": 550, "total": 1200, "seconds": 154.32}
+{"phase": "lexical_query", "id": 575, "complete": 575, "total": 1200, "seconds": 158.13}
+{"phase": "lexical_query", "id": 600, "complete": 600, "total": 1200, "seconds": 162.81}
+{"phase": "lexical_query", "id": 625, "complete": 625, "total": 1200, "seconds": 167.14}
+{"phase": "lexical_query", "id": 650, "complete": 650, "total": 1200, "seconds": 172.37}
+{"phase": "lexical_query", "id": 675, "complete": 675, "total": 1200, "seconds": 176.18}
+{"phase": "lexical_query", "id": 700, "complete": 700, "total": 1200, "seconds": 182.92}
+{"phase": "lexical_query", "id": 725, "complete": 725, "total": 1200, "seconds": 187.02}
+{"phase": "lexical_query", "id": 750, "complete": 750, "total": 1200, "seconds": 192.05}
+{"phase": "lexical_query", "id": 775, "complete": 775, "total": 1200, "seconds": 197.19}
+{"phase": "lexical_query", "id": 800, "complete": 800, "total": 1200, "seconds": 201.74}
+{"phase": "lexical_query", "id": 825, "complete": 825, "total": 1200, "seconds": 206.92}
+{"phase": "lexical_query", "id": 850, "complete": 850, "total": 1200, "seconds": 211.39}
+{"phase": "lexical_query", "id": 875, "complete": 875, "total": 1200, "seconds": 215.02}
+{"phase": "lexical_query", "id": 900, "complete": 900, "total": 1200, "seconds": 220.45}
+{"phase": "lexical_query", "id": 925, "complete": 925, "total": 1200, "seconds": 225.06}
+{"phase": "lexical_query", "id": 950, "complete": 950, "total": 1200, "seconds": 229.62}
+{"phase": "lexical_query", "id": 975, "complete": 975, "total": 1200, "seconds": 235.21}
+{"phase": "lexical_query", "id": 1000, "complete": 1000, "total": 1200, "seconds": 239.23}
+{"phase": "lexical_query", "id": 1025, "complete": 1025, "total": 1200, "seconds": 245.28}
+{"phase": "lexical_query", "id": 1050, "complete": 1050, "total": 1200, "seconds": 251.16}
+{"phase": "lexical_query", "id": 1075, "complete": 1075, "total": 1200, "seconds": 257.17}
+{"phase": "lexical_query", "id": 1100, "complete": 1100, "total": 1200, "seconds": 261.46}
+{"phase": "lexical_query", "id": 1125, "complete": 1125, "total": 1200, "seconds": 267.6}
+{"phase": "lexical_query", "id": 1150, "complete": 1150, "total": 1200, "seconds": 271.8}
+{"phase": "lexical_query", "id": 1175, "complete": 1175, "total": 1200, "seconds": 276.22}
+{"phase": "lexical_query", "id": 1200, "complete": 1200, "total": 1200, "seconds": 280.5}
+{
+  "bm25": {
+    "state": "complete",
+    "queries": 1200,
+    "output_dir": "artifacts/candidates_stage7_bm25",
+    "execution": {
+      "workers": 4,
+      "weight_cache_mib": 1024,
+      "seconds_this_invocation": 280.5025036809998,
+      "weight_cache_hits": 10392,
+      "weight_cache_misses": 14802
+    }
+  },
+  "tfidf": {
+    "state": "complete",
+    "queries": 1200,
+    "output_dir": "artifacts/candidates_stage7_tfidf",
+    "execution": {
+      "workers": 4,
+      "weight_cache_mib": 1024,
+      "seconds_this_invocation": 280.5028405910002,
+      "weight_cache_hits": 10392,
+      "weight_cache_misses": 14802
+    }
+  }
+}
+	Command being timed: ".venv-stage5/bin/python -u -m vibiomir.lexical_search run --workers 4"
+	User time (seconds): 688.92
+	System time (seconds): 28.69
+	Percent of CPU this job got: 255%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 4:40.94
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 5351472
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 2725930
+	Voluntary context switches: 605746
+	Involuntary context switches: 33017
+	Swaps: 0
+	File system inputs: 28817528
+	File system outputs: 1168648
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0
