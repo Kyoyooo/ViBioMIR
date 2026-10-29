@@ -1,0 +1,29 @@
+test_bm25_matches_hand_calculation_and_cosine_self_query_is_one (test_stage10_silver.ExperimentMathTest.test_bm25_matches_hand_calculation_and_cosine_self_query_is_one) ... ok
+test_boolean_and_fabricated_result_doc_ids_fail (test_stage10_silver.ExperimentMathTest.test_boolean_and_fabricated_result_doc_ids_fail) ... ok
+test_cache_reuses_duplicate_text_and_separates_model_revisions (test_stage10_silver.ExperimentMathTest.test_cache_reuses_duplicate_text_and_separates_model_revisions) ... ok
+test_candidate_vs_selection_loss_uses_independent_gold_spans (test_stage10_silver.ExperimentMathTest.test_candidate_vs_selection_loss_uses_independent_gold_spans) ... ok
+test_fusion_family_caps_ties_and_candidate_limits (test_stage10_silver.ExperimentMathTest.test_fusion_family_caps_ties_and_candidate_limits) ... ok
+test_output_caps_are_independent_and_silver_opt_in_is_required (test_stage10_silver.ExperimentMathTest.test_output_caps_are_independent_and_silver_opt_in_is_required) ... ok
+test_pareto_keeps_both_metrics_without_a_combined_score (test_stage10_silver.ExperimentMathTest.test_pareto_keeps_both_metrics_without_a_combined_score) ... ok
+test_pinned_snapshot_weight_formats_are_explicit (test_stage10_silver.ExperimentMathTest.test_pinned_snapshot_weight_formats_are_explicit) ... ok
+test_semantic_separator_atoms_use_separate_nontruncating_cache_policy (test_stage10_silver.ExperimentMathTest.test_semantic_separator_atoms_use_separate_nontruncating_cache_policy) ... ok
+test_changed_quotes_duplicate_sources_or_human_claim_are_rejected (test_stage10_silver.SilverBenchmarkTest.test_changed_quotes_duplicate_sources_or_human_claim_are_rejected) ... ok
+test_compiled_labels_remain_silver_and_exact_source_slices (test_stage10_silver.SilverBenchmarkTest.test_compiled_labels_remain_silver_and_exact_source_slices) ... ok
+test_full_offline_pipeline_controls_resume_and_output_integrity (test_stage10_silver.SilverBenchmarkTest.test_full_offline_pipeline_controls_resume_and_output_integrity) ... {"phase": "chunks", "strategy": "structure", "chunks": 3}
+{"phase": "chunks", "strategy": "fixed", "chunks": 3}
+{"phase": "chunks", "strategy": "semantic", "chunks": 3}
+{"phase": "chunks", "strategy": "target256", "chunks": 3}
+{"phase": "chunks", "strategy": "overlap0", "chunks": 3}
+{"phase": "rerank", "query_id": 100001, "pairs": 3}
+{"phase": "rerank", "query_id": 100002, "pairs": 3}
+{"phase": "rerank", "query_id": 100003, "pairs": 3}
+ok
+test_human_comparison_gate_is_not_weakened (test_stage10_silver.SilverBenchmarkTest.test_human_comparison_gate_is_not_weakened) ... ok
+test_seed_language_and_corpus_signature_must_match (test_stage10_silver.SilverBenchmarkTest.test_seed_language_and_corpus_signature_must_match) ... ok
+test_source_validation_rejects_rewritten_or_orphan_chunks (test_stage10_silver.SilverBenchmarkTest.test_source_validation_rejects_rewritten_or_orphan_chunks) ... ok
+test_web_markup_preserves_comparisons_and_rejects_missing_abstract (test_stage10_silver.SilverBenchmarkTest.test_web_markup_preserves_comparisons_and_rejects_missing_abstract) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.469s
+
+OK
