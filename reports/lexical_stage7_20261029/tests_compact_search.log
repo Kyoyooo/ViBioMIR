@@ -1,0 +1,94 @@
+test_float64_scores_and_ranking_match_original_sql_both_methods (test_stage7_search.CompactLexicalTest.test_float64_scores_and_ranking_match_original_sql_both_methods) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+/home/duyhoang/Downloads/AI_Guru/tests/test_stage7_search.py:43: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x723cb210b6a0>
+  self.assertEqual({k:v for k,v in a.items() if k!='score'}, {k:v for k,v in b.items() if k!='score'})
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/tests/test_stage7_search.py:43: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x723cb21d31f0>
+  self.assertEqual({k:v for k,v in a.items() if k!='score'}, {k:v for k,v in b.items() if k!='score'})
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_native_and_python_arrays_are_byte_identical (test_stage7_search.CompactLexicalTest.test_native_and_python_arrays_are_byte_identical) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+{"state":"complete","scanned_postings":3,"selected_postings":3,"sqlite":"3.45.1"}
+ok
+test_one_and_two_workers_and_pause_resume_are_equivalent (test_stage7_search.CompactLexicalTest.test_one_and_two_workers_and_pause_resume_are_equivalent) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+{"phase": "lexical_query", "id": 1, "complete": 1, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 2, "complete": 2, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 3, "complete": 3, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 4, "complete": 4, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 1, "complete": 1, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 2, "complete": 2, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 3, "complete": 3, "total": 4, "seconds": 0.01}
+{"phase": "lexical_query", "id": 4, "complete": 4, "total": 4, "seconds": 0.01}
+ok
+test_projection_checksum_and_different_query_cannot_be_reused (test_stage7_search.CompactLexicalTest.test_projection_checksum_and_different_query_cannot_be_reused) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+test_ties_use_chunk_ids_and_do_not_return_unmatched_zeroes (test_stage7_search.CompactLexicalTest.test_ties_use_chunk_ids_and_do_not_return_unmatched_zeroes) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+test_validated_lexical_candidates_bind_to_stage9_source_and_queries (test_stage7_search.CompactLexicalTest.test_validated_lexical_candidates_bind_to_stage9_source_and_queries) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+{"phase": "lexical_query", "id": 1, "complete": 1, "total": 4, "seconds": 0.0}
+{"phase": "lexical_query", "id": 2, "complete": 2, "total": 4, "seconds": 0.0}
+{"phase": "lexical_query", "id": 3, "complete": 3, "total": 4, "seconds": 0.0}
+{"phase": "lexical_query", "id": 4, "complete": 4, "total": 4, "seconds": 0.0}
+ok
+test_weight_cache_is_bounded_and_reuses_same_values (test_stage7_search.CompactLexicalTest.test_weight_cache_is_bounded_and_reuses_same_values) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 1.873s
+
+OK
