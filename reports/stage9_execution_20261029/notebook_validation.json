@@ -1,0 +1,11 @@
+{
+  "validation": "passed",
+  "checks": [
+    "all code cells parse",
+    "execution counts null",
+    "outputs empty"
+  ],
+  "code_cells": 5,
+  "sha256": "6b3294510760387623962a53ce9e3d5b246e7f176ca6848610c7f69d37d75168",
+  "gpu_cells_executed": false
+}
