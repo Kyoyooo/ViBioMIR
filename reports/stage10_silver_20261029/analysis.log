@@ -1,0 +1,9 @@
+{
+  "state": "complete_silver_pilot",
+  "validation": "passed",
+  "queries": 30,
+  "runs": 25,
+  "review_pairs": 954,
+  "human_reviewed": false,
+  "report": "reports/stage10_silver_20261029/RESULTS.json"
+}
