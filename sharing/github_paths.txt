@@ -8,6 +8,7 @@ docs/
 configs/
 colab/
 vibiomir/
+native/
 taxonomy/
 exploration/
 scripts/
@@ -23,6 +24,9 @@ requirements-baseline-cpu.txt
 requirements-stage7.txt
 requirements-stage8.txt
 requirements-stage8-colab.txt
+requirements-stage9.txt
+requirements-stage9-colab.txt
+requirements-stage10.txt
 requirements-stage5-colab.txt
 requirements-stage5-semantic.txt
 sharing/
