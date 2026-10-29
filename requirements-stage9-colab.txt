@@ -1,0 +1,5 @@
+# Standalone dependencies included in the portable S09 bundle.
+torch>=2.6,<3
+transformers==4.57.1
+tokenizers==0.22.1
+safetensors>=0.4,<1
