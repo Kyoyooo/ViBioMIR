@@ -1,0 +1,48 @@
+{
+  "state": "complete_silver_pilot",
+  "human_reviewed": false,
+  "fixture_tests": {
+    "stage10": 16,
+    "existing_evaluator": 8,
+    "existing_human_gates": 7,
+    "passed": 31,
+    "failed": 0
+  },
+  "actual_model_smoke": "model_smoke.json; three real pinned pretrained models on CPU",
+  "recorded_invocations": {
+    "embedding_preflight": {
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "5:04.86",
+      "Maximum resident set size (kbytes)": "2686284",
+      "Swaps": "0",
+      "Exit status": "2"
+    },
+    "completion": {
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "11:47.04",
+      "Maximum resident set size (kbytes)": "2702632",
+      "Swaps": "0",
+      "Exit status": "0"
+    },
+    "completed_run_reuse": {
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:00.37",
+      "Maximum resident set size (kbytes)": "45940",
+      "Swaps": "0",
+      "Exit status": "0"
+    }
+  },
+  "timing_interpretation": "Completion reused 1469 verified real vector cache entries from the embedding preflight. BGE phase time in COST.json is cache lookup/search, not cold encoding. Logs exclude model downloads and separate smoke tests.",
+  "final_cached_vectors": 2014,
+  "unique_reranker_pairs": 600,
+  "unique_reranker_pair_windows": 621,
+  "ranked_pairs_before_cache_deduplication": 600,
+  "gpu_used": false,
+  "files": {
+    "artifacts/stage10_silver_v1/benchmark.json": "eef39870e1386ea2559821cc1c26b1de8469c2e847869ebc4090059286782a99",
+    "artifacts/stage10_silver_v1/CORPUS.json": "7f39e78de153560e5c0792357e4db30acb4e4ea01872a1cfd62c0ec03d2a62c1",
+    "artifacts/stage10_silver_v1/experiments/manifest.json": "a15d9ac90e1a792b911bc1c1c1ae98df91e89a4eddf651a8a18de7bd20ecc6a2",
+    "artifacts/stage10_silver_v1/experiments/VALIDATION.json": "a63504a9a1c0871612821d728ab3d6a3b3714a14e72e3ea8e7afda6d438b977d",
+    "reports/stage10_silver_20261029/RESULTS.json": "274ff4fb4dd428a2e6c7648e537ceb9cd924002a2371b3182c83a28defd0c333"
+  },
+  "review_pairs": 954,
+  "production_configuration_changed": false,
+  "clinical_and_human_acceptance": "pending"
+}
