@@ -1,0 +1,41 @@
+{
+  "schema": "vibiomir-stage9-v1",
+  "queries": "Data/official/ViBioMIR/query.parquet",
+  "chunk_dir": "artifacts/chunks_stage5_full_structure",
+  "output_dir": "artifacts/retrieval_stage9_hybrid_rrf",
+  "branches": [
+    {
+      "name": "bge_m3_original",
+      "family": "dense",
+      "facet_id": "original",
+      "candidate_dir": "artifacts/candidates_stage8_bge"
+    },
+    {
+      "name": "bm25_original",
+      "family": "lexical",
+      "facet_id": "original",
+      "candidate_dir": "artifacts/candidates_stage7_bm25"
+    }
+  ],
+  "fusion": "rrf",
+  "rrf_k": 60,
+  "lexical_alpha": 0.5,
+  "fused_top_k": 1000,
+  "rerank_top_k": 200,
+  "workers": 2,
+  "reranker": {
+    "model_id": "BAAI/bge-reranker-v2-m3",
+    "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+    "commit_date": "2024-06-24",
+    "max_pair_tokens": 1024,
+    "query_window_tokens": 384,
+    "window_overlap": 32,
+    "aggregation": "mean_query_windows_of_max_passage_logit"
+  },
+  "selection": {
+    "max_docs": 20,
+    "max_chunks": 40,
+    "max_chunks_per_doc": 4,
+    "overlap_iou_threshold": 0.8
+  }
+}
