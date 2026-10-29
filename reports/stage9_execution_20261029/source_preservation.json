@@ -1,0 +1,13 @@
+{
+  "s08_plan_signature": "4dec3ed59d064802207283fbcf3a4c1b03f200c05f234d522deaa50dd2045f0c",
+  "s08_frozen_modules": {
+    "dense_models.py": true,
+    "dense_stage8.py": true,
+    "retrieval_contracts.py": true,
+    "chunk_batches.py": true,
+    "io.py": true
+  },
+  "lexical_projection.py_sha256": "10a262c181c2318d94ef7c7e927105d496c7659b04ae44d43b5684a214820a52",
+  "lexical_search.py_sha256": "886e3573345d2772ab31550acdeb3f516ddfe0eb3a183682c3e542866d84d95b",
+  "lexical_stage7.py_sha256": "c793becbe9a2525056c0b13849e101c8abc017f82408089fb4eb7dcc9a4e1625"
+}
