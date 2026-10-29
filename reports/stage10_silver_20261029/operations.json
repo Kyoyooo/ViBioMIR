@@ -1,0 +1,33 @@
+{
+  "ann": {
+    "scope": "60-document pilot, IVF-Flat; not production IVF-PQ",
+    "k": 200,
+    "nlist": 6,
+    "nprobe": {
+      "1": {
+        "recall_at_k": 0.23233333333333334,
+        "seconds": 0.0012026330005028285
+      },
+      "6": {
+        "recall_at_k": 1.0,
+        "seconds": 0.001461940999433864
+      }
+    }
+  },
+  "parallel_search": {
+    "1": {
+      "seconds": 0.008642230000987183,
+      "same_order_as_one_worker": true
+    },
+    "2": {
+      "seconds": 0.008831475999613758,
+      "same_order_as_one_worker": true
+    },
+    "3": {
+      "seconds": 0.007815394001227105,
+      "same_order_as_one_worker": true
+    }
+  },
+  "seed": 270126,
+  "restart": "immutable chunk checkpoints + model/text/policy vector cache + signed outputs"
+}
