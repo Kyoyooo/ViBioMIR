@@ -1,0 +1,12 @@
+{
+  "validation": "passed",
+  "scope": "bounded silver pilot only",
+  "human_reviewed": false,
+  "queries": 30,
+  "documents": 60,
+  "runs": 25,
+  "source_evidence_verified": true,
+  "manifest_sha256": "a15d9ac90e1a792b911bc1c1c1ae98df91e89a4eddf651a8a18de7bd20ecc6a2",
+  "production_configuration_changed": false,
+  "human_acceptance": "pending"
+}
