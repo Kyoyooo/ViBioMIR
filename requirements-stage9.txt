@@ -1,0 +1,4 @@
+# CPU preparation/export and offline fixtures; no model-weight download needed.
+pyarrow>=20,<23
+transformers==4.57.1
+tokenizers==0.22.1
