@@ -1,0 +1,54 @@
+{
+  "performed_on": "2026-10-30",
+  "removed": [
+    {
+      "path": "artifacts/stage10_silver_v1/research/preflight_checkpoint",
+      "reason": "Failed superseded pilot with no completed validation",
+      "bytes": 1945522,
+      "files": [
+        {
+          "path": "artifacts/stage10_silver_v1/research/preflight_checkpoint/.store.lock",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "path": "artifacts/stage10_silver_v1/research/preflight_checkpoint/chunks_fixed.json",
+          "sha256": "0e05a4df4803534037ad06ee985ad19c8c251ecdfbc9f7383ee5110f5c82bce0"
+        },
+        {
+          "path": "artifacts/stage10_silver_v1/research/preflight_checkpoint/chunks_structure.json",
+          "sha256": "6fdb7fc112cba93259aead81b72efe3e04086f7858b3d76ca133712fbe6bb951"
+        },
+        {
+          "path": "artifacts/stage10_silver_v1/research/preflight_checkpoint/features.sqlite3",
+          "sha256": "94f6767662e9e6c03ccae7453d00150a4b0ade352a548bd3f532e50f361094a3"
+        },
+        {
+          "path": "artifacts/stage10_silver_v1/research/preflight_checkpoint/manifest.json",
+          "sha256": "e12a7e2520218ec7665bfe2f0e8fe335a1575618748088ecfbcf3f153746d70d"
+        }
+      ]
+    },
+    {
+      "path": "artifacts/stage10_silver_v1/research/pubmed_sources.xml",
+      "reason": "Unused HTML error response saved with XML extension; valid Europe PMC receipt retained",
+      "bytes": 3882,
+      "files": [
+        {
+          "path": "artifacts/stage10_silver_v1/research/pubmed_sources.xml",
+          "sha256": "446dbd997e988fd9adfa8ae032bfb654d411fabd90bada21933d7f5b8b606bf0"
+        }
+      ]
+    }
+  ],
+  "regenerable_cache_cleanup": "Project __pycache__ folders removed after final verification; virtual environment untouched",
+  "retained": [
+    "Canonical S03/S04 stores and all successful S05 fixed/structural/semantic stores",
+    "S06/S07/S08 indexes, mappings, vectors and candidate files",
+    "Prepared S09 evidence, both workers, CPU and reranked results, validated provisional submission",
+    "S10 successful experiment, source snapshots/receipts, final features and human review templates",
+    "artifacts/stage10_silver_v1/research/encoding_checkpoint/features.sqlite3",
+    "Historical audit manifests, earlier reports and successful smoke fixtures",
+    "Owner-managed Upload_to_Drive snapshots and raw datasets/model caches"
+  ],
+  "reason_for_preserving_encoding_checkpoint": "Current frozen S10 configuration imports its verified feature cache; deleting it would break reproduction."
+}
