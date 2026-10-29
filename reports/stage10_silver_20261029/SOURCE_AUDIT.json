@@ -1,0 +1,263 @@
+{
+  "label_tier": "silver",
+  "human_reviewed": false,
+  "questions": 30,
+  "question_languages": {
+    "vi": 10,
+    "zh": 10,
+    "en": 10
+  },
+  "corpus_languages": {
+    "vi": 20,
+    "zh": 20,
+    "en": 20
+  },
+  "corpus_sha256": "7f39e78de153560e5c0792357e4db30acb4e4ea01872a1cfd62c0ec03d2a62c1",
+  "benchmark_sha256": "eef39870e1386ea2559821cc1c26b1de8469c2e847869ebc4090059286782a99",
+  "online_alignment": [
+    {
+      "query_id": 100001,
+      "doc_id": 748352,
+      "url": "https://www.vinmec.com/vie/bai-viet/nhan-dien-tieng-thoi-tim-o-tre-so-sinh-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100002,
+      "doc_id": 740350,
+      "url": "https://www.vinmec.com/vie/bai-viet/da-dieu-tri-ung-thu-tuyen-giap-duoc-3-nam-lieu-co-sinh-con-duoc-khong-vi",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100003,
+      "doc_id": 736188,
+      "url": "https://www.vinmec.com/vie/bai-viet/cac-loai-vitamin-dinh-duong-cho-tre-beo-phi-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100004,
+      "doc_id": 734233,
+      "url": "https://www.vinmec.com/vie/bai-viet/benh-co-tim-di-truyen-do-amyloid-lien-quan-toi-transthyretin-la-gi-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100005,
+      "doc_id": 744189,
+      "url": "https://www.vinmec.com/vie/bai-viet/hoi-chung-nao-gan-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100006,
+      "doc_id": 742611,
+      "url": "https://www.vinmec.com/vie/bai-viet/dieu-tri-vo-sinh-7-cau-hoi-ve-tiem-tinh-trung-vao-bao-tuong-noan-icsi-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100007,
+      "doc_id": 739563,
+      "url": "https://www.vinmec.com/vie/bai-viet/co-dung-thuoc-di-ung-cho-ba-bau-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100008,
+      "doc_id": 739496,
+      "url": "https://www.vinmec.com/vie/bai-viet/co-che-hinh-thanh-soi-tui-mat-vi",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100009,
+      "doc_id": 750317,
+      "url": "https://www.vinmec.com/vie/bai-viet/polyp-da-day-co-tien-luong-tot",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100010,
+      "doc_id": 736578,
+      "url": "https://www.vinmec.com/vie/bai-viet/cac-trieu-chung-ha-duong-huyet-khi-vua-bat-dau-vi",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100011,
+      "doc_id": 3981208,
+      "url": "https://www.msdmanuals.cn/professional/cardiovascular-disorders/coronary-artery-disease/overview-of-coronary-artery-disease",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100012,
+      "doc_id": 3981486,
+      "url": "https://www.msdmanuals.cn/professional/dermatologic-disorders/benign-skin-tumors-growths-and-vascular-lesions/keloids",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100013,
+      "doc_id": 3982858,
+      "url": "https://www.msdmanuals.cn/professional/infectious-diseases/immunization/hepatitis-b-hepb-vaccine",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100014,
+      "doc_id": 3979190,
+      "url": "https://www.msdmanuals.cn/home/disorders-of-nutrition/overview-of-nutrition/vitamins-and-minerals",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100015,
+      "doc_id": 3981435,
+      "url": "https://www.msdmanuals.cn/professional/dental-disorders/periodontal-disorders/periodontitis",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100016,
+      "doc_id": 3983577,
+      "url": "https://www.msdmanuals.cn/professional/nutritional-disorders/vitamin-deficiency-dependency-and-toxicity/niacin-toxicity",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100017,
+      "doc_id": 3981872,
+      "url": "https://www.msdmanuals.cn/professional/eye-disorders/orbital-diseases/inflammatory-orbital-disease",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100018,
+      "doc_id": 3979411,
+      "url": "https://www.msdmanuals.cn/home/eye-disorders/symptoms-of-eye-disorders/eye-flashes-and-floaters",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100019,
+      "doc_id": 3981564,
+      "url": "https://www.msdmanuals.cn/professional/dermatologic-disorders/nail-disorders/onychomycosis",
+      "online_exact_normalized_quote": false,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100020,
+      "doc_id": 3978518,
+      "url": "https://www.msdmanuals.cn/home/brain-spinal-cord-and-nerve-disorders/meningitis/subacute-and-chronic-meningitis",
+      "online_exact_normalized_quote": true,
+      "authority": "stored S05 source; not a clinical validation",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100021,
+      "doc_id": 6477918,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30012832/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100022,
+      "doc_id": 6477910,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30012779/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100023,
+      "doc_id": 6477920,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30012851/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100024,
+      "doc_id": 6477904,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30012663/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100025,
+      "doc_id": 6477976,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30013412/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100026,
+      "doc_id": 6477960,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30013335/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100027,
+      "doc_id": 6478007,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30013557/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100028,
+      "doc_id": 6478002,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30013511/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100029,
+      "doc_id": 6478016,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30013639/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    },
+    {
+      "query_id": 100030,
+      "doc_id": 6478057,
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30013888/",
+      "online_exact_normalized_quote": true,
+      "authority": "downloaded PubMed abstract through Europe PMC",
+      "display_spacing_insensitive_quote_match": true
+    }
+  ],
+  "generation_origin": "assistant-generated silver; no human author or clinician claimed",
+  "eligibility": "research-only; excluded from competition training and production selection",
+  "evidence_policy": "exact immutable source slices; live whitespace differences documented, not rewritten",
+  "production_scope": "English abstracts added to S10-only corpus; production S05/S08/S09 unchanged"
+}
