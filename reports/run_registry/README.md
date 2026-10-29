@@ -1,6 +1,6 @@
 # Run metadata for team review
 
-These are small copies observed through 2026-10-29, not runnable checkpoints.
+These are small copies observed through 2026-10-30, not runnable checkpoints.
 [index.json](index.json) records original source directories and observation
 time; newer entries have an explicit `observed_on` date. Original artifacts and all their data parts belong on Drive. A registry
 copy must never replace an original manifest or be used to resume a run.
@@ -28,11 +28,19 @@ copy must never replace an original manifest or be used to resume a run.
 | `stage8_queries_20261029` | All 1,200 query vectors validated | [Manifest](stage8_queries_20261029/manifest.json), [validation](stage8_queries_20261029/VALIDATION.json) |
 | `stage8_index_20261029` | Full IVF-PQ index; all unique vector IDs and seals verified | [Manifest](stage8_index_20261029/manifest.json), [validation](stage8_index_20261029/VALIDATION.json) |
 | `stage8_candidates_20261029` | 1,200 queries × 500 dense candidates; every mapping checked | [Manifest](stage8_candidates_20261029/manifest.json), [validation](stage8_candidates_20261029/VALIDATION.json) |
+| `stage7_projection_20261029` | Query-bound compact postings; 2,819 terms / 234,349,921 postings; validation passed | [Manifest](stage7_projection_20261029/manifest.json), [validation](stage7_projection_20261029/VALIDATION.json) |
+| `stage7_bm25_candidates_20261029` | Full BM25 retrieval: 1,200 queries / 600,000 mapped candidates; validation passed | [Manifest](stage7_bm25_candidates_20261029/manifest.json), [validation](stage7_bm25_candidates_20261029/VALIDATION.json) |
+| `stage7_tfidf_candidates_20261029` | Full TF-IDF retrieval: 1,200 queries / 600,000 mapped candidates; validation passed | [Manifest](stage7_tfidf_candidates_20261029/manifest.json), [validation](stage7_tfidf_candidates_20261029/VALIDATION.json) |
+| `stage9_prepared_20261029` | All 1,200 queries / 240,000 candidate pairs resolved; two GPU workers prepared | [Manifest](stage9_prepared_20261029/manifest.json) |
+| `stage9_hybrid_baseline_20261029` | All 1,200 baseline results / 42,051 chunks; original-evidence validation passed | [Manifest](stage9_hybrid_baseline_20261029/manifest.json), [validation](stage9_hybrid_baseline_20261029/VALIDATION.json) |
+| `stage9_hybrid_reranked_20261030` | All 1,200 reranked results / 41,086 chunks; original-evidence validation passed; later Dashboard scores recorded separately | [Manifest](stage9_hybrid_reranked_20261030/manifest.json), [validation](stage9_hybrid_reranked_20261030/VALIDATION.json) |
 
 `chunks: 0` in a `prepare-chunk-inputs` manifest means that preparation has
 finished before chunk generation starts; it does not mean the source is empty.
 
-Human/clinical QA and official-ID eligibility remain pending. Technical
+Human/clinical QA remains pending. Exported IDs were subsequently checked against
+the saved official allowlist; [the later score record](../baseline_submission_20261030/README.md)
+preserves the owner-reported Dashboard metrics without rewriting historical flags. Technical
 validation does not imply a final corpus freeze or measured retrieval quality.
 Historical building snapshots remain unchanged. Later dated snapshots record
 completed validation separately; they do not retroactively change earlier
