@@ -1,6 +1,6 @@
 # ViBioMIR — spec-driven development from Mentor Day to a complete retrieval system
 
-**Version:** 1.13 · **Date:** 2026-10-29 · **Status:** specification for implementation;
+**Version:** 1.17 · **Date:** 2026-10-30 · **Status:** specification for implementation;
 local-audit-first scope, with manual execution from delivery 3 onward.
 
 Target: Vietnamese-query retrieval of original VI–EN–ZH documents and evidence,
@@ -17,6 +17,61 @@ Existing evidence: [EDA report](../reports/eda/REPORT.md),
 [corpus summary](../reports/eda/corpus_summary.json),
 [reference reconciliation](../reports/eda/references_summary.json).
 Language and compatibility policy: [development conventions](DEVELOPMENT_CONVENTIONS.md).
+
+**v1.17 scored baseline, 2026-10-30:** both owner-run S09 rerank workers and
+local source validation completed, producing 1,200 results with 24,000 document
+predictions and 41,086 chunks. The owner reported Dashboard final score
+**0.0916**, document macro F2 **0.1323** and chunk macro F2 **0.0509**.
+The [score and optimization record](../reports/baseline_submission_20261030/README.md)
+preserves all metrics, unknown phase/submission ID, exact local artifact hashes
+and diagnostic experiments. S10 completed an isolated 30-question/60-document,
+25-configuration silver pilot; human/clinical QA, the 300-document ICD audit,
+full reviewed comparisons and production ANN acceptance remain open. This
+provisional submission does not close all S10–S12 acceptance gates. Preserve
+the baseline and compare changes in new versioned runs rather than modifying
+sealed producer modules/manifests. No new retrieval/model processing is part
+of this score-recording and cleanup closeout.
+
+**v1.16 S09 CPU execution and GPU handoff, 2026-10-29 (historical):** the owner
+now authorizes S09 execution and explicitly chooses owner-run Colab reranking.
+The assistant executed 22 passing fixtures, full-query BM25 + BGE-M3 RRF
+preparation, baseline export and original-stage-5 evidence validation, and
+created the portable two-worker GPU bundle. See
+[S09 execution evidence](../reports/stage9_execution_20261029/README.md) and
+[runbook](RETRIEVAL_STAGE9.md). Automatic VRAM budgets, per-query resume,
+one validated return ZIP per worker and one local `finish` command complete
+the handoff. Neural inference remains pending the owner; A13/A14 relevance and
+clinical acceptance, experiments and tuning remain at S10. Official eligibility
+and competition packaging remain at S11. Historical manual-only statements
+below are superseded for this authorized CPU execution.
+
+**v1.15 S07 execution resumed/completed, later on 2026-10-29:** the owner
+explicitly authorizes full lexical query execution and optimization, reversing
+the earlier deferral. The original index/analyzer/frozen modules remain
+unchanged. A sequential compact-postings projection, shared bounded term-weight
+cache and four NumPy query threads produced all 1,200 BM25 and TF-IDF queries,
+600,000 candidates per method; both full mapping validations passed. Seven
+new fixtures passed, and 48 real-index SQL comparisons have identical ranks
+with maximum absolute score discrepancy about 1.1e-16. See
+[S07 execution evidence](../reports/lexical_stage7_20261029/README.md) and
+[runbook](LEXICAL_RETRIEVAL_STAGE7.md). S09's current default is BM25 + BGE-M3
+via RRF; TF-IDF stays a control. Current S09 input binding is checked for all
+queries, but full S09 processing/GPU jobs remain owner-run. These are technical
+retrieval outputs, not relevance/clinical acceptance. Earlier delivery/deferral
+notes below are historical and are superseded by this execution record.
+
+**v1.14 S09 source delivery, 2026-10-29:** deterministic RRF/weighted
+fusion, family weight caps, source-mapped intent/facet metadata, bounded original
+query reranking with the pinned public BGE-reranker-v2-m3, checkpointed 1–6
+CUDA workers (two by default), document grouping, same-version span deduplication,
+CPU baseline/reranked result export and original-chunk validation are supplied.
+The current route reuses validated dense candidates; full S07 querying remains
+deferred. See [S09 runbook](RETRIEVAL_STAGE9.md). Tests and GPU/CPU jobs for this
+new stage remain owner-run; no S09 results or A13/A14 clinical-quality acceptance
+are claimed from source delivery. New relevance/QA/tuning remains at S10 and
+official eligibility/submission at S11. Original queries are retained; optional
+facet retrieval requires explicitly mapped source spans and separately validated
+candidate branches, without automatic clinical query rewriting.
 
 **v1.13 observed baseline, 2026-10-29:** S06 rules (855,745 document
 annotations), S07 BM25/TF-IDF index (5,512,624 chunks) and S08 BGE-M3
@@ -1437,8 +1492,9 @@ and cross-run checks completed successfully. Independent clinical/main-content
 QA and the final working-corpus freeze remain pending. S05 full structural and
 semantic stores have technical validation. S06 rules, the S07 index and the
 S08 BGE-M3 baseline have the dated evidence linked above; full S07 candidate
-generation is deferred by the owner. S09 onward remains future work, while
-S03 is deferred. Supplied code is not proof of meaning-preserving cleaning or
+generation was initially deferred and is now complete under v1.15. S09
+CPU preparation/baseline/validation and portable packaging are complete under
+v1.16; neural reranking awaits owner-run Colab; S10 onward remains future work, while S03 is deferred. Supplied code is not proof of meaning-preserving cleaning or
 final corpus QA. The table describes full target scope, including experiments
 and acceptance work deferred to S10.
 
