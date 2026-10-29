@@ -1,0 +1,5 @@
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.402 seconds.
+Prefix dict has been built successfully.
+{"validation": "passed", "checks": 48, "full_corpus_global_statistics": true, "max_absolute_error": 1.1102230246251565e-16, "quality_measured": false}
