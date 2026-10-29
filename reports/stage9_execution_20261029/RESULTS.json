@@ -1,0 +1,182 @@
+{
+  "observed_on": "2026-10-29",
+  "scope": "Owner-authorized full S09 CPU processing and prepared owner-run Colab GPU handoff",
+  "prepared": {
+    "state": "complete",
+    "signature": "a68ae3f7d23f4f1fb30a3bc0438b1293415e572a69f680eb498a2f8523db1756",
+    "manifest_sha256": "e4ac52514051a65c585951885ca11b343498b9c65d04718d530943bcfe6a4fc5",
+    "queries": 1200,
+    "candidates": 240000,
+    "unique_evidence_chunks": 179244,
+    "source_batches": 1695,
+    "source": {
+      "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+      "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+      "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+      "documents": 855745,
+      "chunks": 5512624,
+      "batches": 1712
+    },
+    "query_file_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+    "branches": [
+      {
+        "name": "bge_m3_original",
+        "family": "dense",
+        "run_signature": "b3bb6d94efebb6b80495705a824a51e2e14a6f8681b32c35f4932bed2408a703",
+        "manifest_sha256": "d4dc947c2e3288f0ad6da3f4f0615ab405dd58f7e69f5b0c6fea06c15f043e66"
+      },
+      {
+        "name": "bm25_original",
+        "family": "lexical",
+        "run_signature": "9bc6f34a6328f48e8575994a8d43c2ab5c04a34beb0e5ef7366e6fbfca4b41cc",
+        "manifest_sha256": "c2b922130e97a13dfea7f7ae8700a427454f092c0df4d823b570da9857d5af90"
+      }
+    ],
+    "code": {
+      "stage9_pipeline.py": "c47aa5d7f6a58bf578bbe92c14b93a89bab6086b042d4a5dd0f686a723da09ae",
+      "stage9_core.py": "488979818141dda477c94010692f32656cc74d7a0340021cf9f3c12b6a240325",
+      "stage9_reranker.py": "01b9165dd31b96bcc73c631e98fea8f18d71c586b7fa031da727c215cf571891",
+      "retrieval_contracts.py": "5c4281e9059a0ff205c833bd60372827087ab80c5e2c7aaf37f845f4b6b51d79",
+      "chunk_batches.py": "0d8ac3bbfe6db9eae12e699aafc9843ef15b835669280f090c1a8cd4cc4231d8",
+      "io.py": "a407bc4837869f7d47aa00f88553bbfb6ba2e5e5c26f9249f8969f04a62a3b37"
+    },
+    "workers": [
+      {
+        "worker_id": 0,
+        "queries": 600,
+        "candidates": 120000
+      },
+      {
+        "worker_id": 1,
+        "queries": 600,
+        "candidates": 120000
+      }
+    ]
+  },
+  "baseline": {
+    "counts": {
+      "queries": 1200,
+      "documents": 24000,
+      "chunks": 42051,
+      "empty_document_queries": 0,
+      "empty_chunk_queries": 0
+    },
+    "validation": {
+      "validation": "passed",
+      "queries": 1200,
+      "scope": "all_queries",
+      "mode": "baseline",
+      "chunks": 42051,
+      "unique_selected_chunks": 37626,
+      "original_evidence_verified": true,
+      "manifest_sha256": "c2f425381150d5a64dcf439dbb93300e10236934cb8cd18026a4686f144775c4",
+      "predictions_sha256": "487dff16a611938dc2697098607f8e77958db97a2e15de55d1c1d2d3d200abbe",
+      "quality_measured": false,
+      "official_submission_ready": false,
+      "official_eligibility": "pending S11"
+    }
+  },
+  "tests": {
+    "run": 22,
+    "passed": 22,
+    "skipped": 0,
+    "real_gpu_inference": false,
+    "actual_local_fast_tokenizer_checked": true
+  },
+  "bundle": {
+    "validation": "passed",
+    "files_checked": 1209,
+    "compressed_bytes": 238769633,
+    "uncompressed_bytes": 239027594,
+    "sha256": "fe95dc61a160584579c9d5f1d27f48e1272754e57c8d75640b7b3bc6a7f869da",
+    "prepared_signature": "a68ae3f7d23f4f1fb30a3bc0438b1293415e572a69f680eb498a2f8523db1756",
+    "all_payload_hashes_verified": true,
+    "isolated_portable_import_and_packet": true,
+    "gpu_inference_executed": false
+  },
+  "notebook": {
+    "validation": "passed",
+    "checks": [
+      "all code cells parse",
+      "execution counts null",
+      "outputs empty"
+    ],
+    "code_cells": 5,
+    "sha256": "6b3294510760387623962a53ce9e3d5b246e7f176ca6848610c7f69d37d75168",
+    "gpu_cells_executed": false
+  },
+  "execution": {
+    "tests_stage9": {
+      "User time (seconds)": "1.33",
+      "System time (seconds)": "0.31",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:01.74",
+      "Maximum resident set size (kbytes)": "370400",
+      "Swaps": "0",
+      "Exit status": "0"
+    },
+    "prepare_pilot": {
+      "User time (seconds)": "13.39",
+      "System time (seconds)": "0.63",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:14.14",
+      "Maximum resident set size (kbytes)": "400404",
+      "Swaps": "0",
+      "Exit status": "0"
+    },
+    "prepare_full": {
+      "User time (seconds)": "169.85",
+      "System time (seconds)": "9.84",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "3:09.61",
+      "Maximum resident set size (kbytes)": "484264",
+      "Swaps": "0",
+      "Exit status": "0"
+    },
+    "export_baseline": {
+      "User time (seconds)": "17.07",
+      "System time (seconds)": "1.01",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:18.11",
+      "Maximum resident set size (kbytes)": "460840",
+      "Swaps": "0",
+      "Exit status": "0"
+    },
+    "bundle": {
+      "User time (seconds)": "17.29",
+      "System time (seconds)": "0.84",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "0:18.13",
+      "Maximum resident set size (kbytes)": "32980",
+      "Swaps": "0",
+      "Exit status": "0"
+    },
+    "validate_baseline": {
+      "User time (seconds)": "105.85",
+      "System time (seconds)": "1.92",
+      "Elapsed (wall clock) time (h:mm:ss or m:ss)": "1:50.12",
+      "Maximum resident set size (kbytes)": "485992",
+      "Swaps": "0",
+      "Exit status": "0"
+    }
+  },
+  "artifact_bytes": {
+    "artifacts/retrieval_stage9_hybrid_rrf": 1273747922,
+    "artifacts/results_stage9_hybrid_baseline": 297065382,
+    "artifacts/stage9_rerank_colab.zip": 238769633
+  },
+  "gpu_execution": {
+    "state": "pending_owner_colab",
+    "model": "BAAI/bge-reranker-v2-m3",
+    "revision": "953dc6f6f85a1b2dbfca4c34a2796e7dde08d41e",
+    "worker_ids": [
+      0,
+      1
+    ],
+    "return_dir": "artifacts/stage9_rerank_workers",
+    "return_files": [
+      "stage9_worker_0.zip",
+      "stage9_worker_1.zip"
+    ],
+    "local_finish": "python -m vibiomir.stage9_pipeline finish"
+  },
+  "quality_measured": false,
+  "clinical_qa": "pending S10",
+  "official_submission_ready": false,
+  "official_eligibility": "pending S11"
+}
