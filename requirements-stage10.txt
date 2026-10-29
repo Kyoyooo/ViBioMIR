@@ -1,0 +1,8 @@
+-r requirements-stage9.txt
+-r requirements-stage7.txt
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.9.0+cpu
+huggingface-hub==0.35.3
+numpy>=2,<3
+scikit-learn>=1.6,<2
+faiss-cpu>=1.12,<2
