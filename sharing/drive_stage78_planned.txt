@@ -7,5 +7,8 @@ artifacts/dense_stage8_bge_structure/query_vectors/
 artifacts/dense_stage8_bge_structure/index_ivfpq/
 artifacts/candidates_stage8_bge/
 # Existing frozen worker ZIPs/remote worker backups remain recovery assets.
-# Full S07 BM25/TF-IDF candidates are deferred; no completed folders are claimed.
+artifacts/candidates_stage7_bm25/
+artifacts/candidates_stage7_tfidf/
+# Optional reusable acceleration cache; original index + query set can rebuild it:
+artifacts/lexical_stage7_query_cache/
 # Environments, model caches, partial files and duplicate downloads stay out.
