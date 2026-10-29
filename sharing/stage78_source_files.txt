@@ -1,4 +1,4 @@
-# S07/S08 baseline verified 2026-10-29; full S07 queries deferred by owner.
+# S07/S08 baseline plus resumed exact lexical query completion, 2026-10-29.
 configs/lexical_stage7.json
 configs/dense_stage8.json
 requirements-stage7.txt
@@ -27,3 +27,9 @@ tests/test_stage78_validation.py
 docs/STAGES6_8_BASELINE_HANDOFF.md
 reports/stage678_baseline_20261029/
 reports/run_registry/
+vibiomir/lexical_projection.py
+vibiomir/lexical_search.py
+native/lexical_projection.cpp
+tests/test_stage7_search.py
+docs/LEXICAL_RETRIEVAL_STAGE7.md
+reports/lexical_stage7_20261029/
