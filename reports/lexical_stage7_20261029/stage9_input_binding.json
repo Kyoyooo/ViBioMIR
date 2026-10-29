@@ -1,0 +1,19 @@
+{
+  "validation": "passed",
+  "queries": 1200,
+  "families": [
+    "dense",
+    "lexical"
+  ],
+  "branches": [
+    "bge_m3_original",
+    "bm25_original"
+  ],
+  "fusion": "rrf",
+  "prepared_dir": "artifacts/retrieval_stage9_hybrid_rrf",
+  "common_source_signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+  "all_candidate_files_bound": true,
+  "full_preparation_executed": false,
+  "gpu_jobs_executed": false,
+  "seconds": 1.2304330489996573
+}
