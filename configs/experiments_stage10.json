@@ -1,0 +1,30 @@
+{
+  "schema": "vibiomir-stage10-pilot-v1",
+  "root": "artifacts/stage10_silver_v1",
+  "model_cache": "artifacts/stage10_models",
+  "tokenizer_dir": "artifacts/tokenizers/bge_m3_stage5",
+  "chunk_config": "configs/chunking_stage5.json",
+  "icd_config": "configs/icd_stage6.json",
+  "seed": 270126,
+  "threads": 4,
+  "candidate_k": 50,
+  "rerank_k": 20,
+  "bootstrap": 1000,
+  "selection": {
+    "max_docs": 5,
+    "max_chunks": 10,
+    "max_chunks_per_doc": 2,
+    "overlap_iou_threshold": 0.8
+  },
+  "feature_cache_import": {
+    "path": "artifacts/stage10_silver_v1/research/encoding_checkpoint/features.sqlite3",
+    "sha256": "649c5e6c78b9cbe8a25bce62390e01b4a8586cda4c6b8abbe3d914ef9bc9c407",
+    "runtime": {
+      "torch": "2.9.0+cpu",
+      "transformers": "4.57.1",
+      "tokenizers": "0.22.1",
+      "numpy": "2.5.4",
+      "faiss-cpu": "1.12.0"
+    }
+  }
+}
