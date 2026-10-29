@@ -1,0 +1,212 @@
+test_adapter_registry_is_recorded_without_changing_frozen_encoder (test_stage78_fast_tokenizer.FastTokenizerCompatibilityTest.test_adapter_registry_is_recorded_without_changing_frozen_encoder) ... ok
+test_all_windows_preserve_ids_offsets_overlap_and_unknown_content (test_stage78_fast_tokenizer.FastTokenizerCompatibilityTest.test_all_windows_preserve_ids_offsets_overlap_and_unknown_content) ... You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ok
+test_notebook_embeds_the_exact_adapter_and_uses_it_for_queries_and_workers (test_stage78_fast_tokenizer.FastTokenizerCompatibilityTest.test_notebook_embeds_the_exact_adapter_and_uses_it_for_queries_and_workers) ... ok
+test_original_fast_api_reproduces_reported_assertion_and_adapter_matches_native (test_stage78_fast_tokenizer.FastTokenizerCompatibilityTest.test_original_fast_api_reproduces_reported_assertion_and_adapter_matches_native) ... You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ok
+test_registered_bge_tokenizer_offline_when_available (test_stage78_fast_tokenizer.FastTokenizerCompatibilityTest.test_registered_bge_tokenizer_offline_when_available) ... You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding.
+ok
+test_analyzer_preserves_negation_units_accents_and_unspaced_han (test_stage78_retrieval.RetrievalTest.test_analyzer_preserves_negation_units_accents_and_unspaced_han) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_backup_restore_and_six_way_merge_match_source_mapping (test_stage78_retrieval.RetrievalTest.test_backup_restore_and_six_way_merge_match_source_mapping) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+ok
+test_bad_plan_overlap_is_rejected_even_after_resigning (test_stage78_retrieval.RetrievalTest.test_bad_plan_overlap_is_rejected_even_after_resigning) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_changed_lexical_configuration_cannot_reuse_index (test_stage78_retrieval.RetrievalTest.test_changed_lexical_configuration_cannot_reuse_index) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+test_drive_restore_reuses_vectors_and_recovers_registry_from_batch (test_stage78_retrieval.RetrievalTest.test_drive_restore_reuses_vectors_and_recovers_registry_from_batch) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 0}
+ok
+test_exact_dense_candidates_use_stable_original_chunk_ids (test_stage78_retrieval.RetrievalTest.test_exact_dense_candidates_use_stable_original_chunk_ids) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+/home/duyhoang/anaconda3/lib/python3.13/ast.py:100: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167807c0>
+  map(_convert, node.values)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/ast.py:100: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167806d0>
+  map(_convert, node.values)))
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_installed_real_analyzers_process_vi_en_zh (test_stage78_retrieval.RetrievalTest.test_installed_real_analyzers_process_vi_en_zh) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016780a90>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167809a0>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/jieba/_compat.py:18: DeprecationWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html
+  import pkg_resources
+Building prefix dict from the default dictionary ...
+Loading model from cache /tmp/jieba.cache
+Loading model cost 0.396 seconds.
+Prefix dict has been built successfully.
+ok
+test_lexical_pause_resume_global_df_and_hand_calculated_scores (test_stage78_retrieval.RetrievalTest.test_lexical_pause_resume_global_df_and_hand_calculated_scores) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+test_long_inputs_have_complete_mapped_windows (test_stage78_retrieval.RetrievalTest.test_long_inputs_have_complete_mapped_windows) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+/home/duyhoang/Downloads/AI_Guru/tests/test_stage78_retrieval.py:26: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167815d0>
+  return {'input_ids': [ord(char) for char in text], 'offset_mapping': [(i, i + 1) for i in range(len(text))]}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/tests/test_stage78_retrieval.py:26: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016c3bf10>
+  return {'input_ids': [ord(char) for char in text], 'offset_mapping': [(i, i + 1) for i in range(len(text))]}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/tests/test_stage78_retrieval.py:26: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30166e58a0>
+  return {'input_ids': [ord(char) for char in text], 'offset_mapping': [(i, i + 1) for i in range(len(text))]}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/Downloads/AI_Guru/tests/test_stage78_retrieval.py:26: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167808b0>
+  return {'input_ids': [ord(char) for char in text], 'offset_mapping': [(i, i + 1) for i in range(len(text))]}
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+test_mbert_pooling_excludes_special_and_padding_tokens (test_stage78_retrieval.RetrievalTest.test_mbert_pooling_excludes_special_and_padding_tokens) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_missing_worker_prevents_successful_merge (test_stage78_retrieval.RetrievalTest.test_missing_worker_prevents_successful_merge) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_nonfinite_vectors_are_rejected_even_with_updated_checksums (test_stage78_retrieval.RetrievalTest.test_nonfinite_vectors_are_rejected_even_with_updated_checksums) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+ok
+test_parallel_tokenization_matches_single_process_global_scores (test_stage78_retrieval.RetrievalTest.test_parallel_tokenization_matches_single_process_global_scores) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+test_portable_source_ids_empty_documents_and_mutation_detection (test_stage78_retrieval.RetrievalTest.test_portable_source_ids_empty_documents_and_mutation_detection) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_six_bundles_include_each_source_batch_once_and_reject_changed_queries (test_stage78_retrieval.RetrievalTest.test_six_bundles_include_each_source_batch_once_and_reject_changed_queries) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_six_worker_plan_is_deterministic_and_has_no_overlap (test_stage78_retrieval.RetrievalTest.test_six_worker_plan_is_deterministic_and_has_no_overlap) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+ok
+test_worker_resume_does_not_reencode_completed_batch (test_stage78_retrieval.RetrievalTest.test_worker_resume_does_not_reencode_completed_batch) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 0}
+ok
+test_candidate_validation_rejects_wrong_mapping_and_changed_query_text (test_stage78_validation.BaselineValidationTest.test_candidate_validation_rejects_wrong_mapping_and_changed_query_text) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+/home/duyhoang/anaconda3/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167808b0>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016c3b970>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016c3bf10>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167815d0>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+/home/duyhoang/anaconda3/lib/python3.13/unittest/mock.py:2247: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016c3b4c0>
+  def __init__(self, name, parent):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+ok
+test_ivfpq_duplicate_global_ids_are_rejected (test_stage78_validation.BaselineValidationTest.test_ivfpq_duplicate_global_ids_are_rejected) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016c3b970>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f3016c3bf10>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap_external>:784: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30167808b0>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyPacked has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type SwigPyObject has no __module__ attribute
+<frozen importlib._bootstrap>:488: DeprecationWarning: builtin type swigvarlink has no __module__ attribute
+ok
+test_lexical_snapshot_seal_rejects_changed_database (test_stage78_validation.BaselineValidationTest.test_lexical_snapshot_seal_rejects_changed_database) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+{"phase": "lexical_postings", "batch": 0, "chunks": 1}
+{"phase": "lexical_postings", "batch": 1, "chunks": 1}
+{"phase": "lexical_postings", "batch": 2, "chunks": 0}
+{"phase": "lexical_norms", "batch": 0}
+{"phase": "lexical_norms", "batch": 1}
+{"phase": "lexical_norms", "batch": 2}
+ok
+test_query_source_and_resealed_nonfinite_vectors_are_rejected (test_stage78_validation.BaselineValidationTest.test_query_source_and_resealed_nonfinite_vectors_are_rejected) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 1}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"worker": 0, "source_batch": 0, "rows": 1, "new_batches": 1}
+{"worker": 1, "source_batch": 1, "rows": 1, "new_batches": 1}
+{"worker": 2, "source_batch": 2, "rows": 0, "new_batches": 1}
+<frozen posixpath>:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30166e7790>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen posixpath>:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30166e7c40>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+<frozen posixpath>:82: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x7f30166e7a60>
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 1.778s
+
+OK
