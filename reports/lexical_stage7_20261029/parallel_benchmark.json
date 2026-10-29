@@ -1,0 +1,41 @@
+{
+  "query_ids": [
+    1,
+    98,
+    195,
+    292,
+    389,
+    486,
+    583,
+    680,
+    777,
+    874,
+    971,
+    1165
+  ],
+  "cache_policy": "shared 1024 MiB LRU; sequential 1/2/4 runs, cache state differs; indicative only",
+  "identical_results": true,
+  "runs": [
+    {
+      "workers": 1,
+      "queries": 12,
+      "seconds": 6.636299203999897,
+      "cache_hits": 100,
+      "cache_misses": 212
+    },
+    {
+      "workers": 2,
+      "queries": 12,
+      "seconds": 3.647745020000002,
+      "cache_hits": 128,
+      "cache_misses": 184
+    },
+    {
+      "workers": 4,
+      "queries": 12,
+      "seconds": 2.896458624999923,
+      "cache_hits": 134,
+      "cache_misses": 178
+    }
+  ]
+}
