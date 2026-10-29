@@ -2,9 +2,11 @@
 
 Updated **2026-10-29**: the full BM25/TF-IDF index is verified. BGE-M3 vectors,
 all 1,200 query vectors, the full IVF-PQ index and 600,000 dense candidates are
-technically validated. **Full S07 candidate generation is deferred by the owner.**
+technically validated. **S07 queries have also completed:** both BM25 and TF-IDF
+have all 1,200 queries and 600,000 validated candidates per method. See the
+[S07 compact exact search guide](LEXICAL_RETRIEVAL_STAGE7.md) for measured execution.
 Read [baseline results and handoff](STAGES6_8_BASELINE_HANDOFF.md) for observed
-counts, timing, tests and the dense-only S09 entry point. The commands below
+counts, timing and tests. The current S09 default is hybrid BM25 + dense RRF. The commands below
 remain reproduction instructions; completed jobs need not be rerun.
 Comparisons, clinical review, ICD calibration and ANN quality measurement stay
 at S10. This closeout was explicitly authorized to execute CPU jobs and tests.
@@ -54,7 +56,7 @@ snapshot, with final QA/readiness flags still pending.
 | S08 plan and six bundles | Local CPU/SSD | Same chunks and pinned tokenizer |
 | S08 embedding | Six independent Colab CUDA sessions | Matching bundle per worker |
 | S08 merge and vector index | One local machine or one Colab CPU | All worker outputs complete |
-| S09 dense reranking; later hybrid fusion | Later delivery | Dense candidates now; compatible lexical candidates needed for hybrid |
+| S09 hybrid fusion and reranking | Owner-run source delivery | Compatible validated BM25 and dense candidates now available |
 
 ## 1. Local environment and fixtures
 
@@ -117,23 +119,14 @@ alone writes SQLite transactions. Set config `workers` to 1–8 according to CPU
 Workers, SQLite cache and default output top-k can change without rebuilding
 the unchanged postings. Input/analyzer/scoring changes still require a new run.
 
-**Optional/deferred:** full lexical candidate generation is not required for
-the current closeout. Run these only when resuming the lexical S09 branch;
-no relevance evaluation occurs:
-
-```bash
-python -m vibiomir.lexical_stage7 search \
-  --queries Data/official/ViBioMIR/query.parquet --method bm25 \
-  --output-dir artifacts/candidates_stage7_bm25
-
-python -m vibiomir.lexical_stage7 search \
-  --queries Data/official/ViBioMIR/query.parquet --method tfidf \
-  --output-dir artifacts/candidates_stage7_tfidf
-```
-
-Default top-k is 500, controlled by config or `--top-k`. Each query writes an
-atomic, signed candidate JSON; reruns reuse matching completed query files.
-The index must be built and technically validated first.
+The full lexical candidate run is now complete. Use the
+[S07 compact search runbook](LEXICAL_RETRIEVAL_STAGE7.md) to reproduce it or
+resume another matching run with `vibiomir.lexical_search`. It builds a compact
+query-bound postings cache and computes both scorers together with bounded
+NumPy threads. The original SQL `lexical_stage7 search` is retained as a
+reference for small fixtures, not the recommended full-query command. Both
+canonical candidate directories contain all 1,200 query files and passed
+`VALIDATION.json`; no rerun is required before S09.
 
 ## 3. Prepare one immutable S08 plan and six bundles
 
