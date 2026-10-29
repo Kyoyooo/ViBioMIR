@@ -1,0 +1,14 @@
+{
+  "validation": "passed",
+  "queries": 1200,
+  "scope": "all_queries",
+  "mode": "reranked",
+  "chunks": 41086,
+  "unique_selected_chunks": 37132,
+  "original_evidence_verified": true,
+  "manifest_sha256": "4e423c29320d372cd7f1324385a8d4cd4dceaa50b1ae4b5754731024f8b00879",
+  "predictions_sha256": "37230a0e3859f534e5e37dd42436d278a18da931c072d8be500c372ba1be4b05",
+  "quality_measured": false,
+  "official_submission_ready": false,
+  "official_eligibility": "pending S11"
+}
