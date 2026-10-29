@@ -1,0 +1,12 @@
+test_bad_offsets_changed_source_and_cross_split_groups_rejected (test_stage5_benchmark_tools.BenchmarkToolsTest.test_bad_offsets_changed_source_and_cross_split_groups_rejected) ... ok
+test_comparison_reports_paired_queries_and_rejects_changed_caps (test_stage5_benchmark_tools.BenchmarkToolsTest.test_comparison_reports_paired_queries_and_rejects_changed_caps) ... ok
+test_holdout_cannot_run_without_dev_freeze (test_stage5_benchmark_tools.BenchmarkToolsTest.test_holdout_cannot_run_without_dev_freeze) ... ok
+test_insufficient_second_review_is_draft_only (test_stage5_benchmark_tools.BenchmarkToolsTest.test_insufficient_second_review_is_draft_only) ... ok
+test_locate_span_reports_exact_unicode_offsets_without_rewriting (test_stage5_benchmark_tools.BenchmarkToolsTest.test_locate_span_reports_exact_unicode_offsets_without_rewriting) ... ok
+test_original_spans_and_review_provenance_are_compiled (test_stage5_benchmark_tools.BenchmarkToolsTest.test_original_spans_and_review_provenance_are_compiled) ... ok
+test_pool_never_assigns_automatic_negatives_and_preserves_existing_file (test_stage5_benchmark_tools.BenchmarkToolsTest.test_pool_never_assigns_automatic_negatives_and_preserves_existing_file) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 0.020s
+
+OK
