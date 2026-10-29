@@ -1,0 +1,43 @@
+{
+  "identity": {
+    "operation": "lexical-query-projection-v1",
+    "index_signature": "0bdbb1965aeeba2cd767df3e87166126e165d11ab4589c85b07e3c3331e22e97",
+    "index_manifest_sha256": "37988cd4ef323dd9d3ed62617a3674c6a502d0723b2992e2bf9e08a76e99b3e8",
+    "database_sha256": "27fcfe14d08304beb444f54d990cad27d42bed74656904f6368f00ea731a669c",
+    "source": {
+      "signature": "5ce3d7c02e6a0a8275e203a4cff9c12fb371fc8cf0fd9515574250acfff3751c",
+      "manifest_sha256": "d88fd1c046a93950c7e97ef5c8786d933a677ef1f54e7880f5c34fa6c4ff40f1",
+      "validation_sha256": "5bdc88900f47989a4edb653ae1f6b90ba90a79760f620edb35ac09a48d20d993",
+      "documents": 855745,
+      "chunks": 5512624,
+      "batches": 1712
+    },
+    "query_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+    "terms_sha256": "ba782134579c44695c216ceed78fa86e56e77d588c2567f53048774585e424e1",
+    "analyzed_queries_sha256": "ce671d254524ce9e2a69b68980a80f907f2dbdc296f3e9cc85312bb6607b9663",
+    "chunks": 5512624,
+    "code": {
+      "lexical_projection.py": "10a262c181c2318d94ef7c7e927105d496c7659b04ae44d43b5684a214820a52",
+      "native": "1e0d9543c0420e53fd54202383bc62646e3a2e78ea7e7dcfff8aefbfc75f2c99"
+    }
+  },
+  "signature": "3c9cc1b4f1ac26a20c3457a2c4b0f74b9ceaaf160e8edd982a38d70b444de09f",
+  "state": "complete",
+  "human_qa": "pending",
+  "selection_is_final": false,
+  "ready_for_retrieval": false,
+  "queries": 1200,
+  "terms": 2819,
+  "postings": 234349921,
+  "builder": "native",
+  "seconds": 146.57914176900022,
+  "files": {
+    "cids.u32": "7dc711b7d8b7d0f2f3df8de4f647546de63d43aad936e70aa35bfced2663f83d",
+    "tf.u32": "0b79512c9199bd7ac4818ec1c6be3bd135015299a4100ccd563cee7fa2d47bdc",
+    "lengths.f64": "0356a287a23ea718ee5793934356be1fcc7d7c92ece8549e7007238f35b1cd3c",
+    "norms.f64": "738a2560cc571a015f80b7e52450665229de89373d63ca6fac4702d0a1cf01ea",
+    "chunk_ids.s64": "a21759bb6ec3bf4b4165720fc3f027304f633b9d7ef7c94c8419c0bc49c0cb01",
+    "terms.json": "8f0b6b1851aa67ea787c668a6f59f3b376291db61dd4eecf3e377251453b8342",
+    "queries.json": "085aa4bfa319ac288cff023890e9031e47d5f05f9c0459e1f3a263c435d612a3"
+  }
+}
