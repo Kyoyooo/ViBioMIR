@@ -2,7 +2,10 @@
 
 Observed on **2026-10-29**, following the owner's authorization to finish the
 rules/lexical/BGE-M3 baseline. The owner subsequently deferred expensive full
-S07 query generation. The existing lexical index is retained and verified.
+S07 query generation at that time. **Later on 2026-10-29, the owner resumed
+lexical queries; both methods are now complete and validated.** See the
+[S07 completion evidence](../reports/lexical_stage7_20261029/README.md). The
+existing lexical index is retained and verified.
 No full-corpus rebuild or new GPU inference was needed for this closeout.
 
 ## Verified outputs
@@ -11,6 +14,7 @@ No full-corpus rebuild or new GPU inference was needed for this closeout.
 | --- | --- | --- |
 | S06 rules | 855,745 document annotations / 1,712 batches; sealed snapshot verified | `artifacts/icd_stage6_rules/` |
 | S07 BM25/TF-IDF index | 5,512,624 chunks / 737,967 terms / 1,712 batches; sealed index verified | `artifacts/lexical_stage7_structure/` |
+| S07 lexical candidates | Each method: 1,200 queries × 500 = 600,000 validated candidates | `artifacts/candidates_stage7_bm25/`, `artifacts/candidates_stage7_tfidf/` |
 | S08 merged BGE-M3 vectors | 5,512,624 × 1,024 float16 vectors; complete source/mapping coverage | `artifacts/dense_stage8_bge_structure/merged/` |
 | S08 query vectors | All 1,200 official queries; finite, normalized vectors and exact query identity checked | `artifacts/dense_stage8_bge_structure/query_vectors/` |
 | S08 FAISS IVF-PQ | All 5,512,624 unique global row IDs indexed; file checksum and geometry checked | `artifacts/dense_stage8_bge_structure/index_ivfpq/` |
@@ -36,19 +40,24 @@ ID coverage and every candidate's source mapping and score order.
 
 ## What is ready next
 
-S09 can consume the **dense candidate branch** now. Each `query-ID.json` is a
+The [S09 source/runbook](RETRIEVAL_STAGE9.md) now defaults to **BM25 + dense RRF**
+using both validated candidate branches. Each `query-ID.json` is a
 signed intermediate artifact with source chunk/version identity and scores;
 it is not competition submission JSON. Preserve the matching merged mapping,
 structural chunk store and frozen `plan.json` for resolving original evidence.
 
-Full S07 BM25/TF-IDF candidate generation is **deferred by the owner** because
-of local query cost. Neither `artifacts/candidates_stage7_bm25/` nor
-`artifacts/candidates_stage7_tfidf/` is a completed output. Full hybrid/RRF
-integration requires those candidates later. Dense-only S09 work does not.
+The earlier S06–S08 report records the historical S07 deferral. The later
+[S07 run](../reports/lexical_stage7_20261029/README.md) supersedes it with full
+query outputs, seven passing new fixtures and 48 low-DF real-index score/rank
+comparisons. Every lexical candidate mapping was checked against the sealed
+original index. Full S09 preparation and owner-run GPU reranking subsequently
+completed; see the [submitted baseline](../reports/baseline_submission_20261030/README.md).
 
 Semantic/combined ICD, mBERT, full fixed-chunker comparisons, clinical QA,
 ICD calibration, relevance evaluation and ANN recall@200 measurement remain
-at S10. No F2, clinical accuracy or ANN recall is claimed here. The FAISS
+at S10 for full-corpus/human acceptance. A separate 30-question/60-document
+silver pilot completed bounded comparisons; the later Dashboard score is
+recorded in the linked baseline, not inferred from this technical closeout. The FAISS
 training sample uses language **hints**, not verified language/domain strata.
 Formal clinical/quality acceptance gates, including A10/A12, are still open;
 pending human-QA, final-selection and readiness flags remain unchanged.
