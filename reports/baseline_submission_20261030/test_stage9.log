@@ -1,0 +1,170 @@
+test_conflicting_mappings_duplicates_and_nonfinite_scores_fail (test_stage9_retrieval.FusionAndIntentTest.test_conflicting_mappings_duplicates_and_nonfinite_scores_fail) ... ok
+test_original_query_and_conditions_are_preserved (test_stage9_retrieval.FusionAndIntentTest.test_original_query_and_conditions_are_preserved) ... ok
+test_rrf_missing_branch_and_stable_ties (test_stage9_retrieval.FusionAndIntentTest.test_rrf_missing_branch_and_stable_ties) ... ok
+test_score_cache_key_changes_for_query_text_passage_or_revision (test_stage9_retrieval.FusionAndIntentTest.test_score_cache_key_changes_for_query_text_passage_or_revision) ... ok
+test_shipped_configuration_is_valid_and_rejects_bool_or_bad_budgets (test_stage9_retrieval.FusionAndIntentTest.test_shipped_configuration_is_valid_and_rejects_bool_or_bad_budgets) ... ok
+test_weighted_constant_lists_and_family_weight_cap (test_stage9_retrieval.FusionAndIntentTest.test_weighted_constant_lists_and_family_weight_cap) ... ok
+test_gpu_memory_profiles_are_bounded_and_override_friendly (test_stage9_retrieval.PairWindowTest.test_gpu_memory_profiles_are_bounded_and_override_friendly) ... ok
+test_long_query_and_passage_keep_complete_mapped_token_coverage (test_stage9_retrieval.PairWindowTest.test_long_query_and_passage_keep_complete_mapped_token_coverage) ... ok
+test_model_query_passage_cache_reuses_scored_windows (test_stage9_retrieval.PairWindowTest.test_model_query_passage_cache_reuses_scored_windows) ... ok
+test_oom_splits_microbatch_without_dropping_or_reordering (test_stage9_retrieval.PairWindowTest.test_oom_splits_microbatch_without_dropping_or_reordering) ... ok
+test_real_fast_pair_api_does_not_request_unsupported_mask (test_stage9_retrieval.PairWindowTest.test_real_fast_pair_api_does_not_request_unsupported_mask) ... --- Logging error ---
+Traceback (most recent call last):
+  File "/home/duyhoang/anaconda3/lib/python3.13/logging/__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<stdin>", line 11, in <module>
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/runner.py", line 240, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 122, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 122, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 122, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/case.py", line 707, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/case.py", line 651, in run
+    self._callTestMethod(testMethod)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/case.py", line 606, in _callTestMethod
+    if method() is not None:
+  File "/home/duyhoang/Downloads/AI_Guru/tests/test_stage9_retrieval.py", line 124, in test_real_fast_pair_api_does_not_request_unsupported_mask
+    windows = pair_windows(tokenizer, 'Không 5 mg', '肾结石 5 mg', self.policy)
+  File "/home/duyhoang/Downloads/AI_Guru/vibiomir/stage9_reranker.py", line 43, in pair_windows
+    feature = tokenizer.prepare_for_model(q['input_ids'][a:b], pair_ids=p['input_ids'][c:d],
+  File "/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/transformers/tokenization_utils_base.py", line 3623, in prepare_for_model
+    encoded_inputs = self.pad(
+  File "/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/transformers/tokenization_utils_base.py", line 3360, in pad
+    logger.warning_advice(
+  File "/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/transformers/utils/logging.py", line 313, in warning_advice
+    self.warning(*args, **kwargs)
+Message: "You're using a BertTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding."
+Arguments: ()
+ok
+test_registered_local_bge_pair_windows_cover_real_vi_en_zh_tokens (test_stage9_retrieval.PairWindowTest.test_registered_local_bge_pair_windows_cover_real_vi_en_zh_tokens) ... --- Logging error ---
+Traceback (most recent call last):
+  File "/home/duyhoang/anaconda3/lib/python3.13/logging/__init__.py", line 1154, in emit
+    stream.write(msg + self.terminator)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: I/O operation on closed file.
+Call stack:
+  File "<stdin>", line 11, in <module>
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/runner.py", line 240, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 122, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 122, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 84, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/suite.py", line 122, in run
+    test(result)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/case.py", line 707, in __call__
+    return self.run(*args, **kwds)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/case.py", line 651, in run
+    self._callTestMethod(testMethod)
+  File "/home/duyhoang/anaconda3/lib/python3.13/unittest/case.py", line 606, in _callTestMethod
+    if method() is not None:
+  File "/home/duyhoang/Downloads/AI_Guru/tests/test_stage9_retrieval.py", line 177, in test_registered_local_bge_pair_windows_cover_real_vi_en_zh_tokens
+    windows = pair_windows(tokenizer, query, passage, self.policy)
+  File "/home/duyhoang/Downloads/AI_Guru/vibiomir/stage9_reranker.py", line 43, in pair_windows
+    feature = tokenizer.prepare_for_model(q['input_ids'][a:b], pair_ids=p['input_ids'][c:d],
+  File "/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/transformers/tokenization_utils_base.py", line 3623, in prepare_for_model
+    encoded_inputs = self.pad(
+  File "/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/transformers/tokenization_utils_base.py", line 3360, in pad
+    logger.warning_advice(
+  File "/home/duyhoang/Downloads/AI_Guru/.venv-stage5/lib/python3.13/site-packages/transformers/utils/logging.py", line 313, in warning_advice
+    self.warning(*args, **kwargs)
+Message: "You're using a XLMRobertaTokenizerFast tokenizer. Please note that with a fast tokenizer, using the `__call__` method is faster than using a method to encode the text followed by a call to the `pad` method to get a padded encoding."
+Arguments: ()
+ok
+test_bounds_document_scores_exact_dedup_and_no_cross_doc_dedup (test_stage9_retrieval.Stage9PipelineTest.test_bounds_document_scores_exact_dedup_and_no_cross_doc_dedup) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_missing_and_tampered_worker_archives_fail_before_export (test_stage9_retrieval.Stage9PipelineTest.test_missing_and_tampered_worker_archives_fail_before_export) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 1}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 2}
+ok
+test_missing_workers_changed_config_and_tampered_packets_fail_early (test_stage9_retrieval.Stage9PipelineTest.test_missing_workers_changed_config_and_tampered_packets_fail_early) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_portable_bundle_checks_payloads_and_reuses_identical_archive (test_stage9_retrieval.Stage9PipelineTest.test_portable_bundle_checks_payloads_and_reuses_identical_archive) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_prepare_resume_baseline_empty_results_and_cross_doc_identity (test_stage9_retrieval.Stage9PipelineTest.test_prepare_resume_baseline_empty_results_and_cross_doc_identity) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_query_subset_is_labeled_and_cannot_be_validated_as_full (test_stage9_retrieval.Stage9PipelineTest.test_query_subset_is_labeled_and_cannot_be_validated_as_full) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_rerank_pause_restore_no_repeat_and_complete_export (test_stage9_retrieval.Stage9PipelineTest.test_rerank_pause_restore_no_repeat_and_complete_export) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 1}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 0}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 1}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 1}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 0}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 0}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 0}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 0}
+ok
+test_reranker_cannot_return_more_scores_than_input_candidates (test_stage9_retrieval.Stage9PipelineTest.test_reranker_cannot_return_more_scores_than_input_candidates) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_selected_original_source_mutation_and_changed_prediction_fail (test_stage9_retrieval.Stage9PipelineTest.test_selected_original_source_mutation_and_changed_prediction_fail) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+ok
+test_worker_archives_finish_and_reuse_without_gpu (test_stage9_retrieval.Stage9PipelineTest.test_worker_archives_finish_and_reuse_without_gpu) ... {"batch": 0, "last_doc_id": 1, "documents": 1, "chunks": 2}
+{"batch": 1, "last_doc_id": 2, "documents": 1, "chunks": 1}
+{"batch": 2, "last_doc_id": 3, "documents": 1, "chunks": 0}
+{"stage9": "extract_evidence", "source_batch": 0, "completed_batches": 1, "needed_batches": 2}
+{"stage9": "extract_evidence", "source_batch": 1, "completed_batches": 2, "needed_batches": 2}
+{"worker": 0, "query_id": 101, "complete": 1, "assigned": 2, "new_this_invocation": 1}
+{"worker": 0, "query_id": 303, "complete": 2, "assigned": 2, "new_this_invocation": 2}
+{"worker": 1, "query_id": 202, "complete": 1, "assigned": 1, "new_this_invocation": 1}
+ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.785s
+
+OK
