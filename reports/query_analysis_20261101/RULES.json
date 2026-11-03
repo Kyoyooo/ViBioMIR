@@ -1,0 +1,24 @@
+{
+  "intent_hints": {
+    "explanation": "\\b(là gì|là sao|như thế nào|giải thích|có nghĩa|nghĩa là)\\b",
+    "diagnosis_cause": "\\b(nguyên nhân|do đâu|bệnh gì|bị gì|tại sao|vì sao|có phải|vì đâu)\\b",
+    "management_treatment": "\\b(điều trị|chữa|phẫu thuật|can thiệp|phải làm sao|làm thế nào|nên làm gì|xử lý|khắc phục)\\b",
+    "prognosis_risk": "\\b(nguy hiểm|có nặng|biến chứng|khỏi|ung thư|có sao không|làm sao không|ảnh hưởng|khả năng)\\b",
+    "prevention_transmission": "\\b(phòng tránh|phòng ngừa|lây|lây nhiễm|lây truyền|tiêm chủng|tiêm phòng|vắc xin|vaccine)\\b",
+    "medication_use": "\\b(thuốc|liều|uống|bôi|nhỏ mắt|tác dụng phụ|kháng sinh)\\b",
+    "test_result": "\\b(xét nghiệm|chỉ số|kết quả|siêu âm|nội soi|chụp|beta[- ]?hcg|scc)\\b",
+    "diet_lifestyle": "\\b(ăn|kiêng|dinh dưỡng|tập luyện|thể dục|sinh hoạt|rượu|bia|hút thuốc)\\b"
+  },
+  "feature_hints": {
+    "digits": "\\d",
+    "numeric_age": "\\b\\d+(?:[.,]\\d+)?\\s*(?:tuổi|tháng tuổi|ngày tuổi|tuan tuoi|thang tuoi)\\b",
+    "time_expression": "\\b(?:\\d+|một|hai|ba|vài|mấy|nhiều)\\s*(?:ngày|tuần|tháng|năm|giờ)\\b",
+    "pregnancy_lactation": "\\b(mang thai|thai kỳ|có thai|bầu|cho con bú|cho bé bú|sau sinh|sinh em bé)\\b",
+    "child_context": "\\b(trẻ|bé|con em|con tôi|sơ sinh|trẻ em)\\b",
+    "explicit_negation": "\\b(không bị|không có|không sốt|không đau|không dùng|chưa từng|âm tính)\\b",
+    "question_khong": "\\bkhông\\s*[?？.]?\\s*$",
+    "uncertainty_alternative": "\\b(có phải|không biết|hay là|liệu|nghi ngờ)\\b",
+    "unit_measurement": "(?i)\\b(?:mg|mcg|µg|ml|mmol/l|mmhg|ng/ml|u/l|iu/l|kg|cm|mm|bpm)\\b|\\d\\s*%",
+    "url": "https?://|www\\."
+  }
+}

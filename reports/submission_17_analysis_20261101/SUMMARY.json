@@ -1,0 +1,427 @@
+{
+  "zip_path": "submission_17.zip",
+  "zip_sha256": "0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd",
+  "submission_json_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+  "zip_bytes": 50964249,
+  "json_bytes": 192969487,
+  "zip_members": [
+    {
+      "name": "submission.json",
+      "bytes": 192969487
+    }
+  ],
+  "queries": 1200,
+  "query_coverage_matches": true,
+  "technical_errors": [],
+  "technical_validation": "passed",
+  "total_document_occurrences": 143961,
+  "total_chunk_occurrences": 144000,
+  "unique_documents": 89516,
+  "unique_doc_text_pairs": 116939,
+  "unique_chunk_texts": 113791,
+  "documents_per_query": {
+    "min": 94,
+    "mean": 119.97,
+    "median": 120.0,
+    "p90": 120.0,
+    "p95": 120.0,
+    "p99": 120.0,
+    "max": 120
+  },
+  "chunks_per_query": {
+    "min": 120,
+    "mean": 120,
+    "median": 120.0,
+    "p90": 120.0,
+    "p95": 120.0,
+    "p99": 120.0,
+    "max": 120
+  },
+  "documents_with_chunks_per_query": {
+    "min": 37,
+    "mean": 86.48,
+    "median": 88.0,
+    "p90": 103.0,
+    "p95": 107.0,
+    "p99": 115.01,
+    "max": 120
+  },
+  "documents_without_chunks_per_query": {
+    "min": 0,
+    "mean": 33.49,
+    "median": 32.0,
+    "p90": 52.0,
+    "p95": 56.0,
+    "p99": 68.0,
+    "max": 83
+  },
+  "document_occurrences_without_chunks": 40188,
+  "document_occurrences_without_chunks_pct": 27.92,
+  "query_count_with_uncovered_documents": 1197,
+  "chunks_per_covered_query_document": {
+    "1": 80046,
+    "2": 14824,
+    "3": 4746,
+    "4": 1928,
+    "5": 1018,
+    "6": 1211
+  },
+  "chunk_characters": {
+    "min": 2,
+    "mean": 879.59,
+    "median": 858.0,
+    "p90": 1479.0,
+    "p95": 1558.0,
+    "p99": 1748.0,
+    "max": 2059
+  },
+  "chunk_whitespace_units": {
+    "min": 1,
+    "mean": 186.39,
+    "median": 189.0,
+    "p90": 326.0,
+    "p95": 343.0,
+    "p99": 385.0,
+    "max": 462
+  },
+  "chunk_character_bands": {
+    "1-200": 9679,
+    "1001-2000": 63669,
+    "201-500": 33437,
+    "501-1000": 37208,
+    "2001+": 7
+  },
+  "language_heuristics": {
+    "vietnamese_diacritics": 124630,
+    "cjk_present": 19312,
+    "other_unclassified": 58
+  },
+  "short_chunk_counts_below_characters": {
+    "30": 829,
+    "50": 1460,
+    "100": 3511,
+    "10": 120
+  },
+  "generic_label_only_occurrences": {
+    "sức khỏe": 13,
+    "sống khỏe": 6,
+    "tin liên quan": 85,
+    "phòng mạch online": 5,
+    "có thể bạn quan tâm": 40
+  },
+  "generic_label_examples": [
+    {
+      "query_id": 5,
+      "doc_id": 43339,
+      "text": "Sức khỏe\n"
+    },
+    {
+      "query_id": 7,
+      "doc_id": 344955,
+      "text": "Sống khỏe\n"
+    },
+    {
+      "query_id": 9,
+      "doc_id": 293887,
+      "text": "Tin liên quan\n"
+    },
+    {
+      "query_id": 9,
+      "doc_id": 355184,
+      "text": "Phòng mạch Online\n"
+    },
+    {
+      "query_id": 9,
+      "doc_id": 293887,
+      "text": "Có thể bạn quan tâm\n"
+    },
+    {
+      "query_id": 15,
+      "doc_id": 283891,
+      "text": "Tin liên quan\n"
+    },
+    {
+      "query_id": 15,
+      "doc_id": 283891,
+      "text": "Có thể bạn quan tâm\n"
+    },
+    {
+      "query_id": 57,
+      "doc_id": 297714,
+      "text": "Có thể bạn quan tâm\n"
+    },
+    {
+      "query_id": 58,
+      "doc_id": 296951,
+      "text": "Tin liên quan\n"
+    },
+    {
+      "query_id": 58,
+      "doc_id": 296951,
+      "text": "Có thể bạn quan tâm\n"
+    },
+    {
+      "query_id": 62,
+      "doc_id": 84455,
+      "text": "Tin liên quan\n"
+    },
+    {
+      "query_id": 62,
+      "doc_id": 293639,
+      "text": "Có thể bạn quan tâm\n"
+    },
+    {
+      "query_id": 79,
+      "doc_id": 293353,
+      "text": "Tin liên quan\n"
+    },
+    {
+      "query_id": 81,
+      "doc_id": 284430,
+      "text": "Tin liên quan\n"
+    },
+    {
+      "query_id": 85,
+      "doc_id": 310796,
+      "text": "Tin liên quan\n"
+    }
+  ],
+  "length_by_language": {
+    "vietnamese_diacritics": {
+      "characters": {
+        "min": 4,
+        "mean": 963.32,
+        "median": 1027.0,
+        "p90": 1495.0,
+        "p95": 1575.0,
+        "p99": 1760.0,
+        "max": 2059
+      },
+      "whitespace_units": {
+        "min": 1,
+        "mean": 211.94,
+        "median": 225.0,
+        "p90": 329.0,
+        "p95": 347.0,
+        "p99": 389.0,
+        "max": 462
+      }
+    },
+    "cjk_present": {
+      "characters": {
+        "min": 2,
+        "mean": 340.75,
+        "median": 346.0,
+        "p90": 545.0,
+        "p95": 583.0,
+        "p99": 674.0,
+        "max": 1222
+      },
+      "whitespace_units": {
+        "min": 1,
+        "mean": 21.9,
+        "median": 12.0,
+        "p90": 50.0,
+        "p95": 58.0,
+        "p99": 118.0,
+        "max": 236
+      }
+    },
+    "other_unclassified": {
+      "characters": {
+        "min": 3,
+        "mean": 367.88,
+        "median": 63.5,
+        "p90": 988.2,
+        "p95": 1044.5,
+        "p99": 1286.34,
+        "max": 1308
+      },
+      "whitespace_units": {
+        "min": 1,
+        "mean": 51.64,
+        "median": 2.0,
+        "p90": 161.8,
+        "p95": 184.7,
+        "p99": 222.15,
+        "max": 225
+      }
+    }
+  },
+  "same_doc_exact_duplicate_occurrences": 0,
+  "cross_doc_extra_identical_text_occurrences_within_query": 3166,
+  "strictly_contained_chunk_occurrences_same_doc_within_query": 117,
+  "unique_texts_appearing_in_multiple_documents": 1234,
+  "empty_queries": 0,
+  "longest_chunks": [
+    {
+      "characters": 2059,
+      "query_id": 352,
+      "doc_id": 591558,
+      "chunk_order": 94,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2053,
+      "query_id": 1142,
+      "doc_id": 2589,
+      "chunk_order": 74,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2003,
+      "query_id": 469,
+      "doc_id": 552687,
+      "chunk_order": 24,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2003,
+      "query_id": 113,
+      "doc_id": 552687,
+      "chunk_order": 60,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2002,
+      "query_id": 1132,
+      "doc_id": 179412,
+      "chunk_order": 112,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2002,
+      "query_id": 956,
+      "doc_id": 179412,
+      "chunk_order": 103,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2002,
+      "query_id": 657,
+      "doc_id": 179412,
+      "chunk_order": 0,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1999,
+      "query_id": 717,
+      "doc_id": 140861,
+      "chunk_order": 65,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1999,
+      "query_id": 113,
+      "doc_id": 140861,
+      "chunk_order": 19,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1993,
+      "query_id": 199,
+      "doc_id": 649117,
+      "chunk_order": 68,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1990,
+      "query_id": 655,
+      "doc_id": 116996,
+      "chunk_order": 4,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1990,
+      "query_id": 324,
+      "doc_id": 651396,
+      "chunk_order": 5,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1986,
+      "query_id": 838,
+      "doc_id": 177594,
+      "chunk_order": 93,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1986,
+      "query_id": 306,
+      "doc_id": 177594,
+      "chunk_order": 36,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1985,
+      "query_id": 799,
+      "doc_id": 609246,
+      "chunk_order": 95,
+      "language": "vietnamese_diacritics"
+    }
+  ],
+  "cjk_samples": [
+    {
+      "query_id": 1,
+      "doc_id": 2785337,
+      "chunk_order": 95,
+      "preview": "你好!你这检查的情况看炎症不会怎么重,稍微吃点消炎药就可以至于短时间内服药和吃哪方面的药则要看你近些时间的具体临床表现而定,才能够更有针对性的去治疗,从而收到更理想的治疗效果\n你的情况建议采用3结合的方法治疗，平时禁食辛辣刺激性的食物，多饮水，加强身体的锻炼，提高免疫力."
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792263,
+      "chunk_order": 1,
+      "preview": "我最近早上起来漱口时牙龈总是会出血，是什么回事啊？\n然而，如果牙龈经常出血就该引起你的高度警惕了，因为这常常是疾病的报警信号。 谁是导致 牙龈出血 的凶手？ 第一个疑犯：压力突然增大 牙医建议：很多人由于近期工作压力突然增大，在刷牙时牙龈总是出血，并且有 口臭 。在放松压力的同时，建议先要到正规口腔医院去做一下牙齿洁治(即洗牙)，然后坚持配合正确有效的刷牙方"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792187,
+      "chunk_order": 5,
+      "preview": "养成良好的口腔卫生习惯，可以预防 牙龈炎 、 牙周炎 的发生。坚持早晚刷牙，饭后漱口，清除污物和食物残渣，可防止牙垢和牙结石的形成。定期到医院进行牙周洁治（洗牙）是最好的牙齿保健方法。 维生素C是一种酸性有机物，具有抗出血的作用。当人体严重缺乏它时，会导致牙龈出血。但不能把所有 牙龈出血 完全归咎于维生素C缺乏。 牙龈出血是口腔疾病的常见症状之一。一般分为局"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792187,
+      "chunk_order": 6,
+      "preview": "早晨起床刷牙时经常有牙龈出血，这是怎么回事？\n牙龈出血的原因很多，是口腔疾病的常见症状之一。一般分为局部性和全身性两种：局部原因引起的牙龈出血，常见的是患 牙龈炎 和牙周炎病人。这些病人由于不经常刷牙，或由于刷牙的方法不正确，在牙龈边缘的地方产生牙石。牙石是一种坚硬的石灰样物质，对牙龈有刺激作用，能引起牙龈发炎、肿胀、充血，轻者在刷牙、吮吸、咬硬物或剔牙时出"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792263,
+      "chunk_order": 7,
+      "preview": "因此，如果牙龈反复出血，或皮肤时常出现一些青紫色的斑点，同时脸色发黄、全身无力等症状，就应该及时做血液、 肝功能 等相关检查。 第四个疑犯：阿司匹林 牙医建议：长期服用阿司匹林的人，刷牙时如突然发现 牙龈出血 ，并同时伴有鼻腔出血时，很可能因阿司匹林副作用所致。患者应停止用药，并到医院进行血小板化验，在医生指导下调整药量。 第五个疑犯：牙刷 牙医建议：应先检"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792263,
+      "chunk_order": 10,
+      "preview": "牙龈出血 是 牙周病 或全身疾病在牙龈组织上出现的一种症状。祖国医学称“牙衄”。在中医治疗方面，宜辩证审因，标本兼治，以诊治全身疾病，消除诱因为主，对症治疗，局部止血为辅使病愈血止。 1：敷药疗法 处方：白砂糖、石膏各10克 用法：共研细末加冷开水适量调成糊状，涂敷牙龈患处。 疗效：用药1次，止血有效率达100%，切无副作用。 2：中成药疗法 药名：二至丸 "
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792187,
+      "chunk_order": 11,
+      "preview": "有一部分牙龈出血是由于全身性疾病所引起的，这类 牙龈出血 往往是全身疾病的临床症状之一，它对全身疾病的诊断有一定的帮助，治疗也要特别小心。 坏血病是由于缺乏抗坏血酸（也称维生素C）所致的生身性出血性疾病，而 牙龈出血 是该病的一个突出症状。患坏血病的病人口腔牙龈呈暗红色肿胀，肿胀的牙龈有时可遮盖牙冠。随着人民生活不断提高，在我国坏血病已十分罕见。 值得注意的"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792246,
+      "chunk_order": 14,
+      "preview": "早上起来牙龈出血是什么原因？\n牙龈出血的原因很多，是口腔疾病的常见症状之一。一般分为局部性和全身性两种：局部原因引起的牙龈出血，常见的是患 牙龈炎 和牙周炎病人。这些病人由于不经常刷牙，或由于刷牙的方法不正确，在牙龈边缘的地方产生牙石。牙石是一种坚硬的石灰样物质，对牙龈有刺激作用，能引起牙龈发炎、肿胀、充血，轻者在刷牙、吮吸、咬硬物或剔牙时出血，重者在轻微刺"
+    }
+  ],
+  "available_chunk_fields": [
+    "doc_id",
+    "chunk_text",
+    "chunk_order"
+  ],
+  "limitations": [
+    "No corpus source verification or official doc-ID allowlist verification performed.",
+    "No scores, candidate pools, original source offsets or model identity in this ZIP.",
+    "chunk_order is output sequence, not original document source order.",
+    "No gold labels or official LCS evaluation; length and language are not quality labels.",
+    "Language detection is a script heuristic, and whitespace units are not model tokens.",
+    "The reported score 0.1706 cannot be independently linked to this ZIP without a scoring receipt."
+  ],
+  "query_file_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08"
+}

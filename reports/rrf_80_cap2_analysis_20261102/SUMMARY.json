@@ -1,0 +1,341 @@
+{
+  "zip_path": "RRF_80_cap2.zip",
+  "zip_sha256": "9d8eea0d32febe976d8980bf1ae28fabb570fe7017116a246a40dcb200e2ec8e",
+  "submission_json_sha256": "45b376fa0bd299b6ed429796e9bd226afc0e6d949c819e79effa2757447f6ef0",
+  "zip_bytes": 34003022,
+  "json_bytes": 125285430,
+  "zip_members": [
+    {
+      "name": "submission.json",
+      "bytes": 125285430
+    }
+  ],
+  "queries": 1200,
+  "query_coverage_matches": true,
+  "technical_errors": [],
+  "technical_validation": "passed",
+  "total_document_occurrences": 143961,
+  "total_chunk_occurrences": 95913,
+  "unique_documents": 89516,
+  "unique_doc_text_pairs": 81268,
+  "unique_chunk_texts": 79442,
+  "documents_per_query": {
+    "min": 94,
+    "mean": 119.97,
+    "median": 120.0,
+    "p90": 120.0,
+    "p95": 120.0,
+    "p99": 120.0,
+    "max": 120
+  },
+  "chunks_per_query": {
+    "min": 61,
+    "mean": 79.93,
+    "median": 80.0,
+    "p90": 80.0,
+    "p95": 80.0,
+    "p99": 80.0,
+    "max": 80
+  },
+  "documents_with_chunks_per_query": {
+    "min": 37,
+    "mean": 67.08,
+    "median": 68.0,
+    "p90": 74.0,
+    "p95": 76.0,
+    "p99": 79.0,
+    "max": 80
+  },
+  "documents_without_chunks_per_query": {
+    "min": 40,
+    "mean": 52.88,
+    "median": 52.0,
+    "p90": 60.0,
+    "p95": 62.0,
+    "p99": 68.02,
+    "max": 83
+  },
+  "document_occurrences_without_chunks": 63461,
+  "document_occurrences_without_chunks_pct": 44.08,
+  "query_count_with_uncovered_documents": 1200,
+  "chunks_per_covered_query_document": {
+    "1": 65087,
+    "2": 15413
+  },
+  "chunk_characters": {
+    "min": 4,
+    "mean": 891.85,
+    "median": 882,
+    "p90": 1481.0,
+    "p95": 1561.0,
+    "p99": 1756.0,
+    "max": 2059
+  },
+  "chunk_whitespace_units": {
+    "min": 1,
+    "mean": 189.34,
+    "median": 193,
+    "p90": 326.0,
+    "p95": 344.0,
+    "p99": 387.0,
+    "max": 462
+  },
+  "chunk_character_bands": {
+    "201-500": 21518,
+    "501-1000": 25440,
+    "1001-2000": 43120,
+    "1-200": 5830,
+    "2001+": 5
+  },
+  "language_heuristics": {
+    "vietnamese_diacritics": 83656,
+    "cjk_present": 12245,
+    "other_unclassified": 12
+  },
+  "short_chunk_counts_below_characters": {
+    "30": 189,
+    "50": 541,
+    "100": 1827,
+    "10": 13
+  },
+  "generic_label_only_occurrences": {},
+  "generic_label_examples": [],
+  "length_by_language": {
+    "vietnamese_diacritics": {
+      "characters": {
+        "min": 15,
+        "mean": 972.7,
+        "median": 1036.0,
+        "p90": 1496.0,
+        "p95": 1578.0,
+        "p99": 1765.0,
+        "max": 2059
+      },
+      "whitespace_units": {
+        "min": 3,
+        "mean": 214.01,
+        "median": 227.5,
+        "p90": 329.0,
+        "p95": 347.0,
+        "p99": 390.0,
+        "max": 462
+      }
+    },
+    "cjk_present": {
+      "characters": {
+        "min": 4,
+        "mean": 339.74,
+        "median": 337,
+        "p90": 545.6,
+        "p95": 583.0,
+        "p99": 665.0,
+        "max": 1222
+      },
+      "whitespace_units": {
+        "min": 1,
+        "mean": 20.87,
+        "median": 11,
+        "p90": 50.0,
+        "p95": 55.0,
+        "p99": 113.12,
+        "max": 236
+      }
+    },
+    "other_unclassified": {
+      "characters": {
+        "min": 95,
+        "mean": 679,
+        "median": 782.5,
+        "p90": 1032.4,
+        "p95": 1059.5,
+        "p99": 1081.5,
+        "max": 1087
+      },
+      "whitespace_units": {
+        "min": 1,
+        "mean": 121.17,
+        "median": 150.5,
+        "p90": 214.6,
+        "p95": 222.25,
+        "p99": 224.45,
+        "max": 225
+      }
+    }
+  },
+  "same_doc_exact_duplicate_occurrences": 0,
+  "cross_doc_extra_identical_text_occurrences_within_query": 1969,
+  "strictly_contained_chunk_occurrences_same_doc_within_query": 63,
+  "unique_texts_appearing_in_multiple_documents": 825,
+  "empty_queries": 0,
+  "longest_chunks": [
+    {
+      "characters": 2059,
+      "query_id": 352,
+      "doc_id": 591558,
+      "chunk_order": 55,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2003,
+      "query_id": 469,
+      "doc_id": 552687,
+      "chunk_order": 14,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2003,
+      "query_id": 113,
+      "doc_id": 552687,
+      "chunk_order": 69,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2002,
+      "query_id": 956,
+      "doc_id": 179412,
+      "chunk_order": 64,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 2002,
+      "query_id": 657,
+      "doc_id": 179412,
+      "chunk_order": 0,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1999,
+      "query_id": 717,
+      "doc_id": 140861,
+      "chunk_order": 73,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1999,
+      "query_id": 113,
+      "doc_id": 140861,
+      "chunk_order": 17,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1993,
+      "query_id": 199,
+      "doc_id": 649117,
+      "chunk_order": 44,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1990,
+      "query_id": 655,
+      "doc_id": 116996,
+      "chunk_order": 5,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1990,
+      "query_id": 324,
+      "doc_id": 651396,
+      "chunk_order": 3,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1986,
+      "query_id": 838,
+      "doc_id": 177594,
+      "chunk_order": 77,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1986,
+      "query_id": 306,
+      "doc_id": 177594,
+      "chunk_order": 50,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1983,
+      "query_id": 834,
+      "doc_id": 656975,
+      "chunk_order": 76,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1978,
+      "query_id": 717,
+      "doc_id": 552793,
+      "chunk_order": 72,
+      "language": "vietnamese_diacritics"
+    },
+    {
+      "characters": 1977,
+      "query_id": 525,
+      "doc_id": 182315,
+      "chunk_order": 68,
+      "language": "vietnamese_diacritics"
+    }
+  ],
+  "cjk_samples": [
+    {
+      "query_id": 2,
+      "doc_id": 1178885,
+      "chunk_order": 3,
+      "preview": "其他类似问题\n发现口腔里有个黑点，口腔里会有痣吗？\n大约长了两三天了，突然发现口腔里长了一个\n睡一觉起来口腔里、就有很多血\n早晨起来口腔里有血水嘴巴里有苦味\n去年六月份每天早晨起来口腔有异味\n去年六月份每天早晨起来口腔有异味\n每天早晨起来鼻子里都有血\n每天起床，口腔里有雪\n我妈妈口腔里全部都白了\n我女儿今年6岁，这几天口腔里的蛀牙每天都\n在线义诊（限时：10"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792187,
+      "chunk_order": 4,
+      "preview": "早晨起床刷牙时经常有牙龈出血，这是怎么回事？\n牙龈出血的原因很多，是口腔疾病的常见症状之一。一般分为局部性和全身性两种：局部原因引起的牙龈出血，常见的是患 牙龈炎 和牙周炎病人。这些病人由于不经常刷牙，或由于刷牙的方法不正确，在牙龈边缘的地方产生牙石。牙石是一种坚硬的石灰样物质，对牙龈有刺激作用，能引起牙龈发炎、肿胀、充血，轻者在刷牙、吮吸、咬硬物或剔牙时出"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 997291,
+      "chunk_order": 6,
+      "preview": "其他类似问题\n一觉醒来嘴唇肿了，口腔上颚长了好多点点\n本人一觉醒来发现有口腔出血现象\n一觉醒来，口腔右边有两个小类似于溃烂\n一觉醒来嘴巴肿了，口腔上颚张可很多点点\n早上醒来口腔很酸，很总\n早上醒来口腔发苦\n每天早晨醒来，口腔来干燥\n睡觉醒来口腔就感觉很不舒服\n最近睡觉醒来口腔里总是有血\n睡觉醒来口腔有血怎么办\n在线义诊（限时：10月23日）\n回复区\n裴瑞龙\n"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792263,
+      "chunk_order": 7,
+      "preview": "我最近早上起来漱口时牙龈总是会出血，是什么回事啊？\n然而，如果牙龈经常出血就该引起你的高度警惕了，因为这常常是疾病的报警信号。 谁是导致 牙龈出血 的凶手？ 第一个疑犯：压力突然增大 牙医建议：很多人由于近期工作压力突然增大，在刷牙时牙龈总是出血，并且有 口臭 。在放松压力的同时，建议先要到正规口腔医院去做一下牙齿洁治(即洗牙)，然后坚持配合正确有效的刷牙方"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792246,
+      "chunk_order": 8,
+      "preview": "早上起来牙龈出血是什么原因？\n牙龈出血的原因很多，是口腔疾病的常见症状之一。一般分为局部性和全身性两种：局部原因引起的牙龈出血，常见的是患 牙龈炎 和牙周炎病人。这些病人由于不经常刷牙，或由于刷牙的方法不正确，在牙龈边缘的地方产生牙石。牙石是一种坚硬的石灰样物质，对牙龈有刺激作用，能引起牙龈发炎、肿胀、充血，轻者在刷牙、吮吸、咬硬物或剔牙时出血，重者在轻微刺"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 2985135,
+      "chunk_order": 10,
+      "preview": "每次醒来时从牙齿缝里出血\n健康咨询描述： 右下部的牙齿每次起床后都会出血,而且嘴里面有腥腥的感觉...有时候喉咙干燥的历害． 能不能告诉我这是怎么引起的．我最可能患有什么疾病呢． 患者年龄:２１ 本次发病及持续的时间:很久了． 病史:好像目前仍然有鼻炎症状．鼻炎也有1年了。但是没正式看过\n"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 1792274,
+      "chunk_order": 12,
+      "preview": "早上起来牙龈出血怎么办？\n牙龈出血的原因很多，是口腔疾病的常见症状之一。一般分为局部性和全身性两种：局部原因引起的牙龈出血，常见的是患 牙龈炎 和牙周炎病人。这些病人由于不经常刷牙，或由于刷牙的方法不正确，在牙龈边缘的地方产生牙石。牙石是一种坚硬的石灰样物质，对牙龈有刺激作用，能引起牙龈发炎、肿胀、充血，轻者在刷牙、吮吸、咬硬物或剔牙时出血，重者在轻微刺激或"
+    },
+    {
+      "query_id": 2,
+      "doc_id": 2831438,
+      "chunk_order": 17,
+      "preview": "早晨起床后刷牙时经常出血，血红色的\n曾经的治疗情况和效果： 无\n想得到怎样的帮助： 我该怎么办，如何避免\n投诉\n病情分析： 好，您有可能是牙龈炎，口腔卫生不好，牙齿有牙结石牙菌斑极可能造成牙龈炎从而引起牙龈出血，但如果牙龈状况良好，刷牙还是出血的话就得考虑其他问题了，比如凝血功能差，血小板低等 指导意见： 建议先到口腔科检查牙齿是否有牙结石，牙菌斑，是否有牙"
+    }
+  ],
+  "available_chunk_fields": [
+    "doc_id",
+    "chunk_text",
+    "chunk_order"
+  ],
+  "limitations": [
+    "No corpus source verification or official doc-ID allowlist verification performed.",
+    "No scores, candidate pools, original source offsets or model identity in this ZIP.",
+    "chunk_order is output sequence, not original document source order.",
+    "No gold labels or official LCS evaluation; length and language are not quality labels.",
+    "Language detection is a script heuristic, and whitespace units are not model tokens.",
+    "The reported score 0.1706 cannot be independently linked to this ZIP without a scoring receipt."
+  ],
+  "query_file_sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08"
+}

@@ -1,0 +1,10 @@
+{
+  "queries": 1200,
+  "identical_document_lists": 1200,
+  "exact_baseline_chunks": 95913,
+  "new_subspans": 0,
+  "unmatched_chunks": 0,
+  "baseline_chunks_removed": 48087,
+  "documents_losing_all_evidence": 23273,
+  "documents_gaining_evidence": 0
+}

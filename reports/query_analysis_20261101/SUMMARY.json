@@ -1,0 +1,88 @@
+{
+  "path": "query\\query.parquet",
+  "sha256": "ce13508b893bbd6b9169679d540630bc37eb5950cad08b4d5e0e5d7063670c08",
+  "rows": 1200,
+  "schema": "id: int64 not null\nquery: string not null",
+  "unique_ids": 1200,
+  "id_min": 1,
+  "id_max": 1200,
+  "ids_in_order": true,
+  "characters": {
+    "min": 18,
+    "median": 81.0,
+    "mean": 129.51,
+    "p90": 281.1,
+    "p95": 364.05,
+    "p99": 494.06,
+    "max": 1243
+  },
+  "whitespace_units": {
+    "min": 5,
+    "median": 18.0,
+    "mean": 29.91,
+    "p90": 66.0,
+    "p95": 84.0,
+    "p99": 111.0,
+    "max": 281
+  },
+  "length_bands": {
+    "1-20": 661,
+    "21-50": 329,
+    "51-100": 189,
+    "101-200": 20,
+    "201+": 1
+  },
+  "language_heuristics": {
+    "vietnamese_diacritics": 1200
+  },
+  "intent_hints": {
+    "diagnosis_cause": 244,
+    "prognosis_risk": 310,
+    "medication_use": 248,
+    "explanation": 139,
+    "test_result": 236,
+    "prevention_transmission": 85,
+    "management_treatment": 333,
+    "diet_lifestyle": 88
+  },
+  "feature_hints": {
+    "digits": 521,
+    "time_expression": 266,
+    "uncertainty_alternative": 146,
+    "unit_measurement": 41,
+    "question_khong": 417,
+    "child_context": 162,
+    "explicit_negation": 76,
+    "numeric_age": 110,
+    "pregnancy_lactation": 117
+  },
+  "two_or_more_intent_hints": 473,
+  "no_intent_hint": 172,
+  "two_or_more_question_marks": 126,
+  "zero_question_marks": 248,
+  "integrity": {
+    "empty": 0,
+    "nfc_differs": 4,
+    "replacement_character": 0,
+    "surrounding_whitespace": 0
+  },
+  "exact_duplicate_groups": [],
+  "normalized_duplicate_groups": [],
+  "longest_ids": [
+    219,
+    271,
+    71,
+    93,
+    1066,
+    130,
+    179,
+    471,
+    158,
+    767
+  ],
+  "caveats": [
+    "Whitespace units are not model tokens or Vietnamese words.",
+    "Intent/feature/language hints are overlapping regex flags, not verified labels.",
+    "Query-only analysis cannot measure retrieval quality or answer-span lengths."
+  ]
+}
