@@ -40,6 +40,10 @@ LOCAL.mkdir(parents=True, exist_ok=True)
 RUN_PARENT.mkdir(parents=True, exist_ok=True)
 os_environ = __import__('os').environ
 os_environ.update(USE_TF='0', USE_FLAX='0', TOKENIZERS_PARALLELISM='false')
+DEBUG_CUDA = False  # Set True in a FRESH session if a CUDA assertion persists.
+if DEBUG_CUDA:
+    assert 'torch' not in sys.modules, 'Restart session before enabling CUDA diagnostics'
+    os_environ['CUDA_LAUNCH_BLOCKING'] = '1'
 '''
 
 FILES = {name+'.py': (ROOT/'scripts'/f'{name}.py').read_text(encoding='utf-8') for name in MODULES}
@@ -106,8 +110,9 @@ QUERY_LIMIT = 20
 SOURCE_BATCH_LIMIT = 4
 TOP_K_PER_BRANCH = 500
 RERANK_TOP_K = 400
+QWEN_ATTENTION = 'sdpa'  # faster; 'eager' for a separate diagnostic plan if needed
 PLAN = pipeline.make_plan(QUERY_FILE, QUERIES, QUERY_LIMIT, SOURCE_BATCH_LIMIT,
-                          TOP_K_PER_BRANCH, RERANK_TOP_K)
+                          TOP_K_PER_BRANCH, RERANK_TOP_K, QWEN_ATTENTION)
 RUN = RUN_PARENT / PLAN['signature']
 RUN.mkdir(parents=True, exist_ok=True)
 plan_path = RUN / 'PLAN.json'
@@ -159,6 +164,8 @@ Embedding float32 lưu đủ corpus có thể cần khoảng 22,6 GB/model nếu
 SHARD_COUNT = 1
 SHARD_INDEX = 0
 SAVE_EMBEDDINGS = True
+ENCODE_BATCH_SIZE = 32  # maximum; actual batches also obey ENCODE_PADDED_TOKENS
+ENCODE_PADDED_TOKENS = 8192  # conservative start; increase after measuring GPU memory
 STOP_AFTER_BATCHES = 2  # pilot timing; then None and rerun ONLY worker cell below
 assert ROLE in pipeline.BRANCHES
 assert ROLE != 'bm25' or (SHARD_COUNT, SHARD_INDEX) == (1, 0)
@@ -171,7 +178,8 @@ print('Assigned batches:', pipeline.assigned(PLAN, SHARD_INDEX, SHARD_COUNT))
             LOCAL / PLAN['signature'] / 'bm25.sqlite3', STOP_AFTER_BATCHES)
     else:
         RESULT = pipeline.retrieve_dense(PLAN, RUN, ROLE, SOURCE_PLAN, MEMBERS,
-            SHARD_INDEX, SHARD_COUNT, STOP_AFTER_BATCHES, SAVE_EMBEDDINGS)
+            SHARD_INDEX, SHARD_COUNT, STOP_AFTER_BATCHES, SAVE_EMBEDDINGS,
+            encoder_factory=lambda policy: pipeline.Encoder(policy, ENCODE_BATCH_SIZE, ENCODE_PADDED_TOKENS))
 print('State:', RESULT['state'], 'Completed source batches:', len(RESULT['completed_batches']))
 '''), md('''Sau khi cả 4 nhánh và mọi shard đều complete, mở notebook 2.
 Paused là checkpoint thời gian, chưa phải hoàn tất. Đổi STOP_AFTER_BATCHES=None rồi chạy lại cell worker.

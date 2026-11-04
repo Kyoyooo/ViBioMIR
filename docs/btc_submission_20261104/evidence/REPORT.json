@@ -1,0 +1,20 @@
+{
+  "queries": 1200,
+  "source_validation": {
+    "validation": "passed",
+    "queries": 1200,
+    "scope": "all_queries",
+    "mode": "reranked",
+    "chunks": 144000,
+    "unique_selected_chunks": 116939,
+    "original_evidence_verified": true,
+    "manifest_sha256": "582422fbee65c9b2ef4d0b45585d4171e531a4234c15bcf90f097ccc7cbd697f",
+    "predictions_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+    "quality_measured": false,
+    "official_submission_ready": false,
+    "official_eligibility": "pending S11"
+  },
+  "submission_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+  "zip_sha256": "0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd",
+  "relevance_measured": false
+}

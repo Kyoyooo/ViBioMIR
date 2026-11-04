@@ -33,6 +33,70 @@ class FakeScorer:
 
 
 class CorpusPipelineTest(unittest.TestCase):
+    def test_native_bf16_detection_does_not_choose_emulation(self):
+        from types import SimpleNamespace
+        class Device:
+            major = 7
+            def get_device_capability(self):
+                return (self.major, 5)
+            def is_bf16_supported(self, including_emulation=True):
+                return including_emulation or self.major >= 8
+        gpu = Device()
+        fake = SimpleNamespace(cuda=gpu, bfloat16='bf16', float16='fp16')
+        self.assertEqual(p.embedding_dtype(fake, p.embedding_policies()['qwen']), 'fp16')
+        gpu.major = 8
+        self.assertEqual(p.embedding_dtype(fake, p.embedding_policies()['qwen']), 'bf16')
+        self.assertEqual(p.embedding_dtype(fake, p.embedding_policies()['bge']), 'fp16')
+
+    def test_length_sort_and_padded_budget_preserve_window_owners(self):
+        features = [dict(input_ids=list(range(n))) for n in (200, 20, 100, 30)]
+        items, owners, weights = p.sorted_windows(features, [0, 1, 2, 0], [200, 20, 100, 30])
+        self.assertEqual(owners, [1, 0, 2, 0])
+        self.assertEqual(weights, [20, 30, 100, 200])
+        self.assertEqual(p.window_batch_size(items, 0, 4, 128), 2)
+        self.assertEqual(p.window_batch_size(items, 2, 4, 256), 1)
+        self.assertEqual(sum(w for o, w in zip(owners, weights) if o == 0), 230)
+
+    def test_embedding_token_validation_before_cuda_and_pooling(self):
+        import torch
+        hidden = torch.arange(2*4*3, dtype=torch.float32).reshape(2, 4, 3)
+        for mask, expected in [(torch.tensor([[0, 0, 1, 1], [1, 1, 1, 1]]), [3, 3]),
+                               (torch.tensor([[1, 1, 0, 0], [1, 1, 1, 1]]), [1, 3])]:
+            batch = dict(input_ids=torch.tensor([[0, 0, 2, 3], [4, 5, 6, 7]]), attention_mask=mask)
+            positions = p.validate_embedding_batch(batch, 8, 4)
+            self.assertEqual(positions, expected)
+            torch.testing.assert_close(p.pool_embeddings(hidden, mask, 'last', positions),
+                torch.stack([hidden[row, index] for row, index in enumerate(expected)]))
+        batch['input_ids'][0, 0] = 8
+        with self.assertRaisesRegex(ValueError, 'vocabulary'):
+            p.validate_embedding_batch(batch, 8, 4)
+        batch['input_ids'][0, 0] = -1
+        with self.assertRaisesRegex(ValueError, 'vocabulary'):
+            p.validate_embedding_batch(batch, 8, 4)
+        batch['input_ids'][0, 0] = 0
+        batch['attention_mask'][0] = 0
+        with self.assertRaisesRegex(ValueError, 'Attention mask'):
+            p.validate_embedding_batch(batch, 8, 4)
+        with self.assertRaisesRegex(ValueError, 'positions'):
+            p.pool_embeddings(hidden, mask, 'last', [4, 3])
+
+    def test_qwen_real_tiny_forward_with_left_padding(self):
+        import torch
+        from transformers import Qwen3Config, Qwen3Model
+        config = Qwen3Config(vocab_size=32, hidden_size=32, intermediate_size=64,
+            num_hidden_layers=1, num_attention_heads=4, num_key_value_heads=2,
+            head_dim=8, max_position_embeddings=64, pad_token_id=0)
+        config._attn_implementation = 'eager'
+        model = Qwen3Model(config).eval()
+        batch = dict(input_ids=torch.tensor([[0, 0, 2, 3], [4, 5, 6, 7]]),
+                     attention_mask=torch.tensor([[0, 0, 1, 1], [1, 1, 1, 1]]))
+        positions = p.validate_embedding_batch(batch, 32, 64)
+        with torch.inference_mode():
+            hidden = model(**batch, use_cache=False).last_hidden_state
+            result = p.pool_embeddings(hidden, batch['attention_mask'], 'last', positions)
+            torch.testing.assert_close(result, hidden[:, -1])
+            self.assertTrue(torch.isfinite(result).all())
+
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)

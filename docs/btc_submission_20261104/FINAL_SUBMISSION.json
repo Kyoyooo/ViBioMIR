@@ -1,0 +1,27 @@
+{
+  "confirmed_by_owner": true,
+  "submission_route": "dense_v1_bge",
+  "submission_zip_path": "submission_17.zip",
+  "submission_zip_sha256": "0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd",
+  "submission_json_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+  "submitted_at_vietnam_time": null,
+  "competition_submission_id": null,
+  "run_or_snapshot_drive_url": "https://drive.google.com/drive/folders/1r0xka2F-afmQ4c22mLNbU_A0mrv-kwBe",
+  "reported_metrics": null,
+  "allowed_routes": [
+    "dense_v1_bge",
+    "submission_multimodel_selection",
+    "partial_retrieval_fallback",
+    "other_documented"
+  ],
+  "baseline_reference_only": {
+    "local_file": "submission_17.zip",
+    "zip_sha256": "0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd",
+    "submission_json_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+    "status": "Người đại diện xác nhận dùng submission_17.zip; hash ZIP/JSON khớp REPORT export dense V1 trên Drive, đọc qua connector ngày 04/11/2026. Chưa có receipt thời điểm/submission ID BTC."
+  },
+  "producer_export_folder": "https://drive.google.com/drive/folders/1VjmZpAQKFawzrD0IbrwCIwi6HkX7P1u_",
+  "producer_report_url": "https://drive.google.com/file/d/19CpYQq0KOJtKWI91tzu9v6ORvX5E1X9n/view",
+  "producer_experiment_url": "https://drive.google.com/file/d/1Jevw4aYAw1jsN6zyb2Oq_1lpRopkLNVn/view",
+  "notes": "Bài private được người đại diện chọn trong hội thoại ngày 04/11/2026. REPORT export xác nhận dense-only cross-encoder, source structural, top400, 120docs/120chunks/6perdoc/IoU0.8 và hash giống file local. submitted_at/submission ID và điểm private chưa được cung cấp. Không tự gán điểm công khai trước đó thành điểm private."
+}

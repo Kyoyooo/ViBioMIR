@@ -11,6 +11,7 @@ from pathlib import Path
 import re
 import shutil
 import sqlite3
+import time
 import zipfile
 
 try:
@@ -30,17 +31,19 @@ LINKS_SHA = '87e44a792d7a99fb0fde5dff7f09f1a38a0a1fdf02ddd1ac93a005736e00b0a7'
 BRANCHES = ('bm25', 'bge', 'qwen', 'e5')
 
 
-def embedding_policies():
+def embedding_policies(qwen_attention='sdpa'):
+    core.require(qwen_attention in ('sdpa', 'eager'), 'Use sdpa or eager Qwen attention')
     return dict(
         bge=dict(model_id='BAAI/bge-m3', revision='5617a9f61b028005a4858fdac845db406aefb181',
                  date='2024-07-03T14:50:10Z', pooling='cls', max_tokens=1024, safetensors=False),
         qwen=dict(model_id='Qwen/Qwen3-Embedding-0.6B', revision='97b0c614be4d77ee51c0cef4e5f07c00f9eb65b3',
-                  date='2026-04-20T02:45:58Z', pooling='last', max_tokens=2048),
+                  date='2026-04-20T02:45:58Z', pooling='last', max_tokens=2048,
+                  padding='left', attention=qwen_attention, dtype='bfloat16_native_else_float16'),
         e5=dict(model_id='intfloat/multilingual-e5-large', revision='3d7cfbdacd47fdda877c5cd8a79fbcc4f2a574f3',
                 date='2026-04-02T02:16:59Z', pooling='mean', max_tokens=512))
 
 
-def make_plan(query_path, queries, query_limit=20, batch_limit=4, top_k=500, rerank_k=400):
+def make_plan(query_path, queries, query_limit=20, batch_limit=4, top_k=500, rerank_k=400, qwen_attention='sdpa'):
     import pyarrow.parquet as pq
     core.require(query_limit is None or type(query_limit) is int and query_limit > 0, 'Invalid query limit')
     core.require(batch_limit is None or type(batch_limit) is int and 0 < batch_limit <= SOURCE['batches'], 'Invalid batch limit')
@@ -53,7 +56,7 @@ def make_plan(query_path, queries, query_limit=20, batch_limit=4, top_k=500, rer
         query_sha256=core.file_hash(query_path), queries=selected,
         batch_indices=list(range(SOURCE['batches'] if batch_limit is None else batch_limit)),
         full_scope=len(selected) == 1200 and batch_limit is None,
-        top_k=top_k, rerank_k=rerank_k, embeddings=embedding_policies(), rerankers=multi.policies(),
+        top_k=top_k, rerank_k=rerank_k, embeddings=embedding_policies(qwen_attention), rerankers=multi.policies(),
         dense_scoring='normalized-float32-inner-product', long_text='overlap64-token-windows-weighted-mean-v1',
         bm25='sqlite-fts5-global-bm25-unicode61-plus-cjk-bigrams-v1', bm25_query_terms=128,
         code={name: core.file_hash(path) for name, path in dict(
@@ -62,7 +65,7 @@ def make_plan(query_path, queries, query_limit=20, batch_limit=4, top_k=500, rer
 
 def check_plan(plan):
     core.checked(plan)
-    core.require(plan['source'] == SOURCE and plan['embeddings'] == embedding_policies()
+    core.require(plan['source'] == SOURCE and plan['embeddings'] == embedding_policies(plan['embeddings']['qwen']['attention'])
         and plan['rerankers'] == multi.policies(), 'Source/model policy changed')
     core.require(plan['batch_indices'] == list(range(len(plan['batch_indices']))) and
         0 < len(plan['batch_indices']) <= SOURCE['batches'], 'Invalid source scope')
@@ -120,22 +123,78 @@ def lexical(text):
            for token in list(run) + [run[i:i+2] for i in range(len(run)-1)]])
 
 
+def validate_embedding_batch(batch, vocabulary_size, max_tokens):
+    """Check IDs and gather positions on CPU before any CUDA indexing."""
+    import torch
+    ids, mask = batch['input_ids'], batch['attention_mask']
+    core.require(ids.device.type == mask.device.type == 'cpu', 'Validate token batch before CUDA transfer')
+    core.require(ids.ndim == 2 and ids.shape == mask.shape and 0 < ids.shape[1] <= max_tokens,
+                 'Invalid embedding token/mask shape or context length')
+    core.require(ids.dtype in (torch.int64, torch.int32), 'Token IDs must be integers')
+    core.require(int(ids.min()) >= 0 and int(ids.max()) < vocabulary_size,
+        f'Token IDs outside model vocabulary: min={int(ids.min())}, max={int(ids.max())}, vocabulary={vocabulary_size}')
+    core.require(bool(((mask == 0) | (mask == 1)).all()) and bool((mask.sum(1) > 0).all()),
+                 'Attention mask must be binary with nonempty sequences')
+    return [int(row.nonzero()[-1]) for row in mask]
+
+
+def pool_embeddings(hidden, mask, pooling, last_positions):
+    import torch
+    core.require(hidden.ndim == 3 and hidden.shape[:2] == mask.shape, 'Hidden state and mask shape differ')
+    if pooling == 'cls':
+        return hidden[:, 0]
+    if pooling == 'mean':
+        return (hidden.float()*mask[..., None]).sum(1)/mask.sum(1)[:, None]
+    core.require(pooling == 'last' and len(last_positions) == hidden.shape[0] and
+        all(0 <= i < hidden.shape[1] for i in last_positions), 'Invalid last-token pooling positions')
+    positions = torch.tensor(last_positions, device=hidden.device, dtype=torch.long)
+    return hidden.gather(1, positions[:, None, None].expand(-1, 1, hidden.shape[2])).squeeze(1)
+
+
+def embedding_dtype(torch, policy):
+    # PyTorch's default includes emulation; tensor creation is not native BF16 compute.
+    native_bf16 = torch.cuda.get_device_capability()[0] >= 8 and torch.cuda.is_bf16_supported(including_emulation=False)
+    return torch.bfloat16 if policy.get('dtype', '').startswith('bfloat16') and native_bf16 else torch.float16
+
+
+def sorted_windows(features, owners, weights):
+    order = sorted(range(len(features)), key=lambda i: len(features[i]['input_ids']))
+    return ([features[i] for i in order], [owners[i] for i in order], [weights[i] for i in order])
+
+
+def window_batch_size(features, offset, max_batch, padded_tokens):
+    size = min(max_batch, len(features)-offset)
+    while size > 1 and size*max(len(f['input_ids']) for f in features[offset:offset+size]) > padded_tokens:
+        size -= 1
+    return size
+
+
 class Encoder:
     """Native model pooling; all tokens covered by windows, never silent truncation."""
-    def __init__(self, policy, batch_size=16):
+    def __init__(self, policy, batch_size=32, padded_tokens=8192):
         import numpy as np
         import torch
         from transformers import AutoModel, AutoTokenizer
         core.require(torch.cuda.is_available(), 'Embedding worker requires CUDA')
+        core.require(type(batch_size) is int and batch_size > 0 and padded_tokens >= policy['max_tokens'], 'Invalid encoding batch/token budgets')
         self.np, self.torch, self.policy, self.batch_size = np, torch, policy, batch_size
-        self.tokenizer = AutoTokenizer.from_pretrained(policy['model_id'], revision=policy['revision'], trust_remote_code=False)
+        self.padded_tokens = padded_tokens
+        self.debug_cuda = __import__('os').environ.get('CUDA_LAUNCH_BLOCKING') == '1'
+        self.tokenizer = AutoTokenizer.from_pretrained(policy['model_id'], revision=policy['revision'],
+            trust_remote_code=False, padding_side=policy.get('padding', 'right'))
+        dtype = embedding_dtype(torch, policy)
         self.model = AutoModel.from_pretrained(policy['model_id'], revision=policy['revision'],
-            trust_remote_code=False, torch_dtype=torch.float16, use_safetensors=policy.get('safetensors', True),
-            attn_implementation='sdpa').cuda().eval()
+            trust_remote_code=False, dtype=dtype, use_safetensors=policy.get('safetensors', True),
+            attn_implementation=policy.get('attention', 'sdpa')).cuda().eval()
         if self.tokenizer.pad_token_id is None:
             self.tokenizer.pad_token = self.tokenizer.eos_token
         core.require(self.model.config._commit_hash == policy['revision'], 'Embedding revision differs')
         core.require(sum(p.numel() for p in self.model.parameters()) <= 15_000_000_000, 'Model exceeds parameter limit')
+        self.vocabulary_size = self.model.get_input_embeddings().num_embeddings
+        print('Embedding runtime:', dict(model=policy['model_id'], gpu=torch.cuda.get_device_name(0),
+            torch=torch.__version__, cuda=torch.version.cuda, dtype=str(dtype),
+            attention=policy.get('attention', 'sdpa'), padding=self.tokenizer.padding_side,
+            vocabulary=self.vocabulary_size, batch_size=batch_size, padded_tokens=padded_tokens), flush=True)
 
     def encode(self, texts, query=False):
         import numpy as np
@@ -154,30 +213,36 @@ class Encoder:
             start = 0
             while start < len(body):
                 end = min(start+capacity, len(body))
-                features.append(dict(input_ids=tok.build_inputs_with_special_tokens(header+body[start:end]),
-                                     attention_mask=[1]*(len(header)+end-start+tok.num_special_tokens_to_add(pair=False))))
+                ids = tok.build_inputs_with_special_tokens(header+body[start:end])
+                features.append(dict(input_ids=ids, attention_mask=[1]*len(ids)))
                 owners.append(owner)
                 weights.append(end-start if start == 0 else end-start-64)
                 if end == len(body):
                     break
                 start = end-64
+        features, owners, weights = sorted_windows(features, owners, weights)
         output, pos = None, 0
         while pos < len(features):
-            size = min(self.batch_size, len(features)-pos)
+            size = window_batch_size(features, pos, self.batch_size, self.padded_tokens)
+            stage = 'CPU token validation'
             try:
-                batch = tok.pad(features[pos:pos+size], padding=True, return_tensors='pt').to('cuda')
+                batch = tok.pad(features[pos:pos+size], padding=True, return_tensors='pt')
+                last_positions = validate_embedding_batch(batch, self.vocabulary_size, policy['max_tokens'])
+                stage = 'CUDA transfer / model forward'
+                batch = batch.to('cuda')
                 with t.inference_mode():
-                    hidden = self.model(**batch).last_hidden_state
+                    kwargs = dict(use_cache=False) if policy['pooling'] == 'last' else {}
+                    hidden = self.model(**batch, **kwargs).last_hidden_state
+                    if self.debug_cuda:
+                        t.cuda.synchronize()
+                    stage = 'token pooling'
                     mask = batch['attention_mask']
-                    if policy['pooling'] == 'cls':
-                        vectors = hidden[:, 0]
-                    elif policy['pooling'] == 'mean':
-                        vectors = (hidden.float()*mask[..., None]).sum(1)/mask.sum(1)[:, None]
-                    else:
-                        # Works for left or right padding, independent of pad token ID.
-                        idx = (t.arange(mask.shape[1], device='cuda')[None, :]*mask).max(1).values
-                        vectors = hidden[t.arange(size, device='cuda'), idx]
-                    vectors = t.nn.functional.normalize(vectors.float(), dim=1).cpu().numpy()
+                    vectors = pool_embeddings(hidden, mask, policy['pooling'], last_positions).float().cpu().numpy()
+                    stage = 'CPU vector normalization'
+                    core.require(np.isfinite(vectors).all(), 'Model returned nonfinite embeddings')
+                    lengths = np.linalg.norm(vectors, axis=1, keepdims=True)
+                    core.require(bool((lengths > 0).all()), 'Model returned zero embeddings')
+                    vectors = vectors/lengths
                 if output is None:
                     output = np.zeros((len(texts), vectors.shape[1]), dtype=np.float32)
                 for j, vector in enumerate(vectors):
@@ -187,7 +252,16 @@ class Encoder:
                 if size == 1:
                     raise
                 self.batch_size = max(1, size//2)
+                batch, hidden, vectors = None, None, None
                 t.cuda.empty_cache()
+            except RuntimeError as exc:
+                if 'device-side assert' not in str(exc) and 'CUDA error' not in str(exc):
+                    raise
+                # Do not call CUDA again: a device assertion poisons this context.
+                raise RuntimeError(f'Embedding failed at {stage}; model={policy["model_id"]}, '
+                    f'query={query}, window_offset={pos}, batch_size={size}. '
+                    'Restart the Colab session before retrying. Set DEBUG_CUDA=True before importing torch '
+                    'for synchronous diagnostics. Original error: '+str(exc)) from exc
         norms = np.linalg.norm(output, axis=1, keepdims=True)
         core.require(np.all(norms > 0) and np.isfinite(output).all(), 'Invalid embedding vectors')
         return output/norms
@@ -242,12 +316,19 @@ def retrieve_dense(plan, run, role, source_plan, members, shard=0, shards=1,
     for index in parts[len(completed):]:
         if stop_after_batches is not None and new >= stop_after_batches:
             break
+        started = time.monotonic()
+        timing = dict(batch=index)
         rows = source_batch(source_plan, members, index)
+        timing['source_seconds'] = round(time.monotonic()-started, 3)
         if not rows:
             completed.append(index)
             continue
         if qvectors is None:
+            print(f'{role}: loading encoder / encoding {len(plan["queries"])} queries (once this session)', flush=True)
+            query_started = time.monotonic()
             qvectors = encode([q['query'] for q in plan['queries']], query=True)
+            timing['query_setup_seconds'] = round(time.monotonic()-query_started, 3)
+        encode_started = time.monotonic()
         vector_path = output/f'embeddings-{index:06d}.npy'
         receipt_path = output/f'embeddings-{index:06d}.json'
         if vector_path.is_file() and receipt_path.is_file():
@@ -256,6 +337,7 @@ def retrieve_dense(plan, run, role, source_plan, members, shard=0, shards=1,
                 receipt['sha256'] == core.file_hash(vector_path), 'Embedding receipt differs')
             vectors = np.load(vector_path, allow_pickle=False)
         else:
+            print(f'{role}: encoding source batch {index}, {len(rows)} chunks', flush=True)
             vectors = encode([row['retrieval_text'] for row in rows])
             if save_embeddings:
                 temporary = vector_path.with_suffix('.npy.tmp')
@@ -264,17 +346,24 @@ def retrieve_dense(plan, run, role, source_plan, members, shard=0, shards=1,
                 temporary.replace(vector_path)
                 core.write(receipt_path, core.signed(dict(identity=identity, batch=index,
                     sha256=core.file_hash(vector_path))))
+        timing['vectors_load_or_encode_and_save_seconds'] = round(time.monotonic()-encode_started, 3)
         core.require(vectors.shape == (len(rows), qvectors.shape[1]) and np.isfinite(vectors).all(), 'Embedding shape/value differs')
+        search_started = time.monotonic()
         for q, result in enumerate(dense_top(qvectors, vectors, plan['top_k'])):
             for position, score in result:
                 key = rows[position]['chunk_id']
                 hits[q][key] = max(score, hits[q].get(key, -float('inf')))
             hits[q] = trim(hits[q], plan['top_k'])
+        timing['search_seconds'] = round(time.monotonic()-search_started, 3)
         completed.append(index)
         new += 1
         # Exact prefix is saved after each batch; no gzip timestamps in identity.
+        backup_started = time.monotonic()
         core.write(checkpoint, core.signed(dict(identity=identity, completed_batches=completed, hits=hits)))
-        print(f'{role} shard {shard}/{shards}: {len(completed)}/{len(parts)} batches', flush=True)
+        timing['checkpoint_seconds'] = round(time.monotonic()-backup_started, 3)
+        timing['total_seconds'] = round(time.monotonic()-started, 3)
+        core.write(output/f'timing-{index:06d}.json', timing)
+        print(f'{role} shard {shard}/{shards}: {len(completed)}/{len(parts)} batches; {timing}', flush=True)
     result = core.signed(dict(identity=identity, state='complete' if completed == parts else 'paused',
         completed_batches=completed, hits=hits))
     core.write(output/'result.json', result)

@@ -2,6 +2,8 @@
 
 **Thành viên mới:** đọc [Thuyết minh pipeline và kế hoạch cải tiến cho nhóm](THUYET_MINH_PIPELINE_RETRIEVAL_CHO_NHOM.md) trước để hiểu mục tiêu, vai trò từng module, cách phân công và giới hạn của thí nghiệm. File hiện tại tập trung vào thao tác chạy Colab.
 
+**Nếu retrieval chưa xong và cần kết hợp với baseline:** dùng [notebook partial fallback](../colab/stage9_partial_retrieval_fallback_colab.ipynb) và [hướng dẫn riêng](COLAB_PARTIAL_RETRIEVAL_FALLBACK.md). Luồng này nhập checkpoint thiếu nhánh, chấm candidate mới cùng evidence baseline và giữ nguyên query chưa xử lý; không yêu cầu hoàn tất pipeline bốn nhánh dưới đây.
+
 Bộ này thực hiện luồng bạn yêu cầu:
 
 ```text
@@ -57,6 +59,7 @@ QUERY_LIMIT = 20
 SOURCE_BATCH_LIMIT = 4
 TOP_K_PER_BRANCH = 500
 RERANK_TOP_K = 400
+QWEN_ATTENTION = 'sdpa'
 SHARD_COUNT = 1
 SHARD_INDEX = 0
 STOP_AFTER_BATCHES = 2
@@ -149,3 +152,68 @@ Tài liệu model gốc: [BGE-M3](https://huggingface.co/BAAI/bge-m3), [Qwen emb
 Kiểm thử offline dùng source gzip thật của fixture, SQLite FTS5 thật, matrix search CPU và scorer/encoder giả để kiểm tra luồng. Bao gồm resume, chia shard, từ chối coverage thiếu/trùng, hash nguồn/packet sai, policy chọn evidence và chặn export pilot thành submission. Kiểm tra notebook parse được và nhúng đúng source hỗ trợ.
 
 **Chưa chạy pretrained weights trên GPU Colab hoặc benchmark toàn corpus.** Pilot của bạn là bước xác nhận vận hành tiếp theo; chất lượng chỉ xác định được qua đánh giá phù hợp hoặc điểm BTC.
+
+## Khi Qwen báo CUDA device-side assert
+
+Nếu model đã tải xong rồi báo `CUDA error: device-side assert triggered` ở `norm()` hoặc một thao tác tensor khác, vị trí traceback có thể là nơi lỗi bất đồng bộ được phát hiện, chưa phải thao tác gây lỗi. Cảnh báo HF_TOKEN hoặc torch_dtype deprecated không xác định nguyên nhân này.
+
+1. Chọn **Runtime → Restart session** (hoặc mục khởi động lại phiên tương ứng). Sau device-side assert, không tiếp tục dùng context CUDA cũ hoặc chỉ gọi empty_cache.
+2. Mở phiên bản notebook cập nhật và chạy lại từ đầu. Giữ cấu hình query/batch mong muốn.
+3. Chạy thử `STOP_AFTER_BATCHES=1`; sau khi batch đầu hoàn tất, đặt None và chạy lại riêng cell worker.
+4. Nếu vẫn lỗi, khởi động lại một lần nữa, đặt `DEBUG_CUDA=True` trong cell setup trước khi import torch, rồi chạy lại. Gửi dòng `Embedding runtime` và traceback đầy đủ, nhất là thông báo `Embedding failed at ...`.
+
+Bản chẩn đoán 04/11/2026 bổ sung kiểm tra token IDs, mask và vị trí pooling trên CPU; dùng last-token gather có kiểm tra và chuẩn hóa vector trên CPU. Cấu hình bảo thủ ban đầu dùng eager attention. Bản tối ưu tiếp theo dùng SDPA mặc định, giữ left padding và tắt KV cache; có thể chọn `QWEN_ATTENTION='eager'` để tạo một plan chẩn đoán riêng. Chỉ bật đồng bộ CUDA bổ sung khi DEBUG_CUDA=True. Những thay đổi này giảm các khả năng lỗi và bổ sung chẩn đoán; chưa chứng minh nguyên nhân GPU cụ thể của log đã nhận.
+
+**Code/policy đã thay đổi nên plan signature và RUN mới cũng thay đổi.** Dùng cùng bộ notebook cập nhật trong tất cả nhánh và bước rerank/export; không trộn output của RUN cũ hoặc sửa hash để tiếp tục. Output cũ vẫn được giữ trên Drive. Bản tối ưu có 10 kiểm thử offline, gồm forward thật của Qwen3 kích thước rất nhỏ với trọng số khởi tạo ngẫu nhiên trên CPU; chưa kiểm chứng pretrained weights trên GPU gặp lỗi.
+
+## Tăng tốc trên Colab Pro
+
+### Chọn đúng dtype và attention
+
+Log đã nhận có Tesla T4 nhưng dtype BF16. Code trước dùng `torch.cuda.is_bf16_supported()` với giá trị mặc định có tính cả giả lập, nên đã chọn BF16 dù GPU không có hỗ trợ BF16 native. Bản sửa chỉ chọn BF16 khi compute capability major ≥8 và kiểm tra native BF16 đạt; T4 dùng FP16. Đây là lỗi lựa chọn runtime đã xác định, chưa phải bằng chứng nó giải thích toàn bộ thời gian chậm hoặc lỗi CUDA trước đó.
+
+Nguồn: [hàm kiểm tra BF16 trong PyTorch 2.11](https://github.com/pytorch/pytorch/blob/v2.11.0/torch/cuda/__init__.py), [tài liệu Qwen3 hỗ trợ SDPA](https://huggingface.co/docs/transformers/v4.57.1/en/model_doc/qwen3).
+
+Bản mới sắp window theo độ dài trước khi encode và giữ mapping để trả vector đúng văn bản. Cách này giảm token padding. Batch bị giới hạn đồng thời bởi số window và tổng padded tokens; nếu hết VRAM, batch giảm tự động. Không rút ngắn corpus hay cắt mất nội dung để tăng tốc.
+
+Cấu hình bắt đầu trên T4:
+
+```python
+QWEN_ATTENTION = 'sdpa'  # ở cell tạo PLAN, giống nhau giữa các nhánh
+ENCODE_BATCH_SIZE = 32
+ENCODE_PADDED_TOKENS = 8192
+STOP_AFTER_BATCHES = 3
+DEBUG_CUDA = False
+```
+
+Trên GPU VRAM lớn hơn, có thể thử tăng dần `ENCODE_BATCH_SIZE` và `ENCODE_PADDED_TOKENS` sau khi đo VRAM/thời gian. Đừng đổi các tham số ngay trong lúc cell đang chạy và kỳ vọng chúng có hiệu lực; cần dừng ở checkpoint rồi chạy cell worker lại. Thay QWEN_ATTENTION tạo plan mới; tăng batch/token budget là tham số vận hành của encoder, không đổi nguồn hoặc policy nội dung.
+
+Colab Pro không bảo đảm cấp một loại GPU cụ thể. Trong phần thay runtime, chọn A100 hoặc L4 nếu tài khoản/phiên có tùy chọn và đủ compute units. Không có số đo trong dự án để hứa tốc độ tăng bao nhiêu. Nguồn: [Colab FAQ](https://research.google.com/colaboratory/faq.html).
+
+### Đọc timing trước khi chạy hết
+
+Mỗi batch in và lưu `timing-XXXXXX.json` cạnh checkpoint:
+
+| Trường | Bao gồm | Khi quá cao |
+|---|---|---|
+| source_seconds | Đọc ZIP, giải nén, kiểm tra và parse nguồn | Xem lại I/O Drive; cân nhắc staging ZIP lên local nếu đủ disk |
+| query_setup_seconds | Load model và encode toàn bộ query một lần/phiên | Không coi đây là chi phí lặp lại mỗi source batch |
+| vectors_load_or_encode_and_save_seconds | Load vector có sẵn hoặc encode chunk và lưu vector/receipt | Xem GPU, dtype, batch budget và chi phí lưu Drive |
+| search_seconds | Exact search và cập nhật top candidate | Xem số query, candidate pool và tải GPU/CPU |
+| checkpoint_seconds | Ghi top candidate cùng cursor lên Drive | Nút thắt ghi Drive, GPU mạnh hơn không giải quyết trực tiếp |
+| total_seconds | Tổng thời gian batch | So các batch sau khi khởi tạo xong để ước lượng |
+
+Không lấy thời gian batch đầu để nhân thẳng 1.712: batch đầu có thêm load weights và encode 1.200 query. Gửi timing của 2–3 batch sau khởi tạo để xác định nút thắt. Những batch không có chunk chỉ cập nhật coverage, không có encode timing.
+
+### Chia nhiều phiên
+
+Để chạy Qwen trên hai phiên độc lập:
+
+| Phiên | ROLE | SHARD_COUNT | SHARD_INDEX |
+|---|---|---:|---:|
+| A | qwen | 2 | 0 |
+| B | qwen | 2 | 1 |
+
+Cả hai cùng PLAN/RUN, mỗi phiên một GPU riêng; mỗi worker nhận khoảng một nửa source batch. Có thêm chi phí khởi tạo và dùng chung Drive nên không bảo đảm giảm thời gian đúng một nửa. Không chạy hai worker trên cùng role/shard. Chuyển từ partition cũ sang partition mới cần CAMPAIGN mới để không trộn kết quả.
+
+Nếu `SAVE_EMBEDDINGS=True` đang tốn thời gian ghi Drive mà không cần giữ vector lâu dài, có thể chọn False khi bắt đầu một worker output mới. Vẫn encode thật, chỉ không giữ vector. Không đổi tham số này giữa chừng trong cùng output.

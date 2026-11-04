@@ -1,0 +1,30 @@
+{
+  "status": "built_required_fields_present",
+  "missing_required_fields": [],
+  "owner_review_notes": [
+    "Đội cần xác nhận tải artifact lớn bằng tài khoản BTC/khách; connector read không thay thế kiểm tra này.",
+    "Drive root đang anyone:writer; cân nhắc đổi Viewer trước khi gửi. Công cụ chưa sửa quyền.",
+    "Chưa xác minh quyền truy cập GitHub; ZIP đính kèm đã chứa mã nguồn workspace.",
+    "Chưa có submission ID/receipt BTC; hồ sơ không xác nhận điểm private."
+  ],
+  "archive": "deliverables\\r2ai_stage3_20261104\\onlyrelu_ViBioMIR_R2AI_Stage3_HoSo_MaNguon.zip",
+  "archive_bytes": 4640051,
+  "archive_sha256": "c7a31697499f5b2c33709cebc8d5bd06eab38d5584336e13a8ea59e58f52418a",
+  "files": 523,
+  "source_manifest_verification": "passed",
+  "final_submission_audit": {
+    "file": "submission_17.zip",
+    "bytes": 50964249,
+    "queries": 1200,
+    "document_occurrences": 143961,
+    "chunks": 144000,
+    "zip_sha256": "0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd",
+    "json_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+    "validation": "local_schema_coverage_and_hash_passed",
+    "relevance_measured": false,
+    "matches_drive_producer_report": true
+  },
+  "data_link_scope": "connector read verified; all large payload access not independently tested",
+  "sent_email": false,
+  "uploaded": false
+}

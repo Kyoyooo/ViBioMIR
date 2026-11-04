@@ -353,7 +353,7 @@ Không so hai điểm như một phép thử có kiểm soát nếu evaluator ho
 | Hợp nhất top candidate và đối chiếu nguồn | Đã có code |
 | Qwen/BGE rerank cùng packet | Đã có code |
 | Chọn document/evidence và xuất pilot/full | Đã có code |
-| Kiểm thử resume, shard, hash, chọn evidence và notebook | Đã qua 6 kiểm thử offline bằng fixture và encoder/scorer giả |
+| Kiểm thử resume, shard, hash, chọn evidence, dtype và notebook | Đã qua 10 kiểm thử offline; luồng retrieval dùng encoder/scorer giả, pooling có forward Qwen3 nhỏ với trọng số ngẫu nhiên trên CPU |
 | Chạy pretrained weights trên GPU cho bộ corpus mới | Chưa được xác nhận trong phiên phát triển |
 | Chạy đủ toàn corpus và có điểm thi mới | Chưa có kết quả được cung cấp |
 | ANN index phục vụ retrieval nhanh hơn | Chưa triển khai trong bộ này |

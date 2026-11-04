@@ -1,5 +1,7 @@
 # ViBioMIR — multilingual biomedical retrieval
 
+**Hồ sơ nộp BTC Stage 3 — đội onlyrelu (04/11/2026):** [README thuyết minh và tái hiện](docs/btc_submission_20261104/README.md), bao gồm dữ liệu/model/source/config và danh tính bài private `submission_17.zip` đã đối chiếu hash với export dense V1.
+
 Retrieve original Vietnamese, English and Chinese medical documents and passages
 for Vietnamese queries. Evidence must remain traceable to the original source.
 Code and technical documentation use English; corpus text retains its language.

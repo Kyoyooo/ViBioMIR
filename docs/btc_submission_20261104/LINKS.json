@@ -1,0 +1,17 @@
+{
+  "team_name": "onlyrelu",
+  "representative_name": "Võ Trần Duy Hoàng",
+  "representative_email": null,
+  "repository_url": "https://github.com/Kyoyooo/ViBioMIR",
+  "repository_access_verified_by_owner": false,
+  "data_and_artifacts_url": "https://drive.google.com/drive/folders/1-9NUCeil3SLWizRsacc4y0FXkzVgSDqr?usp=sharing",
+  "data_access_verified_by_owner": false,
+  "source_archive_url": null,
+  "connector_read_verified": true,
+  "root_permission_observed": "anyone:writer",
+  "verification_scope": "Đã đọc metadata/thư mục và ba JSON của export dense V1 qua connector ngày 04/11/2026; chưa tải/kiểm tra mọi payload lớn hoặc thử bằng tài khoản BTC.",
+  "submission_drive_url": "https://drive.google.com/file/d/1TNABd0SSOcA1M_lsojkWGfZ-ejVFVL2h/view",
+  "dense_recovery_run_url": "https://drive.google.com/drive/folders/1r0xka2F-afmQ4c22mLNbU_A0mrv-kwBe",
+  "dense_export_url": "https://drive.google.com/drive/folders/1VjmZpAQKFawzrD0IbrwCIwi6HkX7P1u_",
+  "notes": "source_archive_url có thể bỏ trống khi đính kèm ZIP mã nguồn trong email. Metadata thư mục gốc đang cho anyone quyền writer; nên đổi thành Viewer trước khi gửi BTC nếu chỉ cần tải. Công cụ chỉ đọc, chưa thay quyền. representative_email chưa được cung cấp, có thể dùng địa chỉ gửi email thực tế."
+}

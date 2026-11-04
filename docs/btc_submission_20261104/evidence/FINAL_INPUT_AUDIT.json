@@ -1,0 +1,12 @@
+{
+  "file": "submission_17.zip",
+  "bytes": 50964249,
+  "queries": 1200,
+  "document_occurrences": 143961,
+  "chunks": 144000,
+  "zip_sha256": "0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd",
+  "json_sha256": "24e4e6490afc53f2a08af229b54c354a7d47436b96f00f92efb1ebf6ba671e32",
+  "validation": "local_schema_coverage_and_hash_passed",
+  "relevance_measured": false,
+  "matches_drive_producer_report": true
+}

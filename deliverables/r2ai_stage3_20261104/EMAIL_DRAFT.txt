@@ -1,0 +1,22 @@
+Người nhận: hr@aiguru.com.vn
+Tiêu đề: [ROAD TO AI 2026 – Stage 3] Hồ sơ thuyết minh ViBioMIR – onlyrelu
+
+Kính gửi Ban Tổ chức ROAD TO AI 2026,
+
+Đội onlyrelu, đại diện Võ Trần Duy Hoàng, xin gửi hồ sơ thuyết minh sản phẩm ViBioMIR tham gia Stage 3.
+
+Hồ sơ đính kèm gồm thuyết minh kiến trúc/phương pháp, mô tả dữ liệu, checkpoint model, README hướng dẫn tái hiện và mã nguồn/cấu hình kèm checksum.
+
+Dữ liệu và artifact: https://drive.google.com/drive/folders/1-9NUCeil3SLWizRsacc4y0FXkzVgSDqr?usp=sharing
+Repository: https://github.com/Kyoyooo/ViBioMIR
+Gói mã nguồn/hồ sơ đính kèm: onlyrelu_ViBioMIR_R2AI_Stage3_HoSo_MaNguon.zip
+Bài private được đội lựa chọn: submission_17.zip
+SHA256 ZIP: 0963641cb422e4223d6fc4b0c22eb09938f8b03c8227053cc7a398bf33e25dbd
+
+Trong hồ sơ, bài private được đối chiếu với export Dense V1 + BGE rerank; các nhánh Qwen/E5/fallback được ghi rõ là thử nghiệm riêng. Link checkpoint mã nguồn mở và các bước tái hiện nằm trong bộ tài liệu đính kèm.
+
+Đại diện liên hệ: Võ Trần Duy Hoàng
+Địa chỉ phản hồi: Địa chỉ email gửi hồ sơ này
+
+Trân trọng,
+onlyrelu — Võ Trần Duy Hoàng
